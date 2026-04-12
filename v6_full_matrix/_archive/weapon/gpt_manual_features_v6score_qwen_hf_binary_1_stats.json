@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "gpt_manual_features",
+  "csv": "gpt_manual_features.csv",
+  "model": "qwen_hf",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/weapon/results_weapon/gpt_manual_features_v6score_qwen_hf_binary_0_preds.csv",
+  "best_threshold": 45.2261,
+  "global_best": {
+    "f1": 0.7059,
+    "accuracy": 0.7163,
+    "precision": 0.6486,
+    "recall": 0.7742,
+    "tp": 48,
+    "fp": 26,
+    "fn": 14,
+    "tn": 53
+  },
+  "loo": {
+    "accuracy": 0.7163,
+    "f1": 0.7059,
+    "precision": 0.6486,
+    "recall": 0.7742,
+    "cm": [
+      [
+        53,
+        26
+      ],
+      [
+        14,
+        48
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 52.33,
+    "std": 17.25,
+    "pos_mean": 61.5,
+    "neg_mean": 45.14
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

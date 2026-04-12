@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "gpt_manual_features",
+  "csv": "gpt_manual_features.csv",
+  "model": "gpt5mini",
+  "task": "binary_0",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/weapon/results_weapon/gpt_manual_features_v6score_gpt5mini_binary_0_preds.csv",
+  "best_threshold": 66.3317,
+  "global_best": {
+    "f1": 0.6824,
+    "accuracy": 0.8085,
+    "precision": 0.6591,
+    "recall": 0.7073,
+    "tp": 29,
+    "fp": 15,
+    "fn": 12,
+    "tn": 85
+  },
+  "loo": {
+    "accuracy": 0.7943,
+    "f1": 0.6588,
+    "precision": 0.6364,
+    "recall": 0.6829,
+    "cm": [
+      [
+        84,
+        16
+      ],
+      [
+        13,
+        28
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 58.43,
+    "std": 15.59,
+    "pos_mean": 70.73,
+    "neg_mean": 53.38
+  }
+}

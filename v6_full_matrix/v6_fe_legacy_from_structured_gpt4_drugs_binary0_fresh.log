@@ -1,0 +1,18 @@
+
+============================================================
+  DOMAIN: drugs
+============================================================
+    fe_legacy_from_structured gpt4: 10/100
+    fe_legacy_from_structured gpt4: 20/100
+    fe_legacy_from_structured gpt4: 30/100
+    fe_legacy_from_structured gpt4: 40/100
+    fe_legacy_from_structured gpt4: 50/100
+    fe_legacy_from_structured gpt4: 60/100
+    fe_legacy_from_structured gpt4: 70/100
+    fe_legacy_from_structured gpt4: 80/100
+    fe_legacy_from_structured gpt4: 90/100
+    fe_legacy_from_structured gpt4: 100/100
+  fe_legacy_from_structured | gpt4 | task=binary_0 F1=0.818 LOO=0.750 thr=60.3
+  fe_legacy_from_structured | gpt4 | task=binary_1 (same scores, no extra API) F1=0.784 LOO=0.757 thr=38.2 -> similarity_database_fe_legacy_from_structured_v6score_gpt4_binary_1_stats.json
+
+Saved summary: /Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/v6_multimodel_summary_binary_0.json

@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": false,
+  "domain": "drugs",
+  "representation_id": "gpt_law",
+  "csv": "similarity_database_with_gpt_law_features.csv",
+  "model": "mistral",
+  "task": "binary_0",
+  "n_pairs": 100,
+  "n_valid": 99,
+  "n_failed": 1,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/drugs/results_drugs/similarity_database_with_gpt_law_features_v6score_mistral_binary_0_preds.csv",
+  "best_threshold": 65.3266,
+  "global_best": {
+    "f1": 0.7606,
+    "accuracy": 0.8283,
+    "precision": 0.7297,
+    "recall": 0.7941,
+    "tp": 27,
+    "fp": 10,
+    "fn": 7,
+    "tn": 55
+  },
+  "loo": {
+    "accuracy": 0.8182,
+    "f1": 0.7429,
+    "precision": 0.7222,
+    "recall": 0.7647,
+    "cm": [
+      [
+        55,
+        10
+      ],
+      [
+        8,
+        26
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 63.48,
+    "std": 16.26,
+    "pos_mean": 76.32,
+    "neg_mean": 56.77
+  }
+}

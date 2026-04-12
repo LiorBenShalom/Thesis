@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "manual_fe",
+  "csv": "similarity_database_fe.csv",
+  "model": "claude_sonnet_4_6",
+  "task": "binary_0",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_fe_v6score_claude_sonnet_4_6_binary_0_preds.csv",
+  "best_threshold": 52.2613,
+  "global_best": {
+    "f1": 0.9275,
+    "accuracy": 0.95,
+    "precision": 1.0,
+    "recall": 0.8649,
+    "tp": 32,
+    "fp": 0,
+    "fn": 5,
+    "tn": 63
+  },
+  "loo": {
+    "accuracy": 0.95,
+    "f1": 0.9275,
+    "precision": 1.0,
+    "recall": 0.8649,
+    "cm": [
+      [
+        63,
+        0
+      ],
+      [
+        5,
+        32
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 43.0,
+    "std": 29.7,
+    "pos_mean": 76.14,
+    "neg_mean": 23.54
+  }
+}

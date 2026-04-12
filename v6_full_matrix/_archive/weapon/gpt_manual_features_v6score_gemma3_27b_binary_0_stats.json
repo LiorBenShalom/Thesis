@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "gpt_manual_features",
+  "csv": "gpt_manual_features.csv",
+  "model": "gemma3_27b",
+  "task": "binary_0",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/weapon/results_weapon/gpt_manual_features_v6score_gemma3_27b_binary_0_preds.csv",
+  "best_threshold": 65.3266,
+  "global_best": {
+    "f1": 0.6197,
+    "accuracy": 0.8085,
+    "precision": 0.7333,
+    "recall": 0.5366,
+    "tp": 22,
+    "fp": 8,
+    "fn": 19,
+    "tn": 92
+  },
+  "loo": {
+    "accuracy": 0.8085,
+    "f1": 0.6197,
+    "precision": 0.7333,
+    "recall": 0.5366,
+    "cm": [
+      [
+        92,
+        8
+      ],
+      [
+        19,
+        22
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 60.74,
+    "std": 14.03,
+    "pos_mean": 70.98,
+    "neg_mean": 56.55
+  }
+}

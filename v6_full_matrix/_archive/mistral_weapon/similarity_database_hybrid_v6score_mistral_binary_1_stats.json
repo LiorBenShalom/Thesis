@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "hybrid_manual_gpt",
+  "csv": "similarity_database_hybrid.csv",
+  "model": "mistral",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/weapon/results_weapon/similarity_database_hybrid_v6score_mistral_binary_0_preds.csv",
+  "best_threshold": 40.201,
+  "global_best": {
+    "f1": 0.6905,
+    "accuracy": 0.6312,
+    "precision": 0.5472,
+    "recall": 0.9355,
+    "tp": 58,
+    "fp": 48,
+    "fn": 4,
+    "tn": 31
+  },
+  "loo": {
+    "accuracy": 0.6312,
+    "f1": 0.6905,
+    "precision": 0.5472,
+    "recall": 0.9355,
+    "cm": [
+      [
+        31,
+        48
+      ],
+      [
+        4,
+        58
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 52.52,
+    "std": 15.04,
+    "pos_mean": 60.32,
+    "neg_mean": 46.39
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

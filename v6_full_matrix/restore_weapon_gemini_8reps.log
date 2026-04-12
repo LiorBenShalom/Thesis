@@ -1,0 +1,134 @@
+
+============================================================
+  DOMAIN: weapon
+============================================================
+    facts gemini_3_flash: 10/141
+    facts gemini_3_flash: 20/141
+    facts gemini_3_flash: 30/141
+    facts gemini_3_flash: 40/141
+    facts gemini_3_flash: 50/141
+    facts gemini_3_flash: 60/141
+    facts gemini_3_flash: 70/141
+    facts gemini_3_flash: 80/141
+    facts gemini_3_flash: 90/141
+    facts gemini_3_flash: 100/141
+    facts gemini_3_flash: 110/141
+    facts gemini_3_flash: 120/141
+    facts gemini_3_flash: 130/141
+    facts gemini_3_flash: 140/141
+  facts | gemini_3_flash | task=binary_0 F1=0.451 LOO=0.451 thr=0.0
+  facts | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.611 LOO=0.611 thr=0.0 -> similarity_database_with_indicment_facts_v6score_gemini_3_flash_binary_1_stats.json
+    manual_fe gemini_3_flash: 10/141
+    manual_fe gemini_3_flash: 20/141
+    manual_fe gemini_3_flash: 30/141
+    manual_fe gemini_3_flash: 40/141
+    manual_fe gemini_3_flash: 50/141
+    manual_fe gemini_3_flash: 60/141
+    manual_fe gemini_3_flash: 70/141
+    manual_fe gemini_3_flash: 80/141
+    manual_fe gemini_3_flash: 90/141
+    manual_fe gemini_3_flash: 100/141
+    manual_fe gemini_3_flash: 110/141
+    manual_fe gemini_3_flash: 120/141
+    manual_fe gemini_3_flash: 130/141
+    manual_fe gemini_3_flash: 140/141
+  manual_fe | gemini_3_flash | task=binary_0 F1=0.447 LOO=0.447 thr=0.0 (partial: 2 rows still invalid — delete those rows or re-run)
+  manual_fe | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.610 LOO=0.610 thr=0.0 -> similarity_database_fe_v6score_gemini_3_flash_binary_1_stats.json
+    fe_gpt_schema gemini_3_flash: 10/141
+    fe_gpt_schema gemini_3_flash: 20/141
+    fe_gpt_schema gemini_3_flash: 30/141
+    fe_gpt_schema gemini_3_flash: 40/141
+    fe_gpt_schema gemini_3_flash: 50/141
+    fe_gpt_schema gemini_3_flash: 60/141
+    fe_gpt_schema gemini_3_flash: 70/141
+    fe_gpt_schema gemini_3_flash: 80/141
+    fe_gpt_schema gemini_3_flash: 90/141
+    fe_gpt_schema gemini_3_flash: 100/141
+    fe_gpt_schema gemini_3_flash: 110/141
+    fe_gpt_schema gemini_3_flash: 120/141
+    fe_gpt_schema gemini_3_flash: 130/141
+    fe_gpt_schema gemini_3_flash: 140/141
+  fe_gpt_schema | gemini_3_flash | task=binary_0 F1=0.444 LOO=0.444 thr=0.0 (partial: 1 rows still invalid — delete those rows or re-run)
+  fe_gpt_schema | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.607 LOO=0.607 thr=0.0 -> similarity_database_fe_gpt_schema_v6score_gemini_3_flash_binary_1_stats.json
+    gpt_law gemini_3_flash: 10/141
+    gpt_law gemini_3_flash: 20/141
+    gpt_law gemini_3_flash: 30/141
+    gpt_law gemini_3_flash: 40/141
+    gpt_law gemini_3_flash: 50/141
+    gpt_law gemini_3_flash: 60/141
+    gpt_law gemini_3_flash: 70/141
+    gpt_law gemini_3_flash: 80/141
+    gpt_law gemini_3_flash: 90/141
+    gpt_law gemini_3_flash: 100/141
+    gpt_law gemini_3_flash: 110/141
+    gpt_law gemini_3_flash: 120/141
+    gpt_law gemini_3_flash: 130/141
+    gpt_law gemini_3_flash: 140/141
+  gpt_law | gemini_3_flash | task=binary_0 F1=0.447 LOO=0.447 thr=0.0 (partial: 2 rows still invalid — delete those rows or re-run)
+  gpt_law | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.610 LOO=0.610 thr=0.0 -> similarity_database_with_gpt_law_features_v6score_gemini_3_flash_binary_1_stats.json
+    gpt_free gemini_3_flash: 10/141
+    gpt_free gemini_3_flash: 20/141
+    gpt_free gemini_3_flash: 30/141
+    gpt_free gemini_3_flash: 40/141
+    gpt_free gemini_3_flash: 50/141
+    gpt_free gemini_3_flash: 60/141
+    gpt_free gemini_3_flash: 70/141
+    gpt_free gemini_3_flash: 80/141
+    gpt_free gemini_3_flash: 90/141
+    gpt_free gemini_3_flash: 100/141
+    gpt_free gemini_3_flash: 110/141
+    gpt_free gemini_3_flash: 120/141
+    gpt_free gemini_3_flash: 130/141
+    gpt_free gemini_3_flash: 140/141
+  gpt_free | gemini_3_flash | task=binary_0 F1=0.453 LOO=0.453 thr=0.0 (partial: 1 rows still invalid — delete those rows or re-run)
+  gpt_free | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.607 LOO=0.607 thr=0.0 -> similarity_database_with_gpt_features_v6score_gemini_3_flash_binary_1_stats.json
+    hybrid_manual_gpt gemini_3_flash: 10/141
+    hybrid_manual_gpt gemini_3_flash: 20/141
+    hybrid_manual_gpt gemini_3_flash: 30/141
+    hybrid_manual_gpt gemini_3_flash: 40/141
+    hybrid_manual_gpt gemini_3_flash: 50/141
+    hybrid_manual_gpt gemini_3_flash: 60/141
+    hybrid_manual_gpt gemini_3_flash: 70/141
+    hybrid_manual_gpt gemini_3_flash: 80/141
+    hybrid_manual_gpt gemini_3_flash: 90/141
+    hybrid_manual_gpt gemini_3_flash: 100/141
+    hybrid_manual_gpt gemini_3_flash: 110/141
+    hybrid_manual_gpt gemini_3_flash: 120/141
+    hybrid_manual_gpt gemini_3_flash: 130/141
+    hybrid_manual_gpt gemini_3_flash: 140/141
+  hybrid_manual_gpt | gemini_3_flash | task=binary_0 F1=0.456 LOO=0.456 thr=0.0 (partial: 2 rows still invalid — delete those rows or re-run)
+  hybrid_manual_gpt | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.617 LOO=0.617 thr=0.0 -> similarity_database_hybrid_v6score_gemini_3_flash_binary_1_stats.json
+    hybrid_gpt gemini_3_flash: 10/141
+    hybrid_gpt gemini_3_flash: 20/141
+    hybrid_gpt gemini_3_flash: 30/141
+    hybrid_gpt gemini_3_flash: 40/141
+    hybrid_gpt gemini_3_flash: 50/141
+    hybrid_gpt gemini_3_flash: 60/141
+    hybrid_gpt gemini_3_flash: 70/141
+    hybrid_gpt gemini_3_flash: 80/141
+    hybrid_gpt gemini_3_flash: 90/141
+    hybrid_gpt gemini_3_flash: 100/141
+    hybrid_gpt gemini_3_flash: 110/141
+    hybrid_gpt gemini_3_flash: 120/141
+    hybrid_gpt gemini_3_flash: 130/141
+    hybrid_gpt gemini_3_flash: 140/141
+  hybrid_gpt | gemini_3_flash | task=binary_0 F1=0.438 LOO=0.438 thr=0.0 (partial: 2 rows still invalid — delete those rows or re-run)
+  hybrid_gpt | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.603 LOO=0.603 thr=0.0 -> similarity_database_hybrid_gpt_v6score_gemini_3_flash_binary_1_stats.json
+    hybrid_full_gpt gemini_3_flash: 10/141
+    hybrid_full_gpt gemini_3_flash: 20/141
+    hybrid_full_gpt gemini_3_flash: 30/141
+    hybrid_full_gpt gemini_3_flash: 40/141
+    hybrid_full_gpt gemini_3_flash: 50/141
+    hybrid_full_gpt gemini_3_flash: 60/141
+    hybrid_full_gpt gemini_3_flash: 70/141
+    hybrid_full_gpt gemini_3_flash: 80/141
+    hybrid_full_gpt gemini_3_flash: 90/141
+    hybrid_full_gpt gemini_3_flash: 100/141
+    hybrid_full_gpt gemini_3_flash: 110/141
+    hybrid_full_gpt gemini_3_flash: 120/141
+    hybrid_full_gpt gemini_3_flash: 130/141
+    hybrid_full_gpt gemini_3_flash: 140/141
+  hybrid_full_gpt | gemini_3_flash | task=binary_0 F1=0.456 LOO=0.456 thr=0.0 (partial: 2 rows still invalid — delete those rows or re-run)
+  hybrid_full_gpt | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.617 LOO=0.617 thr=0.0 -> similarity_database_hybrid_full_gpt_v6score_gemini_3_flash_binary_1_stats.json
+
+Saved summary: /Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/v6_multimodel_summary_binary_0.json

@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "gpt_free",
+  "csv": "similarity_database_with_gpt_features.csv",
+  "model": "gpt51_thinking",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/weapon/results_weapon/similarity_database_with_gpt_features_v6score_gpt51_thinking_binary_0_preds.csv",
+  "best_threshold": 60.3015,
+  "global_best": {
+    "f1": 0.7778,
+    "accuracy": 0.8014,
+    "precision": 0.7656,
+    "recall": 0.7903,
+    "tp": 49,
+    "fp": 15,
+    "fn": 13,
+    "tn": 64
+  },
+  "loo": {
+    "accuracy": 0.773,
+    "f1": 0.7538,
+    "precision": 0.7206,
+    "recall": 0.7903,
+    "cm": [
+      [
+        60,
+        19
+      ],
+      [
+        13,
+        49
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 52.98,
+    "std": 20.38,
+    "pos_mean": 66.71,
+    "neg_mean": 42.2
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

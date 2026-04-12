@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "gpt_law",
+  "csv": "similarity_database_with_gpt_law_features.csv",
+  "model": "gpt52",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/weapon/results_weapon/similarity_database_with_gpt_law_features_v6score_gpt52_binary_0_preds.csv",
+  "best_threshold": 58.2915,
+  "global_best": {
+    "f1": 0.8281,
+    "accuracy": 0.844,
+    "precision": 0.803,
+    "recall": 0.8548,
+    "tp": 53,
+    "fp": 13,
+    "fn": 9,
+    "tn": 66
+  },
+  "loo": {
+    "accuracy": 0.844,
+    "f1": 0.8281,
+    "precision": 0.803,
+    "recall": 0.8548,
+    "cm": [
+      [
+        66,
+        13
+      ],
+      [
+        9,
+        53
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 53.43,
+    "std": 15.51,
+    "pos_mean": 64.26,
+    "neg_mean": 44.92
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

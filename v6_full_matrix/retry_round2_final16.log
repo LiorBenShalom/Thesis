@@ -1,0 +1,293 @@
+
+============================================================
+  REP: fe_gpt_schema  (drugs → weapon per model)
+============================================================
+  (parallel: up to 4 workers; each runs drugs then weapon; provider caps: OpenAI≤2 HF≤2 NIM≤3 Gemini≤1)
+    fe_gpt_schema gemini_3_flash: 10/100 (cached ok)
+    fe_gpt_schema gemini_3_flash: 20/100 (cached ok)    fe_gpt_schema gemma3_27b: 10/100 (cached ok)
+    fe_gpt_schema gemini_3_flash: 30/100 (cached ok)
+
+    fe_gpt_schema gemini_3_flash: 40/100 (cached ok)    fe_gpt_schema gemma3_27b: 20/100 (cached ok)
+    fe_gpt_schema mistral: 10/100 (cached ok)
+    fe_gpt_schema gemini_3_flash: 50/100 (cached ok)
+
+    fe_gpt_schema gemma3_27b: 30/100 (cached ok)    fe_gpt_schema mistral: 20/100 (cached ok)    fe_gpt_schema gemini_3_flash: 60/100 (cached ok)
+
+
+    fe_gpt_schema gemini_3_flash: 70/100 (cached ok)    fe_gpt_schema gemma3_27b: 40/100 (cached ok)
+    fe_gpt_schema mistral: 30/100 (cached ok)
+
+    fe_gpt_schema gemini_3_flash: 80/100 (cached ok)    fe_gpt_schema mistral: 40/100 (cached ok)
+    fe_gpt_schema mistral: 50/100 (cached ok)
+
+    fe_gpt_schema mistral: 60/100 (cached ok)    fe_gpt_schema gemini_3_flash: 90/100 (cached ok)
+
+    fe_gpt_schema mistral: 70/100 (cached ok)    fe_gpt_schema gemini_3_flash: 100/100 (cached ok)
+
+    fe_gpt_schema mistral: 80/100 (cached ok)
+    fe_gpt_schema mistral: 90/100 (cached ok)
+    fe_gpt_schema mistral: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | gemini_3_flash | task=binary_0 F1=0.507 LOO=0.507 thr=0.0
+  fe_gpt_schema | mistral | task=binary_0 F1=0.769 LOO=0.746 thr=70.4
+  fe_gpt_schema | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.649 LOO=0.649 thr=0.0 -> similarity_database_fe_gpt_schema_v6score_gemini_3_flash_binary_1_stats.json
+    fe_gpt_schema gemini_3_flash: 10/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 20/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 30/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 40/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 50/141 (cached ok)
+  fe_gpt_schema | mistral | task=binary_1 (same scores, no extra API) F1=0.729 LOO=0.729 thr=60.3 -> similarity_database_fe_gpt_schema_v6score_mistral_binary_1_stats.json
+    fe_gpt_schema mistral: 10/141 (cached ok)
+    fe_gpt_schema mistral: 20/141 (cached ok)
+    fe_gpt_schema mistral: 30/141 (cached ok)
+    fe_gpt_schema mistral: 40/141 (cached ok)
+    fe_gpt_schema mistral: 50/141 (cached ok)
+    fe_gpt_schema mistral: 60/141 (cached ok)
+    fe_gpt_schema mistral: 70/141 (cached ok)
+    fe_gpt_schema mistral: 80/141 (cached ok)
+    fe_gpt_schema mistral: 90/141 (cached ok)
+    fe_gpt_schema mistral: 100/141 (cached ok)
+    fe_gpt_schema mistral: 110/141 (cached ok)
+    fe_gpt_schema mistral: 120/141 (cached ok)
+    fe_gpt_schema mistral: 130/141 (cached ok)
+    fe_gpt_schema mistral: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | mistral | task=binary_0 F1=0.576 LOO=0.576 thr=45.2
+  fe_gpt_schema | mistral | task=binary_1 (same scores, no extra API) F1=0.726 LOO=0.726 thr=45.2 -> similarity_database_fe_gpt_schema_v6score_mistral_binary_1_stats.json
+  API error (gemma3_27b): 500 Server Error: Internal Server Error for url: https://integrate.api.nvidia.com/v1/chat/completions
+    HTTP 500 (empty response body)
+  API error (gemma3_27b): 500 Server Error: Internal Server Error for url: https://integrate.api.nvidia.com/v1/chat/completions
+    HTTP 500 (empty response body)
+  API error (gemma3_27b): 500 Server Error: Internal Server Error for url: https://integrate.api.nvidia.com/v1/chat/completions
+    HTTP 500 response body: {"type":"urn:inference-connection:problem-details:internal-server-error","title":"Internal Server Error","status":500,"detail":"Inference connection error while making inference request"}
+    fe_gpt_schema gemini_3_flash: 60/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 70/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 80/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 90/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 100/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 110/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 120/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 130/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 140/141 (cached ok)
+    (row cache: skipped 140 ok rows; refetched 1 non-ok/missing)
+  fe_gpt_schema | gemini_3_flash | task=binary_0 F1=0.444 LOO=0.444 thr=0.0 (partial: 1 rows still invalid — delete those rows or re-run)
+  fe_gpt_schema | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.607 LOO=0.607 thr=0.0 -> similarity_database_fe_gpt_schema_v6score_gemini_3_flash_binary_1_stats.json
+⚠️  NIM connection/timeout 1/6: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120), retry in 3s...
+  API error (gemma3_27b): 400 Client Error: Bad Request for url: https://integrate.api.nvidia.com/v1/chat/completions
+    HTTP 400 response body: {"status":400,"title":"Bad Request","detail":"Function id 'b86482fe-8e57-4f0a-8efd-7a45a985377e': DEGRADED function cannot be invoked"}
+  API error (gemma3_27b): 400 Client Error: Bad Request for url: https://integrate.api.nvidia.com/v1/chat/completions
+    HTTP 400 response body: {"status":400,"title":"Bad Request","detail":"Function id 'b86482fe-8e57-4f0a-8efd-7a45a985377e': DEGRADED function cannot be invoked"}
+  API error (gemma3_27b): 400 Client Error: Bad Request for url: https://integrate.api.nvidia.com/v1/chat/completions
+    HTTP 400 response body: {"status":400,"title":"Bad Request","detail":"Function id 'b86482fe-8e57-4f0a-8efd-7a45a985377e': DEGRADED function cannot be invoked"}
+  API error (gemma3_27b): 400 Client Error: Bad Request for url: https://integrate.api.nvidia.com/v1/chat/completions
+    HTTP 400 response body: {"status":400,"title":"Bad Request","detail":"Function id 'b86482fe-8e57-4f0a-8efd-7a45a985377e': DEGRADED function cannot be invoked"}
+    fe_gpt_schema gemma3_27b: 50/100 (cached ok)
+    fe_gpt_schema gemma3_27b: 60/100 (cached ok)
+    fe_gpt_schema gemma3_27b: 70/100 (cached ok)
+    fe_gpt_schema gemma3_27b: 80/100 (cached ok)
+    fe_gpt_schema gemma3_27b: 90/100 (cached ok)
+    fe_gpt_schema gemma3_27b: 100/100 (cached ok)
+    (row cache: skipped 99 ok rows; refetched 1 non-ok/missing)
+  fe_gpt_schema | gemma3_27b | task=binary_0 F1=0.780 LOO=0.780 thr=65.3 (partial: 1 rows still invalid — delete those rows or re-run)
+  fe_gpt_schema | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.755 LOO=0.748 thr=55.3 -> similarity_database_fe_gpt_schema_v6score_gemma3_27b_binary_1_stats.json
+    fe_gpt_schema gemma3_27b: 10/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 20/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 30/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 40/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 50/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 60/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 70/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 80/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 90/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 100/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 110/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 120/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 130/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | gemma3_27b | task=binary_0 F1=0.532 LOO=0.496 thr=55.3
+  fe_gpt_schema | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.674 LOO=0.588 thr=40.2 -> similarity_database_fe_gpt_schema_v6score_gemma3_27b_binary_1_stats.json
+
+============================================================
+  REP: gpt_free  (drugs → weapon per model)
+============================================================
+  (parallel: up to 4 workers; each runs drugs then weapon; provider caps: OpenAI≤2 HF≤2 NIM≤3 Gemini≤1)
+    gpt_free gemini_3_flash: 10/100 (cached ok)
+    gpt_free gemini_3_flash: 20/100 (cached ok)    gpt_free mistral: 10/100 (cached ok)    gpt_free gemma3_27b: 10/100 (cached ok)
+
+
+    gpt_free gemma3_27b: 20/100 (cached ok)
+    gpt_free mistral: 20/100 (cached ok)    gpt_free gemini_3_flash: 30/100 (cached ok)    gpt_free gemma3_27b: 30/100 (cached ok)
+
+    gpt_free gemma3_27b: 40/100 (cached ok)
+
+    gpt_free gemma3_27b: 50/100 (cached ok)
+    gpt_free mistral: 30/100 (cached ok)    gpt_free gemma3_27b: 60/100 (cached ok)    gpt_free gemini_3_flash: 40/100 (cached ok)
+
+    gpt_free gemini_3_flash: 50/100 (cached ok)
+
+    gpt_free gemini_3_flash: 60/100 (cached ok)
+    gpt_free mistral: 40/100 (cached ok)
+    gpt_free mistral: 50/100 (cached ok)
+    gpt_free gemini_3_flash: 70/100 (cached ok)
+    gpt_free mistral: 60/100 (cached ok)
+    gpt_free gemini_3_flash: 80/100 (cached ok)
+    gpt_free mistral: 70/100 (cached ok)
+    gpt_free gemini_3_flash: 90/100 (cached ok)
+    gpt_free mistral: 80/100 (cached ok)
+    gpt_free gemini_3_flash: 100/100 (cached ok)
+    gpt_free mistral: 90/100 (cached ok)
+    gpt_free gemma3_27b: 70/100 (cached ok)    gpt_free mistral: 100/100 (cached ok)
+
+    gpt_free gemma3_27b: 80/100 (cached ok)
+    gpt_free gemma3_27b: 90/100 (cached ok)
+    gpt_free gemma3_27b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_free | gemini_3_flash | task=binary_0 F1=0.507 LOO=0.507 thr=0.0
+  gpt_free | gemma3_27b | task=binary_0 F1=0.800 LOO=0.784 thr=45.2
+  gpt_free | mistral | task=binary_0 F1=0.806 LOO=0.806 thr=65.3
+  gpt_free | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.649 LOO=0.649 thr=0.0 -> similarity_database_with_gpt_features_v6score_gemini_3_flash_binary_1_stats.json
+    gpt_free gemini_3_flash: 10/141 (cached ok)
+    gpt_free gemini_3_flash: 20/141 (cached ok)
+    gpt_free gemini_3_flash: 30/141 (cached ok)
+    gpt_free gemini_3_flash: 40/141 (cached ok)
+    gpt_free gemini_3_flash: 50/141 (cached ok)
+    gpt_free gemini_3_flash: 60/141 (cached ok)
+    gpt_free gemini_3_flash: 70/141 (cached ok)
+  gpt_free | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.757 LOO=0.745 thr=35.2 -> similarity_database_with_gpt_features_v6score_gemma3_27b_binary_1_stats.json
+    gpt_free gemma3_27b: 10/141 (cached ok)
+    gpt_free gemma3_27b: 20/141 (cached ok)
+    gpt_free gemma3_27b: 30/141 (cached ok)
+    gpt_free gemma3_27b: 40/141 (cached ok)
+    gpt_free gemma3_27b: 50/141 (cached ok)
+    gpt_free gemma3_27b: 60/141 (cached ok)
+    gpt_free gemma3_27b: 70/141 (cached ok)
+    gpt_free gemma3_27b: 80/141 (cached ok)
+    gpt_free gemma3_27b: 90/141 (cached ok)
+    gpt_free gemma3_27b: 100/141 (cached ok)
+    gpt_free gemma3_27b: 110/141 (cached ok)
+    gpt_free gemma3_27b: 120/141 (cached ok)
+    gpt_free gemma3_27b: 130/141 (cached ok)
+    gpt_free gemma3_27b: 140/141 (cached ok)
+  gpt_free | mistral | task=binary_1 (same scores, no extra API) F1=0.713 LOO=0.713 thr=60.3 -> similarity_database_with_gpt_features_v6score_mistral_binary_1_stats.json
+    gpt_free mistral: 10/141 (cached ok)
+    gpt_free mistral: 20/141 (cached ok)
+    gpt_free mistral: 30/141 (cached ok)
+    gpt_free mistral: 40/141 (cached ok)
+    gpt_free mistral: 50/141 (cached ok)
+    gpt_free mistral: 60/141 (cached ok)
+    gpt_free mistral: 70/141 (cached ok)
+    gpt_free mistral: 80/141 (cached ok)
+    gpt_free mistral: 90/141 (cached ok)
+    gpt_free mistral: 100/141 (cached ok)    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+
+    gpt_free mistral: 110/141 (cached ok)
+    gpt_free mistral: 120/141 (cached ok)
+    gpt_free mistral: 130/141 (cached ok)
+    gpt_free mistral: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_free | gemma3_27b | task=binary_0 F1=0.631 LOO=0.631 thr=45.2
+  gpt_free | mistral | task=binary_0 F1=0.611 LOO=0.611 thr=60.3
+  gpt_free | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.742 LOO=0.723 thr=45.2 -> similarity_database_with_gpt_features_v6score_gemma3_27b_binary_1_stats.json
+  gpt_free | mistral | task=binary_1 (same scores, no extra API) F1=0.678 LOO=0.606 thr=40.2 -> similarity_database_with_gpt_features_v6score_mistral_binary_1_stats.json
+    gpt_free gemini_3_flash: 80/141 (cached ok)
+    gpt_free gemini_3_flash: 90/141 (cached ok)
+    gpt_free gemini_3_flash: 100/141 (cached ok)
+    gpt_free gemini_3_flash: 110/141 (cached ok)
+    gpt_free gemini_3_flash: 120/141 (cached ok)
+    gpt_free gemini_3_flash: 130/141 (cached ok)
+    gpt_free gemini_3_flash: 140/141 (cached ok)
+    (row cache: skipped 140 ok rows; refetched 1 non-ok/missing)
+  gpt_free | gemini_3_flash | task=binary_0 F1=0.453 LOO=0.453 thr=0.0 (partial: 1 rows still invalid — delete those rows or re-run)
+  gpt_free | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.607 LOO=0.607 thr=0.0 -> similarity_database_with_gpt_features_v6score_gemini_3_flash_binary_1_stats.json
+
+============================================================
+  REP: gpt_law  (drugs → weapon per model)
+============================================================
+  (parallel: up to 4 workers; each runs drugs then weapon; provider caps: OpenAI≤2 HF≤2 NIM≤3 Gemini≤1)
+    gpt_law gemini_3_flash: 10/100 (cached ok)
+    gpt_law gemma3_27b: 10/100 (cached ok)
+    gpt_law gemma3_27b: 20/100 (cached ok)    gpt_law mistral: 10/100 (cached ok)
+    gpt_law gemma3_27b: 30/100 (cached ok)
+
+    gpt_law gemma3_27b: 40/100 (cached ok)    gpt_law mistral: 20/100 (cached ok)
+
+    gpt_law mistral: 30/100 (cached ok)    gpt_law gemma3_27b: 50/100 (cached ok)
+
+    gpt_law gemma3_27b: 60/100 (cached ok)    gpt_law mistral: 40/100 (cached ok)
+
+    gpt_law mistral: 50/100 (cached ok)    gpt_law gemma3_27b: 70/100 (cached ok)
+
+    gpt_law mistral: 60/100 (cached ok)    gpt_law gemma3_27b: 80/100 (cached ok)
+
+    gpt_law mistral: 70/100 (cached ok)    gpt_law gemma3_27b: 90/100 (cached ok)
+
+    gpt_law mistral: 80/100 (cached ok)
+    gpt_law gemma3_27b: 100/100 (cached ok)
+    gpt_law mistral: 90/100 (cached ok)
+    gpt_law mistral: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_law | mistral | task=binary_0 F1=0.761 LOO=0.743 thr=65.3
+  gpt_law | gemma3_27b | task=binary_0 F1=0.787 LOO=0.787 thr=65.3
+  gpt_law | mistral | task=binary_1 (same scores, no extra API) F1=0.695 LOO=0.689 thr=60.3 -> similarity_database_with_gpt_law_features_v6score_mistral_binary_1_stats.json
+    gpt_law mistral: 10/141 (cached ok)
+    gpt_law mistral: 20/141 (cached ok)
+    gpt_law mistral: 30/141 (cached ok)
+    gpt_law mistral: 40/141 (cached ok)
+    gpt_law mistral: 50/141 (cached ok)
+    gpt_law mistral: 60/141 (cached ok)
+    gpt_law mistral: 70/141 (cached ok)
+    gpt_law mistral: 80/141 (cached ok)
+    gpt_law mistral: 90/141 (cached ok)
+    gpt_law mistral: 100/141 (cached ok)
+    gpt_law mistral: 110/141 (cached ok)
+    gpt_law mistral: 120/141 (cached ok)
+    gpt_law mistral: 130/141 (cached ok)
+    gpt_law mistral: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_law | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.760 LOO=0.745 thr=55.3 -> similarity_database_with_gpt_law_features_v6score_gemma3_27b_binary_1_stats.json
+    gpt_law gemma3_27b: 10/141 (cached ok)
+    gpt_law gemma3_27b: 20/141 (cached ok)
+    gpt_law gemma3_27b: 30/141 (cached ok)
+    gpt_law gemma3_27b: 40/141 (cached ok)
+    gpt_law gemma3_27b: 50/141 (cached ok)
+    gpt_law gemma3_27b: 60/141 (cached ok)
+    gpt_law gemma3_27b: 70/141 (cached ok)
+    gpt_law gemma3_27b: 80/141 (cached ok)
+    gpt_law gemma3_27b: 90/141 (cached ok)
+    gpt_law gemma3_27b: 100/141 (cached ok)
+    gpt_law gemma3_27b: 110/141 (cached ok)
+    gpt_law gemma3_27b: 120/141 (cached ok)
+    gpt_law gemma3_27b: 130/141 (cached ok)
+    gpt_law gemma3_27b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+    gpt_law gemini_3_flash: 20/100 (cached ok)
+    gpt_law gemini_3_flash: 30/100 (cached ok)
+    gpt_law gemini_3_flash: 40/100 (cached ok)
+    gpt_law gemini_3_flash: 50/100 (cached ok)
+    gpt_law gemini_3_flash: 60/100 (cached ok)
+    gpt_law gemini_3_flash: 70/100 (cached ok)
+    gpt_law gemini_3_flash: 80/100 (cached ok)
+    gpt_law gemini_3_flash: 90/100 (cached ok)
+    gpt_law gemini_3_flash: 100/100 (cached ok)
+    (row cache: skipped 99 ok rows; refetched 1 non-ok/missing)
+  gpt_law | gemini_3_flash | task=binary_0 F1=0.507 LOO=0.507 thr=0.0
+  gpt_law | mistral | task=binary_0 F1=0.585 LOO=0.585 thr=60.3
+  gpt_law | gemma3_27b | task=binary_0 F1=0.578 LOO=0.578 thr=45.2
+  gpt_law | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.649 LOO=0.649 thr=0.0 -> similarity_database_with_gpt_law_features_v6score_gemini_3_flash_binary_1_stats.json
+    gpt_law gemini_3_flash: 10/141 (cached ok)
+    gpt_law gemini_3_flash: 20/141 (cached ok)
+    gpt_law gemini_3_flash: 30/141 (cached ok)
+    gpt_law gemini_3_flash: 40/141 (cached ok)
+    gpt_law gemini_3_flash: 50/141 (cached ok)
+    gpt_law gemini_3_flash: 60/141 (cached ok)
+    gpt_law gemini_3_flash: 70/141 (cached ok)
+  gpt_law | mistral | task=binary_1 (same scores, no extra API) F1=0.742 LOO=0.723 thr=60.3 -> similarity_database_with_gpt_law_features_v6score_mistral_binary_1_stats.json
+  gpt_law | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.752 LOO=0.752 thr=45.2 -> similarity_database_with_gpt_law_features_v6score_gemma3_27b_binary_1_stats.json
+    gpt_law gemini_3_flash: 80/141 (cached ok)
+    gpt_law gemini_3_flash: 90/141 (cached ok)
+    gpt_law gemini_3_flash: 100/141 (cached ok)

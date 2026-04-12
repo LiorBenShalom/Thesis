@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "gpt_free",
+  "csv": "similarity_database_with_gpt_features.csv",
+  "model": "gpt52",
+  "task": "binary_1",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_with_gpt_features_v6score_gpt52_binary_0_preds.csv",
+  "best_threshold": 35.1759,
+  "global_best": {
+    "f1": 0.8381,
+    "accuracy": 0.83,
+    "precision": 0.8148,
+    "recall": 0.8627,
+    "tp": 44,
+    "fp": 10,
+    "fn": 7,
+    "tn": 39
+  },
+  "loo": {
+    "accuracy": 0.83,
+    "f1": 0.8381,
+    "precision": 0.8148,
+    "recall": 0.8627,
+    "cm": [
+      [
+        39,
+        10
+      ],
+      [
+        7,
+        44
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 45.84,
+    "std": 21.92,
+    "pos_mean": 60.22,
+    "neg_mean": 30.88
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

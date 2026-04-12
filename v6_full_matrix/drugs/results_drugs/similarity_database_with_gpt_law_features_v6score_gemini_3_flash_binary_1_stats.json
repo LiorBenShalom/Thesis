@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "gpt_law",
+  "csv": "similarity_database_with_gpt_law_features.csv",
+  "model": "gemini_3_flash",
+  "task": "binary_1",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/drugs/results_drugs/similarity_database_with_gpt_law_features_v6score_gemini_3_flash_binary_0_preds.csv",
+  "best_threshold": 45.2261,
+  "global_best": {
+    "f1": 0.7921,
+    "accuracy": 0.79,
+    "precision": 0.7547,
+    "recall": 0.8333,
+    "tp": 40,
+    "fp": 13,
+    "fn": 8,
+    "tn": 39
+  },
+  "loo": {
+    "accuracy": 0.79,
+    "f1": 0.7921,
+    "precision": 0.7547,
+    "recall": 0.8333,
+    "cm": [
+      [
+        39,
+        13
+      ],
+      [
+        8,
+        40
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 57.41,
+    "std": 27.05,
+    "pos_mean": 73.96,
+    "neg_mean": 42.13
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

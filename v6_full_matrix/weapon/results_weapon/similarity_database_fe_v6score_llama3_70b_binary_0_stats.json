@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "manual_fe",
+  "csv": "similarity_database_fe.csv",
+  "model": "llama3_70b",
+  "task": "binary_0",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/weapon/results_weapon/similarity_database_fe_v6score_llama3_70b_binary_0_preds.csv",
+  "best_threshold": 58.2915,
+  "global_best": {
+    "f1": 0.544,
+    "accuracy": 0.5957,
+    "precision": 0.4048,
+    "recall": 0.8293,
+    "tp": 34,
+    "fp": 50,
+    "fn": 7,
+    "tn": 50
+  },
+  "loo": {
+    "accuracy": 0.5887,
+    "f1": 0.5397,
+    "precision": 0.4,
+    "recall": 0.8293,
+    "cm": [
+      [
+        49,
+        51
+      ],
+      [
+        7,
+        34
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 53.77,
+    "std": 13.64,
+    "pos_mean": 61.78,
+    "neg_mean": 50.49
+  }
+}

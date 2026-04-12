@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "gpt_free",
+  "csv": "similarity_database_with_gpt_features.csv",
+  "model": "gemini_3_flash",
+  "task": "binary_0",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/drugs/results_drugs/similarity_database_with_gpt_features_v6score_gemini_3_flash_binary_0_preds.csv",
+  "best_threshold": 62.3116,
+  "global_best": {
+    "f1": 0.8219,
+    "accuracy": 0.87,
+    "precision": 0.7692,
+    "recall": 0.8824,
+    "tp": 30,
+    "fp": 9,
+    "fn": 4,
+    "tn": 57
+  },
+  "loo": {
+    "accuracy": 0.79,
+    "f1": 0.72,
+    "precision": 0.6585,
+    "recall": 0.7941,
+    "cm": [
+      [
+        52,
+        14
+      ],
+      [
+        7,
+        27
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 51.6,
+    "std": 29.89,
+    "pos_mean": 81.85,
+    "neg_mean": 36.02
+  }
+}

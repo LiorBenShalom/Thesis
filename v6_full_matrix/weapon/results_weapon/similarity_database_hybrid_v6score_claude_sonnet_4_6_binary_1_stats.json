@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "hybrid_manual_gpt",
+  "csv": "similarity_database_hybrid.csv",
+  "model": "claude_sonnet_4_6",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/weapon/results_weapon/similarity_database_hybrid_v6score_claude_sonnet_4_6_binary_0_preds.csv",
+  "best_threshold": 28.1407,
+  "global_best": {
+    "f1": 0.8321,
+    "accuracy": 0.8369,
+    "precision": 0.76,
+    "recall": 0.9194,
+    "tp": 57,
+    "fp": 18,
+    "fn": 5,
+    "tn": 61
+  },
+  "loo": {
+    "accuracy": 0.8369,
+    "f1": 0.8321,
+    "precision": 0.76,
+    "recall": 0.9194,
+    "cm": [
+      [
+        61,
+        18
+      ],
+      [
+        5,
+        57
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 36.18,
+    "std": 19.19,
+    "pos_mean": 51.84,
+    "neg_mean": 23.89
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "hybrid_gpt",
+  "csv": "similarity_database_hybrid_gpt.csv",
+  "model": "llama3_70b",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/weapon/results_weapon/similarity_database_hybrid_gpt_v6score_llama3_70b_binary_0_preds.csv",
+  "best_threshold": 58.2915,
+  "global_best": {
+    "f1": 0.76,
+    "accuracy": 0.7447,
+    "precision": 0.6477,
+    "recall": 0.9194,
+    "tp": 57,
+    "fp": 31,
+    "fn": 5,
+    "tn": 48
+  },
+  "loo": {
+    "accuracy": 0.7447,
+    "f1": 0.76,
+    "precision": 0.6477,
+    "recall": 0.9194,
+    "cm": [
+      [
+        48,
+        31
+      ],
+      [
+        5,
+        57
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 54.59,
+    "std": 14.94,
+    "pos_mean": 63.77,
+    "neg_mean": 47.38
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

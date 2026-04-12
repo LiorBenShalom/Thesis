@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "hybrid_manual_gpt",
+  "csv": "similarity_database_hybrid.csv",
+  "model": "gemini_3_flash",
+  "task": "binary_1",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_hybrid_v6score_gemini_3_flash_binary_0_preds.csv",
+  "best_threshold": 45.2261,
+  "global_best": {
+    "f1": 0.8333,
+    "accuracy": 0.84,
+    "precision": 0.8889,
+    "recall": 0.7843,
+    "tp": 40,
+    "fp": 5,
+    "fn": 11,
+    "tn": 44
+  },
+  "loo": {
+    "accuracy": 0.79,
+    "f1": 0.7921,
+    "precision": 0.8,
+    "recall": 0.7843,
+    "cm": [
+      [
+        39,
+        10
+      ],
+      [
+        11,
+        40
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 49.36,
+    "std": 30.55,
+    "pos_mean": 70.31,
+    "neg_mean": 27.55
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

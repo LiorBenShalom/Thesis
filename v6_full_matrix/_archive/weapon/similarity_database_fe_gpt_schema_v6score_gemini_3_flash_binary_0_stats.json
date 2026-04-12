@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "fe_gpt_schema",
+  "csv": "similarity_database_fe_gpt_schema.csv",
+  "model": "gemini_3_flash",
+  "task": "binary_0",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/weapon/results_weapon/similarity_database_fe_gpt_schema_v6score_gemini_3_flash_binary_0_preds.csv",
+  "best_threshold": 0.0,
+  "global_best": {
+    "f1": 0.4505,
+    "accuracy": 0.2908,
+    "precision": 0.2908,
+    "recall": 1.0,
+    "tp": 41,
+    "fp": 100,
+    "fn": 0,
+    "tn": 0
+  },
+  "loo": {
+    "accuracy": 0.2908,
+    "f1": 0.4505,
+    "precision": 0.2908,
+    "recall": 1.0,
+    "cm": [
+      [
+        0,
+        100
+      ],
+      [
+        0,
+        41
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 99.87,
+    "std": 1.51,
+    "pos_mean": 99.56,
+    "neg_mean": 100.0
+  }
+}

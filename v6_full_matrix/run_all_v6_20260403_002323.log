@@ -1,0 +1,3019 @@
+Seeding hybrid_full_gpt binary_0 preds/stats from prior experiment (cache reuse)...
+
+========== TASK=binary_0 (binary_1 stats from same API scores) ==========
+Using: python  (set PYTHON=... to override)
+
+============================================================
+  REP: facts  (drugs → weapon per model)
+============================================================
+  (parallel: up to 4 workers; each runs drugs then weapon; provider caps: OpenAI≤2 HF≤2 NIM≤3 Gemini≤1)
+    facts gpt4: 10/100 (cached ok)    facts qwen3_235b: 10/100 (cached ok)    facts mistral: 10/100 (cached ok)
+
+
+    facts mistral: 20/100 (cached ok)    facts qwen3_235b: 20/100 (cached ok)
+
+    facts gpt4: 20/100 (cached ok)    facts qwen3_235b: 30/100 (cached ok)    facts gpt5mini: 10/100 (cached ok)
+
+
+    facts gpt4: 30/100 (cached ok)    facts mistral: 30/100 (cached ok)    facts qwen3_235b: 40/100 (cached ok)    facts gpt5mini: 20/100 (cached ok)
+
+    facts gpt4: 40/100 (cached ok)
+
+    facts mistral: 40/100 (cached ok)
+
+    facts gpt4: 50/100 (cached ok)    facts qwen3_235b: 50/100 (cached ok)
+    facts mistral: 50/100 (cached ok)
+
+    facts qwen3_235b: 60/100 (cached ok)    facts gpt4: 60/100 (cached ok)
+    facts mistral: 60/100 (cached ok)
+    facts gpt5mini: 30/100 (cached ok)    facts gpt4: 70/100 (cached ok)
+    facts qwen3_235b: 70/100 (cached ok)
+
+
+    facts mistral: 70/100 (cached ok)
+    facts gpt5mini: 40/100 (cached ok)    facts gpt4: 80/100 (cached ok)    facts qwen3_235b: 80/100 (cached ok)
+    facts qwen3_235b: 90/100 (cached ok)
+    facts mistral: 80/100 (cached ok)
+
+    facts mistral: 90/100 (cached ok)
+
+    facts mistral: 100/100 (cached ok)
+    facts gpt4: 90/100 (cached ok)    facts qwen3_235b: 100/100 (cached ok)
+    facts gpt4: 100/100 (cached ok)    facts gpt5mini: 50/100 (cached ok)
+
+    facts gpt5mini: 60/100 (cached ok)
+
+    facts gpt5mini: 70/100 (cached ok)
+    facts gpt5mini: 80/100 (cached ok)
+    facts gpt5mini: 90/100 (cached ok)
+    facts gpt5mini: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  facts | mistral | task=binary_0 F1=0.817 LOO=0.817 thr=65.3
+  facts | gpt5mini | task=binary_0 F1=0.842 LOO=0.816 thr=53.3
+  facts | qwen3_235b | task=binary_0 F1=0.865 LOO=0.817 thr=40.2
+  facts | gpt4 | task=binary_0 F1=0.842 LOO=0.831 thr=60.3
+  facts | mistral | task=binary_1 (same scores, no extra API) F1=0.716 LOO=0.600 thr=45.2 -> similarity_database_with_indicment_facts_v6score_mistral_binary_1_stats.json
+    facts mistral: 10/141 (cached ok)
+    facts mistral: 20/141 (cached ok)
+    facts mistral: 30/141 (cached ok)
+    facts mistral: 40/141 (cached ok)
+    facts mistral: 50/141 (cached ok)
+    facts mistral: 60/141 (cached ok)
+    facts mistral: 70/141 (cached ok)
+    facts mistral: 80/141 (cached ok)
+    facts mistral: 90/141 (cached ok)
+    facts mistral: 100/141 (cached ok)
+    facts mistral: 110/141 (cached ok)
+    facts mistral: 120/141 (cached ok)
+    facts mistral: 130/141 (cached ok)
+    facts mistral: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  facts | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.800 LOO=0.800 thr=35.2 -> similarity_database_with_indicment_facts_v6score_qwen3_235b_binary_1_stats.json
+    facts qwen3_235b: 10/141 (cached ok)
+    facts qwen3_235b: 20/141 (cached ok)
+    facts qwen3_235b: 30/141 (cached ok)
+    facts qwen3_235b: 40/141 (cached ok)
+    facts qwen3_235b: 50/141 (cached ok)
+    facts qwen3_235b: 60/141 (cached ok)
+    facts qwen3_235b: 70/141 (cached ok)
+    facts qwen3_235b: 80/141 (cached ok)
+    facts qwen3_235b: 90/141 (cached ok)
+    facts qwen3_235b: 100/141 (cached ok)
+    facts qwen3_235b: 110/141 (cached ok)
+    facts qwen3_235b: 120/141 (cached ok)
+    facts qwen3_235b: 130/141 (cached ok)
+    facts qwen3_235b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  facts | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.756 LOO=0.733 thr=53.3 -> similarity_database_with_indicment_facts_v6score_gpt5mini_binary_1_stats.json
+    facts gpt5mini: 10/141 (cached ok)
+    facts gpt5mini: 20/141 (cached ok)
+    facts gpt5mini: 30/141 (cached ok)
+    facts gpt5mini: 40/141 (cached ok)
+    facts gpt5mini: 50/141 (cached ok)
+    facts gpt5mini: 60/141 (cached ok)
+    facts gpt5mini: 70/141 (cached ok)
+    facts gpt5mini: 80/141 (cached ok)
+    facts gpt5mini: 90/141 (cached ok)
+    facts gpt5mini: 100/141 (cached ok)
+    facts gpt5mini: 110/141 (cached ok)
+    facts gpt5mini: 120/141 (cached ok)
+    facts gpt5mini: 130/141 (cached ok)
+    facts gpt5mini: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  facts | gpt4 | task=binary_1 (same scores, no extra API) F1=0.769 LOO=0.769 thr=55.3 -> similarity_database_with_indicment_facts_v6score_gpt4_binary_1_stats.json
+    facts gpt4: 10/141 (cached ok)
+    facts gpt4: 20/141 (cached ok)
+    facts gpt4: 30/141 (cached ok)
+    facts gpt4: 40/141 (cached ok)
+    facts gpt4: 50/141 (cached ok)
+    facts gpt4: 60/141 (cached ok)
+    facts gpt4: 70/141 (cached ok)
+    facts gpt4: 80/141 (cached ok)
+    facts gpt4: 90/141 (cached ok)
+    facts gpt4: 100/141 (cached ok)
+    facts gpt4: 110/141 (cached ok)
+    facts gpt4: 120/141 (cached ok)
+    facts gpt4: 130/141 (cached ok)
+    facts gpt4: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  facts | mistral | task=binary_0 F1=0.658 LOO=0.658 thr=65.3
+  facts | qwen3_235b | task=binary_0 F1=0.721 LOO=0.674 thr=45.2
+  facts | gpt5mini | task=binary_0 F1=0.667 LOO=0.575 thr=64.3
+  facts | gpt4 | task=binary_0 F1=0.759 LOO=0.725 thr=70.4
+  facts | mistral | task=binary_1 (same scores, no extra API) F1=0.696 LOO=0.671 thr=45.2 -> similarity_database_with_indicment_facts_v6score_mistral_binary_1_stats.json
+    facts llama3_70b: 10/100 (cached ok)
+    facts llama3_70b: 20/100 (cached ok)
+    facts llama3_70b: 30/100 (cached ok)
+    facts llama3_70b: 40/100 (cached ok)
+    facts llama3_70b: 50/100 (cached ok)
+    facts llama3_70b: 60/100 (cached ok)
+    facts llama3_70b: 70/100 (cached ok)
+    facts llama3_70b: 80/100 (cached ok)
+    facts llama3_70b: 90/100 (cached ok)
+    facts llama3_70b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  facts | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.782 LOO=0.782 thr=35.2 -> similarity_database_with_indicment_facts_v6score_qwen3_235b_binary_1_stats.json
+  facts | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.750 LOO=0.720 thr=55.3 -> similarity_database_with_indicment_facts_v6score_gpt5mini_binary_1_stats.json
+    facts gpt51_thinking: 10/100 (cached ok)
+    facts gpt51_thinking: 20/100 (cached ok)
+    facts gpt51_thinking: 30/100 (cached ok)
+    facts gpt51_thinking: 40/100 (cached ok)
+    facts gpt51_thinking: 50/100 (cached ok)
+    facts gpt51_thinking: 60/100 (cached ok)
+    facts gpt51_thinking: 70/100 (cached ok)
+    facts gpt51_thinking: 80/100 (cached ok)
+    facts gpt51_thinking: 90/100 (cached ok)
+    facts gpt51_thinking: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  facts | gpt4 | task=binary_1 (same scores, no extra API) F1=0.778 LOO=0.750 thr=70.4 -> similarity_database_with_indicment_facts_v6score_gpt4_binary_1_stats.json
+    facts gpt52: 10/100 (cached ok)    facts qwen_hf: 10/100 (cached ok)
+
+    facts gpt52: 20/100 (cached ok)    facts qwen_hf: 20/100 (cached ok)
+
+    facts gpt52: 30/100 (cached ok)
+    facts qwen_hf: 30/100 (cached ok)    facts gpt52: 40/100 (cached ok)
+    facts gpt52: 50/100 (cached ok)
+    facts gpt52: 60/100 (cached ok)
+
+    facts qwen_hf: 40/100 (cached ok)
+    facts qwen_hf: 50/100 (cached ok)
+    facts gpt52: 70/100 (cached ok)    facts qwen_hf: 60/100 (cached ok)
+    facts qwen_hf: 70/100 (cached ok)
+
+    facts qwen_hf: 80/100 (cached ok)
+    facts qwen_hf: 90/100 (cached ok)
+    facts qwen_hf: 100/100 (cached ok)
+    facts gpt52: 80/100 (cached ok)
+    facts gpt52: 90/100 (cached ok)
+    facts gpt52: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  facts | llama3_70b | task=binary_0 F1=0.820 LOO=0.800 thr=60.3
+  facts | gpt51_thinking | task=binary_0 F1=0.857 LOO=0.846 thr=58.3
+  facts | qwen_hf | task=binary_0 F1=0.842 LOO=0.794 thr=40.2
+  facts | gpt52 | task=binary_0 F1=0.821 LOO=0.785 thr=46.2
+  facts | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.732 LOO=0.620 thr=30.2 -> similarity_database_with_indicment_facts_v6score_llama3_70b_binary_1_stats.json
+    facts llama3_70b: 10/141 (cached ok)
+    facts llama3_70b: 20/141 (cached ok)
+    facts llama3_70b: 30/141 (cached ok)
+    facts llama3_70b: 40/141 (cached ok)
+    facts llama3_70b: 50/141 (cached ok)
+    facts llama3_70b: 60/141 (cached ok)
+    facts llama3_70b: 70/141 (cached ok)
+    facts llama3_70b: 80/141 (cached ok)
+    facts llama3_70b: 90/141 (cached ok)
+    facts llama3_70b: 100/141 (cached ok)
+    facts llama3_70b: 110/141 (cached ok)
+    facts llama3_70b: 120/141 (cached ok)
+    facts llama3_70b: 130/141 (cached ok)
+    facts llama3_70b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  facts | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.787 LOO=0.766 thr=52.3 -> similarity_database_with_indicment_facts_v6score_gpt51_thinking_binary_1_stats.json
+    facts gpt51_thinking: 10/141 (cached ok)
+    facts gpt51_thinking: 20/141 (cached ok)
+    facts gpt51_thinking: 30/141 (cached ok)
+    facts gpt51_thinking: 40/141 (cached ok)
+    facts gpt51_thinking: 50/141 (cached ok)
+    facts gpt51_thinking: 60/141 (cached ok)
+    facts gpt51_thinking: 70/141 (cached ok)
+    facts gpt51_thinking: 80/141 (cached ok)
+    facts gpt51_thinking: 90/141 (cached ok)
+    facts gpt51_thinking: 100/141 (cached ok)
+    facts gpt51_thinking: 110/141 (cached ok)
+    facts gpt51_thinking: 120/141 (cached ok)
+    facts gpt51_thinking: 130/141 (cached ok)
+    facts gpt51_thinking: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  facts | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.800 LOO=0.800 thr=40.2 -> similarity_database_with_indicment_facts_v6score_qwen_hf_binary_1_stats.json
+    facts qwen_hf: 10/141 (cached ok)
+    facts qwen_hf: 20/141 (cached ok)
+    facts qwen_hf: 30/141 (cached ok)
+    facts qwen_hf: 40/141 (cached ok)
+    facts qwen_hf: 50/141 (cached ok)
+    facts qwen_hf: 60/141 (cached ok)
+    facts qwen_hf: 70/141 (cached ok)
+    facts qwen_hf: 80/141 (cached ok)
+    facts qwen_hf: 90/141 (cached ok)
+    facts qwen_hf: 100/141 (cached ok)
+    facts qwen_hf: 110/141 (cached ok)
+    facts qwen_hf: 120/141 (cached ok)
+    facts qwen_hf: 130/141 (cached ok)
+    facts qwen_hf: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  facts | gpt52 | task=binary_1 (same scores, no extra API) F1=0.821 LOO=0.821 thr=43.2 -> similarity_database_with_indicment_facts_v6score_gpt52_binary_1_stats.json
+    facts gpt52: 10/141 (cached ok)
+    facts gpt52: 20/141 (cached ok)
+    facts gpt52: 30/141 (cached ok)
+    facts gpt52: 40/141 (cached ok)
+    facts gpt52: 50/141 (cached ok)
+    facts gpt52: 60/141 (cached ok)
+    facts gpt52: 70/141 (cached ok)
+    facts gpt52: 80/141 (cached ok)
+    facts gpt52: 90/141 (cached ok)
+    facts gpt52: 100/141 (cached ok)
+    facts gpt52: 110/141 (cached ok)
+    facts gpt52: 120/141 (cached ok)
+    facts gpt52: 130/141 (cached ok)
+    facts gpt52: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  facts | llama3_70b | task=binary_0 F1=0.581 LOO=0.370 thr=58.3
+  facts | gpt51_thinking | task=binary_0 F1=0.725 LOO=0.710 thr=68.3
+  facts | gpt52 | task=binary_0 F1=0.734 LOO=0.630 thr=62.3
+  facts | qwen_hf | task=binary_0 F1=0.673 LOO=0.673 thr=40.2
+  facts | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.717 LOO=0.717 thr=58.3 -> similarity_database_with_indicment_facts_v6score_llama3_70b_binary_1_stats.json
+    facts gemini_25_pro: 10/100 (cached ok)
+    facts gemini_25_pro: 20/100 (cached ok)
+    facts gemini_25_pro: 30/100 (cached ok)
+    facts gemini_25_pro: 40/100 (cached ok)
+    facts gemini_25_pro: 50/100 (cached ok)
+    facts gemini_25_pro: 60/100 (cached ok)
+    facts gemini_25_pro: 70/100 (cached ok)
+    facts gemini_25_pro: 80/100 (cached ok)
+    facts gemini_25_pro: 90/100 (cached ok)
+    facts gemini_25_pro: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  facts | gpt52 | task=binary_1 (same scores, no extra API) F1=0.800 LOO=0.794 thr=56.3 -> similarity_database_with_indicment_facts_v6score_gpt52_binary_1_stats.json
+  facts | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.769 LOO=0.769 thr=35.2 -> similarity_database_with_indicment_facts_v6score_qwen_hf_binary_1_stats.json
+    facts gemma3_27b: 10/100 (cached ok)
+    facts gemma3_27b: 20/100 (cached ok)
+    facts gemma3_27b: 30/100 (cached ok)
+    facts gemma3_27b: 40/100 (cached ok)
+    facts gemma3_27b: 50/100 (cached ok)
+    facts gemma3_27b: 60/100 (cached ok)
+    facts gemma3_27b: 70/100 (cached ok)
+    facts gemma3_27b: 80/100 (cached ok)
+    facts gemma3_27b: 90/100 (cached ok)
+    facts gemma3_27b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  facts | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.788 LOO=0.779 thr=60.3 -> similarity_database_with_indicment_facts_v6score_gpt51_thinking_binary_1_stats.json
+  facts | gemini_25_pro | task=binary_0 F1=0.816 LOO=0.767 thr=25.1
+  facts | gemma3_27b | task=binary_0 F1=0.790 LOO=0.780 thr=55.3
+  facts | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.726 LOO=0.726 thr=20.1 -> similarity_database_with_indicment_facts_v6score_gemini_25_pro_binary_1_stats.json
+    facts gemini_3_flash: 10/100 (cached ok)
+    facts gemini_3_flash: 20/100 (cached ok)
+    facts gemini_3_flash: 30/100 (cached ok)
+    facts gemini_3_flash: 40/100 (cached ok)
+    facts gemini_3_flash: 50/100 (cached ok)
+    facts gemini_3_flash: 60/100 (cached ok)
+    facts gemini_3_flash: 70/100 (cached ok)
+    facts gemini_3_flash: 80/100 (cached ok)
+    facts gemini_3_flash: 90/100 (cached ok)
+    facts gemini_3_flash: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  facts | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.779 LOO=0.771 thr=55.3 -> similarity_database_with_indicment_facts_v6score_gemma3_27b_binary_1_stats.json
+    facts gemma3_27b: 10/141 (cached ok)
+    facts gemma3_27b: 20/141 (cached ok)
+    facts gemma3_27b: 30/141 (cached ok)
+    facts gemma3_27b: 40/141 (cached ok)
+    facts gemma3_27b: 50/141 (cached ok)
+    facts gemma3_27b: 60/141 (cached ok)
+    facts gemma3_27b: 70/141 (cached ok)
+    facts gemma3_27b: 80/141 (cached ok)
+    facts gemma3_27b: 90/141 (cached ok)
+    facts gemma3_27b: 100/141 (cached ok)
+    facts gemma3_27b: 110/141 (cached ok)
+    facts gemma3_27b: 120/141 (cached ok)
+    facts gemma3_27b: 130/141 (cached ok)
+    facts gemma3_27b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  facts | gemini_3_flash | task=binary_0 F1=0.831 LOO=0.831 thr=58.3
+  facts | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.808 LOO=0.800 thr=45.2 -> similarity_database_with_indicment_facts_v6score_gemini_3_flash_binary_1_stats.json
+    facts gemini_25_pro: 10/141 (cached ok)
+    facts gemini_25_pro: 20/141 (cached ok)
+    facts gemini_25_pro: 30/141 (cached ok)
+    facts gemini_25_pro: 40/141 (cached ok)
+    facts gemini_25_pro: 50/141 (cached ok)
+    facts gemini_25_pro: 60/141 (cached ok)
+    facts gemini_25_pro: 70/141 (cached ok)
+    facts gemini_25_pro: 80/141 (cached ok)
+    facts gemini_25_pro: 90/141 (cached ok)
+    facts gemini_25_pro: 100/141 (cached ok)
+    facts gemini_25_pro: 110/141 (cached ok)
+    facts gemini_25_pro: 120/141 (cached ok)
+    facts gemini_25_pro: 130/141 (cached ok)
+    facts gemini_25_pro: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  facts | gemma3_27b | task=binary_0 F1=0.710 LOO=0.710 thr=55.3
+  facts | gemini_25_pro | task=binary_0 F1=0.650 LOO=0.650 thr=40.2
+  facts | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.788 LOO=0.769 thr=45.2 -> similarity_database_with_indicment_facts_v6score_gemma3_27b_binary_1_stats.json
+  facts | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.769 LOO=0.769 thr=25.1 -> similarity_database_with_indicment_facts_v6score_gemini_25_pro_binary_1_stats.json
+    facts gemini_3_flash: 10/141 (cached ok)
+    facts gemini_3_flash: 20/141 (cached ok)
+    facts gemini_3_flash: 30/141 (cached ok)
+    facts gemini_3_flash: 40/141 (cached ok)
+    facts gemini_3_flash: 50/141 (cached ok)
+    facts gemini_3_flash: 60/141 (cached ok)
+    facts gemini_3_flash: 70/141 (cached ok)
+    facts gemini_3_flash: 80/141 (cached ok)
+    facts gemini_3_flash: 90/141 (cached ok)
+    facts gemini_3_flash: 100/141 (cached ok)
+    facts gemini_3_flash: 110/141 (cached ok)
+    facts gemini_3_flash: 120/141 (cached ok)
+    facts gemini_3_flash: 130/141 (cached ok)
+    facts gemini_3_flash: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  facts | gemini_3_flash | task=binary_0 F1=0.716 LOO=0.716 thr=68.3
+  facts | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.785 LOO=0.739 thr=58.3 -> similarity_database_with_indicment_facts_v6score_gemini_3_flash_binary_1_stats.json
+
+============================================================
+  REP: manual_fe  (drugs → weapon per model)
+============================================================
+  (parallel: up to 4 workers; each runs drugs then weapon; provider caps: OpenAI≤2 HF≤2 NIM≤3 Gemini≤1)
+    manual_fe gpt5mini: 10/100 (cached ok)
+    manual_fe gpt5mini: 20/100 (cached ok)
+    manual_fe gpt5mini: 30/100 (cached ok)
+    manual_fe gpt5mini: 40/100 (cached ok)    manual_fe gpt4: 10/100 (cached ok)
+
+    manual_fe gpt4: 20/100 (cached ok)    manual_fe gpt5mini: 50/100 (cached ok)    manual_fe mistral: 10/100 (cached ok)    manual_fe qwen3_235b: 10/100 (cached ok)
+
+
+
+    manual_fe gpt5mini: 60/100 (cached ok)    manual_fe mistral: 20/100 (cached ok)    manual_fe qwen3_235b: 20/100 (cached ok)    manual_fe gpt4: 30/100 (cached ok)
+
+
+    manual_fe mistral: 30/100 (cached ok)
+    manual_fe gpt5mini: 70/100 (cached ok)    manual_fe gpt4: 40/100 (cached ok)
+    manual_fe qwen3_235b: 30/100 (cached ok)
+
+    manual_fe mistral: 40/100 (cached ok)
+    manual_fe qwen3_235b: 40/100 (cached ok)
+    manual_fe gpt4: 50/100 (cached ok)    manual_fe gpt5mini: 80/100 (cached ok)    manual_fe qwen3_235b: 50/100 (cached ok)
+
+
+    manual_fe qwen3_235b: 60/100 (cached ok)
+
+    manual_fe mistral: 50/100 (cached ok)    manual_fe gpt5mini: 90/100 (cached ok)
+    manual_fe qwen3_235b: 70/100 (cached ok)
+
+    manual_fe gpt5mini: 100/100 (cached ok)    manual_fe gpt4: 60/100 (cached ok)    manual_fe mistral: 60/100 (cached ok)    manual_fe qwen3_235b: 80/100 (cached ok)
+
+
+
+    manual_fe gpt4: 70/100 (cached ok)
+    manual_fe mistral: 70/100 (cached ok)    manual_fe gpt4: 80/100 (cached ok)    manual_fe qwen3_235b: 90/100 (cached ok)
+
+    manual_fe qwen3_235b: 100/100 (cached ok)
+    manual_fe mistral: 80/100 (cached ok)
+
+    manual_fe mistral: 90/100 (cached ok)
+    manual_fe mistral: 100/100 (cached ok)
+    manual_fe gpt4: 90/100 (cached ok)
+    manual_fe gpt4: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  manual_fe | mistral | task=binary_0 F1=0.783 LOO=0.783 thr=70.4
+  manual_fe | gpt5mini | task=binary_0 F1=0.882 LOO=0.882 thr=64.3
+  manual_fe | qwen3_235b | task=binary_0 F1=0.886 LOO=0.873 thr=50.3
+  manual_fe | gpt4 | task=binary_0 F1=0.889 LOO=0.875 thr=62.3
+  manual_fe | mistral | task=binary_1 (same scores, no extra API) F1=0.768 LOO=0.722 thr=45.2 -> similarity_database_fe_v6score_mistral_binary_1_stats.json
+    manual_fe mistral: 10/141 (cached ok)
+    manual_fe mistral: 20/141 (cached ok)
+    manual_fe mistral: 30/141 (cached ok)
+    manual_fe mistral: 40/141 (cached ok)
+    manual_fe mistral: 50/141 (cached ok)
+    manual_fe mistral: 60/141 (cached ok)
+    manual_fe mistral: 70/141 (cached ok)
+    manual_fe mistral: 80/141 (cached ok)
+    manual_fe mistral: 90/141 (cached ok)
+    manual_fe mistral: 100/141 (cached ok)
+    manual_fe mistral: 110/141 (cached ok)
+    manual_fe mistral: 120/141 (cached ok)
+    manual_fe mistral: 130/141 (cached ok)
+    manual_fe mistral: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  manual_fe | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.828 LOO=0.828 thr=55.3 -> similarity_database_fe_v6score_gpt5mini_binary_1_stats.json
+    manual_fe gpt5mini: 10/141 (cached ok)
+    manual_fe gpt5mini: 20/141 (cached ok)
+    manual_fe gpt5mini: 30/141 (cached ok)
+    manual_fe gpt5mini: 40/141 (cached ok)
+    manual_fe gpt5mini: 50/141 (cached ok)
+    manual_fe gpt5mini: 60/141 (cached ok)
+    manual_fe gpt5mini: 70/141 (cached ok)
+    manual_fe gpt5mini: 80/141 (cached ok)
+    manual_fe gpt5mini: 90/141 (cached ok)
+    manual_fe gpt5mini: 100/141 (cached ok)
+    manual_fe gpt5mini: 110/141 (cached ok)
+    manual_fe gpt5mini: 120/141 (cached ok)
+    manual_fe gpt5mini: 130/141 (cached ok)
+    manual_fe gpt5mini: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  manual_fe | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.845 LOO=0.804 thr=40.2 -> similarity_database_fe_v6score_qwen3_235b_binary_1_stats.json
+    manual_fe qwen3_235b: 10/141 (cached ok)
+    manual_fe qwen3_235b: 20/141 (cached ok)
+    manual_fe qwen3_235b: 30/141 (cached ok)
+    manual_fe qwen3_235b: 40/141 (cached ok)
+    manual_fe qwen3_235b: 50/141 (cached ok)
+    manual_fe qwen3_235b: 60/141 (cached ok)
+    manual_fe qwen3_235b: 70/141 (cached ok)
+    manual_fe qwen3_235b: 80/141 (cached ok)
+    manual_fe qwen3_235b: 90/141 (cached ok)
+    manual_fe qwen3_235b: 100/141 (cached ok)
+    manual_fe qwen3_235b: 110/141 (cached ok)
+    manual_fe qwen3_235b: 120/141 (cached ok)
+    manual_fe qwen3_235b: 130/141 (cached ok)
+    manual_fe qwen3_235b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  manual_fe | gpt4 | task=binary_1 (same scores, no extra API) F1=0.819 LOO=0.819 thr=40.2 -> similarity_database_fe_v6score_gpt4_binary_1_stats.json
+    manual_fe gpt4: 10/141 (cached ok)
+    manual_fe gpt4: 20/141 (cached ok)
+    manual_fe gpt4: 30/141 (cached ok)
+    manual_fe gpt4: 40/141 (cached ok)
+    manual_fe gpt4: 50/141 (cached ok)
+    manual_fe gpt4: 60/141 (cached ok)
+    manual_fe gpt4: 70/141 (cached ok)
+    manual_fe gpt4: 80/141 (cached ok)
+    manual_fe gpt4: 90/141 (cached ok)
+    manual_fe gpt4: 100/141 (cached ok)
+    manual_fe gpt4: 110/141 (cached ok)
+    manual_fe gpt4: 120/141 (cached ok)
+    manual_fe gpt4: 130/141 (cached ok)
+    manual_fe gpt4: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  manual_fe | mistral | task=binary_0 F1=0.673 LOO=0.673 thr=60.3
+  manual_fe | gpt5mini | task=binary_0 F1=0.744 LOO=0.729 thr=65.3
+  manual_fe | qwen3_235b | task=binary_0 F1=0.694 LOO=0.581 thr=58.3
+  manual_fe | gpt4 | task=binary_0 F1=0.767 LOO=0.767 thr=68.3
+  manual_fe | mistral | task=binary_1 (same scores, no extra API) F1=0.803 LOO=0.803 thr=45.2 -> similarity_database_fe_v6score_mistral_binary_1_stats.json
+    manual_fe llama3_70b: 10/100 (cached ok)
+    manual_fe llama3_70b: 20/100 (cached ok)
+    manual_fe llama3_70b: 30/100 (cached ok)
+    manual_fe llama3_70b: 40/100 (cached ok)
+    manual_fe llama3_70b: 50/100 (cached ok)
+    manual_fe llama3_70b: 60/100 (cached ok)
+    manual_fe llama3_70b: 70/100 (cached ok)
+    manual_fe llama3_70b: 80/100 (cached ok)
+    manual_fe llama3_70b: 90/100 (cached ok)
+    manual_fe llama3_70b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  manual_fe | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.788 LOO=0.788 thr=40.2 -> similarity_database_fe_v6score_qwen3_235b_binary_1_stats.json
+  manual_fe | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.803 LOO=0.788 thr=56.3 -> similarity_database_fe_v6score_gpt5mini_binary_1_stats.json
+    manual_fe gpt51_thinking: 10/100 (cached ok)
+    manual_fe gpt51_thinking: 20/100 (cached ok)
+    manual_fe gpt51_thinking: 30/100 (cached ok)
+    manual_fe gpt51_thinking: 40/100 (cached ok)
+    manual_fe gpt51_thinking: 50/100 (cached ok)
+    manual_fe gpt51_thinking: 60/100 (cached ok)
+    manual_fe gpt51_thinking: 70/100 (cached ok)
+    manual_fe gpt51_thinking: 80/100 (cached ok)
+    manual_fe gpt51_thinking: 90/100 (cached ok)
+    manual_fe gpt51_thinking: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  manual_fe | gpt4 | task=binary_1 (same scores, no extra API) F1=0.855 LOO=0.855 thr=45.2 -> similarity_database_fe_v6score_gpt4_binary_1_stats.json
+    manual_fe qwen_hf: 10/100 (cached ok)
+    manual_fe qwen_hf: 20/100 (cached ok)
+    manual_fe qwen_hf: 30/100 (cached ok)
+    manual_fe gpt52: 10/100 (cached ok)
+    manual_fe gpt52: 20/100 (cached ok)
+    manual_fe qwen_hf: 40/100 (cached ok)
+    manual_fe gpt52: 30/100 (cached ok)
+    manual_fe qwen_hf: 50/100 (cached ok)
+    manual_fe gpt52: 40/100 (cached ok)    manual_fe qwen_hf: 60/100 (cached ok)
+    manual_fe qwen_hf: 70/100 (cached ok)
+
+    manual_fe qwen_hf: 80/100 (cached ok)
+    manual_fe gpt52: 50/100 (cached ok)
+    manual_fe qwen_hf: 90/100 (cached ok)
+    manual_fe gpt52: 60/100 (cached ok)    manual_fe qwen_hf: 100/100 (cached ok)
+
+    manual_fe gpt52: 70/100 (cached ok)
+    manual_fe gpt52: 80/100 (cached ok)
+    manual_fe gpt52: 90/100 (cached ok)
+    manual_fe gpt52: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  manual_fe | llama3_70b | task=binary_0 F1=0.786 LOO=0.786 thr=68.3
+  manual_fe | gpt51_thinking | task=binary_0 F1=0.882 LOO=0.845 thr=65.3
+  manual_fe | qwen_hf | task=binary_0 F1=0.866 LOO=0.849 thr=50.3
+  manual_fe | gpt52 | task=binary_0 F1=0.895 LOO=0.853 thr=54.3
+  manual_fe | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.800 LOO=0.771 thr=55.3 -> similarity_database_fe_v6score_llama3_70b_binary_1_stats.json
+    manual_fe llama3_70b: 10/141 (cached ok)
+    manual_fe llama3_70b: 20/141 (cached ok)
+    manual_fe llama3_70b: 30/141 (cached ok)
+    manual_fe llama3_70b: 40/141 (cached ok)
+    manual_fe llama3_70b: 50/141 (cached ok)
+    manual_fe llama3_70b: 60/141 (cached ok)
+    manual_fe llama3_70b: 70/141 (cached ok)
+    manual_fe llama3_70b: 80/141 (cached ok)
+    manual_fe llama3_70b: 90/141 (cached ok)
+    manual_fe llama3_70b: 100/141 (cached ok)
+    manual_fe llama3_70b: 110/141 (cached ok)
+    manual_fe llama3_70b: 120/141 (cached ok)
+    manual_fe llama3_70b: 130/141 (cached ok)
+    manual_fe llama3_70b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  manual_fe | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.830 LOO=0.791 thr=58.3 -> similarity_database_fe_v6score_gpt51_thinking_binary_1_stats.json
+    manual_fe gpt51_thinking: 10/141 (cached ok)
+    manual_fe gpt51_thinking: 20/141 (cached ok)
+    manual_fe gpt51_thinking: 30/141 (cached ok)
+    manual_fe gpt51_thinking: 40/141 (cached ok)
+    manual_fe gpt51_thinking: 50/141 (cached ok)
+    manual_fe gpt51_thinking: 60/141 (cached ok)
+    manual_fe gpt51_thinking: 70/141 (cached ok)
+    manual_fe gpt51_thinking: 80/141 (cached ok)
+    manual_fe gpt51_thinking: 90/141 (cached ok)
+    manual_fe gpt51_thinking: 100/141 (cached ok)
+    manual_fe gpt51_thinking: 110/141 (cached ok)
+    manual_fe gpt51_thinking: 120/141 (cached ok)
+    manual_fe gpt51_thinking: 130/141 (cached ok)
+    manual_fe gpt51_thinking: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  manual_fe | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.812 LOO=0.812 thr=40.2 -> similarity_database_fe_v6score_qwen_hf_binary_1_stats.json
+    manual_fe qwen_hf: 10/141 (cached ok)
+    manual_fe qwen_hf: 20/141 (cached ok)
+    manual_fe qwen_hf: 30/141 (cached ok)
+    manual_fe qwen_hf: 40/141 (cached ok)
+    manual_fe qwen_hf: 50/141 (cached ok)
+    manual_fe qwen_hf: 60/141 (cached ok)
+    manual_fe qwen_hf: 70/141 (cached ok)
+    manual_fe qwen_hf: 80/141 (cached ok)
+    manual_fe qwen_hf: 90/141 (cached ok)
+    manual_fe qwen_hf: 100/141 (cached ok)
+    manual_fe qwen_hf: 110/141 (cached ok)
+    manual_fe qwen_hf: 120/141 (cached ok)
+    manual_fe qwen_hf: 130/141 (cached ok)
+    manual_fe qwen_hf: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  manual_fe | gpt52 | task=binary_1 (same scores, no extra API) F1=0.857 LOO=0.857 thr=46.2 -> similarity_database_fe_v6score_gpt52_binary_1_stats.json
+    manual_fe gpt52: 10/141 (cached ok)
+    manual_fe gpt52: 20/141 (cached ok)
+    manual_fe gpt52: 30/141 (cached ok)
+    manual_fe gpt52: 40/141 (cached ok)
+    manual_fe gpt52: 50/141 (cached ok)
+    manual_fe gpt52: 60/141 (cached ok)
+    manual_fe gpt52: 70/141 (cached ok)
+    manual_fe gpt52: 80/141 (cached ok)
+    manual_fe gpt52: 90/141 (cached ok)
+    manual_fe gpt52: 100/141 (cached ok)
+    manual_fe gpt52: 110/141 (cached ok)
+    manual_fe gpt52: 120/141 (cached ok)
+    manual_fe gpt52: 130/141 (cached ok)
+    manual_fe gpt52: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  manual_fe | llama3_70b | task=binary_0 F1=0.587 LOO=0.587 thr=58.3
+  manual_fe | gpt51_thinking | task=binary_0 F1=0.744 LOO=0.744 thr=70.4
+  manual_fe | gpt52 | task=binary_0 F1=0.726 LOO=0.726 thr=58.3
+  manual_fe | qwen_hf | task=binary_0 F1=0.667 LOO=0.591 thr=45.2
+  manual_fe | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.710 LOO=0.710 thr=52.3 -> similarity_database_fe_v6score_llama3_70b_binary_1_stats.json
+    manual_fe gemini_25_pro: 10/100 (cached ok)
+    manual_fe gemini_25_pro: 20/100 (cached ok)
+    manual_fe gemini_25_pro: 30/100 (cached ok)
+    manual_fe gemini_25_pro: 40/100 (cached ok)
+    manual_fe gemini_25_pro: 50/100 (cached ok)
+    manual_fe gemini_25_pro: 60/100 (cached ok)
+    manual_fe gemini_25_pro: 70/100 (cached ok)
+    manual_fe gemini_25_pro: 80/100 (cached ok)
+    manual_fe gemini_25_pro: 90/100 (cached ok)
+    manual_fe gemini_25_pro: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  manual_fe | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.828 LOO=0.815 thr=62.3 -> similarity_database_fe_v6score_gpt51_thinking_binary_1_stats.json
+  manual_fe | gpt52 | task=binary_1 (same scores, no extra API) F1=0.837 LOO=0.825 thr=56.3 -> similarity_database_fe_v6score_gpt52_binary_1_stats.json
+    manual_fe gemma3_27b: 10/100 (cached ok)
+    manual_fe gemma3_27b: 20/100 (cached ok)
+    manual_fe gemma3_27b: 30/100 (cached ok)
+    manual_fe gemma3_27b: 40/100 (cached ok)
+    manual_fe gemma3_27b: 50/100 (cached ok)
+    manual_fe gemma3_27b: 60/100 (cached ok)
+    manual_fe gemma3_27b: 70/100 (cached ok)
+    manual_fe gemma3_27b: 80/100 (cached ok)
+    manual_fe gemma3_27b: 90/100 (cached ok)
+    manual_fe gemma3_27b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  manual_fe | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.791 LOO=0.791 thr=40.2 -> similarity_database_fe_v6score_qwen_hf_binary_1_stats.json
+  manual_fe | gemini_25_pro | task=binary_0 F1=0.906 LOO=0.892 thr=55.3
+  manual_fe | gemma3_27b | task=binary_0 F1=0.800 LOO=0.790 thr=60.3
+  manual_fe | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.786 LOO=0.786 thr=40.2 -> similarity_database_fe_v6score_gemini_25_pro_binary_1_stats.json
+    manual_fe gemini_3_flash: 10/100 (cached ok)
+    manual_fe gemini_3_flash: 20/100 (cached ok)
+    manual_fe gemini_3_flash: 30/100 (cached ok)
+    manual_fe gemini_3_flash: 40/100 (cached ok)
+    manual_fe gemini_3_flash: 50/100 (cached ok)
+    manual_fe gemini_3_flash: 60/100 (cached ok)
+    manual_fe gemini_3_flash: 70/100 (cached ok)
+    manual_fe gemini_3_flash: 80/100 (cached ok)
+    manual_fe gemini_3_flash: 90/100 (cached ok)
+    manual_fe gemini_3_flash: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  manual_fe | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.808 LOO=0.800 thr=60.3 -> similarity_database_fe_v6score_gemma3_27b_binary_1_stats.json
+    manual_fe gemma3_27b: 10/141 (cached ok)
+    manual_fe gemma3_27b: 20/141 (cached ok)
+    manual_fe gemma3_27b: 30/141 (cached ok)
+    manual_fe gemma3_27b: 40/141 (cached ok)
+    manual_fe gemma3_27b: 50/141 (cached ok)
+    manual_fe gemma3_27b: 60/141 (cached ok)
+    manual_fe gemma3_27b: 70/141 (cached ok)
+    manual_fe gemma3_27b: 80/141 (cached ok)
+    manual_fe gemma3_27b: 90/141 (cached ok)
+    manual_fe gemma3_27b: 100/141 (cached ok)
+    manual_fe gemma3_27b: 110/141 (cached ok)
+    manual_fe gemma3_27b: 120/141 (cached ok)
+    manual_fe gemma3_27b: 130/141 (cached ok)
+    manual_fe gemma3_27b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  manual_fe | gemini_3_flash | task=binary_0 F1=0.892 LOO=0.857 thr=68.3
+  manual_fe | gemma3_27b | task=binary_0 F1=0.639 LOO=0.628 thr=55.3
+  manual_fe | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.845 LOO=0.792 thr=48.2 -> similarity_database_fe_v6score_gemini_3_flash_binary_1_stats.json
+    manual_fe gemini_25_pro: 10/141 (cached ok)
+    manual_fe gemini_25_pro: 20/141 (cached ok)
+    manual_fe gemini_25_pro: 30/141 (cached ok)
+    manual_fe gemini_25_pro: 40/141 (cached ok)
+    manual_fe gemini_25_pro: 50/141 (cached ok)
+    manual_fe gemini_25_pro: 60/141 (cached ok)
+    manual_fe gemini_25_pro: 70/141 (cached ok)
+    manual_fe gemini_25_pro: 80/141 (cached ok)
+    manual_fe gemini_25_pro: 90/141 (cached ok)
+    manual_fe gemini_25_pro: 100/141 (cached ok)
+    manual_fe gemini_25_pro: 110/141 (cached ok)
+    manual_fe gemini_25_pro: 120/141 (cached ok)
+    manual_fe gemini_25_pro: 130/141 (cached ok)
+    manual_fe gemini_25_pro: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  manual_fe | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.811 LOO=0.811 thr=55.3 -> similarity_database_fe_v6score_gemma3_27b_binary_1_stats.json
+  manual_fe | gemini_25_pro | task=binary_0 F1=0.742 LOO=0.688 thr=40.2
+  manual_fe | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.818 LOO=0.818 thr=25.1 -> similarity_database_fe_v6score_gemini_25_pro_binary_1_stats.json
+    manual_fe gemini_3_flash: 10/141 (cached ok)
+    manual_fe gemini_3_flash: 20/141 (cached ok)
+    manual_fe gemini_3_flash: 30/141 (cached ok)
+    manual_fe gemini_3_flash: 40/141 (cached ok)
+    manual_fe gemini_3_flash: 50/141 (cached ok)
+    manual_fe gemini_3_flash: 60/141 (cached ok)
+    manual_fe gemini_3_flash: 70/141 (cached ok)
+    manual_fe gemini_3_flash: 80/141 (cached ok)
+    manual_fe gemini_3_flash: 90/141 (cached ok)
+    manual_fe gemini_3_flash: 100/141 (cached ok)
+    manual_fe gemini_3_flash: 110/141 (cached ok)
+    manual_fe gemini_3_flash: 120/141 (cached ok)
+    manual_fe gemini_3_flash: 130/141 (cached ok)
+    manual_fe gemini_3_flash: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  manual_fe | gemini_3_flash | task=binary_0 F1=0.719 LOO=0.719 thr=72.4
+  manual_fe | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.847 LOO=0.803 thr=58.3 -> similarity_database_fe_v6score_gemini_3_flash_binary_1_stats.json
+
+============================================================
+  REP: fe_manual_format  (drugs → weapon per model)
+============================================================
+  (parallel: up to 4 workers; each runs drugs then weapon; provider caps: OpenAI≤2 HF≤2 NIM≤3 Gemini≤1)
+Connecting to HuggingFace Inference Router (OpenAI-compatible)...
+✅ HuggingFace Router client initialized
+    fe_manual_format gpt4: 10/100
+    fe_manual_format gpt4: 20/100
+    fe_manual_format mistral: 10/100
+    fe_manual_format gpt4: 30/100
+    fe_manual_format qwen3_235b: 10/100
+    fe_manual_format gpt5mini: 10/100
+    fe_manual_format gpt4: 40/100
+    fe_manual_format gpt4: 50/100
+    fe_manual_format mistral: 20/100
+    fe_manual_format gpt4: 60/100
+    fe_manual_format gpt5mini: 20/100
+    fe_manual_format qwen3_235b: 20/100
+    fe_manual_format gpt4: 70/100
+    fe_manual_format gpt4: 80/100
+    fe_manual_format mistral: 30/100
+    fe_manual_format gpt4: 90/100
+    fe_manual_format gpt5mini: 30/100
+    fe_manual_format qwen3_235b: 30/100
+    fe_manual_format gpt4: 100/100
+  fe_manual_format | gpt4 | task=binary_0 F1=0.800 LOO=0.714 thr=45.2
+  fe_manual_format | gpt4 | task=binary_1 (same scores, no extra API) F1=0.769 LOO=0.694 thr=38.2 -> similarity_database_fe_manual_format_v6score_gpt4_binary_1_stats.json
+    fe_manual_format gpt4: 10/141
+    fe_manual_format gpt5mini: 40/100
+    fe_manual_format gpt4: 20/141
+    fe_manual_format mistral: 40/100
+    fe_manual_format qwen3_235b: 40/100
+    fe_manual_format gpt4: 30/141
+    fe_manual_format gpt4: 40/141
+    fe_manual_format gpt5mini: 50/100
+    fe_manual_format mistral: 50/100
+    fe_manual_format gpt4: 50/141
+    fe_manual_format qwen3_235b: 50/100
+    fe_manual_format gpt4: 60/141
+    fe_manual_format gpt4: 70/141
+    fe_manual_format gpt5mini: 60/100
+    fe_manual_format mistral: 60/100
+    fe_manual_format gpt4: 80/141
+    fe_manual_format qwen3_235b: 60/100
+    fe_manual_format gpt4: 90/141
+    fe_manual_format mistral: 70/100
+    fe_manual_format gpt5mini: 70/100
+    fe_manual_format gpt4: 100/141
+    fe_manual_format gpt4: 110/141
+    fe_manual_format mistral: 80/100
+    fe_manual_format gpt5mini: 80/100
+    fe_manual_format qwen3_235b: 70/100
+    fe_manual_format gpt4: 120/141
+    fe_manual_format gpt4: 130/141
+    fe_manual_format gpt5mini: 90/100
+    fe_manual_format mistral: 90/100
+    fe_manual_format gpt4: 140/141
+  fe_manual_format | gpt4 | task=binary_0 F1=0.800 LOO=0.800 thr=60.3
+  fe_manual_format | gpt4 | task=binary_1 (same scores, no extra API) F1=0.822 LOO=0.822 thr=55.3 -> similarity_database_fe_manual_format_v6score_gpt4_binary_1_stats.json
+    fe_manual_format qwen3_235b: 80/100
+    fe_manual_format gpt5mini: 100/100
+    fe_manual_format mistral: 100/100
+  fe_manual_format | gpt5mini | task=binary_0 F1=0.789 LOO=0.709 thr=62.3
+  fe_manual_format | mistral | task=binary_0 F1=0.759 LOO=0.759 thr=60.3 (partial: 1 rows still invalid — delete those rows or re-run)
+  fe_manual_format | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.775 LOO=0.755 thr=53.3 -> similarity_database_fe_manual_format_v6score_gpt5mini_binary_1_stats.json
+  fe_manual_format | mistral | task=binary_1 (same scores, no extra API) F1=0.721 LOO=0.600 thr=40.2 -> similarity_database_fe_manual_format_v6score_mistral_binary_1_stats.json
+    fe_manual_format qwen3_235b: 90/100
+    fe_manual_format gpt5mini: 10/141
+    fe_manual_format mistral: 10/141
+    fe_manual_format gpt5mini: 20/141
+    fe_manual_format mistral: 20/141
+    fe_manual_format qwen3_235b: 100/100
+  fe_manual_format | qwen3_235b | task=binary_0 F1=0.747 LOO=0.747 thr=40.2
+  fe_manual_format | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.752 LOO=0.692 thr=35.2 -> similarity_database_fe_manual_format_v6score_qwen3_235b_binary_1_stats.json
+    fe_manual_format llama3_70b: 10/100
+    fe_manual_format gpt5mini: 30/141
+    fe_manual_format mistral: 30/141
+    fe_manual_format qwen3_235b: 10/141
+    fe_manual_format gpt5mini: 40/141
+    fe_manual_format mistral: 40/141
+    fe_manual_format gpt5mini: 50/141
+    fe_manual_format qwen3_235b: 20/141
+    fe_manual_format mistral: 50/141
+    fe_manual_format gpt5mini: 60/141
+    fe_manual_format qwen3_235b: 30/141
+    fe_manual_format llama3_70b: 20/100
+    fe_manual_format mistral: 60/141
+    fe_manual_format gpt5mini: 70/141
+    fe_manual_format mistral: 70/141
+    fe_manual_format qwen3_235b: 40/141
+    fe_manual_format gpt5mini: 80/141
+    fe_manual_format mistral: 80/141
+    fe_manual_format qwen3_235b: 50/141
+    fe_manual_format llama3_70b: 30/100
+    fe_manual_format gpt5mini: 90/141
+    fe_manual_format mistral: 90/141
+    fe_manual_format qwen3_235b: 60/141
+    fe_manual_format gpt5mini: 100/141
+    fe_manual_format mistral: 100/141
+    fe_manual_format qwen3_235b: 70/141
+    fe_manual_format gpt5mini: 110/141
+    fe_manual_format mistral: 110/141
+    fe_manual_format llama3_70b: 40/100
+    fe_manual_format qwen3_235b: 80/141
+    fe_manual_format gpt5mini: 120/141
+    fe_manual_format mistral: 120/141
+    fe_manual_format gpt5mini: 130/141
+  API error (llama3_70b): 429 Client Error: Too Many Requests for url: https://integrate.api.nvidia.com/v1/chat/completions
+    HTTP 429 response body: {"status":429,"title":"Too Many Requests"}
+    fe_manual_format qwen3_235b: 90/141
+    fe_manual_format mistral: 130/141
+    fe_manual_format gpt5mini: 140/141
+  fe_manual_format | gpt5mini | task=binary_0 F1=0.706 LOO=0.632 thr=66.3
+  fe_manual_format | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.761 LOO=0.761 thr=58.3 -> similarity_database_fe_manual_format_v6score_gpt5mini_binary_1_stats.json
+    fe_manual_format mistral: 140/141
+    fe_manual_format qwen3_235b: 100/141
+    fe_manual_format gpt52: 10/100
+    fe_manual_format llama3_70b: 50/100
+  fe_manual_format | mistral | task=binary_0 F1=0.658 LOO=0.658 thr=65.3
+  fe_manual_format | mistral | task=binary_1 (same scores, no extra API) F1=0.720 LOO=0.720 thr=45.2 -> similarity_database_fe_manual_format_v6score_mistral_binary_1_stats.json
+    fe_manual_format gpt52: 20/100
+    fe_manual_format gpt51_thinking: 10/100
+    fe_manual_format gpt52: 30/100
+    fe_manual_format qwen3_235b: 110/141
+    fe_manual_format gpt51_thinking: 20/100
+    fe_manual_format gpt52: 40/100
+    fe_manual_format llama3_70b: 60/100
+    fe_manual_format gpt52: 50/100
+    fe_manual_format gpt51_thinking: 30/100
+    fe_manual_format qwen3_235b: 120/141
+    fe_manual_format gpt52: 60/100
+    fe_manual_format gpt51_thinking: 40/100
+    fe_manual_format gpt52: 70/100
+    fe_manual_format qwen3_235b: 130/141
+    fe_manual_format gpt51_thinking: 50/100
+    fe_manual_format gpt52: 80/100
+    fe_manual_format gpt52: 90/100
+    fe_manual_format gpt51_thinking: 60/100
+    fe_manual_format llama3_70b: 70/100
+    fe_manual_format qwen3_235b: 140/141
+    fe_manual_format gpt52: 100/100
+  fe_manual_format | gpt52 | task=binary_0 F1=0.868 LOO=0.868 thr=45.2
+  fe_manual_format | gpt52 | task=binary_1 (same scores, no extra API) F1=0.800 LOO=0.783 thr=45.2 -> similarity_database_fe_manual_format_v6score_gpt52_binary_1_stats.json
+  fe_manual_format | qwen3_235b | task=binary_0 F1=0.673 LOO=0.600 thr=50.3
+  fe_manual_format | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.774 LOO=0.774 thr=40.2 -> similarity_database_fe_manual_format_v6score_qwen3_235b_binary_1_stats.json
+    fe_manual_format gpt51_thinking: 70/100
+    fe_manual_format gpt52: 10/141
+    fe_manual_format gpt51_thinking: 80/100
+    fe_manual_format gpt52: 20/141
+    fe_manual_format qwen_hf: 10/100
+    fe_manual_format gpt52: 30/141
+    fe_manual_format llama3_70b: 80/100
+    fe_manual_format gpt51_thinking: 90/100
+    fe_manual_format gpt52: 40/141
+    fe_manual_format qwen_hf: 20/100
+    fe_manual_format gpt51_thinking: 100/100
+  fe_manual_format | gpt51_thinking | task=binary_0 F1=0.833 LOO=0.822 thr=63.3
+  fe_manual_format | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.763 LOO=0.667 thr=38.2 -> similarity_database_fe_manual_format_v6score_gpt51_thinking_binary_1_stats.json
+    fe_manual_format gpt52: 50/141
+    fe_manual_format gpt52: 60/141
+    fe_manual_format qwen_hf: 30/100
+    fe_manual_format gpt51_thinking: 10/141
+    fe_manual_format gpt52: 70/141
+    fe_manual_format gpt52: 80/141
+    fe_manual_format gpt51_thinking: 20/141
+    fe_manual_format qwen_hf: 40/100
+    fe_manual_format llama3_70b: 90/100
+    fe_manual_format gpt52: 90/141
+    fe_manual_format gpt51_thinking: 30/141
+    fe_manual_format gpt52: 100/141
+    fe_manual_format qwen_hf: 50/100
+    fe_manual_format gpt52: 110/141
+    fe_manual_format gpt51_thinking: 40/141
+    fe_manual_format gpt52: 120/141
+    fe_manual_format llama3_70b: 100/100
+  fe_manual_format | llama3_70b | task=binary_0 F1=0.765 LOO=0.765 thr=52.3
+    fe_manual_format gpt51_thinking: 50/141
+  fe_manual_format | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.722 LOO=0.701 thr=50.3 -> similarity_database_fe_manual_format_v6score_llama3_70b_binary_1_stats.json
+    fe_manual_format qwen_hf: 60/100
+    fe_manual_format gpt52: 130/141
+    fe_manual_format gpt51_thinking: 60/141
+    fe_manual_format gpt52: 140/141
+  fe_manual_format | gpt52 | task=binary_0 F1=0.723 LOO=0.723 thr=58.3
+  fe_manual_format | gpt52 | task=binary_1 (same scores, no extra API) F1=0.783 LOO=0.783 thr=58.3 -> similarity_database_fe_manual_format_v6score_gpt52_binary_1_stats.json
+    fe_manual_format qwen_hf: 70/100
+    fe_manual_format gpt51_thinking: 70/141
+    fe_manual_format gpt51_thinking: 80/141
+    fe_manual_format llama3_70b: 10/141
+    fe_manual_format gemini_25_pro: 10/100
+    fe_manual_format qwen_hf: 80/100
+    fe_manual_format gpt51_thinking: 90/141
+    fe_manual_format qwen_hf: 90/100
+    fe_manual_format gpt51_thinking: 100/141
+    fe_manual_format gemini_25_pro: 20/100
+    fe_manual_format gpt51_thinking: 110/141
+    fe_manual_format llama3_70b: 20/141
+    fe_manual_format gemini_25_pro: 30/100
+    fe_manual_format gpt51_thinking: 120/141
+    fe_manual_format qwen_hf: 100/100
+  fe_manual_format | qwen_hf | task=binary_0 F1=0.775 LOO=0.775 thr=40.2
+  fe_manual_format | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.766 LOO=0.766 thr=40.2 -> similarity_database_fe_manual_format_v6score_qwen_hf_binary_1_stats.json
+    fe_manual_format gpt51_thinking: 130/141
+    fe_manual_format gemini_25_pro: 40/100
+    fe_manual_format gpt51_thinking: 140/141
+  fe_manual_format | gpt51_thinking | task=binary_0 F1=0.779 LOO=0.779 thr=72.4
+  fe_manual_format | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.792 LOO=0.792 thr=58.3 -> similarity_database_fe_manual_format_v6score_gpt51_thinking_binary_1_stats.json
+    fe_manual_format qwen_hf: 10/141
+    fe_manual_format llama3_70b: 30/141
+    fe_manual_format gemini_25_pro: 50/100
+    fe_manual_format qwen_hf: 20/141
+    fe_manual_format gemini_25_pro: 60/100
+    fe_manual_format qwen_hf: 30/141
+    fe_manual_format gemini_25_pro: 70/100
+    fe_manual_format llama3_70b: 40/141
+    fe_manual_format qwen_hf: 40/141
+⚠️  NIM connection/timeout 1/6: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120), retry in 3s...
+    fe_manual_format gemini_25_pro: 80/100
+    fe_manual_format qwen_hf: 50/141
+    fe_manual_format gemini_25_pro: 90/100
+    fe_manual_format llama3_70b: 50/141
+    fe_manual_format qwen_hf: 60/141
+    fe_manual_format gemini_25_pro: 100/100
+  fe_manual_format | gemini_25_pro | task=binary_0 F1=0.794 LOO=0.778 thr=25.1
+  fe_manual_format | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.736 LOO=0.721 thr=25.1 -> similarity_database_fe_manual_format_v6score_gemini_25_pro_binary_1_stats.json
+    fe_manual_format qwen_hf: 70/141
+    fe_manual_format gemini_3_flash: 10/100
+    fe_manual_format gemini_3_flash: 20/100
+    fe_manual_format gemini_3_flash: 30/100
+    fe_manual_format qwen_hf: 80/141
+    fe_manual_format llama3_70b: 60/141
+    fe_manual_format gemini_3_flash: 40/100
+    fe_manual_format gemini_3_flash: 50/100
+    fe_manual_format qwen_hf: 90/141
+    fe_manual_format gemini_3_flash: 60/100
+⚠️  NIM connection/timeout 1/6: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120), retry in 3s...
+    fe_manual_format gemini_3_flash: 70/100
+    fe_manual_format gemini_3_flash: 80/100
+    fe_manual_format qwen_hf: 100/141
+    fe_manual_format gemini_3_flash: 90/100
+    fe_manual_format llama3_70b: 70/141
+    fe_manual_format gemini_3_flash: 100/100
+  fe_manual_format | gemini_3_flash | task=binary_0 F1=0.827 LOO=0.757 thr=65.3
+  fe_manual_format | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.788 LOO=0.788 thr=52.3 -> similarity_database_fe_manual_format_v6score_gemini_3_flash_binary_1_stats.json
+    fe_manual_format qwen_hf: 110/141
+⚠️  NIM connection/timeout 1/6: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120), retry in 3s...
+    fe_manual_format gemini_25_pro: 10/141
+    fe_manual_format qwen_hf: 120/141
+⚠️  NIM connection/timeout 1/6: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120), retry in 3s...
+    fe_manual_format gemini_25_pro: 20/141
+    fe_manual_format qwen_hf: 130/141
+    fe_manual_format llama3_70b: 80/141
+    fe_manual_format qwen_hf: 140/141
+  fe_manual_format | qwen_hf | task=binary_0 F1=0.769 LOO=0.759 thr=58.3
+  fe_manual_format | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.769 LOO=0.769 thr=40.2 -> similarity_database_fe_manual_format_v6score_qwen_hf_binary_1_stats.json
+⚠️  NIM connection/timeout 1/6: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120), retry in 3s...
+    fe_manual_format gemini_25_pro: 30/141
+    fe_manual_format gemma3_27b: 10/100
+    fe_manual_format gemma3_27b: 20/100
+    fe_manual_format gemma3_27b: 30/100
+    fe_manual_format gemini_25_pro: 40/141
+    fe_manual_format gemma3_27b: 40/100
+    fe_manual_format llama3_70b: 90/141
+    fe_manual_format gemma3_27b: 50/100
+    fe_manual_format gemini_25_pro: 50/141
+    fe_manual_format gemma3_27b: 60/100
+    fe_manual_format gemma3_27b: 70/100
+    fe_manual_format gemma3_27b: 80/100
+    fe_manual_format gemini_25_pro: 60/141
+    fe_manual_format llama3_70b: 100/141
+    fe_manual_format gemma3_27b: 90/100
+    fe_manual_format gemma3_27b: 100/100
+  fe_manual_format | gemma3_27b | task=binary_0 F1=0.805 LOO=0.790 thr=45.2
+  fe_manual_format | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.771 LOO=0.771 thr=45.2 -> similarity_database_fe_manual_format_v6score_gemma3_27b_binary_1_stats.json
+    fe_manual_format gemini_25_pro: 70/141
+    fe_manual_format gemma3_27b: 10/141
+    fe_manual_format gemma3_27b: 20/141
+⚠️  NIM connection/timeout 1/6: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120), retry in 3s...
+    fe_manual_format gemma3_27b: 30/141
+    fe_manual_format gemini_25_pro: 80/141
+    fe_manual_format gemma3_27b: 40/141
+⚠️  NIM connection/timeout 1/6: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120), retry in 3s...
+    fe_manual_format gemma3_27b: 50/141
+    fe_manual_format gemma3_27b: 60/141
+    fe_manual_format gemini_25_pro: 90/141
+    fe_manual_format llama3_70b: 110/141
+    fe_manual_format gemma3_27b: 70/141
+    fe_manual_format gemma3_27b: 80/141
+    fe_manual_format gemini_25_pro: 100/141
+    fe_manual_format gemma3_27b: 90/141
+    fe_manual_format gemma3_27b: 100/141
+⚠️  NIM connection/timeout 1/6: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120), retry in 3s...
+    fe_manual_format gemma3_27b: 110/141
+    fe_manual_format gemini_25_pro: 110/141
+    fe_manual_format gemma3_27b: 120/141
+⚠️  NIM connection/timeout 1/6: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120), retry in 3s...
+    fe_manual_format gemma3_27b: 130/141
+    fe_manual_format gemma3_27b: 140/141
+    fe_manual_format gemini_25_pro: 120/141
+  fe_manual_format | gemma3_27b | task=binary_0 F1=0.571 LOO=0.331 thr=65.3
+    fe_manual_format llama3_70b: 120/141
+  fe_manual_format | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.728 LOO=0.721 thr=55.3 -> similarity_database_fe_manual_format_v6score_gemma3_27b_binary_1_stats.json
+    fe_manual_format gemini_25_pro: 130/141
+⚠️  NIM connection/timeout 1/6: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120), retry in 3s...
+    fe_manual_format gemini_25_pro: 140/141
+⚠️  NIM connection/timeout 1/6: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120), retry in 3s...
+  fe_manual_format | gemini_25_pro | task=binary_0 F1=0.756 LOO=0.756 thr=35.2
+  fe_manual_format | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.746 LOO=0.678 thr=30.2 -> similarity_database_fe_manual_format_v6score_gemini_25_pro_binary_1_stats.json
+⚠️  NIM connection/timeout 2/6: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120), retry in 3s...
+    fe_manual_format gemini_3_flash: 10/141
+    fe_manual_format llama3_70b: 130/141
+    fe_manual_format gemini_3_flash: 20/141
+⚠️  NIM connection/timeout 1/6: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120), retry in 3s...
+    fe_manual_format gemini_3_flash: 30/141
+    fe_manual_format gemini_3_flash: 40/141
+⚠️  NIM connection/timeout 1/6: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120), retry in 3s...
+    fe_manual_format gemini_3_flash: 50/141
+    fe_manual_format gemini_3_flash: 60/141
+⚠️  NIM connection/timeout 1/6: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120), retry in 3s...
+    fe_manual_format gemini_3_flash: 70/141
+    fe_manual_format gemini_3_flash: 80/141
+⚠️  NIM connection/timeout 1/6: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120), retry in 3s...
+    fe_manual_format gemini_3_flash: 90/141
+    fe_manual_format gemini_3_flash: 100/141
+    fe_manual_format llama3_70b: 140/141
+  fe_manual_format | llama3_70b | task=binary_0 F1=0.571 LOO=0.571 thr=65.3
+  fe_manual_format | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.671 LOO=0.671 thr=48.2 -> similarity_database_fe_manual_format_v6score_llama3_70b_binary_1_stats.json
+    fe_manual_format gemini_3_flash: 110/141
+    fe_manual_format gemini_3_flash: 120/141
+    fe_manual_format gemini_3_flash: 130/141
+    fe_manual_format gemini_3_flash: 140/141
+  fe_manual_format | gemini_3_flash | task=binary_0 F1=0.760 LOO=0.748 thr=72.4
+  fe_manual_format | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.823 LOO=0.823 thr=62.3 -> similarity_database_fe_manual_format_v6score_gemini_3_flash_binary_1_stats.json
+
+============================================================
+  REP: fe_gpt_schema  (drugs → weapon per model)
+============================================================
+  (parallel: up to 4 workers; each runs drugs then weapon; provider caps: OpenAI≤2 HF≤2 NIM≤3 Gemini≤1)
+    fe_gpt_schema gpt4: 10/100 (cached ok)
+    fe_gpt_schema gpt4: 20/100 (cached ok)
+    fe_gpt_schema mistral: 10/100 (cached ok)    fe_gpt_schema gpt4: 30/100 (cached ok)    fe_gpt_schema gpt5mini: 10/100 (cached ok)
+
+    fe_gpt_schema mistral: 20/100 (cached ok)
+
+    fe_gpt_schema gpt5mini: 20/100 (cached ok)    fe_gpt_schema gpt4: 40/100 (cached ok)    fe_gpt_schema mistral: 30/100 (cached ok)
+
+
+    fe_gpt_schema qwen3_235b: 10/100 (cached ok)    fe_gpt_schema gpt4: 50/100 (cached ok)    fe_gpt_schema mistral: 40/100 (cached ok)    fe_gpt_schema gpt5mini: 30/100 (cached ok)
+
+
+    fe_gpt_schema gpt4: 60/100 (cached ok)
+    fe_gpt_schema qwen3_235b: 20/100 (cached ok)    fe_gpt_schema gpt5mini: 40/100 (cached ok)
+    fe_gpt_schema mistral: 50/100 (cached ok)
+    fe_gpt_schema gpt4: 70/100 (cached ok)
+
+
+    fe_gpt_schema mistral: 60/100 (cached ok)
+    fe_gpt_schema gpt5mini: 50/100 (cached ok)
+    fe_gpt_schema qwen3_235b: 30/100 (cached ok)    fe_gpt_schema gpt4: 80/100 (cached ok)    fe_gpt_schema gpt5mini: 60/100 (cached ok)
+    fe_gpt_schema gpt5mini: 70/100 (cached ok)
+    fe_gpt_schema gpt4: 90/100 (cached ok)
+
+    fe_gpt_schema mistral: 70/100 (cached ok)
+
+    fe_gpt_schema gpt4: 100/100 (cached ok)
+    fe_gpt_schema gpt5mini: 80/100 (cached ok)
+    fe_gpt_schema qwen3_235b: 40/100 (cached ok)
+    fe_gpt_schema mistral: 80/100 (cached ok)    fe_gpt_schema gpt5mini: 90/100 (cached ok)    fe_gpt_schema qwen3_235b: 50/100 (cached ok)
+
+    fe_gpt_schema qwen3_235b: 60/100 (cached ok)
+    fe_gpt_schema qwen3_235b: 70/100 (cached ok)
+    fe_gpt_schema mistral: 90/100 (cached ok)
+    fe_gpt_schema gpt5mini: 100/100 (cached ok)
+
+    fe_gpt_schema qwen3_235b: 80/100 (cached ok)
+    fe_gpt_schema mistral: 100/100 (cached ok)    fe_gpt_schema qwen3_235b: 90/100 (cached ok)
+
+    fe_gpt_schema qwen3_235b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | mistral | task=binary_0 F1=0.769 LOO=0.746 thr=70.4
+  fe_gpt_schema | gpt5mini | task=binary_0 F1=0.879 LOO=0.879 thr=65.3
+  fe_gpt_schema | qwen3_235b | task=binary_0 F1=0.833 LOO=0.771 thr=50.3
+  fe_gpt_schema | gpt4 | task=binary_0 F1=0.857 LOO=0.857 thr=60.3
+  fe_gpt_schema | mistral | task=binary_1 (same scores, no extra API) F1=0.722 LOO=0.722 thr=60.3 -> similarity_database_fe_gpt_schema_v6score_mistral_binary_1_stats.json
+    fe_gpt_schema mistral: 10/141 (cached ok)
+    fe_gpt_schema mistral: 20/141 (cached ok)
+    fe_gpt_schema mistral: 30/141 (cached ok)
+    fe_gpt_schema mistral: 40/141 (cached ok)
+    fe_gpt_schema mistral: 50/141 (cached ok)
+    fe_gpt_schema mistral: 60/141 (cached ok)
+    fe_gpt_schema mistral: 70/141 (cached ok)
+    fe_gpt_schema mistral: 80/141 (cached ok)
+    fe_gpt_schema mistral: 90/141 (cached ok)
+    fe_gpt_schema mistral: 100/141 (cached ok)
+    fe_gpt_schema mistral: 110/141 (cached ok)
+    fe_gpt_schema mistral: 120/141 (cached ok)
+    fe_gpt_schema mistral: 130/141 (cached ok)
+    fe_gpt_schema mistral: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.762 LOO=0.762 thr=62.3 -> similarity_database_fe_gpt_schema_v6score_gpt5mini_binary_1_stats.json
+    fe_gpt_schema gpt5mini: 10/141 (cached ok)
+    fe_gpt_schema gpt5mini: 20/141 (cached ok)
+    fe_gpt_schema gpt5mini: 30/141 (cached ok)
+    fe_gpt_schema gpt5mini: 40/141 (cached ok)
+    fe_gpt_schema gpt5mini: 50/141 (cached ok)
+    fe_gpt_schema gpt5mini: 60/141 (cached ok)
+    fe_gpt_schema gpt5mini: 70/141 (cached ok)
+    fe_gpt_schema gpt5mini: 80/141 (cached ok)
+    fe_gpt_schema gpt5mini: 90/141 (cached ok)
+    fe_gpt_schema gpt5mini: 100/141 (cached ok)
+    fe_gpt_schema gpt5mini: 110/141 (cached ok)
+    fe_gpt_schema gpt5mini: 120/141 (cached ok)
+    fe_gpt_schema gpt5mini: 130/141 (cached ok)
+    fe_gpt_schema gpt5mini: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.780 LOO=0.780 thr=40.2 -> similarity_database_fe_gpt_schema_v6score_qwen3_235b_binary_1_stats.json
+    fe_gpt_schema qwen3_235b: 10/141 (cached ok)
+    fe_gpt_schema qwen3_235b: 20/141 (cached ok)
+    fe_gpt_schema qwen3_235b: 30/141 (cached ok)
+    fe_gpt_schema qwen3_235b: 40/141 (cached ok)
+    fe_gpt_schema qwen3_235b: 50/141 (cached ok)
+    fe_gpt_schema qwen3_235b: 60/141 (cached ok)
+    fe_gpt_schema qwen3_235b: 70/141 (cached ok)
+    fe_gpt_schema qwen3_235b: 80/141 (cached ok)
+    fe_gpt_schema qwen3_235b: 90/141 (cached ok)
+    fe_gpt_schema qwen3_235b: 100/141 (cached ok)
+    fe_gpt_schema qwen3_235b: 110/141 (cached ok)
+    fe_gpt_schema qwen3_235b: 120/141 (cached ok)
+    fe_gpt_schema qwen3_235b: 130/141 (cached ok)
+    fe_gpt_schema qwen3_235b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | gpt4 | task=binary_1 (same scores, no extra API) F1=0.791 LOO=0.756 thr=48.2 -> similarity_database_fe_gpt_schema_v6score_gpt4_binary_1_stats.json
+    fe_gpt_schema gpt4: 10/141 (cached ok)
+    fe_gpt_schema gpt4: 20/141 (cached ok)
+    fe_gpt_schema gpt4: 30/141 (cached ok)
+    fe_gpt_schema gpt4: 40/141 (cached ok)
+    fe_gpt_schema gpt4: 50/141 (cached ok)
+    fe_gpt_schema gpt4: 60/141 (cached ok)
+    fe_gpt_schema gpt4: 70/141 (cached ok)
+    fe_gpt_schema gpt4: 80/141 (cached ok)
+    fe_gpt_schema gpt4: 90/141 (cached ok)
+    fe_gpt_schema gpt4: 100/141 (cached ok)
+    fe_gpt_schema gpt4: 110/141 (cached ok)
+    fe_gpt_schema gpt4: 120/141 (cached ok)
+    fe_gpt_schema gpt4: 130/141 (cached ok)
+    fe_gpt_schema gpt4: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | mistral | task=binary_0 F1=0.576 LOO=0.576 thr=45.2
+  fe_gpt_schema | gpt5mini | task=binary_0 F1=0.675 LOO=0.675 thr=65.3
+  fe_gpt_schema | gpt4 | task=binary_0 F1=0.697 LOO=0.697 thr=65.3
+  fe_gpt_schema | qwen3_235b | task=binary_0 F1=0.651 LOO=0.602 thr=50.3
+  fe_gpt_schema | mistral | task=binary_1 (same scores, no extra API) F1=0.726 LOO=0.726 thr=45.2 -> similarity_database_fe_gpt_schema_v6score_mistral_binary_1_stats.json
+    fe_gpt_schema llama3_70b: 10/100 (cached ok)
+    fe_gpt_schema llama3_70b: 20/100 (cached ok)
+    fe_gpt_schema llama3_70b: 30/100 (cached ok)
+    fe_gpt_schema llama3_70b: 40/100 (cached ok)
+    fe_gpt_schema llama3_70b: 50/100 (cached ok)
+    fe_gpt_schema llama3_70b: 60/100 (cached ok)
+    fe_gpt_schema llama3_70b: 70/100 (cached ok)
+    fe_gpt_schema llama3_70b: 80/100 (cached ok)
+    fe_gpt_schema llama3_70b: 90/100 (cached ok)
+    fe_gpt_schema llama3_70b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.718 LOO=0.709 thr=55.3 -> similarity_database_fe_gpt_schema_v6score_gpt5mini_binary_1_stats.json
+    fe_gpt_schema gpt52: 10/100 (cached ok)
+    fe_gpt_schema gpt52: 20/100 (cached ok)
+    fe_gpt_schema gpt52: 30/100 (cached ok)
+    fe_gpt_schema gpt52: 40/100 (cached ok)
+    fe_gpt_schema gpt52: 50/100 (cached ok)
+    fe_gpt_schema gpt52: 60/100 (cached ok)
+    fe_gpt_schema gpt52: 70/100 (cached ok)
+    fe_gpt_schema gpt52: 80/100 (cached ok)
+    fe_gpt_schema gpt52: 90/100 (cached ok)
+    fe_gpt_schema gpt52: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.718 LOO=0.718 thr=40.2 -> similarity_database_fe_gpt_schema_v6score_qwen3_235b_binary_1_stats.json
+  fe_gpt_schema | gpt4 | task=binary_1 (same scores, no extra API) F1=0.768 LOO=0.768 thr=55.3 -> similarity_database_fe_gpt_schema_v6score_gpt4_binary_1_stats.json
+    fe_gpt_schema qwen_hf: 10/100 (cached ok)
+    fe_gpt_schema qwen_hf: 20/100 (cached ok)
+    fe_gpt_schema qwen_hf: 30/100 (cached ok)
+    fe_gpt_schema qwen_hf: 40/100 (cached ok)
+    fe_gpt_schema qwen_hf: 50/100 (cached ok)
+    fe_gpt_schema qwen_hf: 60/100 (cached ok)
+    fe_gpt_schema gpt51_thinking: 10/100 (cached ok)    fe_gpt_schema qwen_hf: 70/100 (cached ok)
+
+    fe_gpt_schema gpt51_thinking: 20/100 (cached ok)    fe_gpt_schema qwen_hf: 80/100 (cached ok)
+
+    fe_gpt_schema qwen_hf: 90/100 (cached ok)    fe_gpt_schema gpt51_thinking: 30/100 (cached ok)
+
+    fe_gpt_schema qwen_hf: 100/100 (cached ok)    fe_gpt_schema gpt51_thinking: 40/100 (cached ok)
+
+    fe_gpt_schema gpt51_thinking: 50/100 (cached ok)
+    fe_gpt_schema gpt51_thinking: 60/100 (cached ok)
+    fe_gpt_schema gpt51_thinking: 70/100 (cached ok)
+    fe_gpt_schema gpt51_thinking: 80/100 (cached ok)
+    fe_gpt_schema gpt51_thinking: 90/100 (cached ok)
+    fe_gpt_schema gpt51_thinking: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | llama3_70b | task=binary_0 F1=0.787 LOO=0.746 thr=60.3
+  fe_gpt_schema | gpt52 | task=binary_0 F1=0.865 LOO=0.853 thr=56.3
+  fe_gpt_schema | qwen_hf | task=binary_0 F1=0.800 LOO=0.767 thr=65.3
+  fe_gpt_schema | gpt51_thinking | task=binary_0 F1=0.882 LOO=0.866 thr=62.3
+  fe_gpt_schema | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.756 LOO=0.756 thr=30.2 -> similarity_database_fe_gpt_schema_v6score_llama3_70b_binary_1_stats.json
+    fe_gpt_schema llama3_70b: 10/141 (cached ok)
+    fe_gpt_schema llama3_70b: 20/141 (cached ok)
+    fe_gpt_schema llama3_70b: 30/141 (cached ok)
+    fe_gpt_schema llama3_70b: 40/141 (cached ok)
+    fe_gpt_schema llama3_70b: 50/141 (cached ok)
+    fe_gpt_schema llama3_70b: 60/141 (cached ok)
+    fe_gpt_schema llama3_70b: 70/141 (cached ok)
+    fe_gpt_schema llama3_70b: 80/141 (cached ok)
+    fe_gpt_schema llama3_70b: 90/141 (cached ok)
+    fe_gpt_schema llama3_70b: 100/141 (cached ok)
+    fe_gpt_schema llama3_70b: 110/141 (cached ok)
+    fe_gpt_schema llama3_70b: 120/141 (cached ok)
+    fe_gpt_schema llama3_70b: 130/141 (cached ok)
+    fe_gpt_schema llama3_70b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | gpt52 | task=binary_1 (same scores, no extra API) F1=0.786 LOO=0.786 thr=55.3 -> similarity_database_fe_gpt_schema_v6score_gpt52_binary_1_stats.json
+    fe_gpt_schema gpt52: 10/141 (cached ok)
+    fe_gpt_schema gpt52: 20/141 (cached ok)
+    fe_gpt_schema gpt52: 30/141 (cached ok)
+    fe_gpt_schema gpt52: 40/141 (cached ok)
+    fe_gpt_schema gpt52: 50/141 (cached ok)
+    fe_gpt_schema gpt52: 60/141 (cached ok)
+    fe_gpt_schema gpt52: 70/141 (cached ok)
+    fe_gpt_schema gpt52: 80/141 (cached ok)
+    fe_gpt_schema gpt52: 90/141 (cached ok)
+    fe_gpt_schema gpt52: 100/141 (cached ok)
+    fe_gpt_schema gpt52: 110/141 (cached ok)
+    fe_gpt_schema gpt52: 120/141 (cached ok)
+    fe_gpt_schema gpt52: 130/141 (cached ok)
+    fe_gpt_schema gpt52: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.784 LOO=0.784 thr=40.2 -> similarity_database_fe_gpt_schema_v6score_qwen_hf_binary_1_stats.json
+    fe_gpt_schema qwen_hf: 10/141 (cached ok)
+    fe_gpt_schema qwen_hf: 20/141 (cached ok)
+    fe_gpt_schema qwen_hf: 30/141 (cached ok)
+    fe_gpt_schema qwen_hf: 40/141 (cached ok)
+    fe_gpt_schema qwen_hf: 50/141 (cached ok)
+    fe_gpt_schema qwen_hf: 60/141 (cached ok)
+    fe_gpt_schema qwen_hf: 70/141 (cached ok)
+    fe_gpt_schema qwen_hf: 80/141 (cached ok)
+    fe_gpt_schema qwen_hf: 90/141 (cached ok)
+    fe_gpt_schema qwen_hf: 100/141 (cached ok)
+    fe_gpt_schema qwen_hf: 110/141 (cached ok)
+    fe_gpt_schema qwen_hf: 120/141 (cached ok)
+    fe_gpt_schema qwen_hf: 130/141 (cached ok)
+    fe_gpt_schema qwen_hf: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.769 LOO=0.639 thr=42.2 -> similarity_database_fe_gpt_schema_v6score_gpt51_thinking_binary_1_stats.json
+    fe_gpt_schema gpt51_thinking: 10/141 (cached ok)
+    fe_gpt_schema gpt51_thinking: 20/141 (cached ok)
+    fe_gpt_schema gpt51_thinking: 30/141 (cached ok)
+    fe_gpt_schema gpt51_thinking: 40/141 (cached ok)
+    fe_gpt_schema gpt51_thinking: 50/141 (cached ok)
+    fe_gpt_schema gpt51_thinking: 60/141 (cached ok)
+    fe_gpt_schema gpt51_thinking: 70/141 (cached ok)
+    fe_gpt_schema gpt51_thinking: 80/141 (cached ok)
+    fe_gpt_schema gpt51_thinking: 90/141 (cached ok)
+    fe_gpt_schema gpt51_thinking: 100/141 (cached ok)
+    fe_gpt_schema gpt51_thinking: 110/141 (cached ok)
+    fe_gpt_schema gpt51_thinking: 120/141 (cached ok)
+    fe_gpt_schema gpt51_thinking: 130/141 (cached ok)
+    fe_gpt_schema gpt51_thinking: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | llama3_70b | task=binary_0 F1=0.525 LOO=0.500 thr=48.2
+  fe_gpt_schema | gpt52 | task=binary_0 F1=0.686 LOO=0.686 thr=58.3
+  fe_gpt_schema | qwen_hf | task=binary_0 F1=0.641 LOO=0.633 thr=58.3
+  fe_gpt_schema | gpt51_thinking | task=binary_0 F1=0.646 LOO=0.527 thr=65.3
+  fe_gpt_schema | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.653 LOO=0.653 thr=38.2 -> similarity_database_fe_gpt_schema_v6score_llama3_70b_binary_1_stats.json
+    fe_gpt_schema gemini_25_pro: 10/100 (cached ok)
+    fe_gpt_schema gemini_25_pro: 20/100 (cached ok)
+    fe_gpt_schema gemini_25_pro: 30/100 (cached ok)
+    fe_gpt_schema gemini_25_pro: 40/100 (cached ok)
+    fe_gpt_schema gemini_25_pro: 50/100 (cached ok)
+    fe_gpt_schema gemini_25_pro: 60/100 (cached ok)
+    fe_gpt_schema gemini_25_pro: 70/100 (cached ok)
+    fe_gpt_schema gemini_25_pro: 80/100 (cached ok)
+    fe_gpt_schema gemini_25_pro: 90/100 (cached ok)
+    fe_gpt_schema gemini_25_pro: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | gpt52 | task=binary_1 (same scores, no extra API) F1=0.757 LOO=0.662 thr=56.3 -> similarity_database_fe_gpt_schema_v6score_gpt52_binary_1_stats.json
+  fe_gpt_schema | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.724 LOO=0.724 thr=40.2 -> similarity_database_fe_gpt_schema_v6score_qwen_hf_binary_1_stats.json
+    fe_gpt_schema gemma3_27b: 10/100 (cached ok)
+    fe_gpt_schema gemma3_27b: 20/100 (cached ok)
+    fe_gpt_schema gemma3_27b: 30/100 (cached ok)
+    fe_gpt_schema gemma3_27b: 40/100 (cached ok)
+    fe_gpt_schema gemma3_27b: 50/100 (cached ok)
+    fe_gpt_schema gemma3_27b: 60/100 (cached ok)
+    fe_gpt_schema gemma3_27b: 70/100 (cached ok)
+    fe_gpt_schema gemma3_27b: 80/100 (cached ok)
+    fe_gpt_schema gemma3_27b: 90/100 (cached ok)
+    fe_gpt_schema gemma3_27b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.757 LOO=0.737 thr=58.3 -> similarity_database_fe_gpt_schema_v6score_gpt51_thinking_binary_1_stats.json
+  fe_gpt_schema | gemini_25_pro | task=binary_0 F1=0.857 LOO=0.833 thr=45.2
+  fe_gpt_schema | gemma3_27b | task=binary_0 F1=0.780 LOO=0.780 thr=65.3
+  fe_gpt_schema | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.764 LOO=0.764 thr=35.2 -> similarity_database_fe_gpt_schema_v6score_gemini_25_pro_binary_1_stats.json
+    fe_gpt_schema gemini_3_flash: 10/100 (cached ok)
+    fe_gpt_schema gemini_3_flash: 20/100 (cached ok)
+    fe_gpt_schema gemini_3_flash: 30/100 (cached ok)
+    fe_gpt_schema gemini_3_flash: 40/100 (cached ok)
+    fe_gpt_schema gemini_3_flash: 50/100 (cached ok)
+    fe_gpt_schema gemini_3_flash: 60/100 (cached ok)
+    fe_gpt_schema gemini_3_flash: 70/100 (cached ok)
+    fe_gpt_schema gemini_3_flash: 80/100 (cached ok)
+    fe_gpt_schema gemini_3_flash: 90/100 (cached ok)
+    fe_gpt_schema gemini_3_flash: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.755 LOO=0.748 thr=55.3 -> similarity_database_fe_gpt_schema_v6score_gemma3_27b_binary_1_stats.json
+    fe_gpt_schema gemma3_27b: 10/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 20/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 30/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 40/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 50/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 60/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 70/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 80/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 90/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 100/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 110/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 120/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 130/141 (cached ok)
+    fe_gpt_schema gemma3_27b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | gemini_3_flash | task=binary_0 F1=0.831 LOO=0.743 thr=72.4
+  fe_gpt_schema | gemma3_27b | task=binary_0 F1=0.532 LOO=0.496 thr=55.3
+  fe_gpt_schema | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.738 LOO=0.726 thr=48.2 -> similarity_database_fe_gpt_schema_v6score_gemini_3_flash_binary_1_stats.json
+    fe_gpt_schema gemini_25_pro: 10/141 (cached ok)
+    fe_gpt_schema gemini_25_pro: 20/141 (cached ok)
+    fe_gpt_schema gemini_25_pro: 30/141 (cached ok)
+    fe_gpt_schema gemini_25_pro: 40/141 (cached ok)
+    fe_gpt_schema gemini_25_pro: 50/141 (cached ok)
+    fe_gpt_schema gemini_25_pro: 60/141 (cached ok)
+    fe_gpt_schema gemini_25_pro: 70/141 (cached ok)
+    fe_gpt_schema gemini_25_pro: 80/141 (cached ok)
+    fe_gpt_schema gemini_25_pro: 90/141 (cached ok)
+    fe_gpt_schema gemini_25_pro: 100/141 (cached ok)
+    fe_gpt_schema gemini_25_pro: 110/141 (cached ok)
+    fe_gpt_schema gemini_25_pro: 120/141 (cached ok)
+    fe_gpt_schema gemini_25_pro: 130/141 (cached ok)
+    fe_gpt_schema gemini_25_pro: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.674 LOO=0.588 thr=40.2 -> similarity_database_fe_gpt_schema_v6score_gemma3_27b_binary_1_stats.json
+  fe_gpt_schema | gemini_25_pro | task=binary_0 F1=0.691 LOO=0.691 thr=55.3
+  fe_gpt_schema | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.838 LOO=0.838 thr=30.2 -> similarity_database_fe_gpt_schema_v6score_gemini_25_pro_binary_1_stats.json
+    fe_gpt_schema gemini_3_flash: 10/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 20/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 30/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 40/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 50/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 60/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 70/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 80/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 90/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 100/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 110/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 120/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 130/141 (cached ok)
+    fe_gpt_schema gemini_3_flash: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema | gemini_3_flash | task=binary_0 F1=0.451 LOO=0.451 thr=0.0
+  fe_gpt_schema | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.611 LOO=0.611 thr=0.0 -> similarity_database_fe_gpt_schema_v6score_gemini_3_flash_binary_1_stats.json
+
+============================================================
+  REP: gpt_law  (drugs → weapon per model)
+============================================================
+  (parallel: up to 4 workers; each runs drugs then weapon; provider caps: OpenAI≤2 HF≤2 NIM≤3 Gemini≤1)
+    gpt_law mistral: 10/100 (cached ok)    gpt_law gpt5mini: 10/100 (cached ok)
+
+    gpt_law gpt5mini: 20/100 (cached ok)    gpt_law qwen3_235b: 10/100 (cached ok)    gpt_law gpt4: 10/100 (cached ok)
+
+
+    gpt_law gpt4: 20/100 (cached ok)
+    gpt_law qwen3_235b: 20/100 (cached ok)
+    gpt_law gpt4: 30/100 (cached ok)    gpt_law qwen3_235b: 30/100 (cached ok)
+    gpt_law gpt5mini: 30/100 (cached ok)    gpt_law qwen3_235b: 40/100 (cached ok)
+
+    gpt_law qwen3_235b: 50/100 (cached ok)
+
+    gpt_law qwen3_235b: 60/100 (cached ok)
+    gpt_law gpt4: 40/100 (cached ok)
+    gpt_law gpt5mini: 40/100 (cached ok)
+    gpt_law gpt4: 50/100 (cached ok)
+    gpt_law gpt5mini: 50/100 (cached ok)
+    gpt_law gpt4: 60/100 (cached ok)
+    gpt_law qwen3_235b: 70/100 (cached ok)
+    gpt_law gpt4: 70/100 (cached ok)
+    gpt_law qwen3_235b: 80/100 (cached ok)
+    gpt_law gpt4: 80/100 (cached ok)
+    gpt_law qwen3_235b: 90/100 (cached ok)
+    gpt_law gpt4: 90/100 (cached ok)
+    gpt_law qwen3_235b: 100/100 (cached ok)
+    gpt_law gpt4: 100/100 (cached ok)
+    gpt_law gpt5mini: 60/100 (cached ok)
+    gpt_law gpt5mini: 70/100 (cached ok)
+    gpt_law gpt5mini: 80/100 (cached ok)
+    gpt_law gpt5mini: 90/100 (cached ok)
+    gpt_law gpt5mini: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_law | qwen3_235b | task=binary_0 F1=0.877 LOO=0.877 thr=55.3
+  gpt_law | gpt5mini | task=binary_0 F1=0.873 LOO=0.841 thr=62.3
+  gpt_law | gpt4 | task=binary_0 F1=0.870 LOO=0.829 thr=68.3
+  gpt_law | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.759 LOO=0.725 thr=55.3 -> similarity_database_with_gpt_law_features_v6score_qwen3_235b_binary_1_stats.json
+    gpt_law qwen3_235b: 10/141 (cached ok)
+    gpt_law qwen3_235b: 20/141 (cached ok)
+    gpt_law qwen3_235b: 30/141 (cached ok)
+    gpt_law qwen3_235b: 40/141 (cached ok)
+    gpt_law qwen3_235b: 50/141 (cached ok)
+    gpt_law qwen3_235b: 60/141 (cached ok)
+    gpt_law qwen3_235b: 70/141 (cached ok)
+    gpt_law qwen3_235b: 80/141 (cached ok)
+    gpt_law qwen3_235b: 90/141 (cached ok)
+    gpt_law qwen3_235b: 100/141 (cached ok)
+    gpt_law qwen3_235b: 110/141 (cached ok)
+    gpt_law qwen3_235b: 120/141 (cached ok)
+    gpt_law qwen3_235b: 130/141 (cached ok)
+    gpt_law qwen3_235b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_law | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.771 LOO=0.745 thr=55.3 -> similarity_database_with_gpt_law_features_v6score_gpt5mini_binary_1_stats.json
+    gpt_law gpt5mini: 10/141 (cached ok)
+    gpt_law gpt5mini: 20/141 (cached ok)
+    gpt_law gpt5mini: 30/141 (cached ok)
+    gpt_law gpt5mini: 40/141 (cached ok)
+    gpt_law gpt5mini: 50/141 (cached ok)
+    gpt_law gpt5mini: 60/141 (cached ok)
+    gpt_law gpt5mini: 70/141 (cached ok)
+    gpt_law gpt5mini: 80/141 (cached ok)
+    gpt_law gpt5mini: 90/141 (cached ok)
+    gpt_law gpt5mini: 100/141 (cached ok)
+    gpt_law gpt5mini: 110/141 (cached ok)
+    gpt_law gpt5mini: 120/141 (cached ok)
+    gpt_law gpt5mini: 130/141 (cached ok)
+    gpt_law gpt5mini: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_law | gpt4 | task=binary_1 (same scores, no extra API) F1=0.769 LOO=0.745 thr=38.2 -> similarity_database_with_gpt_law_features_v6score_gpt4_binary_1_stats.json
+    gpt_law gpt4: 10/141 (cached ok)
+    gpt_law gpt4: 20/141 (cached ok)
+    gpt_law gpt4: 30/141 (cached ok)
+    gpt_law gpt4: 40/141 (cached ok)
+    gpt_law gpt4: 50/141 (cached ok)
+    gpt_law gpt4: 60/141 (cached ok)
+    gpt_law gpt4: 70/141 (cached ok)
+    gpt_law gpt4: 80/141 (cached ok)
+    gpt_law gpt4: 90/141 (cached ok)
+    gpt_law gpt4: 100/141 (cached ok)
+    gpt_law gpt4: 110/141 (cached ok)
+    gpt_law gpt4: 120/141 (cached ok)
+    gpt_law gpt4: 130/141 (cached ok)
+    gpt_law gpt4: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_law | qwen3_235b | task=binary_0 F1=0.653 LOO=0.646 thr=50.3
+  gpt_law | gpt5mini | task=binary_0 F1=0.621 LOO=0.621 thr=65.3
+    gpt_law mistral: 20/100 (cached ok)
+    gpt_law mistral: 30/100 (cached ok)
+    gpt_law mistral: 40/100 (cached ok)
+    gpt_law mistral: 50/100 (cached ok)
+    gpt_law mistral: 60/100 (cached ok)
+    gpt_law mistral: 70/100 (cached ok)
+    gpt_law mistral: 80/100 (cached ok)
+    gpt_law mistral: 90/100 (cached ok)
+    gpt_law mistral: 100/100 (cached ok)
+    (row cache: skipped 99 ok rows; refetched 1 non-ok/missing)
+  gpt_law | gpt4 | task=binary_0 F1=0.626 LOO=0.553 thr=65.3
+  gpt_law | mistral | task=binary_0 F1=0.761 LOO=0.743 thr=65.3 (partial: 1 rows still invalid — delete those rows or re-run)
+  gpt_law | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.723 LOO=0.723 thr=35.2 -> similarity_database_with_gpt_law_features_v6score_qwen3_235b_binary_1_stats.json
+    gpt_law llama3_70b: 10/100 (cached ok)
+    gpt_law llama3_70b: 20/100 (cached ok)
+    gpt_law llama3_70b: 30/100 (cached ok)
+    gpt_law llama3_70b: 40/100 (cached ok)
+    gpt_law llama3_70b: 50/100 (cached ok)
+    gpt_law llama3_70b: 60/100 (cached ok)
+    gpt_law llama3_70b: 70/100 (cached ok)
+    gpt_law llama3_70b: 80/100 (cached ok)
+    gpt_law llama3_70b: 90/100 (cached ok)
+    gpt_law llama3_70b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_law | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.758 LOO=0.742 thr=40.2 -> similarity_database_with_gpt_law_features_v6score_gpt5mini_binary_1_stats.json
+    gpt_law gpt52: 10/100 (cached ok)
+    gpt_law gpt52: 20/100 (cached ok)
+    gpt_law gpt52: 30/100 (cached ok)
+    gpt_law gpt52: 40/100 (cached ok)
+    gpt_law gpt52: 50/100 (cached ok)
+    gpt_law gpt52: 60/100 (cached ok)
+    gpt_law gpt52: 70/100 (cached ok)
+    gpt_law gpt52: 80/100 (cached ok)
+    gpt_law gpt52: 90/100 (cached ok)
+    gpt_law gpt52: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_law | gpt4 | task=binary_1 (same scores, no extra API) F1=0.750 LOO=0.750 thr=65.3 -> similarity_database_with_gpt_law_features_v6score_gpt4_binary_1_stats.json
+    gpt_law gpt51_thinking: 10/100 (cached ok)
+    gpt_law gpt51_thinking: 20/100 (cached ok)
+    gpt_law gpt51_thinking: 30/100 (cached ok)
+    gpt_law gpt51_thinking: 40/100 (cached ok)
+    gpt_law gpt51_thinking: 50/100 (cached ok)
+    gpt_law gpt51_thinking: 60/100 (cached ok)
+    gpt_law gpt51_thinking: 70/100 (cached ok)
+    gpt_law gpt51_thinking: 80/100 (cached ok)
+    gpt_law gpt51_thinking: 90/100 (cached ok)
+    gpt_law gpt51_thinking: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_law | mistral | task=binary_1 (same scores, no extra API) F1=0.695 LOO=0.689 thr=60.3 -> similarity_database_with_gpt_law_features_v6score_mistral_binary_1_stats.json
+    gpt_law mistral: 10/141 (cached ok)
+    gpt_law mistral: 20/141 (cached ok)
+    gpt_law mistral: 30/141 (cached ok)
+    gpt_law mistral: 40/141 (cached ok)
+    gpt_law mistral: 50/141 (cached ok)
+    gpt_law mistral: 60/141 (cached ok)
+    gpt_law mistral: 70/141 (cached ok)
+    gpt_law mistral: 80/141 (cached ok)
+    gpt_law mistral: 90/141 (cached ok)
+    gpt_law mistral: 100/141 (cached ok)
+    gpt_law mistral: 110/141 (cached ok)
+    gpt_law mistral: 120/141 (cached ok)
+    gpt_law mistral: 130/141 (cached ok)
+    gpt_law mistral: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_law | llama3_70b | task=binary_0 F1=0.825 LOO=0.825 thr=68.3
+  gpt_law | gpt52 | task=binary_0 F1=0.857 LOO=0.833 thr=58.3
+  gpt_law | gpt51_thinking | task=binary_0 F1=0.873 LOO=0.845 thr=65.3
+  gpt_law | mistral | task=binary_0 F1=0.585 LOO=0.585 thr=60.3
+  gpt_law | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.752 LOO=0.752 thr=58.3 -> similarity_database_with_gpt_law_features_v6score_llama3_70b_binary_1_stats.json
+    gpt_law llama3_70b: 10/141 (cached ok)
+    gpt_law llama3_70b: 20/141 (cached ok)
+    gpt_law llama3_70b: 30/141 (cached ok)
+    gpt_law llama3_70b: 40/141 (cached ok)
+    gpt_law llama3_70b: 50/141 (cached ok)
+    gpt_law llama3_70b: 60/141 (cached ok)
+    gpt_law llama3_70b: 70/141 (cached ok)
+    gpt_law llama3_70b: 80/141 (cached ok)
+    gpt_law llama3_70b: 90/141 (cached ok)
+    gpt_law llama3_70b: 100/141 (cached ok)
+    gpt_law llama3_70b: 110/141 (cached ok)
+    gpt_law llama3_70b: 120/141 (cached ok)
+    gpt_law llama3_70b: 130/141 (cached ok)
+    gpt_law llama3_70b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_law | gpt52 | task=binary_1 (same scores, no extra API) F1=0.764 LOO=0.680 thr=38.2 -> similarity_database_with_gpt_law_features_v6score_gpt52_binary_1_stats.json
+    gpt_law gpt52: 10/141 (cached ok)
+    gpt_law gpt52: 20/141 (cached ok)
+    gpt_law gpt52: 30/141 (cached ok)
+    gpt_law gpt52: 40/141 (cached ok)
+    gpt_law gpt52: 50/141 (cached ok)
+    gpt_law gpt52: 60/141 (cached ok)
+    gpt_law gpt52: 70/141 (cached ok)
+    gpt_law gpt52: 80/141 (cached ok)
+    gpt_law gpt52: 90/141 (cached ok)
+    gpt_law gpt52: 100/141 (cached ok)
+    gpt_law gpt52: 110/141 (cached ok)
+    gpt_law gpt52: 120/141 (cached ok)
+    gpt_law gpt52: 130/141 (cached ok)
+    gpt_law gpt52: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_law | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.774 LOO=0.733 thr=58.3 -> similarity_database_with_gpt_law_features_v6score_gpt51_thinking_binary_1_stats.json
+    gpt_law gpt51_thinking: 10/141 (cached ok)
+    gpt_law gpt51_thinking: 20/141 (cached ok)
+    gpt_law gpt51_thinking: 30/141 (cached ok)
+    gpt_law gpt51_thinking: 40/141 (cached ok)
+    gpt_law gpt51_thinking: 50/141 (cached ok)
+    gpt_law gpt51_thinking: 60/141 (cached ok)
+    gpt_law gpt51_thinking: 70/141 (cached ok)
+    gpt_law gpt51_thinking: 80/141 (cached ok)
+    gpt_law gpt51_thinking: 90/141 (cached ok)
+    gpt_law gpt51_thinking: 100/141 (cached ok)
+    gpt_law gpt51_thinking: 110/141 (cached ok)
+    gpt_law gpt51_thinking: 120/141 (cached ok)
+    gpt_law gpt51_thinking: 130/141 (cached ok)
+    gpt_law gpt51_thinking: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_law | llama3_70b | task=binary_0 F1=0.567 LOO=0.528 thr=55.3
+  gpt_law | mistral | task=binary_1 (same scores, no extra API) F1=0.742 LOO=0.723 thr=60.3 -> similarity_database_with_gpt_law_features_v6score_mistral_binary_1_stats.json
+    gpt_law qwen_hf: 10/100 (cached ok)
+    gpt_law qwen_hf: 20/100 (cached ok)
+    gpt_law qwen_hf: 30/100 (cached ok)
+    gpt_law qwen_hf: 40/100 (cached ok)
+    gpt_law qwen_hf: 50/100 (cached ok)
+    gpt_law qwen_hf: 60/100 (cached ok)
+    gpt_law qwen_hf: 70/100 (cached ok)
+    gpt_law qwen_hf: 80/100 (cached ok)
+    gpt_law qwen_hf: 90/100 (cached ok)
+    gpt_law qwen_hf: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_law | gpt52 | task=binary_0 F1=0.676 LOO=0.521 thr=66.3
+  gpt_law | gpt51_thinking | task=binary_0 F1=0.710 LOO=0.652 thr=68.3
+  gpt_law | qwen_hf | task=binary_0 F1=0.853 LOO=0.853 thr=58.3
+  gpt_law | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.730 LOO=0.725 thr=55.3 -> similarity_database_with_gpt_law_features_v6score_llama3_70b_binary_1_stats.json
+    gpt_law gemini_25_pro: 10/100 (cached ok)
+    gpt_law gemini_25_pro: 20/100 (cached ok)
+    gpt_law gemini_25_pro: 30/100 (cached ok)
+    gpt_law gemini_25_pro: 40/100 (cached ok)
+    gpt_law gemini_25_pro: 50/100 (cached ok)
+    gpt_law gemini_25_pro: 60/100 (cached ok)
+    gpt_law gemini_25_pro: 70/100 (cached ok)
+    gpt_law gemini_25_pro: 80/100 (cached ok)
+    gpt_law gemini_25_pro: 90/100 (cached ok)
+    gpt_law gemini_25_pro: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_law | gpt52 | task=binary_1 (same scores, no extra API) F1=0.828 LOO=0.828 thr=58.3 -> similarity_database_with_gpt_law_features_v6score_gpt52_binary_1_stats.json
+  gpt_law | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.752 LOO=0.752 thr=40.2 -> similarity_database_with_gpt_law_features_v6score_qwen_hf_binary_1_stats.json
+    gpt_law qwen_hf: 10/141 (cached ok)
+    gpt_law qwen_hf: 20/141 (cached ok)
+    gpt_law qwen_hf: 30/141 (cached ok)
+    gpt_law qwen_hf: 40/141 (cached ok)
+    gpt_law qwen_hf: 50/141 (cached ok)
+    gpt_law qwen_hf: 60/141 (cached ok)
+    gpt_law qwen_hf: 70/141 (cached ok)
+    gpt_law qwen_hf: 80/141 (cached ok)
+    gpt_law qwen_hf: 90/141 (cached ok)
+    gpt_law qwen_hf: 100/141 (cached ok)
+    gpt_law qwen_hf: 110/141 (cached ok)
+    gpt_law qwen_hf: 120/141 (cached ok)
+    gpt_law qwen_hf: 130/141 (cached ok)
+    gpt_law qwen_hf: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_law | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.783 LOO=0.783 thr=65.3 -> similarity_database_with_gpt_law_features_v6score_gpt51_thinking_binary_1_stats.json
+    gpt_law gemma3_27b: 10/100 (cached ok)
+    gpt_law gemma3_27b: 20/100 (cached ok)
+    gpt_law gemma3_27b: 30/100 (cached ok)
+    gpt_law gemma3_27b: 40/100 (cached ok)
+    gpt_law gemma3_27b: 50/100 (cached ok)
+    gpt_law gemma3_27b: 60/100 (cached ok)
+    gpt_law gemma3_27b: 70/100 (cached ok)
+    gpt_law gemma3_27b: 80/100 (cached ok)
+    gpt_law gemma3_27b: 90/100 (cached ok)
+    gpt_law gemma3_27b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_law | gemini_25_pro | task=binary_0 F1=0.822 LOO=0.822 thr=35.2
+  gpt_law | gemma3_27b | task=binary_0 F1=0.787 LOO=0.787 thr=65.3
+  gpt_law | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.758 LOO=0.750 thr=30.2 -> similarity_database_with_gpt_law_features_v6score_gemini_25_pro_binary_1_stats.json
+    gpt_law gemini_3_flash: 10/100 (cached ok)
+    gpt_law gemini_3_flash: 20/100 (cached ok)
+    gpt_law gemini_3_flash: 30/100 (cached ok)
+    gpt_law gemini_3_flash: 40/100 (cached ok)
+    gpt_law gemini_3_flash: 50/100 (cached ok)
+    gpt_law gemini_3_flash: 60/100 (cached ok)
+    gpt_law gemini_3_flash: 70/100 (cached ok)
+    gpt_law gemini_3_flash: 80/100 (cached ok)
+    gpt_law gemini_3_flash: 90/100 (cached ok)
+    gpt_law gemini_3_flash: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_law | qwen_hf | task=binary_0 F1=0.621 LOO=0.621 thr=40.2
+  gpt_law | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.760 LOO=0.745 thr=55.3 -> similarity_database_with_gpt_law_features_v6score_gemma3_27b_binary_1_stats.json
+    gpt_law gemma3_27b: 10/141 (cached ok)
+    gpt_law gemma3_27b: 20/141 (cached ok)
+    gpt_law gemma3_27b: 30/141 (cached ok)
+    gpt_law gemma3_27b: 40/141 (cached ok)
+    gpt_law gemma3_27b: 50/141 (cached ok)
+    gpt_law gemma3_27b: 60/141 (cached ok)
+    gpt_law gemma3_27b: 70/141 (cached ok)
+    gpt_law gemma3_27b: 80/141 (cached ok)
+    gpt_law gemma3_27b: 90/141 (cached ok)
+    gpt_law gemma3_27b: 100/141 (cached ok)
+    gpt_law gemma3_27b: 110/141 (cached ok)
+    gpt_law gemma3_27b: 120/141 (cached ok)
+    gpt_law gemma3_27b: 130/141 (cached ok)
+    gpt_law gemma3_27b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_law | gemini_3_flash | task=binary_0 F1=0.857 LOO=0.845 thr=76.4
+  gpt_law | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.745 LOO=0.745 thr=40.2 -> similarity_database_with_gpt_law_features_v6score_qwen_hf_binary_1_stats.json
+  gpt_law | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.792 LOO=0.792 thr=45.2 -> similarity_database_with_gpt_law_features_v6score_gemini_3_flash_binary_1_stats.json
+    gpt_law gemini_3_flash: 10/141 (cached ok)
+    gpt_law gemini_3_flash: 20/141 (cached ok)
+    gpt_law gemini_3_flash: 30/141 (cached ok)
+    gpt_law gemini_3_flash: 40/141 (cached ok)
+    gpt_law gemini_3_flash: 50/141 (cached ok)
+    gpt_law gemini_3_flash: 60/141 (cached ok)
+    gpt_law gemini_3_flash: 70/141 (cached ok)
+    gpt_law gemini_3_flash: 80/141 (cached ok)
+    gpt_law gemini_3_flash: 90/141 (cached ok)
+    gpt_law gemini_3_flash: 100/141 (cached ok)
+    gpt_law gemini_3_flash: 110/141 (cached ok)
+    gpt_law gemini_3_flash: 120/141 (cached ok)
+    gpt_law gemini_3_flash: 130/141 (cached ok)
+    gpt_law gemini_3_flash: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_law | gemma3_27b | task=binary_0 F1=0.578 LOO=0.578 thr=45.2
+  gpt_law | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.752 LOO=0.752 thr=45.2 -> similarity_database_with_gpt_law_features_v6score_gemma3_27b_binary_1_stats.json
+  gpt_law | gemini_3_flash | task=binary_0 F1=0.680 LOO=0.575 thr=75.4
+  gpt_law | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.787 LOO=0.787 thr=72.4 -> similarity_database_with_gpt_law_features_v6score_gemini_3_flash_binary_1_stats.json
+    gpt_law gemini_25_pro: 10/141 (cached ok)
+    gpt_law gemini_25_pro: 20/141 (cached ok)
+    gpt_law gemini_25_pro: 30/141 (cached ok)
+    gpt_law gemini_25_pro: 40/141 (cached ok)
+    gpt_law gemini_25_pro: 50/141 (cached ok)
+    gpt_law gemini_25_pro: 60/141 (cached ok)
+    gpt_law gemini_25_pro: 70/141 (cached ok)
+    gpt_law gemini_25_pro: 80/141 (cached ok)
+    gpt_law gemini_25_pro: 90/141 (cached ok)
+    gpt_law gemini_25_pro: 100/141 (cached ok)
+    gpt_law gemini_25_pro: 110/141 (cached ok)
+    gpt_law gemini_25_pro: 120/141 (cached ok)
+    gpt_law gemini_25_pro: 130/141 (cached ok)
+    gpt_law gemini_25_pro: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_law | gemini_25_pro | task=binary_0 F1=0.602 LOO=0.602 thr=35.2
+  gpt_law | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.722 LOO=0.636 thr=30.2 -> similarity_database_with_gpt_law_features_v6score_gemini_25_pro_binary_1_stats.json
+
+============================================================
+  REP: gpt_free  (drugs → weapon per model)
+============================================================
+  (parallel: up to 4 workers; each runs drugs then weapon; provider caps: OpenAI≤2 HF≤2 NIM≤3 Gemini≤1)
+    gpt_free mistral: 10/100 (cached ok)
+    gpt_free mistral: 20/100 (cached ok)
+    gpt_free qwen3_235b: 10/100 (cached ok)    gpt_free gpt5mini: 10/100 (cached ok)    gpt_free mistral: 30/100 (cached ok)
+    gpt_free qwen3_235b: 20/100 (cached ok)
+
+    gpt_free gpt4: 10/100 (cached ok)    gpt_free mistral: 40/100 (cached ok)
+    gpt_free qwen3_235b: 30/100 (cached ok)
+
+
+    gpt_free gpt5mini: 20/100 (cached ok)    gpt_free qwen3_235b: 40/100 (cached ok)
+    gpt_free qwen3_235b: 50/100 (cached ok)
+
+    gpt_free qwen3_235b: 60/100 (cached ok)
+    gpt_free gpt5mini: 30/100 (cached ok)
+    gpt_free gpt4: 20/100 (cached ok)    gpt_free gpt5mini: 40/100 (cached ok)
+    gpt_free qwen3_235b: 70/100 (cached ok)    gpt_free gpt5mini: 50/100 (cached ok)
+
+
+    gpt_free gpt5mini: 60/100 (cached ok)
+    gpt_free gpt4: 30/100 (cached ok)
+    gpt_free qwen3_235b: 80/100 (cached ok)    gpt_free gpt4: 40/100 (cached ok)
+    gpt_free gpt5mini: 70/100 (cached ok)    gpt_free gpt4: 50/100 (cached ok)
+
+
+    gpt_free gpt5mini: 80/100 (cached ok)    gpt_free qwen3_235b: 90/100 (cached ok)    gpt_free gpt4: 60/100 (cached ok)
+
+    gpt_free gpt5mini: 90/100 (cached ok)
+    gpt_free qwen3_235b: 100/100 (cached ok)
+    gpt_free gpt5mini: 100/100 (cached ok)
+
+    gpt_free gpt4: 70/100 (cached ok)
+    gpt_free gpt4: 80/100 (cached ok)
+    gpt_free gpt4: 90/100 (cached ok)
+    gpt_free gpt4: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_free | qwen3_235b | task=binary_0 F1=0.812 LOO=0.812 thr=45.2
+  gpt_free | gpt4 | task=binary_0 F1=0.845 LOO=0.845 thr=55.3
+  gpt_free | gpt5mini | task=binary_0 F1=0.790 LOO=0.775 thr=45.2
+  gpt_free | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.720 LOO=0.667 thr=30.2 -> similarity_database_with_gpt_features_v6score_qwen3_235b_binary_1_stats.json
+    gpt_free qwen3_235b: 10/141 (cached ok)
+    gpt_free qwen3_235b: 20/141 (cached ok)
+    gpt_free qwen3_235b: 30/141 (cached ok)
+    gpt_free qwen3_235b: 40/141 (cached ok)
+    gpt_free qwen3_235b: 50/141 (cached ok)
+    gpt_free qwen3_235b: 60/141 (cached ok)
+    gpt_free qwen3_235b: 70/141 (cached ok)
+    gpt_free qwen3_235b: 80/141 (cached ok)
+    gpt_free qwen3_235b: 90/141 (cached ok)
+    gpt_free qwen3_235b: 100/141 (cached ok)
+    gpt_free qwen3_235b: 110/141 (cached ok)
+    gpt_free qwen3_235b: 120/141 (cached ok)
+    gpt_free qwen3_235b: 130/141 (cached ok)
+    gpt_free qwen3_235b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_free | gpt4 | task=binary_1 (same scores, no extra API) F1=0.792 LOO=0.792 thr=35.2 -> similarity_database_with_gpt_features_v6score_gpt4_binary_1_stats.json
+    gpt_free gpt4: 10/141 (cached ok)
+    gpt_free gpt4: 20/141 (cached ok)
+    gpt_free gpt4: 30/141 (cached ok)
+    gpt_free gpt4: 40/141 (cached ok)
+    gpt_free gpt4: 50/141 (cached ok)
+    gpt_free gpt4: 60/141 (cached ok)
+    gpt_free gpt4: 70/141 (cached ok)
+    gpt_free gpt4: 80/141 (cached ok)
+    gpt_free gpt4: 90/141 (cached ok)
+    gpt_free gpt4: 100/141 (cached ok)
+    gpt_free gpt4: 110/141 (cached ok)
+    gpt_free gpt4: 120/141 (cached ok)
+    gpt_free gpt4: 130/141 (cached ok)
+    gpt_free gpt4: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_free | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.760 LOO=0.752 thr=42.2 -> similarity_database_with_gpt_features_v6score_gpt5mini_binary_1_stats.json
+    gpt_free gpt5mini: 10/141 (cached ok)
+    gpt_free gpt5mini: 20/141 (cached ok)
+    gpt_free gpt5mini: 30/141 (cached ok)
+    gpt_free gpt5mini: 40/141 (cached ok)
+    gpt_free gpt5mini: 50/141 (cached ok)
+    gpt_free gpt5mini: 60/141 (cached ok)
+    gpt_free gpt5mini: 70/141 (cached ok)
+    gpt_free gpt5mini: 80/141 (cached ok)
+    gpt_free gpt5mini: 90/141 (cached ok)
+    gpt_free gpt5mini: 100/141 (cached ok)
+    gpt_free gpt5mini: 110/141 (cached ok)
+    gpt_free gpt5mini: 120/141 (cached ok)
+    gpt_free gpt5mini: 130/141 (cached ok)
+    gpt_free gpt5mini: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_free | qwen3_235b | task=binary_0 F1=0.704 LOO=0.641 thr=35.2
+    gpt_free mistral: 50/100 (cached ok)
+    gpt_free mistral: 60/100 (cached ok)
+    gpt_free mistral: 70/100 (cached ok)
+    gpt_free mistral: 80/100 (cached ok)
+    gpt_free mistral: 90/100 (cached ok)
+    gpt_free mistral: 100/100 (cached ok)
+    (row cache: skipped 99 ok rows; refetched 1 non-ok/missing)
+  gpt_free | gpt5mini | task=binary_0 F1=0.683 LOO=0.633 thr=62.3
+  gpt_free | gpt4 | task=binary_0 F1=0.716 LOO=0.707 thr=68.3
+  gpt_free | mistral | task=binary_0 F1=0.806 LOO=0.806 thr=65.3 (partial: 1 rows still invalid — delete those rows or re-run)
+  gpt_free | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.760 LOO=0.760 thr=35.2 -> similarity_database_with_gpt_features_v6score_qwen3_235b_binary_1_stats.json
+    gpt_free llama3_70b: 10/100 (cached ok)
+    gpt_free llama3_70b: 20/100 (cached ok)
+    gpt_free llama3_70b: 30/100 (cached ok)
+    gpt_free llama3_70b: 40/100 (cached ok)
+    gpt_free llama3_70b: 50/100 (cached ok)
+    gpt_free llama3_70b: 60/100 (cached ok)
+    gpt_free llama3_70b: 70/100 (cached ok)
+    gpt_free llama3_70b: 80/100 (cached ok)
+    gpt_free llama3_70b: 90/100 (cached ok)
+    gpt_free llama3_70b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_free | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.739 LOO=0.739 thr=45.2 -> similarity_database_with_gpt_features_v6score_gpt5mini_binary_1_stats.json
+    gpt_free gpt52: 10/100 (cached ok)
+    gpt_free gpt52: 20/100 (cached ok)
+    gpt_free gpt52: 30/100 (cached ok)
+    gpt_free gpt52: 40/100 (cached ok)
+    gpt_free gpt52: 50/100 (cached ok)
+    gpt_free gpt52: 60/100 (cached ok)
+    gpt_free gpt52: 70/100 (cached ok)
+    gpt_free gpt52: 80/100 (cached ok)
+    gpt_free gpt52: 90/100 (cached ok)
+    gpt_free gpt52: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_free | gpt4 | task=binary_1 (same scores, no extra API) F1=0.746 LOO=0.735 thr=60.3 -> similarity_database_with_gpt_features_v6score_gpt4_binary_1_stats.json
+    gpt_free gpt51_thinking: 10/100 (cached ok)
+    gpt_free gpt51_thinking: 20/100 (cached ok)
+    gpt_free gpt51_thinking: 30/100 (cached ok)
+    gpt_free gpt51_thinking: 40/100 (cached ok)
+    gpt_free gpt51_thinking: 50/100 (cached ok)
+    gpt_free gpt51_thinking: 60/100 (cached ok)
+    gpt_free gpt51_thinking: 70/100 (cached ok)
+    gpt_free gpt51_thinking: 80/100 (cached ok)
+    gpt_free gpt51_thinking: 90/100 (cached ok)
+    gpt_free gpt51_thinking: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_free | mistral | task=binary_1 (same scores, no extra API) F1=0.713 LOO=0.713 thr=60.3 -> similarity_database_with_gpt_features_v6score_mistral_binary_1_stats.json
+    gpt_free mistral: 10/141 (cached ok)
+    gpt_free mistral: 20/141 (cached ok)
+    gpt_free mistral: 30/141 (cached ok)
+    gpt_free mistral: 40/141 (cached ok)
+    gpt_free mistral: 50/141 (cached ok)
+    gpt_free mistral: 60/141 (cached ok)
+    gpt_free mistral: 70/141 (cached ok)
+    gpt_free mistral: 80/141 (cached ok)
+    gpt_free mistral: 90/141 (cached ok)
+    gpt_free mistral: 100/141 (cached ok)
+    gpt_free mistral: 110/141 (cached ok)
+    gpt_free mistral: 120/141 (cached ok)
+    gpt_free mistral: 130/141 (cached ok)
+    gpt_free mistral: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_free | llama3_70b | task=binary_0 F1=0.795 LOO=0.779 thr=52.3
+  gpt_free | gpt51_thinking | task=binary_0 F1=0.853 LOO=0.794 thr=56.3
+  gpt_free | gpt52 | task=binary_0 F1=0.829 LOO=0.817 thr=55.3
+  gpt_free | mistral | task=binary_0 F1=0.611 LOO=0.611 thr=60.3
+  gpt_free | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.717 LOO=0.711 thr=38.2 -> similarity_database_with_gpt_features_v6score_llama3_70b_binary_1_stats.json
+    gpt_free llama3_70b: 10/141 (cached ok)
+    gpt_free llama3_70b: 20/141 (cached ok)
+    gpt_free llama3_70b: 30/141 (cached ok)
+    gpt_free llama3_70b: 40/141 (cached ok)
+    gpt_free llama3_70b: 50/141 (cached ok)
+    gpt_free llama3_70b: 60/141 (cached ok)
+    gpt_free llama3_70b: 70/141 (cached ok)
+    gpt_free llama3_70b: 80/141 (cached ok)
+    gpt_free llama3_70b: 90/141 (cached ok)
+    gpt_free llama3_70b: 100/141 (cached ok)
+    gpt_free llama3_70b: 110/141 (cached ok)
+    gpt_free llama3_70b: 120/141 (cached ok)
+    gpt_free llama3_70b: 130/141 (cached ok)
+    gpt_free llama3_70b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_free | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.774 LOO=0.747 thr=42.2 -> similarity_database_with_gpt_features_v6score_gpt51_thinking_binary_1_stats.json
+    gpt_free gpt51_thinking: 10/141 (cached ok)
+    gpt_free gpt51_thinking: 20/141 (cached ok)
+    gpt_free gpt51_thinking: 30/141 (cached ok)
+    gpt_free gpt51_thinking: 40/141 (cached ok)
+    gpt_free gpt51_thinking: 50/141 (cached ok)
+    gpt_free gpt51_thinking: 60/141 (cached ok)
+    gpt_free gpt51_thinking: 70/141 (cached ok)
+    gpt_free gpt51_thinking: 80/141 (cached ok)
+    gpt_free gpt51_thinking: 90/141 (cached ok)
+    gpt_free gpt51_thinking: 100/141 (cached ok)
+    gpt_free gpt51_thinking: 110/141 (cached ok)
+    gpt_free gpt51_thinking: 120/141 (cached ok)
+    gpt_free gpt51_thinking: 130/141 (cached ok)
+    gpt_free gpt51_thinking: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_free | gpt52 | task=binary_1 (same scores, no extra API) F1=0.775 LOO=0.710 thr=34.2 -> similarity_database_with_gpt_features_v6score_gpt52_binary_1_stats.json
+    gpt_free gpt52: 10/141 (cached ok)
+    gpt_free gpt52: 20/141 (cached ok)
+    gpt_free gpt52: 30/141 (cached ok)
+    gpt_free gpt52: 40/141 (cached ok)
+    gpt_free gpt52: 50/141 (cached ok)
+    gpt_free gpt52: 60/141 (cached ok)
+    gpt_free gpt52: 70/141 (cached ok)
+    gpt_free gpt52: 80/141 (cached ok)
+    gpt_free gpt52: 90/141 (cached ok)
+    gpt_free gpt52: 100/141 (cached ok)
+    gpt_free gpt52: 110/141 (cached ok)
+    gpt_free gpt52: 120/141 (cached ok)
+    gpt_free gpt52: 130/141 (cached ok)
+    gpt_free gpt52: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_free | mistral | task=binary_1 (same scores, no extra API) F1=0.678 LOO=0.606 thr=40.2 -> similarity_database_with_gpt_features_v6score_mistral_binary_1_stats.json
+    gpt_free qwen_hf: 10/100 (cached ok)
+    gpt_free qwen_hf: 20/100 (cached ok)
+    gpt_free qwen_hf: 30/100 (cached ok)
+    gpt_free qwen_hf: 40/100 (cached ok)
+    gpt_free qwen_hf: 50/100 (cached ok)
+    gpt_free qwen_hf: 60/100 (cached ok)
+    gpt_free qwen_hf: 70/100 (cached ok)
+    gpt_free qwen_hf: 80/100 (cached ok)
+    gpt_free qwen_hf: 90/100 (cached ok)
+    gpt_free qwen_hf: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_free | llama3_70b | task=binary_0 F1=0.568 LOO=0.568 thr=58.3
+  gpt_free | gpt51_thinking | task=binary_0 F1=0.703 LOO=0.612 thr=65.3
+  gpt_free | gpt52 | task=binary_0 F1=0.722 LOO=0.598 thr=62.3
+  gpt_free | qwen_hf | task=binary_0 F1=0.845 LOO=0.845 thr=40.2
+  gpt_free | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.707 LOO=0.698 thr=38.2 -> similarity_database_with_gpt_features_v6score_llama3_70b_binary_1_stats.json
+    gpt_free gemini_25_pro: 10/100 (cached ok)
+    gpt_free gemini_25_pro: 20/100 (cached ok)
+    gpt_free gemini_25_pro: 30/100 (cached ok)
+    gpt_free gemini_25_pro: 40/100 (cached ok)
+    gpt_free gemini_25_pro: 50/100 (cached ok)
+    gpt_free gemini_25_pro: 60/100 (cached ok)
+    gpt_free gemini_25_pro: 70/100 (cached ok)
+    gpt_free gemini_25_pro: 80/100 (cached ok)
+    gpt_free gemini_25_pro: 90/100 (cached ok)
+    gpt_free gemini_25_pro: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_free | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.778 LOO=0.754 thr=60.3 -> similarity_database_with_gpt_features_v6score_gpt51_thinking_binary_1_stats.json
+  gpt_free | gpt52 | task=binary_1 (same scores, no extra API) F1=0.803 LOO=0.797 thr=54.3 -> similarity_database_with_gpt_features_v6score_gpt52_binary_1_stats.json
+    gpt_free gemma3_27b: 10/100 (cached ok)
+    gpt_free gemma3_27b: 20/100 (cached ok)
+    gpt_free gemma3_27b: 30/100 (cached ok)
+    gpt_free gemma3_27b: 40/100 (cached ok)
+    gpt_free gemma3_27b: 50/100 (cached ok)
+    gpt_free gemma3_27b: 60/100 (cached ok)
+    gpt_free gemma3_27b: 70/100 (cached ok)
+    gpt_free gemma3_27b: 80/100 (cached ok)
+    gpt_free gemma3_27b: 90/100 (cached ok)
+    gpt_free gemma3_27b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_free | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.763 LOO=0.723 thr=30.2 -> similarity_database_with_gpt_features_v6score_qwen_hf_binary_1_stats.json
+    gpt_free qwen_hf: 10/141 (cached ok)
+    gpt_free qwen_hf: 20/141 (cached ok)
+    gpt_free qwen_hf: 30/141 (cached ok)
+    gpt_free qwen_hf: 40/141 (cached ok)
+    gpt_free qwen_hf: 50/141 (cached ok)
+    gpt_free qwen_hf: 60/141 (cached ok)
+    gpt_free qwen_hf: 70/141 (cached ok)
+    gpt_free qwen_hf: 80/141 (cached ok)
+    gpt_free qwen_hf: 90/141 (cached ok)
+    gpt_free qwen_hf: 100/141 (cached ok)
+    gpt_free qwen_hf: 110/141 (cached ok)
+    gpt_free qwen_hf: 120/141 (cached ok)
+    gpt_free qwen_hf: 130/141 (cached ok)
+    gpt_free qwen_hf: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_free | gemini_25_pro | task=binary_0 F1=0.816 LOO=0.750 thr=25.1
+  gpt_free | gemma3_27b | task=binary_0 F1=0.800 LOO=0.784 thr=45.2
+  gpt_free | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.768 LOO=0.768 thr=20.1 -> similarity_database_with_gpt_features_v6score_gemini_25_pro_binary_1_stats.json
+    gpt_free gemini_3_flash: 10/100 (cached ok)
+    gpt_free gemini_3_flash: 20/100 (cached ok)
+    gpt_free gemini_3_flash: 30/100 (cached ok)
+    gpt_free gemini_3_flash: 40/100 (cached ok)
+    gpt_free gemini_3_flash: 50/100 (cached ok)
+    gpt_free gemini_3_flash: 60/100 (cached ok)
+    gpt_free gemini_3_flash: 70/100 (cached ok)
+    gpt_free gemini_3_flash: 80/100 (cached ok)
+    gpt_free gemini_3_flash: 90/100 (cached ok)
+    gpt_free gemini_3_flash: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_free | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.757 LOO=0.745 thr=35.2 -> similarity_database_with_gpt_features_v6score_gemma3_27b_binary_1_stats.json
+    gpt_free gemma3_27b: 10/141 (cached ok)
+    gpt_free gemma3_27b: 20/141 (cached ok)
+    gpt_free gemma3_27b: 30/141 (cached ok)
+    gpt_free gemma3_27b: 40/141 (cached ok)
+    gpt_free gemma3_27b: 50/141 (cached ok)
+    gpt_free gemma3_27b: 60/141 (cached ok)
+    gpt_free gemma3_27b: 70/141 (cached ok)
+    gpt_free gemma3_27b: 80/141 (cached ok)
+    gpt_free gemma3_27b: 90/141 (cached ok)
+    gpt_free gemma3_27b: 100/141 (cached ok)
+    gpt_free gemma3_27b: 110/141 (cached ok)
+    gpt_free gemma3_27b: 120/141 (cached ok)
+    gpt_free gemma3_27b: 130/141 (cached ok)
+    gpt_free gemma3_27b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_free | qwen_hf | task=binary_0 F1=0.648 LOO=0.569 thr=35.2
+  gpt_free | gemini_3_flash | task=binary_0 F1=0.822 LOO=0.720 thr=62.3
+  gpt_free | gemma3_27b | task=binary_0 F1=0.631 LOO=0.631 thr=45.2
+  gpt_free | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.800 LOO=0.800 thr=38.2 -> similarity_database_with_gpt_features_v6score_gemini_3_flash_binary_1_stats.json
+    gpt_free gemini_3_flash: 10/141 (cached ok)
+    gpt_free gemini_3_flash: 20/141 (cached ok)
+    gpt_free gemini_3_flash: 30/141 (cached ok)
+    gpt_free gemini_3_flash: 40/141 (cached ok)
+    gpt_free gemini_3_flash: 50/141 (cached ok)
+    gpt_free gemini_3_flash: 60/141 (cached ok)
+    gpt_free gemini_3_flash: 70/141 (cached ok)
+    gpt_free gemini_3_flash: 80/141 (cached ok)
+    gpt_free gemini_3_flash: 90/141 (cached ok)
+    gpt_free gemini_3_flash: 100/141 (cached ok)
+    gpt_free gemini_3_flash: 110/141 (cached ok)
+    gpt_free gemini_3_flash: 120/141 (cached ok)
+    gpt_free gemini_3_flash: 130/141 (cached ok)
+    gpt_free gemini_3_flash: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_free | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.760 LOO=0.760 thr=30.2 -> similarity_database_with_gpt_features_v6score_qwen_hf_binary_1_stats.json
+  gpt_free | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.742 LOO=0.723 thr=45.2 -> similarity_database_with_gpt_features_v6score_gemma3_27b_binary_1_stats.json
+  gpt_free | gemini_3_flash | task=binary_0 F1=0.733 LOO=0.725 thr=75.4
+  gpt_free | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.765 LOO=0.667 thr=58.3 -> similarity_database_with_gpt_features_v6score_gemini_3_flash_binary_1_stats.json
+    gpt_free gemini_25_pro: 10/141 (cached ok)
+    gpt_free gemini_25_pro: 20/141 (cached ok)
+    gpt_free gemini_25_pro: 30/141 (cached ok)
+    gpt_free gemini_25_pro: 40/141 (cached ok)
+    gpt_free gemini_25_pro: 50/141 (cached ok)
+    gpt_free gemini_25_pro: 60/141 (cached ok)
+    gpt_free gemini_25_pro: 70/141 (cached ok)
+    gpt_free gemini_25_pro: 80/141 (cached ok)
+    gpt_free gemini_25_pro: 90/141 (cached ok)
+    gpt_free gemini_25_pro: 100/141 (cached ok)
+    gpt_free gemini_25_pro: 110/141 (cached ok)
+    gpt_free gemini_25_pro: 120/141 (cached ok)
+    gpt_free gemini_25_pro: 130/141 (cached ok)
+    gpt_free gemini_25_pro: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_free | gemini_25_pro | task=binary_0 F1=0.667 LOO=0.667 thr=25.1
+  gpt_free | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.755 LOO=0.657 thr=20.1 -> similarity_database_with_gpt_features_v6score_gemini_25_pro_binary_1_stats.json
+
+============================================================
+  REP: hybrid_manual_gpt  (drugs → weapon per model)
+============================================================
+  (parallel: up to 4 workers; each runs drugs then weapon; provider caps: OpenAI≤2 HF≤2 NIM≤3 Gemini≤1)
+    hybrid_manual_gpt gpt5mini: 10/100 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 10/100 (cached ok)    hybrid_manual_gpt gpt5mini: 20/100 (cached ok)
+    hybrid_manual_gpt gpt5mini: 30/100 (cached ok)
+
+    hybrid_manual_gpt qwen3_235b: 20/100 (cached ok)
+    hybrid_manual_gpt gpt5mini: 40/100 (cached ok)    hybrid_manual_gpt qwen3_235b: 30/100 (cached ok)    hybrid_manual_gpt gpt4: 10/100 (cached ok)
+
+
+    hybrid_manual_gpt gpt4: 20/100 (cached ok)    hybrid_manual_gpt gpt5mini: 50/100 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 40/100 (cached ok)
+    hybrid_manual_gpt gpt5mini: 60/100 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 50/100 (cached ok)    hybrid_manual_gpt gpt5mini: 70/100 (cached ok)
+
+
+    hybrid_manual_gpt gpt4: 30/100 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 60/100 (cached ok)    hybrid_manual_gpt gpt4: 40/100 (cached ok)
+    hybrid_manual_gpt gpt4: 50/100 (cached ok)    hybrid_manual_gpt gpt5mini: 80/100 (cached ok)
+
+
+    hybrid_manual_gpt gpt5mini: 90/100 (cached ok)    hybrid_manual_gpt qwen3_235b: 70/100 (cached ok)
+    hybrid_manual_gpt gpt4: 60/100 (cached ok)
+    hybrid_manual_gpt gpt4: 70/100 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 80/100 (cached ok)
+    hybrid_manual_gpt gpt4: 80/100 (cached ok)    hybrid_manual_gpt qwen3_235b: 90/100 (cached ok)
+
+
+    hybrid_manual_gpt qwen3_235b: 100/100 (cached ok)    hybrid_manual_gpt gpt5mini: 100/100 (cached ok)
+    hybrid_manual_gpt gpt4: 90/100 (cached ok)
+
+    hybrid_manual_gpt gpt4: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | qwen3_235b | task=binary_0 F1=0.857 LOO=0.857 thr=55.3
+  hybrid_manual_gpt | gpt4 | task=binary_0 F1=0.862 LOO=0.862 thr=65.3
+  hybrid_manual_gpt | gpt5mini | task=binary_0 F1=0.857 LOO=0.818 thr=65.3
+  hybrid_manual_gpt | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.800 LOO=0.800 thr=35.2 -> similarity_database_hybrid_v6score_qwen3_235b_binary_1_stats.json
+    hybrid_manual_gpt qwen3_235b: 10/141 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 20/141 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 30/141 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 40/141 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 50/141 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 60/141 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 70/141 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 80/141 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 90/141 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 100/141 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 110/141 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 120/141 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 130/141 (cached ok)
+    hybrid_manual_gpt qwen3_235b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | gpt4 | task=binary_1 (same scores, no extra API) F1=0.796 LOO=0.755 thr=40.2 -> similarity_database_hybrid_v6score_gpt4_binary_1_stats.json
+    hybrid_manual_gpt gpt4: 10/141 (cached ok)
+    hybrid_manual_gpt gpt4: 20/141 (cached ok)
+    hybrid_manual_gpt gpt4: 30/141 (cached ok)
+    hybrid_manual_gpt gpt4: 40/141 (cached ok)
+    hybrid_manual_gpt gpt4: 50/141 (cached ok)
+    hybrid_manual_gpt gpt4: 60/141 (cached ok)
+    hybrid_manual_gpt gpt4: 70/141 (cached ok)
+    hybrid_manual_gpt gpt4: 80/141 (cached ok)
+    hybrid_manual_gpt gpt4: 90/141 (cached ok)
+    hybrid_manual_gpt gpt4: 100/141 (cached ok)
+    hybrid_manual_gpt gpt4: 110/141 (cached ok)
+    hybrid_manual_gpt gpt4: 120/141 (cached ok)
+    hybrid_manual_gpt gpt4: 130/141 (cached ok)
+    hybrid_manual_gpt gpt4: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.800 LOO=0.787 thr=55.3 -> similarity_database_hybrid_v6score_gpt5mini_binary_1_stats.json
+    hybrid_manual_gpt gpt5mini: 10/141 (cached ok)
+    hybrid_manual_gpt gpt5mini: 20/141 (cached ok)
+    hybrid_manual_gpt gpt5mini: 30/141 (cached ok)
+    hybrid_manual_gpt gpt5mini: 40/141 (cached ok)
+    hybrid_manual_gpt gpt5mini: 50/141 (cached ok)
+    hybrid_manual_gpt gpt5mini: 60/141 (cached ok)
+    hybrid_manual_gpt gpt5mini: 70/141 (cached ok)
+    hybrid_manual_gpt gpt5mini: 80/141 (cached ok)
+    hybrid_manual_gpt gpt5mini: 90/141 (cached ok)
+    hybrid_manual_gpt gpt5mini: 100/141 (cached ok)
+    hybrid_manual_gpt gpt5mini: 110/141 (cached ok)
+    hybrid_manual_gpt gpt5mini: 120/141 (cached ok)
+    hybrid_manual_gpt gpt5mini: 130/141 (cached ok)
+    hybrid_manual_gpt gpt5mini: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | qwen3_235b | task=binary_0 F1=0.699 LOO=0.699 thr=45.2
+    hybrid_manual_gpt mistral: 10/100
+    hybrid_manual_gpt mistral: 20/100 (cached ok)
+    hybrid_manual_gpt mistral: 30/100 (cached ok)
+    hybrid_manual_gpt mistral: 40/100 (cached ok)
+  hybrid_manual_gpt | gpt5mini | task=binary_0 F1=0.722 LOO=0.607 thr=58.3
+  hybrid_manual_gpt | gpt4 | task=binary_0 F1=0.789 LOO=0.779 thr=72.4
+  hybrid_manual_gpt | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.783 LOO=0.783 thr=35.2 -> similarity_database_hybrid_v6score_qwen3_235b_binary_1_stats.json
+    hybrid_manual_gpt llama3_70b: 10/100 (cached ok)
+    hybrid_manual_gpt llama3_70b: 20/100 (cached ok)
+    hybrid_manual_gpt llama3_70b: 30/100 (cached ok)
+    hybrid_manual_gpt llama3_70b: 40/100 (cached ok)
+    hybrid_manual_gpt llama3_70b: 50/100 (cached ok)
+    hybrid_manual_gpt llama3_70b: 60/100 (cached ok)
+    hybrid_manual_gpt llama3_70b: 70/100 (cached ok)
+    hybrid_manual_gpt llama3_70b: 80/100 (cached ok)
+    hybrid_manual_gpt llama3_70b: 90/100 (cached ok)
+    hybrid_manual_gpt llama3_70b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.785 LOO=0.719 thr=47.2 -> similarity_database_hybrid_v6score_gpt5mini_binary_1_stats.json
+    hybrid_manual_gpt gpt52: 10/100 (cached ok)
+    hybrid_manual_gpt gpt52: 20/100 (cached ok)
+    hybrid_manual_gpt gpt52: 30/100 (cached ok)
+    hybrid_manual_gpt gpt52: 40/100 (cached ok)
+    hybrid_manual_gpt gpt52: 50/100 (cached ok)
+    hybrid_manual_gpt gpt52: 60/100 (cached ok)
+    hybrid_manual_gpt gpt52: 70/100 (cached ok)
+    hybrid_manual_gpt gpt52: 80/100 (cached ok)
+    hybrid_manual_gpt gpt52: 90/100 (cached ok)
+    hybrid_manual_gpt gpt52: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | gpt4 | task=binary_1 (same scores, no extra API) F1=0.822 LOO=0.809 thr=48.2 -> similarity_database_hybrid_v6score_gpt4_binary_1_stats.json
+    hybrid_manual_gpt gpt51_thinking: 10/100 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 20/100 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 30/100 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 40/100 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 50/100 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 60/100 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 70/100 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 80/100 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 90/100 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | llama3_70b | task=binary_0 F1=0.849 LOO=0.827 thr=58.3
+  hybrid_manual_gpt | gpt52 | task=binary_0 F1=0.882 LOO=0.882 thr=56.3
+  hybrid_manual_gpt | gpt51_thinking | task=binary_0 F1=0.835 LOO=0.825 thr=58.3
+  hybrid_manual_gpt | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.800 LOO=0.800 thr=55.3 -> similarity_database_hybrid_v6score_llama3_70b_binary_1_stats.json
+    hybrid_manual_gpt llama3_70b: 10/141 (cached ok)
+    hybrid_manual_gpt llama3_70b: 20/141 (cached ok)
+    hybrid_manual_gpt llama3_70b: 30/141 (cached ok)
+    hybrid_manual_gpt llama3_70b: 40/141 (cached ok)
+    hybrid_manual_gpt llama3_70b: 50/141 (cached ok)
+    hybrid_manual_gpt llama3_70b: 60/141 (cached ok)
+    hybrid_manual_gpt llama3_70b: 70/141 (cached ok)
+    hybrid_manual_gpt llama3_70b: 80/141 (cached ok)
+    hybrid_manual_gpt llama3_70b: 90/141 (cached ok)
+    hybrid_manual_gpt llama3_70b: 100/141 (cached ok)
+    hybrid_manual_gpt llama3_70b: 110/141 (cached ok)
+    hybrid_manual_gpt llama3_70b: 120/141 (cached ok)
+    hybrid_manual_gpt llama3_70b: 130/141 (cached ok)
+    hybrid_manual_gpt llama3_70b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+    hybrid_manual_gpt mistral: 50/100 (cached ok)
+    hybrid_manual_gpt mistral: 60/100 (cached ok)
+    hybrid_manual_gpt mistral: 70/100 (cached ok)
+    hybrid_manual_gpt mistral: 80/100 (cached ok)
+    hybrid_manual_gpt mistral: 90/100 (cached ok)
+    hybrid_manual_gpt mistral: 100/100 (cached ok)
+    (row cache: skipped 98 ok rows; refetched 2 non-ok/missing)
+  hybrid_manual_gpt | gpt52 | task=binary_1 (same scores, no extra API) F1=0.826 LOO=0.826 thr=44.2 -> similarity_database_hybrid_v6score_gpt52_binary_1_stats.json
+    hybrid_manual_gpt gpt52: 10/141 (cached ok)
+    hybrid_manual_gpt gpt52: 20/141 (cached ok)
+    hybrid_manual_gpt gpt52: 30/141 (cached ok)
+    hybrid_manual_gpt gpt52: 40/141 (cached ok)
+    hybrid_manual_gpt gpt52: 50/141 (cached ok)
+    hybrid_manual_gpt gpt52: 60/141 (cached ok)
+    hybrid_manual_gpt gpt52: 70/141 (cached ok)
+    hybrid_manual_gpt gpt52: 80/141 (cached ok)
+    hybrid_manual_gpt gpt52: 90/141 (cached ok)
+    hybrid_manual_gpt gpt52: 100/141 (cached ok)
+    hybrid_manual_gpt gpt52: 110/141 (cached ok)
+    hybrid_manual_gpt gpt52: 120/141 (cached ok)
+    hybrid_manual_gpt gpt52: 130/141 (cached ok)
+    hybrid_manual_gpt gpt52: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.821 LOO=0.755 thr=38.2 -> similarity_database_hybrid_v6score_gpt51_thinking_binary_1_stats.json
+    hybrid_manual_gpt gpt51_thinking: 10/141 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 20/141 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 30/141 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 40/141 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 50/141 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 60/141 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 70/141 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 80/141 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 90/141 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 100/141 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 110/141 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 120/141 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 130/141 (cached ok)
+    hybrid_manual_gpt gpt51_thinking: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | mistral | task=binary_0 F1=0.800 LOO=0.800 thr=45.2 (partial: 2 rows still invalid — delete those rows or re-run)
+  hybrid_manual_gpt | llama3_70b | task=binary_0 F1=0.568 LOO=0.562 thr=55.3
+  hybrid_manual_gpt | gpt52 | task=binary_0 F1=0.731 LOO=0.731 thr=56.3
+  hybrid_manual_gpt | gpt51_thinking | task=binary_0 F1=0.787 LOO=0.787 thr=65.3
+  hybrid_manual_gpt | mistral | task=binary_1 (same scores, no extra API) F1=0.816 LOO=0.816 thr=45.2 -> similarity_database_hybrid_v6score_mistral_binary_1_stats.json
+    hybrid_manual_gpt mistral: 10/141 (cached ok)
+    hybrid_manual_gpt mistral: 20/141 (cached ok)
+    hybrid_manual_gpt mistral: 30/141 (cached ok)
+    hybrid_manual_gpt mistral: 40/141 (cached ok)
+    hybrid_manual_gpt mistral: 50/141 (cached ok)
+    hybrid_manual_gpt mistral: 60/141 (cached ok)
+    hybrid_manual_gpt mistral: 70/141 (cached ok)
+    hybrid_manual_gpt mistral: 80/141 (cached ok)
+    hybrid_manual_gpt mistral: 90/141 (cached ok)
+    hybrid_manual_gpt mistral: 100/141 (cached ok)
+    hybrid_manual_gpt mistral: 110/141 (cached ok)
+    hybrid_manual_gpt mistral: 120/141 (cached ok)
+    hybrid_manual_gpt mistral: 130/141 (cached ok)
+    hybrid_manual_gpt mistral: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.677 LOO=0.677 thr=50.3 -> similarity_database_hybrid_v6score_llama3_70b_binary_1_stats.json
+    hybrid_manual_gpt qwen_hf: 10/100 (cached ok)
+    hybrid_manual_gpt qwen_hf: 20/100 (cached ok)
+    hybrid_manual_gpt qwen_hf: 30/100 (cached ok)
+    hybrid_manual_gpt qwen_hf: 40/100 (cached ok)
+    hybrid_manual_gpt qwen_hf: 50/100 (cached ok)
+    hybrid_manual_gpt qwen_hf: 60/100 (cached ok)
+    hybrid_manual_gpt qwen_hf: 70/100 (cached ok)
+    hybrid_manual_gpt qwen_hf: 80/100 (cached ok)
+    hybrid_manual_gpt qwen_hf: 90/100 (cached ok)
+    hybrid_manual_gpt qwen_hf: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | gpt52 | task=binary_1 (same scores, no extra API) F1=0.864 LOO=0.864 thr=56.3 -> similarity_database_hybrid_v6score_gpt52_binary_1_stats.json
+    hybrid_manual_gpt gemini_25_pro: 10/100 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 20/100 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 30/100 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 40/100 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 50/100 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 60/100 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 70/100 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 80/100 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 90/100 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.841 LOO=0.841 thr=60.3 -> similarity_database_hybrid_v6score_gpt51_thinking_binary_1_stats.json
+  hybrid_manual_gpt | mistral | task=binary_0 F1=0.608 LOO=0.608 thr=60.3
+  hybrid_manual_gpt | qwen_hf | task=binary_0 F1=0.845 LOO=0.829 thr=45.2
+  hybrid_manual_gpt | gemini_25_pro | task=binary_0 F1=0.822 LOO=0.822 thr=35.2
+  hybrid_manual_gpt | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.779 LOO=0.779 thr=35.2 -> similarity_database_hybrid_v6score_qwen_hf_binary_1_stats.json
+    hybrid_manual_gpt qwen_hf: 10/141 (cached ok)
+    hybrid_manual_gpt qwen_hf: 20/141 (cached ok)
+    hybrid_manual_gpt qwen_hf: 30/141 (cached ok)
+    hybrid_manual_gpt qwen_hf: 40/141 (cached ok)
+    hybrid_manual_gpt qwen_hf: 50/141 (cached ok)
+    hybrid_manual_gpt qwen_hf: 60/141 (cached ok)
+    hybrid_manual_gpt qwen_hf: 70/141 (cached ok)
+    hybrid_manual_gpt qwen_hf: 80/141 (cached ok)
+    hybrid_manual_gpt qwen_hf: 90/141 (cached ok)
+    hybrid_manual_gpt qwen_hf: 100/141 (cached ok)
+    hybrid_manual_gpt qwen_hf: 110/141 (cached ok)
+    hybrid_manual_gpt qwen_hf: 120/141 (cached ok)
+    hybrid_manual_gpt qwen_hf: 130/141 (cached ok)
+    hybrid_manual_gpt qwen_hf: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.747 LOO=0.711 thr=30.2 -> similarity_database_hybrid_v6score_gemini_25_pro_binary_1_stats.json
+    hybrid_manual_gpt gemini_3_flash: 10/100 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 20/100 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 30/100 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 40/100 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 50/100 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 60/100 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 70/100 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 80/100 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 90/100 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | mistral | task=binary_1 (same scores, no extra API) F1=0.691 LOO=0.691 thr=40.2 -> similarity_database_hybrid_v6score_mistral_binary_1_stats.json
+    hybrid_manual_gpt gemma3_27b: 10/100 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 20/100 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 30/100 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 40/100 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 50/100 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 60/100 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 70/100 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 80/100 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 90/100 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | gemma3_27b | task=binary_0 F1=0.805 LOO=0.805 thr=55.3
+  hybrid_manual_gpt | gemini_3_flash | task=binary_0 F1=0.827 LOO=0.811 thr=58.3
+  hybrid_manual_gpt | qwen_hf | task=binary_0 F1=0.731 LOO=0.731 thr=40.2
+  hybrid_manual_gpt | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.789 LOO=0.768 thr=35.2 -> similarity_database_hybrid_v6score_gemma3_27b_binary_1_stats.json
+    hybrid_manual_gpt gemma3_27b: 10/141 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 20/141 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 30/141 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 40/141 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 50/141 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 60/141 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 70/141 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 80/141 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 90/141 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 100/141 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 110/141 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 120/141 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 130/141 (cached ok)
+    hybrid_manual_gpt gemma3_27b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.775 LOO=0.673 thr=42.2 -> similarity_database_hybrid_v6score_gemini_3_flash_binary_1_stats.json
+    hybrid_manual_gpt gemini_3_flash: 10/141 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 20/141 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 30/141 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 40/141 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 50/141 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 60/141 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 70/141 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 80/141 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 90/141 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 100/141 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 110/141 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 120/141 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 130/141 (cached ok)
+    hybrid_manual_gpt gemini_3_flash: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.759 LOO=0.759 thr=35.2 -> similarity_database_hybrid_v6score_qwen_hf_binary_1_stats.json
+  hybrid_manual_gpt | gemma3_27b | task=binary_0 F1=0.620 LOO=0.620 thr=55.3
+  hybrid_manual_gpt | gemini_3_flash | task=binary_0 F1=0.735 LOO=0.727 thr=65.3
+  hybrid_manual_gpt | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.757 LOO=0.688 thr=45.2 -> similarity_database_hybrid_v6score_gemma3_27b_binary_1_stats.json
+  hybrid_manual_gpt | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.807 LOO=0.800 thr=65.3 -> similarity_database_hybrid_v6score_gemini_3_flash_binary_1_stats.json
+    hybrid_manual_gpt gemini_25_pro: 10/141 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 20/141 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 30/141 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 40/141 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 50/141 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 60/141 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 70/141 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 80/141 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 90/141 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 100/141 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 110/141 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 120/141 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 130/141 (cached ok)
+    hybrid_manual_gpt gemini_25_pro: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | gemini_25_pro | task=binary_0 F1=0.688 LOO=0.680 thr=30.2
+  hybrid_manual_gpt | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.780 LOO=0.780 thr=25.1 -> similarity_database_hybrid_v6score_gemini_25_pro_binary_1_stats.json
+
+============================================================
+  REP: hybrid_gpt  (drugs → weapon per model)
+============================================================
+  (parallel: up to 4 workers; each runs drugs then weapon; provider caps: OpenAI≤2 HF≤2 NIM≤3 Gemini≤1)
+    hybrid_gpt gpt5mini: 10/100 (cached ok)    hybrid_gpt mistral: 10/100 (cached ok)
+    hybrid_gpt gpt4: 10/100 (cached ok)
+
+    hybrid_gpt gpt5mini: 20/100 (cached ok)    hybrid_gpt qwen3_235b: 10/100 (cached ok)    hybrid_gpt gpt4: 20/100 (cached ok)
+    hybrid_gpt mistral: 20/100 (cached ok)
+
+    hybrid_gpt gpt4: 30/100 (cached ok)
+    hybrid_gpt gpt5mini: 30/100 (cached ok)
+    hybrid_gpt qwen3_235b: 20/100 (cached ok)
+    hybrid_gpt mistral: 30/100 (cached ok)    hybrid_gpt gpt5mini: 40/100 (cached ok)
+    hybrid_gpt gpt4: 40/100 (cached ok)
+
+    hybrid_gpt qwen3_235b: 30/100 (cached ok)
+    hybrid_gpt gpt4: 50/100 (cached ok)    hybrid_gpt gpt5mini: 50/100 (cached ok)
+    hybrid_gpt mistral: 40/100 (cached ok)
+
+
+    hybrid_gpt qwen3_235b: 40/100 (cached ok)    hybrid_gpt gpt4: 60/100 (cached ok)
+    hybrid_gpt gpt5mini: 60/100 (cached ok)
+    hybrid_gpt mistral: 50/100 (cached ok)    hybrid_gpt gpt4: 70/100 (cached ok)
+
+    hybrid_gpt qwen3_235b: 50/100 (cached ok)
+    hybrid_gpt gpt5mini: 70/100 (cached ok)    hybrid_gpt gpt4: 80/100 (cached ok)
+    hybrid_gpt mistral: 60/100 (cached ok)
+
+    hybrid_gpt qwen3_235b: 60/100 (cached ok)
+
+    hybrid_gpt gpt4: 90/100 (cached ok)    hybrid_gpt gpt5mini: 80/100 (cached ok)    hybrid_gpt qwen3_235b: 70/100 (cached ok)    hybrid_gpt mistral: 70/100 (cached ok)
+
+
+
+    hybrid_gpt mistral: 80/100 (cached ok)    hybrid_gpt gpt4: 100/100 (cached ok)    hybrid_gpt qwen3_235b: 80/100 (cached ok)
+    hybrid_gpt gpt5mini: 90/100 (cached ok)
+
+    hybrid_gpt qwen3_235b: 90/100 (cached ok)
+    hybrid_gpt gpt5mini: 100/100 (cached ok)
+
+    hybrid_gpt mistral: 90/100 (cached ok)    hybrid_gpt qwen3_235b: 100/100 (cached ok)
+
+    hybrid_gpt mistral: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_gpt | mistral | task=binary_0 F1=0.765 LOO=0.765 thr=65.3
+  hybrid_gpt | gpt5mini | task=binary_0 F1=0.778 LOO=0.732 thr=62.3
+  hybrid_gpt | qwen3_235b | task=binary_0 F1=0.812 LOO=0.789 thr=55.3
+  hybrid_gpt | gpt4 | task=binary_0 F1=0.838 LOO=0.806 thr=55.3
+  hybrid_gpt | mistral | task=binary_1 (same scores, no extra API) F1=0.764 LOO=0.764 thr=45.2 -> similarity_database_hybrid_gpt_v6score_mistral_binary_1_stats.json
+    hybrid_gpt mistral: 10/141 (cached ok)
+    hybrid_gpt mistral: 20/141 (cached ok)
+    hybrid_gpt mistral: 30/141 (cached ok)
+    hybrid_gpt mistral: 40/141 (cached ok)
+    hybrid_gpt mistral: 50/141 (cached ok)
+    hybrid_gpt mistral: 60/141 (cached ok)
+    hybrid_gpt mistral: 70/141 (cached ok)
+    hybrid_gpt mistral: 80/141 (cached ok)
+    hybrid_gpt mistral: 90/141 (cached ok)
+    hybrid_gpt mistral: 100/141 (cached ok)
+    hybrid_gpt mistral: 110/141 (cached ok)
+    hybrid_gpt mistral: 120/141 (cached ok)
+    hybrid_gpt mistral: 130/141 (cached ok)
+    hybrid_gpt mistral: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_gpt | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.721 LOO=0.713 thr=62.3 -> similarity_database_hybrid_gpt_v6score_gpt5mini_binary_1_stats.json
+    hybrid_gpt gpt5mini: 10/141 (cached ok)
+    hybrid_gpt gpt5mini: 20/141 (cached ok)
+    hybrid_gpt gpt5mini: 30/141 (cached ok)
+    hybrid_gpt gpt5mini: 40/141 (cached ok)
+    hybrid_gpt gpt5mini: 50/141 (cached ok)
+    hybrid_gpt gpt5mini: 60/141 (cached ok)
+    hybrid_gpt gpt5mini: 70/141 (cached ok)
+    hybrid_gpt gpt5mini: 80/141 (cached ok)
+    hybrid_gpt gpt5mini: 90/141 (cached ok)
+    hybrid_gpt gpt5mini: 100/141 (cached ok)
+    hybrid_gpt gpt5mini: 110/141 (cached ok)
+    hybrid_gpt gpt5mini: 120/141 (cached ok)
+    hybrid_gpt gpt5mini: 130/141 (cached ok)
+    hybrid_gpt gpt5mini: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_gpt | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.709 LOO=0.594 thr=35.2 -> similarity_database_hybrid_gpt_v6score_qwen3_235b_binary_1_stats.json
+    hybrid_gpt qwen3_235b: 10/141 (cached ok)
+    hybrid_gpt qwen3_235b: 20/141 (cached ok)
+    hybrid_gpt qwen3_235b: 30/141 (cached ok)
+    hybrid_gpt qwen3_235b: 40/141 (cached ok)
+    hybrid_gpt qwen3_235b: 50/141 (cached ok)
+    hybrid_gpt qwen3_235b: 60/141 (cached ok)
+    hybrid_gpt qwen3_235b: 70/141 (cached ok)
+    hybrid_gpt qwen3_235b: 80/141 (cached ok)
+    hybrid_gpt qwen3_235b: 90/141 (cached ok)
+    hybrid_gpt qwen3_235b: 100/141 (cached ok)
+    hybrid_gpt qwen3_235b: 110/141 (cached ok)
+    hybrid_gpt qwen3_235b: 120/141 (cached ok)
+    hybrid_gpt qwen3_235b: 130/141 (cached ok)
+    hybrid_gpt qwen3_235b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_gpt | gpt4 | task=binary_1 (same scores, no extra API) F1=0.743 LOO=0.743 thr=38.2 -> similarity_database_hybrid_gpt_v6score_gpt4_binary_1_stats.json
+    hybrid_gpt gpt4: 10/141 (cached ok)
+    hybrid_gpt gpt4: 20/141 (cached ok)
+    hybrid_gpt gpt4: 30/141 (cached ok)
+    hybrid_gpt gpt4: 40/141 (cached ok)
+    hybrid_gpt gpt4: 50/141 (cached ok)
+    hybrid_gpt gpt4: 60/141 (cached ok)
+    hybrid_gpt gpt4: 70/141 (cached ok)
+    hybrid_gpt gpt4: 80/141 (cached ok)
+    hybrid_gpt gpt4: 90/141 (cached ok)
+    hybrid_gpt gpt4: 100/141 (cached ok)
+    hybrid_gpt gpt4: 110/141 (cached ok)
+    hybrid_gpt gpt4: 120/141 (cached ok)
+    hybrid_gpt gpt4: 130/141 (cached ok)
+    hybrid_gpt gpt4: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_gpt | mistral | task=binary_0 F1=0.589 LOO=0.589 thr=60.3
+  hybrid_gpt | gpt5mini | task=binary_0 F1=0.688 LOO=0.674 thr=60.3
+  hybrid_gpt | qwen3_235b | task=binary_0 F1=0.719 LOO=0.719 thr=52.3
+  hybrid_gpt | gpt4 | task=binary_0 F1=0.705 LOO=0.659 thr=68.3
+  hybrid_gpt | mistral | task=binary_1 (same scores, no extra API) F1=0.720 LOO=0.701 thr=60.3 -> similarity_database_hybrid_gpt_v6score_mistral_binary_1_stats.json
+    hybrid_gpt llama3_70b: 10/100 (cached ok)
+    hybrid_gpt llama3_70b: 20/100 (cached ok)
+    hybrid_gpt llama3_70b: 30/100 (cached ok)
+    hybrid_gpt llama3_70b: 40/100 (cached ok)
+    hybrid_gpt llama3_70b: 50/100 (cached ok)
+    hybrid_gpt llama3_70b: 60/100 (cached ok)
+    hybrid_gpt llama3_70b: 70/100 (cached ok)
+    hybrid_gpt llama3_70b: 80/100 (cached ok)
+    hybrid_gpt llama3_70b: 90/100 (cached ok)
+    hybrid_gpt llama3_70b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_gpt | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.750 LOO=0.694 thr=53.3 -> similarity_database_hybrid_gpt_v6score_gpt5mini_binary_1_stats.json
+    hybrid_gpt gpt52: 10/100 (cached ok)
+    hybrid_gpt gpt52: 20/100 (cached ok)
+    hybrid_gpt gpt52: 30/100 (cached ok)
+    hybrid_gpt gpt52: 40/100 (cached ok)
+    hybrid_gpt gpt52: 50/100 (cached ok)
+    hybrid_gpt gpt52: 60/100 (cached ok)
+    hybrid_gpt gpt52: 70/100 (cached ok)
+    hybrid_gpt gpt52: 80/100 (cached ok)
+    hybrid_gpt gpt52: 90/100 (cached ok)
+    hybrid_gpt gpt52: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_gpt | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.752 LOO=0.752 thr=35.2 -> similarity_database_hybrid_gpt_v6score_qwen3_235b_binary_1_stats.json
+  hybrid_gpt | gpt4 | task=binary_1 (same scores, no extra API) F1=0.785 LOO=0.767 thr=55.3 -> similarity_database_hybrid_gpt_v6score_gpt4_binary_1_stats.json
+    hybrid_gpt qwen_hf: 10/100 (cached ok)
+    hybrid_gpt qwen_hf: 20/100 (cached ok)
+    hybrid_gpt qwen_hf: 30/100 (cached ok)
+    hybrid_gpt qwen_hf: 40/100 (cached ok)
+    hybrid_gpt qwen_hf: 50/100 (cached ok)
+    hybrid_gpt gpt51_thinking: 10/100 (cached ok)
+    hybrid_gpt qwen_hf: 60/100 (cached ok)
+    hybrid_gpt qwen_hf: 70/100 (cached ok)    hybrid_gpt gpt51_thinking: 20/100 (cached ok)
+    hybrid_gpt gpt51_thinking: 30/100 (cached ok)
+    hybrid_gpt qwen_hf: 80/100 (cached ok)
+
+    hybrid_gpt gpt51_thinking: 40/100 (cached ok)    hybrid_gpt qwen_hf: 90/100 (cached ok)
+
+    hybrid_gpt gpt51_thinking: 50/100 (cached ok)
+    hybrid_gpt qwen_hf: 100/100 (cached ok)
+    hybrid_gpt gpt51_thinking: 60/100 (cached ok)
+    hybrid_gpt gpt51_thinking: 70/100 (cached ok)
+    hybrid_gpt gpt51_thinking: 80/100 (cached ok)
+    hybrid_gpt gpt51_thinking: 90/100 (cached ok)
+    hybrid_gpt gpt51_thinking: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+
+  hybrid_gpt | llama3_70b | task=binary_0 F1=0.790 LOO=0.753 thr=58.3
+  hybrid_gpt | gpt52 | task=binary_0 F1=0.824 LOO=0.824 thr=62.3
+  hybrid_gpt | gpt51_thinking | task=binary_0 F1=0.865 LOO=0.853 thr=63.3
+  hybrid_gpt | qwen_hf | task=binary_0 F1=0.836 LOO=0.836 thr=55.3
+  hybrid_gpt | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.735 LOO=0.706 thr=50.3 -> similarity_database_hybrid_gpt_v6score_llama3_70b_binary_1_stats.json
+    hybrid_gpt llama3_70b: 10/141 (cached ok)
+    hybrid_gpt llama3_70b: 20/141 (cached ok)
+    hybrid_gpt llama3_70b: 30/141 (cached ok)
+    hybrid_gpt llama3_70b: 40/141 (cached ok)
+    hybrid_gpt llama3_70b: 50/141 (cached ok)
+    hybrid_gpt llama3_70b: 60/141 (cached ok)
+    hybrid_gpt llama3_70b: 70/141 (cached ok)
+    hybrid_gpt llama3_70b: 80/141 (cached ok)
+    hybrid_gpt llama3_70b: 90/141 (cached ok)
+    hybrid_gpt llama3_70b: 100/141 (cached ok)
+    hybrid_gpt llama3_70b: 110/141 (cached ok)
+    hybrid_gpt llama3_70b: 120/141 (cached ok)
+    hybrid_gpt llama3_70b: 130/141 (cached ok)
+    hybrid_gpt llama3_70b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_gpt | gpt52 | task=binary_1 (same scores, no extra API) F1=0.755 LOO=0.727 thr=52.3 -> similarity_database_hybrid_gpt_v6score_gpt52_binary_1_stats.json
+    hybrid_gpt gpt52: 10/141 (cached ok)
+    hybrid_gpt gpt52: 20/141 (cached ok)
+    hybrid_gpt gpt52: 30/141 (cached ok)
+    hybrid_gpt gpt52: 40/141 (cached ok)
+    hybrid_gpt gpt52: 50/141 (cached ok)
+    hybrid_gpt gpt52: 60/141 (cached ok)
+    hybrid_gpt gpt52: 70/141 (cached ok)
+    hybrid_gpt gpt52: 80/141 (cached ok)
+    hybrid_gpt gpt52: 90/141 (cached ok)
+    hybrid_gpt gpt52: 100/141 (cached ok)
+    hybrid_gpt gpt52: 110/141 (cached ok)
+    hybrid_gpt gpt52: 120/141 (cached ok)
+    hybrid_gpt gpt52: 130/141 (cached ok)
+    hybrid_gpt gpt52: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_gpt | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.724 LOO=0.724 thr=35.2 -> similarity_database_hybrid_gpt_v6score_qwen_hf_binary_1_stats.json
+    hybrid_gpt qwen_hf: 10/141 (cached ok)
+    hybrid_gpt qwen_hf: 20/141 (cached ok)
+    hybrid_gpt qwen_hf: 30/141 (cached ok)
+    hybrid_gpt qwen_hf: 40/141 (cached ok)
+    hybrid_gpt qwen_hf: 50/141 (cached ok)
+    hybrid_gpt qwen_hf: 60/141 (cached ok)
+    hybrid_gpt qwen_hf: 70/141 (cached ok)
+    hybrid_gpt qwen_hf: 80/141 (cached ok)
+    hybrid_gpt qwen_hf: 90/141 (cached ok)
+    hybrid_gpt qwen_hf: 100/141 (cached ok)
+    hybrid_gpt qwen_hf: 110/141 (cached ok)
+    hybrid_gpt qwen_hf: 120/141 (cached ok)
+    hybrid_gpt qwen_hf: 130/141 (cached ok)
+    hybrid_gpt qwen_hf: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_gpt | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.747 LOO=0.635 thr=60.3 -> similarity_database_hybrid_gpt_v6score_gpt51_thinking_binary_1_stats.json
+    hybrid_gpt gpt51_thinking: 10/141 (cached ok)
+    hybrid_gpt gpt51_thinking: 20/141 (cached ok)
+    hybrid_gpt gpt51_thinking: 30/141 (cached ok)
+    hybrid_gpt gpt51_thinking: 40/141 (cached ok)
+    hybrid_gpt gpt51_thinking: 50/141 (cached ok)
+    hybrid_gpt gpt51_thinking: 60/141 (cached ok)
+    hybrid_gpt gpt51_thinking: 70/141 (cached ok)
+    hybrid_gpt gpt51_thinking: 80/141 (cached ok)
+    hybrid_gpt gpt51_thinking: 90/141 (cached ok)
+    hybrid_gpt gpt51_thinking: 100/141 (cached ok)
+    hybrid_gpt gpt51_thinking: 110/141 (cached ok)
+    hybrid_gpt gpt51_thinking: 120/141 (cached ok)
+    hybrid_gpt gpt51_thinking: 130/141 (cached ok)
+    hybrid_gpt gpt51_thinking: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_gpt | llama3_70b | task=binary_0 F1=0.589 LOO=0.576 thr=58.3
+  hybrid_gpt | gpt52 | task=binary_0 F1=0.727 LOO=0.718 thr=63.3
+  hybrid_gpt | qwen_hf | task=binary_0 F1=0.705 LOO=0.651 thr=52.3
+  hybrid_gpt | gpt51_thinking | task=binary_0 F1=0.742 LOO=0.710 thr=68.3
+  hybrid_gpt | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.760 LOO=0.760 thr=58.3 -> similarity_database_hybrid_gpt_v6score_llama3_70b_binary_1_stats.json
+    hybrid_gpt gemini_25_pro: 10/100 (cached ok)
+    hybrid_gpt gemini_25_pro: 20/100 (cached ok)
+    hybrid_gpt gemini_25_pro: 30/100 (cached ok)
+    hybrid_gpt gemini_25_pro: 40/100 (cached ok)
+    hybrid_gpt gemini_25_pro: 50/100 (cached ok)
+    hybrid_gpt gemini_25_pro: 60/100 (cached ok)
+    hybrid_gpt gemini_25_pro: 70/100 (cached ok)
+    hybrid_gpt gemini_25_pro: 80/100 (cached ok)
+    hybrid_gpt gemini_25_pro: 90/100 (cached ok)
+    hybrid_gpt gemini_25_pro: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_gpt | gpt52 | task=binary_1 (same scores, no extra API) F1=0.785 LOO=0.774 thr=56.3 -> similarity_database_hybrid_gpt_v6score_gpt52_binary_1_stats.json
+  hybrid_gpt | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.719 LOO=0.569 thr=35.2 -> similarity_database_hybrid_gpt_v6score_qwen_hf_binary_1_stats.json
+    hybrid_gpt gemma3_27b: 10/100 (cached ok)
+    hybrid_gpt gemma3_27b: 20/100 (cached ok)
+    hybrid_gpt gemma3_27b: 30/100 (cached ok)
+    hybrid_gpt gemma3_27b: 40/100 (cached ok)
+    hybrid_gpt gemma3_27b: 50/100 (cached ok)
+    hybrid_gpt gemma3_27b: 60/100 (cached ok)
+    hybrid_gpt gemma3_27b: 70/100 (cached ok)
+    hybrid_gpt gemma3_27b: 80/100 (cached ok)
+    hybrid_gpt gemma3_27b: 90/100 (cached ok)
+    hybrid_gpt gemma3_27b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_gpt | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.794 LOO=0.794 thr=62.3 -> similarity_database_hybrid_gpt_v6score_gpt51_thinking_binary_1_stats.json
+  hybrid_gpt | gemini_25_pro | task=binary_0 F1=0.785 LOO=0.737 thr=35.2
+  hybrid_gpt | gemma3_27b | task=binary_0 F1=0.762 LOO=0.762 thr=65.3
+  hybrid_gpt | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.718 LOO=0.718 thr=20.1 -> similarity_database_hybrid_gpt_v6score_gemini_25_pro_binary_1_stats.json
+    hybrid_gpt gemini_3_flash: 10/100 (cached ok)
+    hybrid_gpt gemini_3_flash: 20/100 (cached ok)
+    hybrid_gpt gemini_3_flash: 30/100 (cached ok)
+    hybrid_gpt gemini_3_flash: 40/100 (cached ok)
+    hybrid_gpt gemini_3_flash: 50/100 (cached ok)
+    hybrid_gpt gemini_3_flash: 60/100 (cached ok)
+    hybrid_gpt gemini_3_flash: 70/100 (cached ok)
+    hybrid_gpt gemini_3_flash: 80/100 (cached ok)
+    hybrid_gpt gemini_3_flash: 90/100 (cached ok)
+    hybrid_gpt gemini_3_flash: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_gpt | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.740 LOO=0.740 thr=55.3 -> similarity_database_hybrid_gpt_v6score_gemma3_27b_binary_1_stats.json
+    hybrid_gpt gemma3_27b: 10/141 (cached ok)
+    hybrid_gpt gemma3_27b: 20/141 (cached ok)
+    hybrid_gpt gemma3_27b: 30/141 (cached ok)
+    hybrid_gpt gemma3_27b: 40/141 (cached ok)
+    hybrid_gpt gemma3_27b: 50/141 (cached ok)
+    hybrid_gpt gemma3_27b: 60/141 (cached ok)
+    hybrid_gpt gemma3_27b: 70/141 (cached ok)
+    hybrid_gpt gemma3_27b: 80/141 (cached ok)
+    hybrid_gpt gemma3_27b: 90/141 (cached ok)
+    hybrid_gpt gemma3_27b: 100/141 (cached ok)
+    hybrid_gpt gemma3_27b: 110/141 (cached ok)
+    hybrid_gpt gemma3_27b: 120/141 (cached ok)
+    hybrid_gpt gemma3_27b: 130/141 (cached ok)
+    hybrid_gpt gemma3_27b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_gpt | gemini_3_flash | task=binary_0 F1=0.824 LOO=0.824 thr=85.4
+  hybrid_gpt | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.752 LOO=0.641 thr=65.3 -> similarity_database_hybrid_gpt_v6score_gemini_3_flash_binary_1_stats.json
+    hybrid_gpt gemini_25_pro: 10/141 (cached ok)
+    hybrid_gpt gemini_25_pro: 20/141 (cached ok)
+    hybrid_gpt gemini_25_pro: 30/141 (cached ok)
+    hybrid_gpt gemini_25_pro: 40/141 (cached ok)
+    hybrid_gpt gemini_25_pro: 50/141 (cached ok)
+    hybrid_gpt gemini_25_pro: 60/141 (cached ok)
+    hybrid_gpt gemini_25_pro: 70/141 (cached ok)
+    hybrid_gpt gemini_25_pro: 80/141 (cached ok)
+    hybrid_gpt gemini_25_pro: 90/141 (cached ok)
+    hybrid_gpt gemini_25_pro: 100/141 (cached ok)
+    hybrid_gpt gemini_25_pro: 110/141 (cached ok)
+    hybrid_gpt gemini_25_pro: 120/141 (cached ok)
+    hybrid_gpt gemini_25_pro: 130/141 (cached ok)
+    hybrid_gpt gemini_25_pro: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_gpt | gemma3_27b | task=binary_0 F1=0.630 LOO=0.630 thr=55.3
+  hybrid_gpt | gemini_25_pro | task=binary_0 F1=0.718 LOO=0.718 thr=55.3
+  hybrid_gpt | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.730 LOO=0.730 thr=55.3 -> similarity_database_hybrid_gpt_v6score_gemma3_27b_binary_1_stats.json
+  hybrid_gpt | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.742 LOO=0.742 thr=25.1 -> similarity_database_hybrid_gpt_v6score_gemini_25_pro_binary_1_stats.json
+    hybrid_gpt gemini_3_flash: 10/141 (cached ok)
+    hybrid_gpt gemini_3_flash: 20/141 (cached ok)
+    hybrid_gpt gemini_3_flash: 30/141 (cached ok)
+    hybrid_gpt gemini_3_flash: 40/141 (cached ok)
+    hybrid_gpt gemini_3_flash: 50/141 (cached ok)
+    hybrid_gpt gemini_3_flash: 60/141 (cached ok)
+    hybrid_gpt gemini_3_flash: 70/141 (cached ok)
+    hybrid_gpt gemini_3_flash: 80/141 (cached ok)
+    hybrid_gpt gemini_3_flash: 90/141 (cached ok)
+    hybrid_gpt gemini_3_flash: 100/141 (cached ok)
+    hybrid_gpt gemini_3_flash: 110/141 (cached ok)
+    hybrid_gpt gemini_3_flash: 120/141 (cached ok)
+    hybrid_gpt gemini_3_flash: 130/141 (cached ok)
+    hybrid_gpt gemini_3_flash: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_gpt | gemini_3_flash | task=binary_0 F1=0.758 LOO=0.758 thr=72.4
+  hybrid_gpt | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.793 LOO=0.767 thr=72.4 -> similarity_database_hybrid_gpt_v6score_gemini_3_flash_binary_1_stats.json
+
+============================================================
+  REP: hybrid_full_gpt  (drugs → weapon per model)
+============================================================
+  (parallel: up to 4 workers; each runs drugs then weapon; provider caps: OpenAI≤2 HF≤2 NIM≤3 Gemini≤1)
+    hybrid_full_gpt mistral: 10/100 (cached ok)
+    hybrid_full_gpt mistral: 20/100 (cached ok)    hybrid_full_gpt qwen3_235b: 10/100 (cached ok)    hybrid_full_gpt gpt4: 10/100 (cached ok)
+
+
+    hybrid_full_gpt mistral: 30/100 (cached ok)
+    hybrid_full_gpt gpt4: 20/100 (cached ok)    hybrid_full_gpt mistral: 40/100 (cached ok)
+    hybrid_full_gpt qwen3_235b: 20/100 (cached ok)
+    hybrid_full_gpt gpt4: 30/100 (cached ok)
+
+    hybrid_full_gpt qwen3_235b: 30/100 (cached ok)
+    hybrid_full_gpt gpt4: 40/100 (cached ok)
+    hybrid_full_gpt gpt4: 50/100 (cached ok)    hybrid_full_gpt qwen3_235b: 40/100 (cached ok)    hybrid_full_gpt gpt5mini: 10/100 (cached ok)
+
+
+    hybrid_full_gpt gpt4: 60/100 (cached ok)
+    hybrid_full_gpt qwen3_235b: 50/100 (cached ok)    hybrid_full_gpt gpt4: 70/100 (cached ok)    hybrid_full_gpt gpt5mini: 20/100 (cached ok)
+
+
+    hybrid_full_gpt gpt5mini: 30/100 (cached ok)
+    hybrid_full_gpt gpt4: 80/100 (cached ok)
+    hybrid_full_gpt gpt4: 90/100 (cached ok)
+    hybrid_full_gpt gpt5mini: 40/100 (cached ok)
+    hybrid_full_gpt qwen3_235b: 60/100 (cached ok)    hybrid_full_gpt gpt4: 100/100 (cached ok)    hybrid_full_gpt gpt5mini: 50/100 (cached ok)
+
+
+    hybrid_full_gpt qwen3_235b: 70/100 (cached ok)    hybrid_full_gpt gpt5mini: 60/100 (cached ok)
+
+    hybrid_full_gpt qwen3_235b: 80/100 (cached ok)    hybrid_full_gpt gpt5mini: 70/100 (cached ok)
+
+    hybrid_full_gpt qwen3_235b: 90/100 (cached ok)    hybrid_full_gpt gpt5mini: 80/100 (cached ok)
+
+    hybrid_full_gpt qwen3_235b: 100/100 (cached ok)    hybrid_full_gpt gpt5mini: 90/100 (cached ok)
+
+    hybrid_full_gpt gpt5mini: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | qwen3_235b | task=binary_0 F1=0.825 LOO=0.825 thr=58.3
+  hybrid_full_gpt | gpt5mini | task=binary_0 F1=0.844 LOO=0.812 thr=64.3
+  hybrid_full_gpt | gpt4 | task=binary_0 F1=0.849 LOO=0.818 thr=65.3
+  hybrid_full_gpt | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.734 LOO=0.660 thr=30.2 -> similarity_database_hybrid_full_gpt_v6score_qwen3_235b_binary_1_stats.json
+    hybrid_full_gpt qwen3_235b: 10/141 (cached ok)
+    hybrid_full_gpt qwen3_235b: 20/141 (cached ok)
+    hybrid_full_gpt qwen3_235b: 30/141 (cached ok)
+    hybrid_full_gpt qwen3_235b: 40/141 (cached ok)
+    hybrid_full_gpt qwen3_235b: 50/141 (cached ok)
+    hybrid_full_gpt qwen3_235b: 60/141 (cached ok)
+    hybrid_full_gpt qwen3_235b: 70/141 (cached ok)
+    hybrid_full_gpt qwen3_235b: 80/141 (cached ok)
+    hybrid_full_gpt qwen3_235b: 90/141 (cached ok)
+    hybrid_full_gpt qwen3_235b: 100/141 (cached ok)
+    hybrid_full_gpt qwen3_235b: 110/141 (cached ok)
+    hybrid_full_gpt qwen3_235b: 120/141 (cached ok)
+    hybrid_full_gpt qwen3_235b: 130/141 (cached ok)
+    hybrid_full_gpt qwen3_235b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.761 LOO=0.753 thr=56.3 -> similarity_database_hybrid_full_gpt_v6score_gpt5mini_binary_1_stats.json
+    hybrid_full_gpt gpt5mini: 10/141 (cached ok)
+    hybrid_full_gpt gpt5mini: 20/141 (cached ok)
+    hybrid_full_gpt gpt5mini: 30/141 (cached ok)
+    hybrid_full_gpt gpt5mini: 40/141 (cached ok)
+    hybrid_full_gpt gpt5mini: 50/141 (cached ok)
+    hybrid_full_gpt gpt5mini: 60/141 (cached ok)
+    hybrid_full_gpt gpt5mini: 70/141 (cached ok)
+    hybrid_full_gpt gpt5mini: 80/141 (cached ok)
+    hybrid_full_gpt gpt5mini: 90/141 (cached ok)
+    hybrid_full_gpt gpt5mini: 100/141 (cached ok)
+    hybrid_full_gpt gpt5mini: 110/141 (cached ok)
+    hybrid_full_gpt gpt5mini: 120/141 (cached ok)
+    hybrid_full_gpt gpt5mini: 130/141 (cached ok)
+    hybrid_full_gpt gpt5mini: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | gpt4 | task=binary_1 (same scores, no extra API) F1=0.765 LOO=0.765 thr=35.2 -> similarity_database_hybrid_full_gpt_v6score_gpt4_binary_1_stats.json
+    hybrid_full_gpt gpt4: 10/141 (cached ok)
+    hybrid_full_gpt gpt4: 20/141 (cached ok)
+    hybrid_full_gpt gpt4: 30/141 (cached ok)
+    hybrid_full_gpt gpt4: 40/141 (cached ok)
+    hybrid_full_gpt gpt4: 50/141 (cached ok)
+    hybrid_full_gpt gpt4: 60/141 (cached ok)
+    hybrid_full_gpt gpt4: 70/141 (cached ok)
+    hybrid_full_gpt gpt4: 80/141 (cached ok)
+    hybrid_full_gpt gpt4: 90/141 (cached ok)
+    hybrid_full_gpt gpt4: 100/141 (cached ok)
+    hybrid_full_gpt gpt4: 110/141 (cached ok)
+    hybrid_full_gpt gpt4: 120/141 (cached ok)
+    hybrid_full_gpt gpt4: 130/141 (cached ok)
+    hybrid_full_gpt gpt4: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | qwen3_235b | task=binary_0 F1=0.619 LOO=0.619 thr=40.2
+  hybrid_full_gpt | gpt5mini | task=binary_0 F1=0.649 LOO=0.622 thr=67.3
+    hybrid_full_gpt mistral: 50/100 (cached ok)
+    hybrid_full_gpt mistral: 60/100 (cached ok)
+    hybrid_full_gpt mistral: 70/100 (cached ok)
+    hybrid_full_gpt mistral: 80/100 (cached ok)
+    hybrid_full_gpt mistral: 90/100 (cached ok)
+    hybrid_full_gpt mistral: 100/100 (cached ok)
+    (row cache: skipped 99 ok rows; refetched 1 non-ok/missing)
+  hybrid_full_gpt | gpt4 | task=binary_0 F1=0.681 LOO=0.604 thr=60.3
+  hybrid_full_gpt | mistral | task=binary_0 F1=0.775 LOO=0.775 thr=60.3 (partial: 1 rows still invalid — delete those rows or re-run)
+  hybrid_full_gpt | qwen3_235b | task=binary_1 (same scores, no extra API) F1=0.687 LOO=0.612 thr=35.2 -> similarity_database_hybrid_full_gpt_v6score_qwen3_235b_binary_1_stats.json
+    hybrid_full_gpt llama3_70b: 10/100 (cached ok)
+    hybrid_full_gpt llama3_70b: 20/100 (cached ok)
+    hybrid_full_gpt llama3_70b: 30/100 (cached ok)
+    hybrid_full_gpt llama3_70b: 40/100 (cached ok)
+    hybrid_full_gpt llama3_70b: 50/100 (cached ok)
+    hybrid_full_gpt llama3_70b: 60/100 (cached ok)
+    hybrid_full_gpt llama3_70b: 70/100 (cached ok)
+    hybrid_full_gpt llama3_70b: 80/100 (cached ok)
+    hybrid_full_gpt llama3_70b: 90/100 (cached ok)
+    hybrid_full_gpt llama3_70b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | gpt5mini | task=binary_1 (same scores, no extra API) F1=0.718 LOO=0.710 thr=40.2 -> similarity_database_hybrid_full_gpt_v6score_gpt5mini_binary_1_stats.json
+    hybrid_full_gpt gpt52: 10/100 (cached ok)
+    hybrid_full_gpt gpt52: 20/100 (cached ok)
+    hybrid_full_gpt gpt52: 30/100 (cached ok)
+    hybrid_full_gpt gpt52: 40/100 (cached ok)
+    hybrid_full_gpt gpt52: 50/100 (cached ok)
+    hybrid_full_gpt gpt52: 60/100 (cached ok)
+    hybrid_full_gpt gpt52: 70/100 (cached ok)
+    hybrid_full_gpt gpt52: 80/100 (cached ok)
+    hybrid_full_gpt gpt52: 90/100 (cached ok)
+    hybrid_full_gpt gpt52: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | gpt4 | task=binary_1 (same scores, no extra API) F1=0.738 LOO=0.643 thr=55.3 -> similarity_database_hybrid_full_gpt_v6score_gpt4_binary_1_stats.json
+    hybrid_full_gpt gpt51_thinking: 10/100 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 20/100 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 30/100 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 40/100 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 50/100 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 60/100 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 70/100 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 80/100 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 90/100 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | mistral | task=binary_1 (same scores, no extra API) F1=0.740 LOO=0.733 thr=40.2 -> similarity_database_hybrid_full_gpt_v6score_mistral_binary_1_stats.json
+    hybrid_full_gpt mistral: 10/141 (cached ok)
+    hybrid_full_gpt mistral: 20/141 (cached ok)
+    hybrid_full_gpt mistral: 30/141 (cached ok)
+    hybrid_full_gpt mistral: 40/141 (cached ok)
+    hybrid_full_gpt mistral: 50/141 (cached ok)
+    hybrid_full_gpt mistral: 60/141 (cached ok)
+    hybrid_full_gpt mistral: 70/141 (cached ok)
+    hybrid_full_gpt mistral: 80/141 (cached ok)
+    hybrid_full_gpt mistral: 90/141 (cached ok)
+    hybrid_full_gpt mistral: 100/141 (cached ok)
+    hybrid_full_gpt mistral: 110/141 (cached ok)
+    hybrid_full_gpt mistral: 120/141 (cached ok)
+    hybrid_full_gpt mistral: 130/141 (cached ok)
+    hybrid_full_gpt mistral: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | llama3_70b | task=binary_0 F1=0.817 LOO=0.817 thr=58.3
+  hybrid_full_gpt | gpt52 | task=binary_0 F1=0.853 LOO=0.853 thr=58.3
+  hybrid_full_gpt | gpt51_thinking | task=binary_0 F1=0.836 LOO=0.765 thr=65.3
+  hybrid_full_gpt | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.766 LOO=0.739 thr=45.2 -> similarity_database_hybrid_full_gpt_v6score_llama3_70b_binary_1_stats.json
+    hybrid_full_gpt llama3_70b: 10/141 (cached ok)
+    hybrid_full_gpt llama3_70b: 20/141 (cached ok)
+    hybrid_full_gpt llama3_70b: 30/141 (cached ok)
+    hybrid_full_gpt llama3_70b: 40/141 (cached ok)
+    hybrid_full_gpt llama3_70b: 50/141 (cached ok)
+    hybrid_full_gpt llama3_70b: 60/141 (cached ok)
+    hybrid_full_gpt llama3_70b: 70/141 (cached ok)
+    hybrid_full_gpt llama3_70b: 80/141 (cached ok)
+    hybrid_full_gpt llama3_70b: 90/141 (cached ok)
+    hybrid_full_gpt llama3_70b: 100/141 (cached ok)
+    hybrid_full_gpt llama3_70b: 110/141 (cached ok)
+    hybrid_full_gpt llama3_70b: 120/141 (cached ok)
+    hybrid_full_gpt llama3_70b: 130/141 (cached ok)
+    hybrid_full_gpt llama3_70b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | mistral | task=binary_0 F1=0.547 LOO=0.547 thr=40.2
+  hybrid_full_gpt | gpt52 | task=binary_1 (same scores, no extra API) F1=0.761 LOO=0.761 thr=45.2 -> similarity_database_hybrid_full_gpt_v6score_gpt52_binary_1_stats.json
+    hybrid_full_gpt gpt52: 10/141 (cached ok)
+    hybrid_full_gpt gpt52: 20/141 (cached ok)
+    hybrid_full_gpt gpt52: 30/141 (cached ok)
+    hybrid_full_gpt gpt52: 40/141 (cached ok)
+    hybrid_full_gpt gpt52: 50/141 (cached ok)
+    hybrid_full_gpt gpt52: 60/141 (cached ok)
+    hybrid_full_gpt gpt52: 70/141 (cached ok)
+    hybrid_full_gpt gpt52: 80/141 (cached ok)
+    hybrid_full_gpt gpt52: 90/141 (cached ok)
+    hybrid_full_gpt gpt52: 100/141 (cached ok)
+    hybrid_full_gpt gpt52: 110/141 (cached ok)
+    hybrid_full_gpt gpt52: 120/141 (cached ok)
+    hybrid_full_gpt gpt52: 130/141 (cached ok)
+    hybrid_full_gpt gpt52: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.782 LOO=0.768 thr=38.2 -> similarity_database_hybrid_full_gpt_v6score_gpt51_thinking_binary_1_stats.json
+    hybrid_full_gpt gpt51_thinking: 10/141 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 20/141 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 30/141 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 40/141 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 50/141 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 60/141 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 70/141 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 80/141 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 90/141 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 100/141 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 110/141 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 120/141 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 130/141 (cached ok)
+    hybrid_full_gpt gpt51_thinking: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | llama3_70b | task=binary_0 F1=0.515 LOO=0.484 thr=55.3
+  hybrid_full_gpt | mistral | task=binary_1 (same scores, no extra API) F1=0.671 LOO=0.671 thr=40.2 -> similarity_database_hybrid_full_gpt_v6score_mistral_binary_1_stats.json
+    hybrid_full_gpt qwen_hf: 10/100 (cached ok)
+    hybrid_full_gpt qwen_hf: 20/100 (cached ok)
+    hybrid_full_gpt qwen_hf: 30/100 (cached ok)
+    hybrid_full_gpt qwen_hf: 40/100 (cached ok)
+    hybrid_full_gpt qwen_hf: 50/100 (cached ok)
+    hybrid_full_gpt qwen_hf: 60/100 (cached ok)
+    hybrid_full_gpt qwen_hf: 70/100 (cached ok)
+    hybrid_full_gpt qwen_hf: 80/100 (cached ok)
+    hybrid_full_gpt qwen_hf: 90/100 (cached ok)
+    hybrid_full_gpt qwen_hf: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | gpt52 | task=binary_0 F1=0.675 LOO=0.675 thr=58.3
+  hybrid_full_gpt | gpt51_thinking | task=binary_0 F1=0.680 LOO=0.680 thr=62.3
+  hybrid_full_gpt | qwen_hf | task=binary_0 F1=0.825 LOO=0.812 thr=58.3
+  hybrid_full_gpt | llama3_70b | task=binary_1 (same scores, no extra API) F1=0.656 LOO=0.629 thr=25.1 -> similarity_database_hybrid_full_gpt_v6score_llama3_70b_binary_1_stats.json
+  hybrid_full_gpt | gpt52 | task=binary_1 (same scores, no extra API) F1=0.770 LOO=0.727 thr=47.2 -> similarity_database_hybrid_full_gpt_v6score_gpt52_binary_1_stats.json
+  hybrid_full_gpt | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.727 LOO=0.692 thr=30.2 -> similarity_database_hybrid_full_gpt_v6score_qwen_hf_binary_1_stats.json
+    hybrid_full_gpt qwen_hf: 10/141 (cached ok)
+    hybrid_full_gpt qwen_hf: 20/141 (cached ok)
+    hybrid_full_gpt qwen_hf: 30/141 (cached ok)
+    hybrid_full_gpt qwen_hf: 40/141 (cached ok)
+    hybrid_full_gpt qwen_hf: 50/141 (cached ok)
+    hybrid_full_gpt qwen_hf: 60/141 (cached ok)
+    hybrid_full_gpt qwen_hf: 70/141 (cached ok)
+    hybrid_full_gpt qwen_hf: 80/141 (cached ok)
+    hybrid_full_gpt qwen_hf: 90/141 (cached ok)
+    hybrid_full_gpt qwen_hf: 100/141 (cached ok)
+    hybrid_full_gpt qwen_hf: 110/141 (cached ok)
+    hybrid_full_gpt qwen_hf: 120/141 (cached ok)
+    hybrid_full_gpt qwen_hf: 130/141 (cached ok)
+    hybrid_full_gpt qwen_hf: 140/141 (cached ok)
+  hybrid_full_gpt | gpt51_thinking | task=binary_1 (same scores, no extra API) F1=0.769 LOO=0.769 thr=45.2 -> similarity_database_hybrid_full_gpt_v6score_gpt51_thinking_binary_1_stats.json
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+    hybrid_full_gpt gemma3_27b: 10/100 (cached ok)
+    hybrid_full_gpt gemma3_27b: 20/100 (cached ok)
+    hybrid_full_gpt gemma3_27b: 30/100 (cached ok)
+    hybrid_full_gpt gemma3_27b: 40/100 (cached ok)
+    hybrid_full_gpt gemma3_27b: 50/100 (cached ok)
+    hybrid_full_gpt gemma3_27b: 60/100 (cached ok)
+    hybrid_full_gpt gemma3_27b: 70/100 (cached ok)
+    hybrid_full_gpt gemma3_27b: 80/100 (cached ok)
+    hybrid_full_gpt gemma3_27b: 90/100 (cached ok)
+    hybrid_full_gpt gemma3_27b: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | gemma3_27b | task=binary_0 F1=0.759 LOO=0.759 thr=65.3
+  hybrid_full_gpt | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.746 LOO=0.734 thr=35.2 -> similarity_database_hybrid_full_gpt_v6score_gemma3_27b_binary_1_stats.json
+    hybrid_full_gpt gemma3_27b: 10/141 (cached ok)
+    hybrid_full_gpt gemma3_27b: 20/141 (cached ok)
+    hybrid_full_gpt gemma3_27b: 30/141 (cached ok)
+    hybrid_full_gpt gemma3_27b: 40/141 (cached ok)
+    hybrid_full_gpt gemma3_27b: 50/141 (cached ok)
+    hybrid_full_gpt gemma3_27b: 60/141 (cached ok)
+    hybrid_full_gpt gemma3_27b: 70/141 (cached ok)
+    hybrid_full_gpt gemma3_27b: 80/141 (cached ok)
+    hybrid_full_gpt gemma3_27b: 90/141 (cached ok)
+    hybrid_full_gpt gemma3_27b: 100/141 (cached ok)
+    hybrid_full_gpt gemma3_27b: 110/141 (cached ok)
+    hybrid_full_gpt gemma3_27b: 120/141 (cached ok)
+    hybrid_full_gpt gemma3_27b: 130/141 (cached ok)
+    hybrid_full_gpt gemma3_27b: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | qwen_hf | task=binary_0 F1=0.600 LOO=0.412 thr=35.2
+  hybrid_full_gpt | gemma3_27b | task=binary_0 F1=0.604 LOO=0.604 thr=55.3
+  hybrid_full_gpt | qwen_hf | task=binary_1 (same scores, no extra API) F1=0.705 LOO=0.705 thr=30.2 -> similarity_database_hybrid_full_gpt_v6score_qwen_hf_binary_1_stats.json
+  hybrid_full_gpt | gemma3_27b | task=binary_1 (same scores, no extra API) F1=0.678 LOO=0.655 thr=35.2 -> similarity_database_hybrid_full_gpt_v6score_gemma3_27b_binary_1_stats.json
+    hybrid_full_gpt gemini_25_pro: 10/100
+    hybrid_full_gpt gemini_25_pro: 20/100
+    hybrid_full_gpt gemini_25_pro: 30/100
+    hybrid_full_gpt gemini_25_pro: 40/100
+    hybrid_full_gpt gemini_25_pro: 50/100
+    hybrid_full_gpt gemini_25_pro: 60/100
+    hybrid_full_gpt gemini_25_pro: 70/100
+    hybrid_full_gpt gemini_25_pro: 80/100
+    hybrid_full_gpt gemini_25_pro: 90/100
+    hybrid_full_gpt gemini_25_pro: 100/100
+  hybrid_full_gpt | gemini_25_pro | task=binary_0 F1=0.829 LOO=0.765 thr=40.2
+  hybrid_full_gpt | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.722 LOO=0.647 thr=20.1 -> similarity_database_hybrid_full_gpt_v6score_gemini_25_pro_binary_1_stats.json
+    hybrid_full_gpt gemini_3_flash: 10/100 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 20/100 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 30/100 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 40/100
+    hybrid_full_gpt gemini_3_flash: 50/100 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 60/100 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 70/100 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 80/100 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 90/100 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 100/100 (cached ok)
+    (row cache: skipped 94 ok rows; refetched 6 non-ok/missing)
+  hybrid_full_gpt | gemini_3_flash | task=binary_0 F1=0.507 LOO=0.507 thr=0.0
+  hybrid_full_gpt | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.649 LOO=0.649 thr=0.0 -> similarity_database_hybrid_full_gpt_v6score_gemini_3_flash_binary_1_stats.json
+    hybrid_full_gpt gemini_25_pro: 10/141 (cached ok)
+    hybrid_full_gpt gemini_25_pro: 20/141 (cached ok)
+    hybrid_full_gpt gemini_25_pro: 30/141 (cached ok)
+    hybrid_full_gpt gemini_25_pro: 40/141 (cached ok)
+    hybrid_full_gpt gemini_25_pro: 50/141 (cached ok)
+    hybrid_full_gpt gemini_25_pro: 60/141 (cached ok)
+    hybrid_full_gpt gemini_25_pro: 70/141 (cached ok)
+    hybrid_full_gpt gemini_25_pro: 80/141 (cached ok)
+    hybrid_full_gpt gemini_25_pro: 90/141 (cached ok)
+    hybrid_full_gpt gemini_25_pro: 100/141 (cached ok)
+    hybrid_full_gpt gemini_25_pro: 110/141 (cached ok)
+    hybrid_full_gpt gemini_25_pro: 120/141 (cached ok)
+    hybrid_full_gpt gemini_25_pro: 130/141 (cached ok)
+    hybrid_full_gpt gemini_25_pro: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | gemini_25_pro | task=binary_0 F1=0.667 LOO=0.653 thr=25.1
+  hybrid_full_gpt | gemini_25_pro | task=binary_1 (same scores, no extra API) F1=0.752 LOO=0.740 thr=30.2 -> similarity_database_hybrid_full_gpt_v6score_gemini_25_pro_binary_1_stats.json
+    hybrid_full_gpt gemini_3_flash: 10/141 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 20/141 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 30/141 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 40/141 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 50/141 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 60/141 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 70/141 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 80/141 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 90/141 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 100/141 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 110/141 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 120/141 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 130/141 (cached ok)
+    hybrid_full_gpt gemini_3_flash: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | gemini_3_flash | task=binary_0 F1=0.690 LOO=0.674 thr=75.4
+  hybrid_full_gpt | gemini_3_flash | task=binary_1 (same scores, no extra API) F1=0.780 LOO=0.780 thr=58.3 -> similarity_database_hybrid_full_gpt_v6score_gemini_3_flash_binary_1_stats.json
+
+Saved summary: /Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/v6_multimodel_summary_binary_0.json
+All finished. Summary includes both binary tasks: /Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/v6_multimodel_summary_binary_0.json

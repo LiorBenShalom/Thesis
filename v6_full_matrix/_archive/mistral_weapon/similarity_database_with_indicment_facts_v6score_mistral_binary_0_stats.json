@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "facts",
+  "csv": "similarity_database_with_indicment_facts.csv",
+  "model": "mistral",
+  "task": "binary_0",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/weapon/results_weapon/similarity_database_with_indicment_facts_v6score_mistral_binary_0_preds.csv",
+  "best_threshold": 65.3266,
+  "global_best": {
+    "f1": 0.6582,
+    "accuracy": 0.8085,
+    "precision": 0.6842,
+    "recall": 0.6341,
+    "tp": 26,
+    "fp": 12,
+    "fn": 15,
+    "tn": 88
+  },
+  "loo": {
+    "accuracy": 0.8085,
+    "f1": 0.6582,
+    "precision": 0.6842,
+    "recall": 0.6341,
+    "cm": [
+      [
+        88,
+        12
+      ],
+      [
+        15,
+        26
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 60.11,
+    "std": 16.78,
+    "pos_mean": 72.93,
+    "neg_mean": 54.85
+  }
+}

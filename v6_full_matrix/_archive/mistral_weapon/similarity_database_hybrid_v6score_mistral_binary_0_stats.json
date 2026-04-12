@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "hybrid_manual_gpt",
+  "csv": "similarity_database_hybrid.csv",
+  "model": "mistral",
+  "task": "binary_0",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/weapon/results_weapon/similarity_database_hybrid_v6score_mistral_binary_0_preds.csv",
+  "best_threshold": 60.3015,
+  "global_best": {
+    "f1": 0.6078,
+    "accuracy": 0.7163,
+    "precision": 0.5082,
+    "recall": 0.7561,
+    "tp": 31,
+    "fp": 30,
+    "fn": 10,
+    "tn": 70
+  },
+  "loo": {
+    "accuracy": 0.7163,
+    "f1": 0.6078,
+    "precision": 0.5082,
+    "recall": 0.7561,
+    "cm": [
+      [
+        70,
+        30
+      ],
+      [
+        10,
+        31
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 52.52,
+    "std": 15.04,
+    "pos_mean": 62.2,
+    "neg_mean": 48.55
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "fe_gpt_schema_v2",
+  "csv": "similarity_database_fe_gpt_schema_v2.csv",
+  "model": "mistral",
+  "task": "binary_1",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/drugs/results_drugs/similarity_database_fe_gpt_schema_v2_v6score_mistral_binary_0_preds.csv",
+  "best_threshold": 60.3015,
+  "global_best": {
+    "f1": 0.8073,
+    "accuracy": 0.79,
+    "precision": 0.7586,
+    "recall": 0.8627,
+    "tp": 44,
+    "fp": 14,
+    "fn": 7,
+    "tn": 35
+  },
+  "loo": {
+    "accuracy": 0.79,
+    "f1": 0.8073,
+    "precision": 0.7586,
+    "recall": 0.8627,
+    "cm": [
+      [
+        35,
+        14
+      ],
+      [
+        7,
+        44
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 62.45,
+    "std": 20.89,
+    "pos_mean": 74.22,
+    "neg_mean": 50.2
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

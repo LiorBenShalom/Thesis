@@ -1,0 +1,8 @@
+﻿domain,model,representation_id,complete,n_valid,n_failed,threshold,f1_global,f1_loo,precision,recall
+drugs,gpt5mini,hybrid_full_gpt,False,3,97,0.0,1.0,1.0,1.0,1.0
+drugs,gpt4,hybrid_full_gpt,True,100,0,65.3266,0.8485,0.8182,0.875,0.8235
+drugs,qwen_hf,hybrid_full_gpt,True,100,0,58.2915,0.8254,0.8125,0.8966,0.7647
+drugs,mistral,hybrid_full_gpt,False,99,1,60.3015,0.775,0.775,0.6739,0.9118
+drugs,nemotron3_nano,hybrid_full_gpt,True,100,0,40.201,0.6909,0.6786,0.9048,0.5588
+drugs,dicta,hybrid_full_gpt,False,0,100,,,,,
+drugs,qwen3_235b,hybrid_full_gpt,False,0,100,,,,,

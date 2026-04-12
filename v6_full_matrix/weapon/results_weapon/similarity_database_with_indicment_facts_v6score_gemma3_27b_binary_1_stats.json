@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "facts",
+  "csv": "similarity_database_with_indicment_facts.csv",
+  "model": "gemma3_27b",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_matrix/weapon/results_weapon/similarity_database_with_indicment_facts_v6score_gemma3_27b_binary_0_preds.csv",
+  "best_threshold": 45.2261,
+  "global_best": {
+    "f1": 0.7879,
+    "accuracy": 0.8014,
+    "precision": 0.7429,
+    "recall": 0.8387,
+    "tp": 52,
+    "fp": 18,
+    "fn": 10,
+    "tn": 61
+  },
+  "loo": {
+    "accuracy": 0.7872,
+    "f1": 0.7692,
+    "precision": 0.7353,
+    "recall": 0.8065,
+    "cm": [
+      [
+        61,
+        18
+      ],
+      [
+        12,
+        50
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 53.19,
+    "std": 16.25,
+    "pos_mean": 65.48,
+    "neg_mean": 43.54
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}
