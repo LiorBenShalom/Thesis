@@ -1,0 +1,943 @@
+{
+  "מחסנית ובה 10 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 10,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "2 מחסניות ריקות ובהן 0 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסניות"
+    },
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ריקה ובה 0 כדורים + מחסנית ריקה ובה 0 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 0,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "magazines",
+      "amount": 0,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "nan": [],
+  "מחסניות": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסניות"
+    }
+  ],
+  "מספר מחסניות": [
+    {
+      "kind": "magazines",
+      "amount": 0,
+      "raw_unit": "מחסניות"
+    }
+  ],
+  "מחסנית ריקה ובה 0 כדורים + 1 כדור": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 1,
+      "raw_unit": "כדור"
+    }
+  ],
+  "3 מחסנית + 17 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 3,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 17,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    }
+  ],
+  "1,100 כדורים, מחסנית, 900 כדורים": [
+    {
+      "kind": "bullets",
+      "amount": 1100,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 900,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "900 כדורים": [
+    {
+      "kind": "bullets",
+      "amount": 900,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "3 מחסניות": [
+    {
+      "kind": "magazines",
+      "amount": 3,
+      "raw_unit": "מחסניות"
+    }
+  ],
+  "2 מחסניות שתוכן כדורים, 11 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסניות"
+    },
+    {
+      "kind": "bullets",
+      "amount": 11,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "2 מחסנית": [
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסנית"
+    }
+  ],
+  "2 מחסניות": [
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסניות"
+    }
+  ],
+  "מחסנית ובה 11 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 11,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "3 כדורים": [
+    {
+      "kind": "bullets",
+      "amount": 3,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "כדורים": [
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית + 2 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 2,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ריקה ובה 0 כדורים + 50 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 50,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ריקה + 50 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 50,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "2 מחסניות ובהן קליעים": [
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסניות"
+    },
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "קליעים"
+    }
+  ],
+  "10 כדורים": [
+    {
+      "kind": "bullets",
+      "amount": 10,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "עשרה כדורים": [
+    {
+      "kind": "bullets",
+      "amount": 10,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ובה כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 1,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "שתי מחסניות, 40 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסניות"
+    },
+    {
+      "kind": "bullets",
+      "amount": 40,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "2 מחסניות, 40 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסניות"
+    },
+    {
+      "kind": "bullets",
+      "amount": 40,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "3 מחסנית": [
+    {
+      "kind": "magazines",
+      "amount": 3,
+      "raw_unit": "מחסנית"
+    }
+  ],
+  "מחסנית ובה 15 כדורים, מחסנית וסה 10 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 15,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 15,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "magazines",
+      "amount": 10,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 10,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ובה 15 כדורים, מחסנית ובה 10 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 15,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 10,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ובה 7 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 7,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מסחנית": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    }
+  ],
+  "מחסנית ובה 9 כדורים, 50 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 9,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "bullets",
+      "amount": 50,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית וכדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 1,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ובה 12 כדורים, מחסנית, 20 כדורים, 24 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 12,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 20,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "bullets",
+      "amount": 24,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ובה כדורים, מחסנית ובה 20 כדורים, מחסנית, 20 כדורים, 24 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 20,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 20,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "bullets",
+      "amount": 24,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ובה 0 כדורים, 2 מחסניות": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסניות"
+    }
+  ],
+  "מחסנית ובה 0 כדורים, 9 כדורים, 10 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "bullets",
+      "amount": 9,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "bullets",
+      "amount": 10,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "3 מחסניות + כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 3,
+      "raw_unit": "מחסניות"
+    },
+    {
+      "kind": "bullets",
+      "amount": 1,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית, מחסנית ובה 0 כדורים, 4 כדורים, 60 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "bullets",
+      "amount": 4,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "bullets",
+      "amount": 60,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "2 מחסנית ריקה ובה 0 כדורים + 26 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "bullets",
+      "amount": 26,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "2 מחסניות ריקות ובהן 0 כדורים + 26 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסניות"
+    },
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "bullets",
+      "amount": 26,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית + 34 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 34,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ריקה + 34 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 34,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "כדור": [
+    {
+      "kind": "bullets",
+      "amount": 1,
+      "raw_unit": "כדור"
+    }
+  ],
+  "מחסנית ובה 13 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 13,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ובה 0 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ובה 10כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 10,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית + מחסנית ובה 9 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 9,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית , מחסנית": [
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסנית"
+    }
+  ],
+  "20 כדורים": [
+    {
+      "kind": "bullets",
+      "amount": 20,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ובה 16 כדורים, מחסנית ובה 16 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 32,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ובה 16 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 16,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ריקה ובה 0 כדורים + 2 כדורים + 17 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "bullets",
+      "amount": 2,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "bullets",
+      "amount": 17,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ,19 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 19,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ובה 0 כדורים, 28 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "bullets",
+      "amount": 28,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ובה 0 כדורים, 28 כדורים, 2 קליעי ספוג": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "bullets",
+      "amount": 28,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "bullets",
+      "amount": 2,
+      "raw_unit": "קליעי ספוג"
+    }
+  ],
+  "מחסנית ובה 14 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 14,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "2 מחסניות, 20 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסניות"
+    },
+    {
+      "kind": "bullets",
+      "amount": 20,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "שתי מחסניות ו20 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסניות"
+    },
+    {
+      "kind": "bullets",
+      "amount": 20,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ובה 15 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 15,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית, כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 1,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "2 מסניות, מאות כדורים, 2 מחסניות": [
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מסניות"
+    },
+    {
+      "kind": "bullets",
+      "amount": 100,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסניות"
+    }
+  ],
+  "2 מחסניות, מאות כדורים, 2 מחסניות ריקות": [
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסניות"
+    },
+    {
+      "kind": "bullets",
+      "amount": 100,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "magazines",
+      "amount": 2,
+      "raw_unit": "מחסניות"
+    }
+  ],
+  "מחסנית ובה 0 כדורים, 11 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "bullets",
+      "amount": 11,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ובה 8 כדורים + מחסנית ובה 15 כדורים + מחסנית ריקה ובה 0 כדורים + מחסנית ובה 6 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 8,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 8,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "magazines",
+      "amount": 15,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 15,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "magazines",
+      "amount": 0,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "magazines",
+      "amount": 6,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 6,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "3 מחסניות + מחסנית ריקה ובה 0 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 3,
+      "raw_unit": "מחסניות"
+    },
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ובה 29 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 29,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "כדורים, 2 מחסניות": [
+    {
+      "kind": "bullets",
+      "amount": 2,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסניות"
+    }
+  ],
+  "75 כדורים": [
+    {
+      "kind": "bullets",
+      "amount": 75,
+      "raw_unit": "כדורים"
+    }
+  ],
+  "מחסנית ובה 0 כדורים, 26 כדורים": [
+    {
+      "kind": "magazines",
+      "amount": 1,
+      "raw_unit": "מחסנית"
+    },
+    {
+      "kind": "bullets",
+      "amount": 0,
+      "raw_unit": "כדורים"
+    },
+    {
+      "kind": "bullets",
+      "amount": 26,
+      "raw_unit": "כדורים"
+    }
+  ]
+}

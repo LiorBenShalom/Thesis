@@ -121,38 +121,37 @@ def main():
             "n_pairs": len(pair_a),
         })
 
-    # תפקיד — split into 2 binary sub-features
+    # תפקיד — encoded as 2 binary sub-features (בעל הסמים, בעל המעבדה).
+    # Score with partial credit: Hamming-weighted κ on the (owner, lab) tuple.
     if "תפקיד" in df.columns:
-        # בעל הסמים (always present; empty defaults to True)
-        pa, pb, ag, tot = [], [], 0, 0
+        pairs = []
         for _, grp in dup.groupby("שם קובץ התיק"):
-            vals = [parse_role(v)[0] for v in grp["תפקיד"]]
-            tot += 1
-            if len(set(vals)) == 1:
-                ag += 1
-            for i, j in combinations(range(len(vals)), 2):
-                pa.append(vals[i]); pb.append(vals[j])
-        results.append({"feature": "תפקיד - בעל הסמים",
-                        "agreement_rate": ag/tot if tot else 0,
-                        "cohen_kappa": cohen_kappa(pa, pb) if pa else np.nan,
-                        "n_cases": tot, "n_pairs": len(pa)})
-        # בעל המעבדה — only cases where ≥2 annotators reported it
-        pa, pb, ag, tot = [], [], 0, 0
-        for _, grp in dup.groupby("שם קובץ התיק"):
-            vals = [parse_role(v)[1] for v in grp["תפקיד"]]
-            reported = [v for v in vals if v is not None]
-            if len(reported) >= 2:
-                tot += 1
-                if len(set(reported)) == 1:
-                    ag += 1
-            for i, j in combinations(range(len(vals)), 2):
-                if vals[i] is None or vals[j] is None:
-                    continue
-                pa.append(vals[i]); pb.append(vals[j])
-        results.append({"feature": "תפקיד - בעל המעבדה",
-                        "agreement_rate": ag/tot if tot else 0,
-                        "cohen_kappa": cohen_kappa(pa, pb) if pa else np.nan,
-                        "n_cases": tot, "n_pairs": len(pa)})
+            tups = []
+            for v in grp["תפקיד"]:
+                o, l = parse_role(v)
+                tups.append((o, l if l is not None else False))
+            for i, j in combinations(range(len(tups)), 2):
+                pairs.append((tups[i], tups[j]))
+        if pairs:
+            cats = [(False, False), (False, True), (True, False), (True, True)]
+            idx = {c: i for i, c in enumerate(cats)}
+            O = np.zeros((4, 4))
+            for a, b in pairs:
+                O[idx[a], idx[b]] += 1
+                O[idx[b], idx[a]] += 1
+            O /= O.sum()
+            r = O.sum(axis=1); c = O.sum(axis=0); E = np.outer(r, c)
+            W = np.zeros((4, 4))
+            for i, ci in enumerate(cats):
+                for j, cj in enumerate(cats):
+                    W[i, j] = (int(ci[0] != cj[0]) + int(ci[1] != cj[1])) / 2
+            k = 1 - (W * O).sum() / (W * E).sum() if (W * E).sum() else 1.0
+            frac = sum((2 - (int(a[0] != b[0]) + int(a[1] != b[1]))) / 2 for a, b in pairs) / len(pairs)
+            results.append({"feature": "תפקיד",
+                            "agreement_rate": frac,
+                            "cohen_kappa": k,
+                            "n_cases": dup["שם קובץ התיק"].nunique(),
+                            "n_pairs": len(pairs)})
 
     res = pd.DataFrame(results).sort_values("cohen_kappa", ascending=False)
     args.out.parent.mkdir(parents=True, exist_ok=True)

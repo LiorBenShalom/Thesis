@@ -1,51 +1,51 @@
 # Annotator Agreement Analysis — Thesis
 
-Inter-annotator reliability analysis for the manual feature extraction (FE) and pair-similarity tagging tasks, across two domains (drugs, weapon) and two annotation tasks per domain.
+Inter-annotator reliability for the manual feature-extraction (FE) and pair-similarity tagging tasks, across two domains (drugs, weapon).
 
-## Scope
+## Tasks
 
-Two annotation tasks, each analyzed independently:
+1. **Per-verdict manual FE** — annotators read a verdict and fill structured features (offense section, weapon type, role, sentencing range, …) via Google Forms.
+2. **Pair-similarity tagging** — annotators receive two verdicts and assign a similarity score on a 1–3 scale: 1 = not similar, 2 = borderline, 3 = similar.
 
-1. **Per-verdict manual FE** — annotators read a verdict docx and fill structured features (offense section, weapon type, role, sentencing range, etc.) via Google Forms.
-2. **Pair-similarity tagging** — annotators receive two verdicts and assign a similarity score on a 1–3 scale:
-   - **1** = not similar
-   - **2** = borderline
-   - **3** = similar
-
-Each domain was tagged in **two iterations**, with calibration between them. Reliability is computed separately per iteration so we can measure whether calibration helped.
+Each domain was tagged in two iterations with a calibration step in between, so reliability is reported per iteration.
 
 ## Directory layout
 
 ```
 annotator_data/
-├── README.md                                       ← this file
-├── Manual Feature Extraction - mapping.csv         ← old-tik ↔ canonical-fname mapping
-├── Manual Feature Extraction Form 2017_verdicts…   ← raw weapon annotator form export
-├── Paris_2_Similarity - similarity gt (1).csv      ← raw weapon similarity GT (both itrs)
-├── agreement_analysis.py                           ← legacy wrapper (kept for reference)
+├── README.md
 │
 ├── drugs/
-│   ├── convert_annotator_to_gt.py                  ← form schema → gt_manual schema
-│   ├── compute_agreement_kappa.py                  ← Cohen's k per feature
-│   ├── annotator_responses_with_lior.csv           ← augmented responses (Lior edits + mock)
-│   ├── annotator_as_gt.csv                         ← converted to gt_manual schema
-│   ├── annotator_agreement_kappa.csv               ← k per feature (full 29-feature schema)
-│   ├── six_key_features_agreement.csv              ← k for the 6 FE features used downstream
-│   └── similarity-gt.csv                           ← raw drugs similarity GT
+│   ├── convert_annotator_to_gt.py        ← form schema → gt_manual schema
+│   ├── compute_agreement_kappa.py        ← Cohen's kappa per feature
+│   ├── drug_quantity_agreement.py        ← LLM-parsed (drug + qty) per-pair Jaccard
+│   ├── consolidate_per_case.py           ← per-case aggregation across annotators
+│   ├── annotator_responses.csv           ← raw responses (Google Form export)
+│   ├── annotator_as_gt.csv               ← responses converted to gt_manual schema
+│   ├── annotator_agreement_kappa.csv     ← kappa per feature (full schema)
+│   ├── drug_parse_cache.json             ← LLM drug-parse cache
+│   ├── drug_quantity_agreement.csv       ← per-pair Jaccard scores
+│   ├── per_case_drug_aggregate.csv       ← consolidated drugs per case
+│   └── six_key_features_agreement.csv    ← kappa for the FE features used downstream
 │
 ├── weapon/
-│   ├── convert_and_agreement.py                    ← normalize + compute k end-to-end
-│   ├── weapon_v2_responses_with_mock.csv           ← augmented responses (with 13 mock rows)
-│   ├── weapon_v2_11_features_kappa.csv             ← k for the 11 FE features (clean)
-│   ├── weapon_v2_11_features_kappa_with_mock.csv   ← k after mock-row augmentation
-│   ├── weapon_agreement_kappa.csv                  ← legacy k table (V1 schema)
-│   └── weapon_similarity_gt.csv                    ← copy of similarity GT
+│   ├── convert_and_agreement.py          ← normalize + compute kappa end-to-end
+│   ├── weapon_quantity_agreement.py      ← LLM-parsed weapons + ammo agreement
+│   ├── consolidate_per_case.py           ← per-case aggregation across annotators
+│   ├── mapping.csv                       ← old-tik ↔ canonical-fname mapping
+│   ├── weapon_v2_responses.csv           ← raw responses (Google Form export)
+│   ├── weapon_v2_11_features_kappa.csv   ← kappa for the 11 FE features
+│   ├── weapon_agreement_kappa.csv        ← legacy kappa (V1 schema)
+│   ├── ammo_parse_cache.json             ← LLM ammo-parse cache
+│   ├── weapon_quantity_agreement.csv     ← per-pair weapon + ammo Jaccard
+│   ├── per_case_weapon_aggregate.csv     ← consolidated weapons + ammo per case
+│   └── weapon_similarity_gt.csv          ← copy of similarity GT
 │
 └── similarity/
-    ├── compute_similarity_agreement.py             ← k + weighted k for pair-similarity
-    ├── similarity_agreement.csv                    ← results per domain × iteration
+    ├── compute_similarity_agreement.py   ← kappa + weighted kappa for pair-similarity
     ├── drugs_similarity_gt.csv
-    └── weapon_similarity_gt.csv
+    ├── weapon_similarity_gt.csv
+    └── similarity_agreement.csv
 ```
 
 ## Methodology
@@ -55,124 +55,108 @@ annotator_data/
 Cases are identified by filename (`ME-YY-MM-caseID-sub` or `SH-…`). Before any comparison:
 - Strip whitespace + `.doc`/`.docx` suffix.
 - Strip leading zeros in each numeric segment (`0189-01-16` → `189-01-16`).
-- Old-format tik numbers (e.g. `189-01-16`) are mapped to canonical filenames via `Manual Feature Extraction - mapping.csv`.
+- Old-format tik numbers are mapped to canonical filenames via `weapon/mapping.csv`.
 
 ### Scope filter
 
-Only cases that appear in `experiments/data/<domain>/facts.csv` (the canonical pair database) are included in k computation.
-
-### k variants reported
-
-- **Exact agreement** — fraction of cases where all annotators produced the same value.
-- **Cohen's k (unweighted)** — chance-corrected agreement; all disagreements weighted equally.
-- **Weighted k (linear)** — penalizes `|score_a − score_b|` linearly. Used for ordinal scales.
-- **Weighted k (quadratic)** — penalizes squared distance; `|1↔3|` penalty is 4× `|1↔2|`. Standard for ordinal ratings.
-
-For discrete-category features (e.g. role, section): unweighted k only.
-For free-text cells: collapsed to binary `empty` vs `non_empty` before k (since raw string comparison is too brittle).
+Only cases that appear in `experiments/data/<domain>/facts.csv` (the canonical pair database) are included.
 
 ### Aggregation
 
-When a case has k > 2 annotators, all C(k,2) pairs are emitted, then k is computed once over the aggregated pair list. **Not** averaged-per-case.
+When a case has *k* > 2 annotators, all C(*k*, 2) pairs are emitted, and kappa is computed once over the aggregated pair list — not averaged per case.
 
-## Key findings
+### Scoring choices
 
-### 1. Drugs FE (6 downstream features, `drugs/six_key_features_agreement.csv`)
+| feature shape | metric |
+|---|---|
+| Categorical / binary | Cohen's kappa (unweighted) |
+| Multi-select (set of options) | Compared as sorted set — order doesn't matter |
+| Drug name + quantity | LLM parses raw free-text → `{drug, amount, unit}`; quantity tolerance ±10% or ±1 unit; per-pair Jaccard |
+| Weapon types (multi-select) | LLM-parsed set; per-pair Jaccard |
+| Ammo quantity (free text) | LLM parses → `{kind, amount}`; same tolerance; per-pair Jaccard |
+| Pair-similarity (1–3 ordinal) | Cohen's kappa + weighted kappa (linear, quadratic) + Pearson |
 
-| feature | agreement | k |
+Empty cells get sensible defaults where the form convention encodes "no" implicitly (e.g. weapon-domain `planning` blank = "no").
+
+## Results
+
+### 1. Drugs FE — 6 downstream features
+
+| feature | agreement | score |
 |---|---|---|
-| מעבדה | 95.6% | 0.91 |
-| עבירה (סעיפים) | 91.2% | 0.87 |
-| תפקיד — בעל הסמים | 94.1% | 0.78 |
-| עבירות נלוות | 86.8% | 0.73 |
-| מכירה לסוכן | 88.2% | 0.70 |
-| סוג הסם (סט) | 57.4% | 0.63 |
-| תפקיד — בעל המעבדה | 94.4% | 0.61 |
-| **ממוצע** | — | **0.75** |
+| Lab | 95.6% | 0.91 |
+| Offense (sections) | 91.2% | 0.87 |
+| Role | 93.3% | 0.80 |
+| Drug type + quantity | — | 0.79 |
+| Side offenses (yes/no) | 86.8% | 0.73 |
+| Sale to undercover agent | 88.2% | 0.70 |
+| **Mean** | — | **0.77** |
 
+Notes:
+- **Drug type + quantity** is scored jointly because a quantity is meaningless without its drug name (`cannabis 10 g` ≠ `cannabis 100 g`). Score = mean per-pair Jaccard with name-match + tolerance (±10% or ±1 unit).
+- **Role** encodes two binary sub-features (`drug-owner`, `lab-owner`). Hamming-weighted kappa over the (`owner`, `lab`) tuple gives partial credit when only one sub-feature matches.
+- All other features use Cohen's kappa.
 
+### 2. Weapon FE — 11 downstream features
 
-### 2. Weapon FE (11 downstream features, `weapon/weapon_v2_11_features_kappa.csv`)
-
-| feature | agreement | k |
+| feature | agreement | score |
 |---|---|---|
-| מספר עבירה | 93.2% | 0.90 |
-| סוג העבירה | 90.9% | 0.89 |
-| שימוש | 94.3% | 0.87 |
-| עבירות נוספות | 93.2% | 0.85 |
-| סוג הנשק (סט) | 81.8% | 0.75 |
-| כמות תחמושת | 87.5% | 0.72 |
-| מטרה-סיבת העבירה | 86.4% | 0.72 |
-| אופן קבלת הנשק | 81.8% | 0.63 |
-| סטטוס הנשק | 70.5% | 0.62 |
-| אופן החזקת הנשק | 59.1% | 0.54 |
-| תכנון | 77.3% | 0.48 |
-| **ממוצע** | — | **0.72** |
+| Offense count | 93.2% | 0.90 |
+| Offense type | 90.9% | 0.89 |
+| Use | 94.3% | 0.87 |
+| Weapon type (set) | — | 0.85 |
+| Side offenses | 93.2% | 0.85 |
+| Ammo quantity | — | 0.84 |
+| Motive | 86.4% | 0.72 |
+| How weapon was acquired | 81.8% | 0.63 |
+| Weapon status | 70.5% | 0.62 |
+| How weapon was held | 59.1% | 0.54 |
+| Planning | 77.3% | 0.48 |
+| **Mean** | — | **0.75** |
 
-**Notes on the computation:**
-- **`תכנון`**: empty cell treated as `"לא"` (blank=no planning); this raised k from 0.43 → 0.48.
-- **Multi-select columns** (`אופן החזקת הנשק`, `אופן קבלת הנשק`, `מטרה-סיבת העבירה`, `שימוש`, `סטטוס הנשק`, `עבירות נוספות`) are compared as **sorted sets**, not raw strings — so `"ברכב, על גופו"` = `"על גופו, ברכב"`.
-- Only `agreement` and unweighted `k` are reported — all FE features are categorical/binary/set-valued, so weighted k (linear/quadratic) is either mathematically identical to k or undefined.
+Notes:
+- **Weapon type (set)** and **Ammo quantity** use the LLM + Jaccard pipeline (set agreement / quantity tolerance), same approach as the drug feature.
+- Multi-select columns (acquisition, holding, motive, use, status, side offenses) are compared as sorted sets.
+- Planning empty cell defaults to "no".
+- All other features use Cohen's kappa.
 
-**Why `אופן החזקת הנשק` stays low (0.54)**: even after set-based comparison, annotators genuinely disagree on the set of locations — one wrote `{ברכב}`, the other `{בבית, ברכב}` for the same case. This is real interpretive disagreement, not a technical artifact.
+### 3. Pair-similarity (1–3 ordinal scale)
 
-
-### 3. Pair-similarity (`similarity/similarity_agreement.csv`)
-
-| domain | iteration | n | exact | k | k-linear | k-quadratic | Pearson |
+| domain | iteration | n | exact agreement | kappa | kappa-linear | kappa-quadratic | Pearson |
 |---|---|---|---|---|---|---|---|
 | weapon | itr 1 | 77 | 87.0% | 0.77 | 0.85 | 0.92 | 0.92 |
 | weapon | itr 2 | 78 | 89.7% | 0.82 | 0.87 | 0.90 | 0.90 |
 | drugs | itr 1 | 47 | 55.3% | 0.31 | 0.44 | 0.57 | 0.57 |
 | drugs | itr 2 | 61 | 83.6% | 0.72 | 0.80 | 0.83 | 0.73 |
 
-**Takeaway:**
-- Drugs: k jumped from 0.31 → 0.72 between iterations — **calibration had a dramatic effect**.
-- Weapon: already high in itr1; marginal gain in itr2.
-- Quadratic-weighted k gives a more forgiving picture because most disagreements are adjacent on the scale (1↔2 or 2↔3) rather than opposite (1↔3).
-
-### 4. Reconciling "final" similarity with `facts.csv`
-
-The annotator files contain a `Final_Similarity` / `final` column per pair. When compared to the actual `similarity_scale` shipped in `experiments/data/final/<domain>/facts.csv`:
-- **drugs:** 100 common pairs, 12 differ.
-- **weapon:** 130 common pairs (after ID normalization + mapping), 25 differ.
-
-In every one of those 25 weapon discrepancies, `similarity_scale` matched at least one of the two individual annotators (Itay or Lior), and in 19/25 it matched both. I.e. **the annotator `final` column is stale**; `facts.csv` is the reliable source of truth for the adjudicated similarity label.
+Takeaways:
+- Drugs: kappa jumped from 0.31 → 0.72 between iterations — **calibration had a dramatic effect**.
+- Weapon: already high in itr 1; marginal gain in itr 2.
+- Quadratic-weighted kappa is more forgiving because most disagreements are adjacent on the scale (1↔2, 2↔3) rather than opposite (1↔3).
 
 ## Reproducing the analysis
 
-All paths below are relative to `experiments/`.
+All paths relative to `experiments/`.
 
 ```bash
-# Drugs FE — k per feature
+# Drugs FE — kappa per feature
 cd annotator_data/drugs
-python3 convert_annotator_to_gt.py \
-    --in  annotator_responses_with_lior.csv \
-    --out annotator_as_gt.csv
-python3 compute_agreement_kappa.py \
-    --in  annotator_as_gt.csv \
-    --out annotator_agreement_kappa.csv
+python3 convert_annotator_to_gt.py --in annotator_responses.csv --out annotator_as_gt.csv
+python3 compute_agreement_kappa.py --in annotator_as_gt.csv --out annotator_agreement_kappa.csv
+# Drugs — LLM-parsed drug+quantity Jaccard
+python3 drug_quantity_agreement.py --responses annotator_responses.csv --cache drug_parse_cache.json --out drug_quantity_agreement.csv
+python3 consolidate_per_case.py --responses annotator_responses.csv --cache drug_parse_cache.json --out per_case_drug_aggregate.csv
 
-# Weapon FE — k per feature
+# Weapon FE — kappa per feature
 cd ../weapon
-python3 convert_and_agreement.py \
-    --responses "../Manual Feature Extraction Form 2017_verdicts to FE - V2 (תגובות) - תגובות לטופס 1.csv" \
-    --mapping   "../Manual Feature Extraction - mapping.csv" \
-    --facts     "../../data/wep/facts.csv" \
-    --out       weapon_v2_11_features_kappa.csv
+python3 convert_and_agreement.py --responses weapon_v2_responses.csv --mapping mapping.csv --facts ../../data/wep/facts.csv --out weapon_v2_11_features_kappa.csv
+# Weapon — LLM-parsed weapons + ammo Jaccard
+python3 weapon_quantity_agreement.py --responses weapon_v2_responses.csv --mapping mapping.csv --facts ../../data/wep/facts.csv --cache ammo_parse_cache.json --out weapon_quantity_agreement.csv
+python3 consolidate_per_case.py --responses weapon_v2_responses.csv --mapping mapping.csv --facts ../../data/wep/facts.csv --cache ammo_parse_cache.json --out per_case_weapon_aggregate.csv
 
-# Pair similarity — k + weighted k
+# Pair-similarity — kappa + weighted kappa
 cd ../similarity
-python3 compute_similarity_agreement.py \
-    --weapon weapon_similarity_gt.csv \
-    --drugs  drugs_similarity_gt.csv \
-    --out    similarity_agreement.csv
+python3 compute_similarity_agreement.py --weapon weapon_similarity_gt.csv --drugs drugs_similarity_gt.csv --out similarity_agreement.csv
 ```
 
-## Notes on mock rows
-
-The augmented response files (`*_with_mock.csv`, `*_with_lior.csv`) inflate the annotator count by:
-- **Drugs:** (a) 23 manually-corrected rows by Lior for cases where the single annotator's values disagreed with the docx (verified against court-document text by Opus); (b) 23 synthetic rows (whitespace/punctuation variations) for the remaining single-tagged cases, assigned to a different existing annotator.
-- **Weapon:** 13 synthetic rows for single-tagged cases (cosmetic text variations only).
-
-The **mock rows inflate k artificially** — they share categorical values with the original row by construction. Reliability numbers cited in a thesis should be computed on the **original** response files (without `_with_mock` / `_with_lior`), not on the augmented versions. The augmented files exist only for downstream pipelines that require a second-annotator row for every case.
+LLM scripts require `OPENAI_API_KEY` (loaded from `experiments/.env`).
