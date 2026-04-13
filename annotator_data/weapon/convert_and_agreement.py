@@ -37,7 +37,7 @@ def normalize_tik(x, mapping: dict[str, str]) -> str:
 
 def manual_kappa(a, b, weights=None):
     a, b = list(a), list(b)
-    cats = sorted(set(a) | set(b))
+    cats = sorted(set(a) | set(b), key=repr)
     k = len(cats)
     if k <= 1:
         return 1.0
@@ -78,10 +78,25 @@ def norm(x):
     return re.sub(r"\s+", " ", str(x)).strip()
 
 
+EMPTY_DEFAULTS = {"תכנון": "לא"}
+
+# Columns whose cell value is a comma-separated multi-select set.
+# Compare as sorted tuples so ordering doesn't affect agreement.
+MULTI_SELECT = {
+    "אופן קבלת הנשק", "אופן החזקת הנשק",
+    "מטרה-סיבת העבירה", "שימוש", "סטטוס הנשק",
+    "עבירות נוספות",
+}
+
+
 def to_cat(val, col):
     t = norm(val)
     if col in FREE_TEXT or col.startswith("סוג הנשק ["):
         return "ne" if t else "e"
+    if not t and col in EMPTY_DEFAULTS:
+        return EMPTY_DEFAULTS[col]
+    if col in MULTI_SELECT and t:
+        return tuple(sorted(p.strip() for p in t.split(",") if p.strip()))
     return t
 
 

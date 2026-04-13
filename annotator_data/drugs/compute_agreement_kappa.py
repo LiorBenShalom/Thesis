@@ -39,10 +39,28 @@ def cohen_kappa(a, b):
     return (po - pe) / (1 - pe)
 
 
+def parse_role(val):
+    """'תפקיד' encodes two binary sub-features: בעל הסמים and בעל המעבדה.
+    Returns (owner: bool, lab: bool|None). Empty cell defaults owner=True.
+    """
+    if pd.isna(val) or not str(val).strip():
+        return (True, None)
+    s = str(val)
+    owner = False if "לא בעל הסמים" in s else ("בעל הסמים" in s or True)
+    if "לא בעל המעבדה" in s:
+        lab = False
+    elif "בעל המעבדה" in s:
+        lab = True
+    else:
+        lab = None
+    return (bool(owner), lab)
+
+
 def to_category(val, col):
     """Map a cell value to a category for kappa.
     Free-text / drug-type columns: binary non_empty vs empty.
-    Categorical fields (תפקיד, מעבדה, מכירה, נלוות, sections): use normalized text.
+    Categorical fields (מעבדה, מכירה, נלוות, sections): use normalized text.
+    `תפקיד` is handled separately (split into 2 sub-features).
     """
     v = norm(val)
     free_text = {
@@ -75,7 +93,7 @@ def main():
                 {"עבירת סמים שלא הייתה ברשימה", "עבירות נלוות כן/לא"}]
     drug_cols = [c for c in df.columns if c.startswith("סוג הסם [")]
     other_cols = [
-        "מעבדה", "תפקיד", "מכירה לסוכן", "עונש עיקרי", "ענש נלווה",
+        "מעבדה", "מכירה לסוכן", "עונש עיקרי", "ענש נלווה",
         "מתחם ענישה מאשימה (פרקליט)", "מתחם ענישה בא כוח (סנגור)",
         "מתחם ענישה שופט",
     ]
@@ -102,6 +120,39 @@ def main():
             "n_cases": total_cases,
             "n_pairs": len(pair_a),
         })
+
+    # תפקיד — split into 2 binary sub-features
+    if "תפקיד" in df.columns:
+        # בעל הסמים (always present; empty defaults to True)
+        pa, pb, ag, tot = [], [], 0, 0
+        for _, grp in dup.groupby("שם קובץ התיק"):
+            vals = [parse_role(v)[0] for v in grp["תפקיד"]]
+            tot += 1
+            if len(set(vals)) == 1:
+                ag += 1
+            for i, j in combinations(range(len(vals)), 2):
+                pa.append(vals[i]); pb.append(vals[j])
+        results.append({"feature": "תפקיד - בעל הסמים",
+                        "agreement_rate": ag/tot if tot else 0,
+                        "cohen_kappa": cohen_kappa(pa, pb) if pa else np.nan,
+                        "n_cases": tot, "n_pairs": len(pa)})
+        # בעל המעבדה — only cases where ≥2 annotators reported it
+        pa, pb, ag, tot = [], [], 0, 0
+        for _, grp in dup.groupby("שם קובץ התיק"):
+            vals = [parse_role(v)[1] for v in grp["תפקיד"]]
+            reported = [v for v in vals if v is not None]
+            if len(reported) >= 2:
+                tot += 1
+                if len(set(reported)) == 1:
+                    ag += 1
+            for i, j in combinations(range(len(vals)), 2):
+                if vals[i] is None or vals[j] is None:
+                    continue
+                pa.append(vals[i]); pb.append(vals[j])
+        results.append({"feature": "תפקיד - בעל המעבדה",
+                        "agreement_rate": ag/tot if tot else 0,
+                        "cohen_kappa": cohen_kappa(pa, pb) if pa else np.nan,
+                        "n_cases": tot, "n_pairs": len(pa)})
 
     res = pd.DataFrame(results).sort_values("cohen_kappa", ascending=False)
     args.out.parent.mkdir(parents=True, exist_ok=True)
