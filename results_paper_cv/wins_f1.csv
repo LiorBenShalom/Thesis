@@ -1,0 +1,10 @@
+domain,drugs,drugs,weapon,weapon
+task,0,1,0,1
+rep,,,,
+Manual,5.0,7.0,0.0,7.0
+GPT-Schema,1.0,3.0,1.0,0.0
+GPT-Free,1.0,0.0,0.0,0.0
+GPT-Law,1.0,0.0,0.0,0.0
+Raw-Facts,1.0,0.0,4.0,1.0
+Hybrid-Manual,1.0,1.0,3.0,2.0
+Hybrid-Full,1.0,0.0,3.0,1.0

@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "gpt_free",
+  "csv": "similarity_database_with_gpt_features.csv",
+  "model": "gpt5mini",
+  "task": "binary_0",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_new_prompt/weapon/results_weapon/similarity_database_with_gpt_features_v6score_gpt5mini_binary_0_preds.csv",
+  "best_threshold": 45.2261,
+  "global_best": {
+    "f1": 0.7234,
+    "accuracy": 0.8156,
+    "precision": 0.6415,
+    "recall": 0.8293,
+    "tp": 34,
+    "fp": 19,
+    "fn": 7,
+    "tn": 81
+  },
+  "loo": {
+    "accuracy": 0.7589,
+    "f1": 0.6531,
+    "precision": 0.5614,
+    "recall": 0.7805,
+    "cm": [
+      [
+        75,
+        25
+      ],
+      [
+        9,
+        32
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 44.07,
+    "std": 19.2,
+    "pos_mean": 63.1,
+    "neg_mean": 36.27
+  }
+}

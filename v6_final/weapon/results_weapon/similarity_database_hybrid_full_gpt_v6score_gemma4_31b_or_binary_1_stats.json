@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "hybrid_full_gpt",
+  "csv": "similarity_database_hybrid_full_gpt.csv",
+  "model": "gemma4_31b_or",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_new_prompt/weapon/results_weapon/similarity_database_hybrid_full_gpt_v6score_gemma4_31b_or_binary_0_preds.csv",
+  "best_threshold": 40.201,
+  "global_best": {
+    "f1": 0.8264,
+    "accuracy": 0.8511,
+    "precision": 0.8475,
+    "recall": 0.8065,
+    "tp": 50,
+    "fp": 9,
+    "fn": 12,
+    "tn": 70
+  },
+  "loo": {
+    "accuracy": 0.8369,
+    "f1": 0.813,
+    "precision": 0.8197,
+    "recall": 0.8065,
+    "cm": [
+      [
+        68,
+        11
+      ],
+      [
+        12,
+        50
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 42.36,
+    "std": 25.77,
+    "pos_mean": 63.11,
+    "neg_mean": 26.08
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

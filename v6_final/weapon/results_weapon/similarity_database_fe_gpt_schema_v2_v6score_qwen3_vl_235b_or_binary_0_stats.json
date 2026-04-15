@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "fe_gpt_schema_v2",
+  "csv": "similarity_database_fe_gpt_schema_v2.csv",
+  "model": "qwen3_vl_235b_or",
+  "task": "binary_0",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_new_prompt/weapon/results_weapon/similarity_database_fe_gpt_schema_v2_v6score_qwen3_vl_235b_or_binary_0_preds.csv",
+  "best_threshold": 45.2261,
+  "global_best": {
+    "f1": 0.6292,
+    "accuracy": 0.766,
+    "precision": 0.5833,
+    "recall": 0.6829,
+    "tp": 28,
+    "fp": 20,
+    "fn": 13,
+    "tn": 80
+  },
+  "loo": {
+    "accuracy": 0.7376,
+    "f1": 0.5647,
+    "precision": 0.5455,
+    "recall": 0.5854,
+    "cm": [
+      [
+        80,
+        20
+      ],
+      [
+        17,
+        24
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 48.4,
+    "std": 23.1,
+    "pos_mean": 67.56,
+    "neg_mean": 40.55
+  }
+}

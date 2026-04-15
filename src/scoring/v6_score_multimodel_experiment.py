@@ -12,7 +12,7 @@ Usage:
   python v6_score_multimodel_experiment.py --domain both --reps hybrid_full_gpt --models gpt4 \\
     --output-root ../experiments/v6_hybrid_full_gpt_score_multimodel
   python v6_score_multimodel_experiment.py --domain both --reps hybrid_full_gpt --parallel 4 \\
-    --models gpt4 mistral qwen_hf gemini_25_pro
+    --models gpt4 qwen_hf gemini_25_pro
 
 Default representation is hybrid_full_gpt (same flagship hybrid as the main similarity paper).
 Optional rep "concepts" exists only to reproduce the concept-reduced CSVs; prior work showed
@@ -138,7 +138,6 @@ MAIN_MODELS_DEFAULT = [
     "gpt4",
     "gpt5mini",
     "qwen3_235b",
-    "mistral",
     "llama3_70b",
     "gpt52",
     "gpt51_thinking",
@@ -146,6 +145,7 @@ MAIN_MODELS_DEFAULT = [
     "gemini_25_pro",
     "gemini_3_flash",
     "gemma3_27b",
+    "gemma4_31b_or",
 ]
 
 STATUS_OK = "ok"
@@ -160,6 +160,7 @@ _PROVIDER_CONCURRENCY: dict[str, int] = {
     "hf": 4,  # Dicta + Qwen HF + Gemma HF (router.huggingface.co)
     "nim": 5,  # NVIDIA NIM (multiple API keys rotate)
     "anthropic": 10,
+    "openrouter": 15,  # paid tier, shared by weapon+drugs jobs
     "other": 2,
 }
 
@@ -173,8 +174,9 @@ def _provider_bucket(model_backend: str) -> str:
         return "gemini"
     if model_backend in ("dicta", "qwen_hf", "qwen3_235b", "gemma3_27b"):
         return "hf"
+    if model_backend == "gemma4_31b_or" or model_backend.endswith("_or"):
+        return "openrouter"
     if model_backend in (
-        "mistral",
         "nemotron3_nano",
         "nemotron3_super",
         "llama3_70b",
@@ -260,7 +262,6 @@ def call_model_backend(model_backend: str, system_prompt: str, user_prompt: str)
             "llama",
             "nemotron",
             "gpt_oss",
-            "mistral",
             "nemotron3_nano",
             "nemotron3_super",
             "qwen3_235b",
@@ -270,6 +271,8 @@ def call_model_backend(model_backend: str, system_prompt: str, user_prompt: str)
             return se.call_nim(system_prompt, user_prompt, model_backend, log_call=False)
         if model_backend == "claude_sonnet_4_6":
             return se.call_claude(system_prompt, user_prompt, log_call=False)
+        if model_backend == "gemma4_31b_or" or model_backend.endswith("_or"):
+            return se.call_openrouter(system_prompt, user_prompt, model_backend, log_call=False)
         if model_backend == "lm_studio":
             return se.call_lm_studio(system_prompt, user_prompt, log_call=False)
     except Exception as e:
@@ -436,6 +439,8 @@ def run_one_config(
     max_retries: int,
     flush_every: int,
     output_root: Path | None = None,
+    inner_parallel: int = 1,
+    provider_semaphore: threading.Semaphore | None = None,
 ) -> list[dict]:
     domain_key = "drugs" if domain == "drugs" else "weapon"
     results_dir = _resolve_results_dir(domain, output_root)
@@ -456,21 +461,52 @@ def run_one_config(
 
     cache = load_row_cache(out_csv, df) if resume else {}
 
-    rows_out: list[dict] = []
-    n_skipped_ok = 0
-    n_refetched = 0
+    n_total = len(df)
+    empty_row = {"score": None, "response": "", "status": "", "last_error": ""}
+    rows_out: list[dict] = [dict(empty_row) for _ in range(n_total)]
+    counters = {"skipped_ok": 0, "refetched": 0, "done": 0}
+    counters_lock = threading.Lock()
+    csv_lock = threading.Lock()
 
-    for pos, (_, row) in enumerate(df.iterrows()):
+    def _do_api_with_retries(u: str) -> tuple[float | None, str, str, str]:
+        """Returns (score, response, status, last_err)."""
+        score: float | None = None
+        response = ""
+        status = STATUS_API_ERROR
+        last_err = ""
+        for attempt in range(max(1, max_retries)):
+            if provider_semaphore is not None:
+                with provider_semaphore:
+                    raw = call_model_backend(model_backend, system, u)
+            else:
+                raw = call_model_backend(model_backend, system, u)
+            response = raw or ""
+            if raw is None:
+                last_err = "empty_api_response"
+                status = STATUS_API_ERROR
+                # Aggressive backoff for API errors: 30s, 60s, 90s, 120s cap.
+                time.sleep(min(30.0 * (attempt + 1), 120.0))
+                continue
+            parsed = parse_score_v6(raw)
+            if validate_score(parsed):
+                score = float(parsed)
+                status = STATUS_OK
+                return score, response, status, ""
+            last_err = "parse_error_or_invalid_score"
+            status = STATUS_PARSE_ERROR
+            time.sleep(min(5.0 * (attempt + 1), 30.0))
+        if status != STATUS_OK:
+            status = STATUS_RETRY_EXHAUSTED if max_retries > 0 else STATUS_PARSE_ERROR
+            score = None
+        return score, response, status, last_err
+
+    def _process_one(pos: int, row) -> bool:
+        """Fill rows_out[pos]. Returns True if served from cache."""
         key = _pair_key(row)
         if input_kind == "facts":
             u = USER_TEMPLATE_FACTS.format(fv1=row["indicment_facts_1"], fv2=row["indicment_facts_2"])
         else:
             u = USER_TEMPLATE_SCORE_RAW.format(fv1=row["feature_vector_1"], fv2=row["feature_vector_2"])
-
-        score: float | None = None
-        response = ""
-        status = STATUS_API_ERROR
-        last_err = ""
 
         cached = cache.get(key)
         if (
@@ -479,60 +515,69 @@ def run_one_config(
             and cached.get("status") == STATUS_OK
             and validate_score(cached.get("score"))
         ):
-            score = float(cached["score"])
-            response = str(cached.get("response") or "")
-            status = STATUS_OK
-            n_skipped_ok += 1
-            rows_out.append(
-                {"score": score, "response": response, "status": status, "last_error": ""}
-            )
-            if (pos + 1) % 10 == 0:
-                print(f"    {rep_id} {model_backend}: {pos + 1}/{len(df)} (cached ok)")
-            continue
+            rows_out[pos] = {
+                "score": float(cached["score"]),
+                "response": str(cached.get("response") or ""),
+                "status": STATUS_OK,
+                "last_error": "",
+            }
+            with counters_lock:
+                counters["skipped_ok"] += 1
+            return True
 
         if cached and resume:
-            n_refetched += 1
+            with counters_lock:
+                counters["refetched"] += 1
 
-        for attempt in range(max(1, max_retries)):
-            raw = call_model_backend(model_backend, system, u)
-            response = raw or ""
-            if raw is None:
-                last_err = "empty_api_response"
-                status = STATUS_API_ERROR
-                time.sleep(min(2.0 * (attempt + 1), 30.0))
-                continue
-
-            parsed = parse_score_v6(raw)
-            if validate_score(parsed):
-                score = float(parsed)
-                status = STATUS_OK
-                break
-
-            last_err = "parse_error_or_invalid_score"
-            status = STATUS_PARSE_ERROR
-            time.sleep(0.5 * (attempt + 1))
-
-        if status != STATUS_OK:
-            status = STATUS_RETRY_EXHAUSTED if max_retries > 0 else STATUS_PARSE_ERROR
-            score = None  # CSV-friendly; invalid rows excluded from metrics
-
-        rows_out.append(
-            {
-                "score": score,
-                "response": response,
-                "status": status,
-                "last_error": last_err if status != STATUS_OK else "",
-            }
-        )
-
+        score, response, status, last_err = _do_api_with_retries(u)
+        rows_out[pos] = {
+            "score": score,
+            "response": response,
+            "status": status,
+            "last_error": last_err if status != STATUS_OK else "",
+        }
         if sleep_sec > 0:
             time.sleep(sleep_sec)
+        return False
 
-        if flush_every > 0 and (pos + 1) % flush_every == 0:
-            save_checkpoint(out_csv, df, task, rows_out)
+    def _post_one(pos: int, cached: bool) -> None:
+        """Bump progress counter and flush if due. Thread-safe."""
+        with counters_lock:
+            counters["done"] += 1
+            done = counters["done"]
+        if flush_every > 0 and done % flush_every == 0:
+            with csv_lock:
+                save_checkpoint(out_csv, df, task, rows_out)
+        if done % 10 == 0:
+            suffix = " (cached ok)" if cached else ""
+            print(f"    {rep_id} {model_backend}: {done}/{n_total}{suffix}")
 
-        if (pos + 1) % 10 == 0:
-            print(f"    {rep_id} {model_backend}: {pos + 1}/{len(df)}")
+    pairs = list(enumerate(df.itertuples(index=False)))
+
+    if inner_parallel <= 1:
+        for pos, row_tuple in pairs:
+            row = df.iloc[pos]
+            was_cached = _process_one(pos, row)
+            _post_one(pos, was_cached)
+    else:
+        with ThreadPoolExecutor(max_workers=inner_parallel) as ex:
+            futures = {ex.submit(_process_one, pos, df.iloc[pos]): pos for pos, _ in pairs}
+            for fut in as_completed(futures):
+                pos = futures[fut]
+                try:
+                    was_cached = fut.result()
+                except Exception as e:
+                    rows_out[pos] = {
+                        "score": None,
+                        "response": "",
+                        "status": STATUS_API_ERROR,
+                        "last_error": f"exception: {str(e)[:200]}",
+                    }
+                    was_cached = False
+                _post_one(pos, was_cached)
+
+    n_skipped_ok = counters["skipped_ok"]
+    n_refetched = counters["refetched"]
 
     # Final write
     save_checkpoint(out_csv, df, task, rows_out)
@@ -642,24 +687,28 @@ def _run_one_config_capped(
     max_retries: int,
     flush_every: int,
     output_root: Path | None,
+    inner_parallel: int = 1,
 ) -> list[dict]:
     b = _provider_bucket(model_backend)
     sem = semaphores.get(b) or semaphores["other"]
-    with sem:
-        return run_one_config(
-            domain,
-            model_backend,
-            rep_id,
-            csv_path,
-            kind,
-            task,
-            limit,
-            sleep_sec,
-            resume,
-            max_retries,
-            flush_every,
-            output_root,
-        )
+    # Per-call semaphore (used inside run_one_config) replaces the per-model wrapper,
+    # so pair-level concurrency is capped at the provider level rather than 1-model-at-a-time.
+    return run_one_config(
+        domain,
+        model_backend,
+        rep_id,
+        csv_path,
+        kind,
+        task,
+        limit,
+        sleep_sec,
+        resume,
+        max_retries,
+        flush_every,
+        output_root,
+        inner_parallel=inner_parallel,
+        provider_semaphore=sem,
+    )
 
 
 def _run_drugs_then_weapon_for_one_model(
@@ -678,6 +727,7 @@ def _run_drugs_then_weapon_for_one_model(
     flush_every: int,
     output_root: Path | None,
     drugs_manual_fe_override: Path | None = None,
+    inner_parallel: int = 1,
 ) -> list[dict]:
     """Run drugs then weapon for the same (rep, model) so slow models on drugs do not block weapon for others."""
     acc: list[dict] = []
@@ -702,6 +752,7 @@ def _run_drugs_then_weapon_for_one_model(
                     max_retries,
                     flush_every,
                     output_root,
+                    inner_parallel=inner_parallel,
                 )
             )
         else:
@@ -719,6 +770,7 @@ def _run_drugs_then_weapon_for_one_model(
                     max_retries,
                     flush_every,
                     output_root,
+                    inner_parallel=inner_parallel,
                 )
             )
     return acc
@@ -770,6 +822,13 @@ def main():
         type=int,
         default=1,
         help="Write preds CSV every N rows (1 = safest against crashes)",
+    )
+    parser.add_argument(
+        "--inner-parallel",
+        type=int,
+        default=1,
+        help="Per-model pair-level concurrency (API calls in flight per model). "
+        "Effective cap is min(this, provider semaphore).",
     )
     parser.add_argument(
         "--output-root",
@@ -848,6 +907,7 @@ def main():
                             flush_every=args.flush_every,
                             output_root=output_root,
                             drugs_manual_fe_override=drugs_manual_fe_override,
+                            inner_parallel=args.inner_parallel,
                         )
                         if s:
                             all_stats.extend(s)
@@ -857,6 +917,7 @@ def main():
                 max_workers = max(1, int(args.parallel))
                 print(
                     f"  (parallel: up to {max_workers} workers; each runs drugs then weapon; "
+                    f"inner-parallel per model: {args.inner_parallel}; "
                     f"provider caps: OpenAI≤{_PROVIDER_CONCURRENCY['openai']} HF≤{_PROVIDER_CONCURRENCY['hf']} "
                     f"NIM≤{_PROVIDER_CONCURRENCY['nim']} Gemini≤{_PROVIDER_CONCURRENCY['gemini']})"
                 )
@@ -879,6 +940,7 @@ def main():
                             flush_every=args.flush_every,
                             output_root=output_root,
                             drugs_manual_fe_override=drugs_manual_fe_override,
+                            inner_parallel=args.inner_parallel,
                         )
                         futures[fut] = model_backend
                     for fut in as_completed(futures):
@@ -892,67 +954,67 @@ def main():
     else:
         for dom in domains:
             print(f"\n{'='*60}\n  DOMAIN: {dom}\n{'='*60}")
+            # Build per-model task queues so each worker thread handles one model's reps sequentially.
+            # This prevents a fast model's thread from idling while its API is unused.
+            rep_list_for_dom: list[tuple[str, str, str, Path]] = []
             for rep_id, csv_name, kind in reps_sel:
                 csv_path = resolve_csv_maybe_override(dom, rep_id, csv_name, drugs_manual_fe_override)
                 if not csv_path.exists():
                     print(f"  SKIP missing CSV: {csv_path}")
                     continue
-                if args.parallel <= 1:
-                    for model_backend in args.models:
+                rep_list_for_dom.append((rep_id, csv_name, kind, csv_path))
+
+            def _run_all_reps_for_model(model_backend: str) -> list[dict]:
+                acc: list[dict] = []
+                for rep_id, csv_name, kind, csv_path in rep_list_for_dom:
+                    try:
+                        s = _run_one_config_capped(
+                            provider_sems,
+                            dom,
+                            model_backend,
+                            rep_id,
+                            csv_path,
+                            kind,
+                            args.task,
+                            args.limit,
+                            args.sleep,
+                            not args.fresh,
+                            args.max_retries,
+                            args.flush_every,
+                            output_root,
+                            args.inner_parallel,
+                        )
+                        if s:
+                            acc.extend(s)
+                    except Exception as e:
+                        print(f"  FAIL {rep_id} {model_backend}: {e}")
+                return acc
+
+            if args.parallel <= 1:
+                for model_backend in args.models:
+                    all_stats.extend(_run_all_reps_for_model(model_backend))
+            else:
+                max_workers = max(1, int(args.parallel))
+                print(
+                    f"  (per-model workers: {max_workers}; each model runs its {len(rep_list_for_dom)} reps sequentially; "
+                    f"inner-parallel per task: {args.inner_parallel}; "
+                    f"provider caps: "
+                    f"OpenAI≤{_PROVIDER_CONCURRENCY['openai']} HF≤{_PROVIDER_CONCURRENCY['hf']} "
+                    f"NIM≤{_PROVIDER_CONCURRENCY['nim']} Gemini≤{_PROVIDER_CONCURRENCY['gemini']} "
+                    f"Anthropic≤{_PROVIDER_CONCURRENCY['anthropic']})"
+                )
+                with ThreadPoolExecutor(max_workers=max_workers) as ex:
+                    futures: dict = {
+                        ex.submit(_run_all_reps_for_model, mb): mb for mb in args.models
+                    }
+                    for fut in as_completed(futures):
+                        mb = futures[fut]
                         try:
-                            s = run_one_config(
-                                dom,
-                                model_backend,
-                                rep_id,
-                                csv_path,
-                                kind,
-                                args.task,
-                                args.limit,
-                                args.sleep,
-                                resume=not args.fresh,
-                                max_retries=args.max_retries,
-                                flush_every=args.flush_every,
-                                output_root=output_root,
-                            )
+                            s = fut.result()
                             if s:
                                 all_stats.extend(s)
                         except Exception as e:
-                            print(f"  FAIL {rep_id} {model_backend}: {e}")
-                else:
-                    max_workers = max(1, int(args.parallel))
-                    print(
-                        f"  (parallel: up to {max_workers} workers; provider caps: "
-                        f"OpenAI≤{_PROVIDER_CONCURRENCY['openai']} HF≤{_PROVIDER_CONCURRENCY['hf']} "
-                        f"NIM≤{_PROVIDER_CONCURRENCY['nim']} Gemini≤{_PROVIDER_CONCURRENCY['gemini']})"
-                    )
-                    with ThreadPoolExecutor(max_workers=max_workers) as ex:
-                        futures: dict = {}
-                        for model_backend in args.models:
-                            fut = ex.submit(
-                                _run_one_config_capped,
-                                provider_sems,
-                                dom,
-                                model_backend,
-                                rep_id,
-                                csv_path,
-                                kind,
-                                args.task,
-                                args.limit,
-                                args.sleep,
-                                not args.fresh,
-                                args.max_retries,
-                                args.flush_every,
-                                output_root,
-                            )
-                            futures[fut] = model_backend
-                        for fut in as_completed(futures):
-                            mb = futures[fut]
-                            try:
-                                s = fut.result()
-                                if s:
-                                    all_stats.extend(s)
-                            except Exception as e:
-                                print(f"  FAIL {rep_id} {mb}: {e}")
+                            print(f"  FAIL {mb}: {e}")
 
     summary_name = f"v6_multimodel_summary_{args.task}.json"
     summary_path = (output_root / summary_name) if output_root else (BASE_DIR / "code" / summary_name)

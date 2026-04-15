@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "hybrid_manual_gpt",
+  "csv": "similarity_database_hybrid.csv",
+  "model": "qwen3_vl_235b_or",
+  "task": "binary_0",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_hybrid_v6score_qwen3_vl_235b_or_binary_0_preds.csv",
+  "best_threshold": 40.201,
+  "global_best": {
+    "f1": 0.8462,
+    "accuracy": 0.88,
+    "precision": 0.7674,
+    "recall": 0.9429,
+    "tp": 33,
+    "fp": 10,
+    "fn": 2,
+    "tn": 55
+  },
+  "loo": {
+    "accuracy": 0.83,
+    "f1": 0.7733,
+    "precision": 0.725,
+    "recall": 0.8286,
+    "cm": [
+      [
+        54,
+        11
+      ],
+      [
+        6,
+        29
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 43.92,
+    "std": 26.13,
+    "pos_mean": 71.77,
+    "neg_mean": 28.92
+  }
+}

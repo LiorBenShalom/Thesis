@@ -32,7 +32,7 @@ DRUGS = BASE / "drugs"
 GT = DRUGS / "similarity_database_fe.csv"
 MANUAL_FMT = DRUGS / "similarity_database_fe_manual_format.csv"
 LEGACY_STRUCT = DRUGS / "similarity_database_fe_legacy_from_structured.csv"
-V6_ROOT = BASE / "experiments" / "v6_full_matrix"
+V6_ROOT = BASE / "experiments" / "v6_final"
 RESULTS_DRUGS = V6_ROOT / "drugs" / "results_drugs"
 
 
@@ -115,7 +115,7 @@ A) שינוי similarity / תיוגי GT בלבד (בלי שינוי טקסט פ
 
    ואז טבלאות:
 
-   cd ../experiments/v6_full_matrix
+   cd ../experiments/v6_final
    python regenerate_v6_tables.py
 
 B) ייצוגי hybrid (משלבים פיצ'רים ידניים): אם הידני/legacy_from_structured השתנה — צריך להריץ מחדש את ציוני ה-dim
@@ -125,7 +125,7 @@ C) דמיון v6 מלא עם --fresh (כשהטקסט/הפיצ'רים שהמוד�
 
    cd new_try/code
    python v6_score_multimodel_experiment.py --domain drugs --reps manual_fe fe_manual_format fe_legacy_from_structured \\
-     --models gpt4 --task binary_0 --fresh --output-root ../experiments/v6_full_matrix
+     --models gpt4 --task binary_0 --fresh --output-root ../experiments/v6_final
 
 D) אם עדכנת טקסט/כמויות ב-GT הידני ורוצים שגם החילוץ האוטומטי (מסודר) יתאים — להריץ מחדש:
 

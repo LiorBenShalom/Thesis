@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "fe_gpt_schema_v2",
+  "csv": "similarity_database_fe_gpt_schema_v2.csv",
+  "model": "claude_sonnet_4_6",
+  "task": "binary_0",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_new_prompt/weapon/results_weapon/similarity_database_fe_gpt_schema_v2_v6score_claude_sonnet_4_6_binary_0_preds.csv",
+  "best_threshold": 52.2613,
+  "global_best": {
+    "f1": 0.7711,
+    "accuracy": 0.8652,
+    "precision": 0.7619,
+    "recall": 0.7805,
+    "tp": 32,
+    "fp": 10,
+    "fn": 9,
+    "tn": 90
+  },
+  "loo": {
+    "accuracy": 0.8652,
+    "f1": 0.7711,
+    "precision": 0.7619,
+    "recall": 0.7805,
+    "cm": [
+      [
+        90,
+        10
+      ],
+      [
+        9,
+        32
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 40.79,
+    "std": 20.3,
+    "pos_mean": 61.56,
+    "neg_mean": 32.27
+  }
+}

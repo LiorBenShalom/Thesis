@@ -1,6 +1,0 @@
-﻿domain,task,model,f1_full_matrix,f1_baseline,delta_f1
-drugs,binary_0,gpt4,0.8485,0.8485,0.0
-drugs,binary_0,gpt5mini,0.8438,0.8438,0.0
-drugs,binary_0,nemotron3_nano,0.6909,0.6909,0.0
-drugs,binary_0,qwen3_235b,0.8254,0.8254,0.0
-drugs,binary_0,qwen_hf,0.8254,0.8254,0.0

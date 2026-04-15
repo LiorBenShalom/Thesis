@@ -1,0 +1,1304 @@
+[
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "manual_fe",
+    "csv": "similarity_database_fe.csv",
+    "model": "qwen3_vl_235b_or",
+    "task": "binary_0",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_fe_v6score_qwen3_vl_235b_or_binary_0_preds.csv",
+    "best_threshold": 55.2764,
+    "global_best": {
+      "f1": 0.8824,
+      "accuracy": 0.92,
+      "precision": 0.9677,
+      "recall": 0.8108,
+      "tp": 30,
+      "fp": 1,
+      "fn": 7,
+      "tn": 62
+    },
+    "loo": {
+      "accuracy": 0.92,
+      "f1": 0.8824,
+      "precision": 0.9677,
+      "recall": 0.8108,
+      "cm": [
+        [
+          62,
+          1
+        ],
+        [
+          7,
+          30
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 49.55,
+      "std": 27.15,
+      "pos_mean": 78.65,
+      "neg_mean": 32.46
+    }
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "manual_fe",
+    "csv": "similarity_database_fe.csv",
+    "model": "qwen3_vl_235b_or",
+    "task": "binary_1",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_fe_v6score_qwen3_vl_235b_or_binary_0_preds.csv",
+    "best_threshold": 40.201,
+    "global_best": {
+      "f1": 0.8247,
+      "accuracy": 0.83,
+      "precision": 0.8696,
+      "recall": 0.7843,
+      "tp": 40,
+      "fp": 6,
+      "fn": 11,
+      "tn": 43
+    },
+    "loo": {
+      "accuracy": 0.83,
+      "f1": 0.8247,
+      "precision": 0.8696,
+      "recall": 0.7843,
+      "cm": [
+        [
+          43,
+          6
+        ],
+        [
+          11,
+          40
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 49.55,
+      "std": 27.15,
+      "pos_mean": 68.43,
+      "neg_mean": 29.9
+    },
+    "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "fe_gpt_schema_v2",
+    "csv": "similarity_database_fe_gpt_schema_v2.csv",
+    "model": "qwen3_vl_235b_or",
+    "task": "binary_0",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_fe_gpt_schema_v2_v6score_qwen3_vl_235b_or_binary_0_preds.csv",
+    "best_threshold": 40.201,
+    "global_best": {
+      "f1": 0.8182,
+      "accuracy": 0.84,
+      "precision": 0.7059,
+      "recall": 0.973,
+      "tp": 36,
+      "fp": 15,
+      "fn": 1,
+      "tn": 48
+    },
+    "loo": {
+      "accuracy": 0.79,
+      "f1": 0.747,
+      "precision": 0.6739,
+      "recall": 0.8378,
+      "cm": [
+        [
+          48,
+          15
+        ],
+        [
+          6,
+          31
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 49.42,
+      "std": 26.41,
+      "pos_mean": 76.0,
+      "neg_mean": 33.81
+    }
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "fe_gpt_schema_v2",
+    "csv": "similarity_database_fe_gpt_schema_v2.csv",
+    "model": "qwen3_vl_235b_or",
+    "task": "binary_1",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_fe_gpt_schema_v2_v6score_qwen3_vl_235b_or_binary_0_preds.csv",
+    "best_threshold": 35.1759,
+    "global_best": {
+      "f1": 0.819,
+      "accuracy": 0.81,
+      "precision": 0.7963,
+      "recall": 0.8431,
+      "tp": 43,
+      "fp": 11,
+      "fn": 8,
+      "tn": 38
+    },
+    "loo": {
+      "accuracy": 0.81,
+      "f1": 0.819,
+      "precision": 0.7963,
+      "recall": 0.8431,
+      "cm": [
+        [
+          38,
+          11
+        ],
+        [
+          8,
+          43
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 49.42,
+      "std": 26.41,
+      "pos_mean": 66.31,
+      "neg_mean": 31.84
+    },
+    "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "hybrid_manual_gpt",
+    "csv": "similarity_database_hybrid.csv",
+    "model": "qwen3_vl_235b_or",
+    "task": "binary_0",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_hybrid_v6score_qwen3_vl_235b_or_binary_0_preds.csv",
+    "best_threshold": 40.201,
+    "global_best": {
+      "f1": 0.8462,
+      "accuracy": 0.88,
+      "precision": 0.7674,
+      "recall": 0.9429,
+      "tp": 33,
+      "fp": 10,
+      "fn": 2,
+      "tn": 55
+    },
+    "loo": {
+      "accuracy": 0.83,
+      "f1": 0.7733,
+      "precision": 0.725,
+      "recall": 0.8286,
+      "cm": [
+        [
+          54,
+          11
+        ],
+        [
+          6,
+          29
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 43.92,
+      "std": 26.13,
+      "pos_mean": 71.77,
+      "neg_mean": 28.92
+    }
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "hybrid_manual_gpt",
+    "csv": "similarity_database_hybrid.csv",
+    "model": "qwen3_vl_235b_or",
+    "task": "binary_1",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_hybrid_v6score_qwen3_vl_235b_or_binary_0_preds.csv",
+    "best_threshold": 35.1759,
+    "global_best": {
+      "f1": 0.8085,
+      "accuracy": 0.82,
+      "precision": 0.8636,
+      "recall": 0.76,
+      "tp": 38,
+      "fp": 6,
+      "fn": 12,
+      "tn": 44
+    },
+    "loo": {
+      "accuracy": 0.74,
+      "f1": 0.7451,
+      "precision": 0.7308,
+      "recall": 0.76,
+      "cm": [
+        [
+          36,
+          14
+        ],
+        [
+          12,
+          38
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 43.92,
+      "std": 26.13,
+      "pos_mean": 60.94,
+      "neg_mean": 26.9
+    },
+    "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "hybrid_full_gpt",
+    "csv": "similarity_database_hybrid_full_gpt.csv",
+    "model": "qwen3_vl_235b_or",
+    "task": "binary_0",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_hybrid_full_gpt_v6score_qwen3_vl_235b_or_binary_0_preds.csv",
+    "best_threshold": 35.1759,
+    "global_best": {
+      "f1": 0.8642,
+      "accuracy": 0.89,
+      "precision": 0.7609,
+      "recall": 1.0,
+      "tp": 35,
+      "fp": 11,
+      "fn": 0,
+      "tn": 54
+    },
+    "loo": {
+      "accuracy": 0.87,
+      "f1": 0.8354,
+      "precision": 0.75,
+      "recall": 0.9429,
+      "cm": [
+        [
+          54,
+          11
+        ],
+        [
+          2,
+          33
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 41.99,
+      "std": 23.49,
+      "pos_mean": 66.97,
+      "neg_mean": 28.54
+    }
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "hybrid_full_gpt",
+    "csv": "similarity_database_hybrid_full_gpt.csv",
+    "model": "qwen3_vl_235b_or",
+    "task": "binary_1",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_hybrid_full_gpt_v6score_qwen3_vl_235b_or_binary_0_preds.csv",
+    "best_threshold": 35.1759,
+    "global_best": {
+      "f1": 0.8125,
+      "accuracy": 0.82,
+      "precision": 0.8478,
+      "recall": 0.78,
+      "tp": 39,
+      "fp": 7,
+      "fn": 11,
+      "tn": 43
+    },
+    "loo": {
+      "accuracy": 0.82,
+      "f1": 0.8125,
+      "precision": 0.8478,
+      "recall": 0.78,
+      "cm": [
+        [
+          43,
+          7
+        ],
+        [
+          11,
+          39
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 41.99,
+      "std": 23.49,
+      "pos_mean": 56.98,
+      "neg_mean": 27.0
+    },
+    "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "gpt_free",
+    "csv": "similarity_database_with_gpt_features.csv",
+    "model": "qwen3_vl_235b_or",
+    "task": "binary_0",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_with_gpt_features_v6score_qwen3_vl_235b_or_binary_0_preds.csv",
+    "best_threshold": 40.201,
+    "global_best": {
+      "f1": 0.8533,
+      "accuracy": 0.89,
+      "precision": 0.8,
+      "recall": 0.9143,
+      "tp": 32,
+      "fp": 8,
+      "fn": 3,
+      "tn": 57
+    },
+    "loo": {
+      "accuracy": 0.89,
+      "f1": 0.8533,
+      "precision": 0.8,
+      "recall": 0.9143,
+      "cm": [
+        [
+          57,
+          8
+        ],
+        [
+          3,
+          32
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 41.39,
+      "std": 27.26,
+      "pos_mean": 70.91,
+      "neg_mean": 25.49
+    }
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "gpt_free",
+    "csv": "similarity_database_with_gpt_features.csv",
+    "model": "qwen3_vl_235b_or",
+    "task": "binary_1",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_with_gpt_features_v6score_qwen3_vl_235b_or_binary_0_preds.csv",
+    "best_threshold": 25.1256,
+    "global_best": {
+      "f1": 0.7835,
+      "accuracy": 0.79,
+      "precision": 0.8085,
+      "recall": 0.76,
+      "tp": 38,
+      "fp": 9,
+      "fn": 12,
+      "tn": 41
+    },
+    "loo": {
+      "accuracy": 0.77,
+      "f1": 0.7579,
+      "precision": 0.8,
+      "recall": 0.72,
+      "cm": [
+        [
+          41,
+          9
+        ],
+        [
+          14,
+          36
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 41.39,
+      "std": 27.26,
+      "pos_mean": 58.54,
+      "neg_mean": 24.24
+    },
+    "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "gpt_law",
+    "csv": "similarity_database_with_gpt_law_features.csv",
+    "model": "qwen3_vl_235b_or",
+    "task": "binary_0",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_with_gpt_law_features_v6score_qwen3_vl_235b_or_binary_0_preds.csv",
+    "best_threshold": 55.2764,
+    "global_best": {
+      "f1": 0.8611,
+      "accuracy": 0.9,
+      "precision": 0.8378,
+      "recall": 0.8857,
+      "tp": 31,
+      "fp": 6,
+      "fn": 4,
+      "tn": 59
+    },
+    "loo": {
+      "accuracy": 0.9,
+      "f1": 0.8611,
+      "precision": 0.8378,
+      "recall": 0.8857,
+      "cm": [
+        [
+          59,
+          6
+        ],
+        [
+          4,
+          31
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 50.39,
+      "std": 26.01,
+      "pos_mean": 77.69,
+      "neg_mean": 35.69
+    }
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "gpt_law",
+    "csv": "similarity_database_with_gpt_law_features.csv",
+    "model": "qwen3_vl_235b_or",
+    "task": "binary_1",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_with_gpt_law_features_v6score_qwen3_vl_235b_or_binary_0_preds.csv",
+    "best_threshold": 40.201,
+    "global_best": {
+      "f1": 0.7835,
+      "accuracy": 0.79,
+      "precision": 0.8085,
+      "recall": 0.76,
+      "tp": 38,
+      "fp": 9,
+      "fn": 12,
+      "tn": 41
+    },
+    "loo": {
+      "accuracy": 0.63,
+      "f1": 0.6606,
+      "precision": 0.6102,
+      "recall": 0.72,
+      "cm": [
+        [
+          27,
+          23
+        ],
+        [
+          14,
+          36
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 50.39,
+      "std": 26.01,
+      "pos_mean": 67.18,
+      "neg_mean": 33.6
+    },
+    "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "facts",
+    "csv": "similarity_database_with_indicment_facts.csv",
+    "model": "qwen3_vl_235b_or",
+    "task": "binary_0",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_with_indicment_facts_v6score_qwen3_vl_235b_or_binary_0_preds.csv",
+    "best_threshold": 55.2764,
+    "global_best": {
+      "f1": 0.8611,
+      "accuracy": 0.9,
+      "precision": 0.8378,
+      "recall": 0.8857,
+      "tp": 31,
+      "fp": 6,
+      "fn": 4,
+      "tn": 59
+    },
+    "loo": {
+      "accuracy": 0.87,
+      "f1": 0.8267,
+      "precision": 0.775,
+      "recall": 0.8857,
+      "cm": [
+        [
+          56,
+          9
+        ],
+        [
+          4,
+          31
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 46.37,
+      "std": 29.74,
+      "pos_mean": 79.06,
+      "neg_mean": 28.77
+    }
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "facts",
+    "csv": "similarity_database_with_indicment_facts.csv",
+    "model": "qwen3_vl_235b_or",
+    "task": "binary_1",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_with_indicment_facts_v6score_qwen3_vl_235b_or_binary_0_preds.csv",
+    "best_threshold": 35.1759,
+    "global_best": {
+      "f1": 0.8172,
+      "accuracy": 0.83,
+      "precision": 0.8837,
+      "recall": 0.76,
+      "tp": 38,
+      "fp": 5,
+      "fn": 12,
+      "tn": 45
+    },
+    "loo": {
+      "accuracy": 0.83,
+      "f1": 0.8172,
+      "precision": 0.8837,
+      "recall": 0.76,
+      "cm": [
+        [
+          45,
+          5
+        ],
+        [
+          12,
+          38
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 46.37,
+      "std": 29.74,
+      "pos_mean": 66.04,
+      "neg_mean": 26.7
+    },
+    "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "manual_fe",
+    "csv": "similarity_database_fe.csv",
+    "model": "gemma4_31b_or",
+    "task": "binary_0",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_fe_v6score_gemma4_31b_or_binary_0_preds.csv",
+    "best_threshold": 45.2261,
+    "global_best": {
+      "f1": 0.8947,
+      "accuracy": 0.92,
+      "precision": 0.8718,
+      "recall": 0.9189,
+      "tp": 34,
+      "fp": 5,
+      "fn": 3,
+      "tn": 58
+    },
+    "loo": {
+      "accuracy": 0.92,
+      "f1": 0.8947,
+      "precision": 0.8718,
+      "recall": 0.9189,
+      "cm": [
+        [
+          58,
+          5
+        ],
+        [
+          3,
+          34
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 50.2,
+      "std": 30.01,
+      "pos_mean": 83.51,
+      "neg_mean": 30.63
+    }
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "manual_fe",
+    "csv": "similarity_database_fe.csv",
+    "model": "gemma4_31b_or",
+    "task": "binary_1",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_fe_v6score_gemma4_31b_or_binary_0_preds.csv",
+    "best_threshold": 40.201,
+    "global_best": {
+      "f1": 0.8454,
+      "accuracy": 0.85,
+      "precision": 0.8913,
+      "recall": 0.8039,
+      "tp": 41,
+      "fp": 5,
+      "fn": 10,
+      "tn": 44
+    },
+    "loo": {
+      "accuracy": 0.84,
+      "f1": 0.8367,
+      "precision": 0.8723,
+      "recall": 0.8039,
+      "cm": [
+        [
+          43,
+          6
+        ],
+        [
+          10,
+          41
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 50.2,
+      "std": 30.01,
+      "pos_mean": 71.76,
+      "neg_mean": 27.76
+    },
+    "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "fe_gpt_schema_v2",
+    "csv": "similarity_database_fe_gpt_schema_v2.csv",
+    "model": "gemma4_31b_or",
+    "task": "binary_0",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_fe_gpt_schema_v2_v6score_gemma4_31b_or_binary_0_preds.csv",
+    "best_threshold": 45.2261,
+    "global_best": {
+      "f1": 0.8947,
+      "accuracy": 0.92,
+      "precision": 0.8718,
+      "recall": 0.9189,
+      "tp": 34,
+      "fp": 5,
+      "fn": 3,
+      "tn": 58
+    },
+    "loo": {
+      "accuracy": 0.87,
+      "f1": 0.8354,
+      "precision": 0.7857,
+      "recall": 0.8919,
+      "cm": [
+        [
+          54,
+          9
+        ],
+        [
+          4,
+          33
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 50.88,
+      "std": 30.95,
+      "pos_mean": 85.24,
+      "neg_mean": 30.7
+    }
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "fe_gpt_schema_v2",
+    "csv": "similarity_database_fe_gpt_schema_v2.csv",
+    "model": "gemma4_31b_or",
+    "task": "binary_1",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_fe_gpt_schema_v2_v6score_gemma4_31b_or_binary_0_preds.csv",
+    "best_threshold": 35.1759,
+    "global_best": {
+      "f1": 0.8485,
+      "accuracy": 0.85,
+      "precision": 0.875,
+      "recall": 0.8235,
+      "tp": 42,
+      "fp": 6,
+      "fn": 9,
+      "tn": 43
+    },
+    "loo": {
+      "accuracy": 0.84,
+      "f1": 0.8367,
+      "precision": 0.8723,
+      "recall": 0.8039,
+      "cm": [
+        [
+          43,
+          6
+        ],
+        [
+          10,
+          41
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 50.88,
+      "std": 30.95,
+      "pos_mean": 73.06,
+      "neg_mean": 27.8
+    },
+    "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "hybrid_manual_gpt",
+    "csv": "similarity_database_hybrid.csv",
+    "model": "gemma4_31b_or",
+    "task": "binary_0",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_hybrid_v6score_gemma4_31b_or_binary_0_preds.csv",
+    "best_threshold": 42.2111,
+    "global_best": {
+      "f1": 0.9041,
+      "accuracy": 0.93,
+      "precision": 0.8684,
+      "recall": 0.9429,
+      "tp": 33,
+      "fp": 5,
+      "fn": 2,
+      "tn": 60
+    },
+    "loo": {
+      "accuracy": 0.93,
+      "f1": 0.9041,
+      "precision": 0.8684,
+      "recall": 0.9429,
+      "cm": [
+        [
+          60,
+          5
+        ],
+        [
+          2,
+          33
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 42.82,
+      "std": 31.5,
+      "pos_mean": 78.74,
+      "neg_mean": 23.48
+    }
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "hybrid_manual_gpt",
+    "csv": "similarity_database_hybrid.csv",
+    "model": "gemma4_31b_or",
+    "task": "binary_1",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_hybrid_v6score_gemma4_31b_or_binary_0_preds.csv",
+    "best_threshold": 30.1508,
+    "global_best": {
+      "f1": 0.8367,
+      "accuracy": 0.84,
+      "precision": 0.8542,
+      "recall": 0.82,
+      "tp": 41,
+      "fp": 7,
+      "fn": 9,
+      "tn": 43
+    },
+    "loo": {
+      "accuracy": 0.81,
+      "f1": 0.8,
+      "precision": 0.8444,
+      "recall": 0.76,
+      "cm": [
+        [
+          43,
+          7
+        ],
+        [
+          12,
+          38
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 42.82,
+      "std": 31.5,
+      "pos_mean": 65.06,
+      "neg_mean": 20.58
+    },
+    "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "hybrid_full_gpt",
+    "csv": "similarity_database_hybrid_full_gpt.csv",
+    "model": "gemma4_31b_or",
+    "task": "binary_0",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_hybrid_full_gpt_v6score_gemma4_31b_or_binary_0_preds.csv",
+    "best_threshold": 65.3266,
+    "global_best": {
+      "f1": 0.9275,
+      "accuracy": 0.95,
+      "precision": 0.9412,
+      "recall": 0.9143,
+      "tp": 32,
+      "fp": 2,
+      "fn": 3,
+      "tn": 63
+    },
+    "loo": {
+      "accuracy": 0.93,
+      "f1": 0.9014,
+      "precision": 0.8889,
+      "recall": 0.9143,
+      "cm": [
+        [
+          61,
+          4
+        ],
+        [
+          3,
+          32
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 47.01,
+      "std": 31.13,
+      "pos_mean": 83.77,
+      "neg_mean": 27.22
+    }
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "hybrid_full_gpt",
+    "csv": "similarity_database_hybrid_full_gpt.csv",
+    "model": "gemma4_31b_or",
+    "task": "binary_1",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_hybrid_full_gpt_v6score_gemma4_31b_or_binary_0_preds.csv",
+    "best_threshold": 30.1508,
+    "global_best": {
+      "f1": 0.8148,
+      "accuracy": 0.8,
+      "precision": 0.7586,
+      "recall": 0.88,
+      "tp": 44,
+      "fp": 14,
+      "fn": 6,
+      "tn": 36
+    },
+    "loo": {
+      "accuracy": 0.74,
+      "f1": 0.7451,
+      "precision": 0.7308,
+      "recall": 0.76,
+      "cm": [
+        [
+          36,
+          14
+        ],
+        [
+          12,
+          38
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 47.01,
+      "std": 31.13,
+      "pos_mean": 68.48,
+      "neg_mean": 25.54
+    },
+    "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "gpt_free",
+    "csv": "similarity_database_with_gpt_features.csv",
+    "model": "gemma4_31b_or",
+    "task": "binary_0",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_with_gpt_features_v6score_gemma4_31b_or_binary_0_preds.csv",
+    "best_threshold": 35.1759,
+    "global_best": {
+      "f1": 0.9041,
+      "accuracy": 0.93,
+      "precision": 0.8684,
+      "recall": 0.9429,
+      "tp": 33,
+      "fp": 5,
+      "fn": 2,
+      "tn": 60
+    },
+    "loo": {
+      "accuracy": 0.93,
+      "f1": 0.9041,
+      "precision": 0.8684,
+      "recall": 0.9429,
+      "cm": [
+        [
+          60,
+          5
+        ],
+        [
+          2,
+          33
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 39.86,
+      "std": 32.7,
+      "pos_mean": 76.26,
+      "neg_mean": 20.26
+    }
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "gpt_free",
+    "csv": "similarity_database_with_gpt_features.csv",
+    "model": "gemma4_31b_or",
+    "task": "binary_1",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_with_gpt_features_v6score_gemma4_31b_or_binary_0_preds.csv",
+    "best_threshold": 30.1508,
+    "global_best": {
+      "f1": 0.8247,
+      "accuracy": 0.83,
+      "precision": 0.8511,
+      "recall": 0.8,
+      "tp": 40,
+      "fp": 7,
+      "fn": 10,
+      "tn": 43
+    },
+    "loo": {
+      "accuracy": 0.82,
+      "f1": 0.8163,
+      "precision": 0.8333,
+      "recall": 0.8,
+      "cm": [
+        [
+          42,
+          8
+        ],
+        [
+          10,
+          40
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 39.86,
+      "std": 32.7,
+      "pos_mean": 62.18,
+      "neg_mean": 17.54
+    },
+    "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "gpt_law",
+    "csv": "similarity_database_with_gpt_law_features.csv",
+    "model": "gemma4_31b_or",
+    "task": "binary_0",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_with_gpt_law_features_v6score_gemma4_31b_or_binary_0_preds.csv",
+    "best_threshold": 55.2764,
+    "global_best": {
+      "f1": 0.8919,
+      "accuracy": 0.92,
+      "precision": 0.8462,
+      "recall": 0.9429,
+      "tp": 33,
+      "fp": 6,
+      "fn": 2,
+      "tn": 59
+    },
+    "loo": {
+      "accuracy": 0.91,
+      "f1": 0.88,
+      "precision": 0.825,
+      "recall": 0.9429,
+      "cm": [
+        [
+          58,
+          7
+        ],
+        [
+          2,
+          33
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 46.72,
+      "std": 32.3,
+      "pos_mean": 81.4,
+      "neg_mean": 28.05
+    }
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "gpt_law",
+    "csv": "similarity_database_with_gpt_law_features.csv",
+    "model": "gemma4_31b_or",
+    "task": "binary_1",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_with_gpt_law_features_v6score_gemma4_31b_or_binary_0_preds.csv",
+    "best_threshold": 45.2261,
+    "global_best": {
+      "f1": 0.8222,
+      "accuracy": 0.84,
+      "precision": 0.925,
+      "recall": 0.74,
+      "tp": 37,
+      "fp": 3,
+      "fn": 13,
+      "tn": 47
+    },
+    "loo": {
+      "accuracy": 0.84,
+      "f1": 0.8222,
+      "precision": 0.925,
+      "recall": 0.74,
+      "cm": [
+        [
+          47,
+          3
+        ],
+        [
+          13,
+          37
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 46.72,
+      "std": 32.3,
+      "pos_mean": 68.8,
+      "neg_mean": 24.64
+    },
+    "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "facts",
+    "csv": "similarity_database_with_indicment_facts.csv",
+    "model": "gemma4_31b_or",
+    "task": "binary_0",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_with_indicment_facts_v6score_gemma4_31b_or_binary_0_preds.csv",
+    "best_threshold": 55.2764,
+    "global_best": {
+      "f1": 0.8732,
+      "accuracy": 0.91,
+      "precision": 0.8611,
+      "recall": 0.8857,
+      "tp": 31,
+      "fp": 5,
+      "fn": 4,
+      "tn": 60
+    },
+    "loo": {
+      "accuracy": 0.91,
+      "f1": 0.8732,
+      "precision": 0.8611,
+      "recall": 0.8857,
+      "cm": [
+        [
+          60,
+          5
+        ],
+        [
+          4,
+          31
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 43.23,
+      "std": 32.42,
+      "pos_mean": 78.89,
+      "neg_mean": 24.03
+    }
+  },
+  {
+    "method": "v6_score_multimodel",
+    "complete": true,
+    "domain": "drugs",
+    "representation_id": "facts",
+    "csv": "similarity_database_with_indicment_facts.csv",
+    "model": "gemma4_31b_or",
+    "task": "binary_1",
+    "n_pairs": 100,
+    "n_valid": 100,
+    "n_failed": 0,
+    "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_with_indicment_facts_v6score_gemma4_31b_or_binary_0_preds.csv",
+    "best_threshold": 35.1759,
+    "global_best": {
+      "f1": 0.8298,
+      "accuracy": 0.84,
+      "precision": 0.8864,
+      "recall": 0.78,
+      "tp": 39,
+      "fp": 5,
+      "fn": 11,
+      "tn": 45
+    },
+    "loo": {
+      "accuracy": 0.84,
+      "f1": 0.8298,
+      "precision": 0.8864,
+      "recall": 0.78,
+      "cm": [
+        [
+          45,
+          5
+        ],
+        [
+          11,
+          39
+        ]
+      ]
+    },
+    "score_stats": {
+      "mean": 43.23,
+      "std": 32.42,
+      "pos_mean": 64.82,
+      "neg_mean": 21.64
+    },
+    "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+  }
+]

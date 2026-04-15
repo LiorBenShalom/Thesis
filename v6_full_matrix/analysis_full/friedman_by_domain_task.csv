@@ -1,5 +1,0 @@
-﻿domain,task,n_models,n_reps,friedman_stat,p_value,representations
-drugs,binary_0,11,8,25.56886227544912,0.0006012448543699305,"facts,fe_gpt_schema,gpt_free,gpt_law,hybrid_full_gpt,hybrid_gpt,hybrid_manual_gpt,manual_fe"
-drugs,binary_1,11,8,43.18062200956937,3.0781659628525624e-07,"facts,fe_gpt_schema,gpt_free,gpt_law,hybrid_full_gpt,hybrid_gpt,hybrid_manual_gpt,manual_fe"
-weapon,binary_0,11,8,46.31861575178997,7.578566438308046e-08,"facts,fe_gpt_schema,gpt_free,gpt_law,hybrid_full_gpt,hybrid_gpt,hybrid_manual_gpt,manual_fe"
-weapon,binary_1,11,8,35.86769964243146,7.678092300404619e-06,"facts,fe_gpt_schema,gpt_free,gpt_law,hybrid_full_gpt,hybrid_gpt,hybrid_manual_gpt,manual_fe"

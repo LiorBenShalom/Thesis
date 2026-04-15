@@ -26,8 +26,8 @@ OUT = EXP/"results_paper"
 OUT.mkdir(exist_ok=True)
 
 DOMAINS = {
-    "drugs":  EXP/"v6_prompt_test"/"drugs"/"results_drugs",
-    "weapon": EXP/"v6_full_matrix"/"weapon"/"results_weapon",
+    "drugs":  EXP/"v6_final"/"drugs"/"results_drugs",
+    "weapon": EXP/"v6_final"/"weapon"/"results_weapon",
 }
 REP_PREFIX = {
     "Manual":        "similarity_database_fe",

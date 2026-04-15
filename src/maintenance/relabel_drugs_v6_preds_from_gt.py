@@ -2,14 +2,14 @@
 """
 אחרי שינוי similarity_scale / similarity_binary_* ב-similarity_database_fe.csv:
 
-1. מעדכן את עמודות התיוג בכל קובץ *_v6score_*_binary_0_preds.csv תחת v6_full_matrix/drugs/results_drugs
+1. מעדכן את עמודות התיוג בכל קובץ *_v6score_*_binary_0_preds.csv תחת v6_final/drugs/results_drugs
    (אותם זוגות — הציונים נשארים; רק ה-GT משתנה).
 
 2. מחשב מחדש *_binary_0_stats.json ו-*_binary_1_stats.json מול הציונים השמורים — בלי קריאות API.
 
 שימוש:
   python relabel_drugs_v6_preds_from_gt.py
-  python relabel_drugs_v6_preds_from_gt.py --gt ../drugs/similarity_database_fe.csv --results-dir ../experiments/v6_full_matrix/drugs/results_drugs
+  python relabel_drugs_v6_preds_from_gt.py --gt ../drugs/similarity_database_fe.csv --results-dir ../experiments/v6_final/drugs/results_drugs
 """
 
 from __future__ import annotations
@@ -135,7 +135,7 @@ def main() -> None:
 
     base = Path(__file__).resolve().parent.parent
     gt_path = (args.gt or (base / "drugs" / "similarity_database_fe.csv")).resolve()
-    results_dir = (args.results_dir or (base / "experiments" / "v6_full_matrix" / "drugs" / "results_drugs")).resolve()
+    results_dir = (args.results_dir or (base / "experiments" / "v6_final" / "drugs" / "results_drugs")).resolve()
 
     if not gt_path.is_file():
         print(f"חסר GT: {gt_path}", file=sys.stderr)

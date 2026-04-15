@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "gpt_law",
+  "csv": "similarity_database_with_gpt_law_features.csv",
+  "model": "qwen3_vl_235b_or",
+  "task": "binary_1",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_with_gpt_law_features_v6score_qwen3_vl_235b_or_binary_0_preds.csv",
+  "best_threshold": 40.201,
+  "global_best": {
+    "f1": 0.7835,
+    "accuracy": 0.79,
+    "precision": 0.8085,
+    "recall": 0.76,
+    "tp": 38,
+    "fp": 9,
+    "fn": 12,
+    "tn": 41
+  },
+  "loo": {
+    "accuracy": 0.63,
+    "f1": 0.6606,
+    "precision": 0.6102,
+    "recall": 0.72,
+    "cm": [
+      [
+        27,
+        23
+      ],
+      [
+        14,
+        36
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 50.39,
+    "std": 26.01,
+    "pos_mean": 67.18,
+    "neg_mean": 33.6
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "manual_fe",
+  "csv": "similarity_database_fe.csv",
+  "model": "gpt52",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_new_prompt/weapon/results_weapon/similarity_database_fe_v6score_gpt52_binary_0_preds.csv",
+  "best_threshold": 55.2764,
+  "global_best": {
+    "f1": 0.8254,
+    "accuracy": 0.844,
+    "precision": 0.8125,
+    "recall": 0.8387,
+    "tp": 52,
+    "fp": 12,
+    "fn": 10,
+    "tn": 67
+  },
+  "loo": {
+    "accuracy": 0.8298,
+    "f1": 0.8095,
+    "precision": 0.7969,
+    "recall": 0.8226,
+    "cm": [
+      [
+        66,
+        13
+      ],
+      [
+        11,
+        51
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 47.75,
+    "std": 20.66,
+    "pos_mean": 64.85,
+    "neg_mean": 34.33
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

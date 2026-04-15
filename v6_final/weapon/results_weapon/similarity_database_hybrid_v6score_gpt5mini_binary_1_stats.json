@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "hybrid_manual_gpt",
+  "csv": "similarity_database_hybrid.csv",
+  "model": "gpt5mini",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_new_prompt/weapon/results_weapon/similarity_database_hybrid_v6score_gpt5mini_binary_0_preds.csv",
+  "best_threshold": 36.1809,
+  "global_best": {
+    "f1": 0.8322,
+    "accuracy": 0.8227,
+    "precision": 0.7126,
+    "recall": 1.0,
+    "tp": 62,
+    "fp": 25,
+    "fn": 0,
+    "tn": 54
+  },
+  "loo": {
+    "accuracy": 0.8156,
+    "f1": 0.8267,
+    "precision": 0.7045,
+    "recall": 1.0,
+    "cm": [
+      [
+        53,
+        26
+      ],
+      [
+        0,
+        62
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 45.71,
+    "std": 19.05,
+    "pos_mean": 61.32,
+    "neg_mean": 33.46
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

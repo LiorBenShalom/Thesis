@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "facts",
+  "csv": "similarity_database_with_indicment_facts.csv",
+  "model": "gemini_25_pro",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_new_prompt/weapon/results_weapon/similarity_database_with_indicment_facts_v6score_gemini_25_pro_binary_0_preds.csv",
+  "best_threshold": 25.1256,
+  "global_best": {
+    "f1": 0.7812,
+    "accuracy": 0.8014,
+    "precision": 0.7576,
+    "recall": 0.8065,
+    "tp": 50,
+    "fp": 16,
+    "fn": 12,
+    "tn": 63
+  },
+  "loo": {
+    "accuracy": 0.8014,
+    "f1": 0.7812,
+    "precision": 0.7576,
+    "recall": 0.8065,
+    "cm": [
+      [
+        63,
+        16
+      ],
+      [
+        12,
+        50
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 34.82,
+    "std": 20.28,
+    "pos_mean": 49.35,
+    "neg_mean": 23.42
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

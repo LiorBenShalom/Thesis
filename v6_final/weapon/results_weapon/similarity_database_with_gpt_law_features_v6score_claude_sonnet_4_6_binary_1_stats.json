@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "gpt_law",
+  "csv": "similarity_database_with_gpt_law_features.csv",
+  "model": "claude_sonnet_4_6",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_new_prompt/weapon/results_weapon/similarity_database_with_gpt_law_features_v6score_claude_sonnet_4_6_binary_0_preds.csv",
+  "best_threshold": 28.1407,
+  "global_best": {
+    "f1": 0.8182,
+    "accuracy": 0.8298,
+    "precision": 0.7714,
+    "recall": 0.871,
+    "tp": 54,
+    "fp": 16,
+    "fn": 8,
+    "tn": 63
+  },
+  "loo": {
+    "accuracy": 0.8085,
+    "f1": 0.7907,
+    "precision": 0.7612,
+    "recall": 0.8226,
+    "cm": [
+      [
+        63,
+        16
+      ],
+      [
+        11,
+        51
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 37.18,
+    "std": 22.37,
+    "pos_mean": 54.56,
+    "neg_mean": 23.54
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

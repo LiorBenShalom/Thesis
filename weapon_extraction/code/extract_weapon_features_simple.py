@@ -326,6 +326,7 @@ def extract_storage_method(text: str) -> dict:
 - רק מעובדות כתב האישום או דברי השופט.
 - רק אם נאמר במפורש איך הנאשם החזיק את הנשק.
 - ניתן לסמן מספר קטגוריות בו-זמנית.
+- ברירת מחדל מותנית: בעבירת נשיאת נשק, אם לא נאמר במפורש היכן החזיק הנשק, ניתן להניח "על_גופו" = 1 (כי נשיאה משמעה הנשק על הגוף).
 
 תוכן התיק:
 {text}"""
@@ -404,6 +405,7 @@ def extract_purpose(text: str) -> dict:
 - רק מעובדות כתב האישום או דברי השופט.
 - רק אם נאמר במפורש מה מטרת העבירה. אל תסיק מטרה שלא נאמרה מפורשות.
 - אם לא נאמר - כל הערכים 0 ושדה "אחר" ריק.
+- ברירת מחדל מותנית: בעבירת סחר בנשק (או ניסיון לסחר), אם לא נאמרה מטרה אחרת, המטרה היא "בצע_כסף" = 1.
 - שדה "אחר": רק אם יש מטרה שלא מתאימה לקטגוריות. כתוב 2-3 מילים בלבד (למשל: "פיגוע", "ציד", "אלימות במשפחה"). אם אין מטרה או שהמטרה כבר סומנה בקטגוריה - השאר ריק!
 
 תוכן התיק:
@@ -441,6 +443,38 @@ FEATURE_EXTRACTORS = [
 ]
 
 
+def apply_conditional_defaults(results: dict) -> dict:
+    """
+    Apply conditional defaults that depend on offense type:
+      - נשיאת_נשק + no storage location said → סמן "על_גופו" = 1
+      - סחר_בנשק / ניסיון_לסחר + no purpose said → סמן "בצע_כסף" = 1
+
+    Applied AFTER all individual extractors ran, since they don't see
+    each other's output.
+    """
+    offense = results.get("סוג_העבירה") or {}
+    is_carry   = offense.get("נשיאת_נשק", 0) == 1
+    is_trade   = offense.get("סחר_בנשק", 0) == 1 or offense.get("ניסיון_לסחר_בנשק", 0) == 1
+
+    # Storage default
+    if is_carry:
+        storage = results.get("אופן_החזקת_הנשק") or {}
+        if isinstance(storage, dict) and not any(storage.get(k, 0) for k in
+                ["בבית", "ברכב", "על_גופו", "מוסלק_מוסתר", "סמוך_לבית"]):
+            storage["על_גופו"] = 1
+            results["אופן_החזקת_הנשק"] = storage
+
+    # Purpose default
+    if is_trade:
+        purpose = results.get("מטרה_סיבת_העבירה") or {}
+        if isinstance(purpose, dict) and not any(purpose.get(k, 0) for k in
+                ["בצע_כסף", "הגנה_עצמית", "פחד", "ביטחון", "חברות_בארגון_פשע_או_טרור"]):
+            purpose["בצע_כסף"] = 1
+            results["מטרה_סיבת_העבירה"] = purpose
+
+    return results
+
+
 def extract_all_features(text: str) -> dict:
     results = {}
     for name, func in FEATURE_EXTRACTORS:
@@ -451,7 +485,7 @@ def extract_all_features(text: str) -> dict:
         except Exception as e:
             print(f"ERROR: {e}")
             results[name] = None
-    return results
+    return apply_conditional_defaults(results)
 
 
 def process_single(docx_path: str) -> dict:

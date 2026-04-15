@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "gpt_law",
+  "csv": "similarity_database_with_gpt_law_features.csv",
+  "model": "llama3_70b",
+  "task": "binary_0",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_full_new_prompt/weapon/results_weapon/similarity_database_with_gpt_law_features_v6score_llama3_70b_binary_0_preds.csv",
+  "best_threshold": 45.2261,
+  "global_best": {
+    "f1": 0.6116,
+    "accuracy": 0.6667,
+    "precision": 0.4625,
+    "recall": 0.9024,
+    "tp": 37,
+    "fp": 43,
+    "fn": 4,
+    "tn": 57
+  },
+  "loo": {
+    "accuracy": 0.6596,
+    "f1": 0.6066,
+    "precision": 0.4568,
+    "recall": 0.9024,
+    "cm": [
+      [
+        56,
+        44
+      ],
+      [
+        4,
+        37
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 49.6,
+    "std": 17.73,
+    "pos_mean": 61.1,
+    "neg_mean": 44.89
+  }
+}

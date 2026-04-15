@@ -5,3 +5,6 @@ __pycache__/
 .DS_Store
 *.bak
 *.bak_*
+# Working symlinks (created at runtime)
+src/drugs
+src/weapon

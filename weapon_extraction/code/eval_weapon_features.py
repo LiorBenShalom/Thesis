@@ -30,6 +30,7 @@ from extract_weapon_features_simple import (
     extract_ammunition,
     extract_purpose,
     extract_usage,
+    apply_conditional_defaults,
 )
 
 # ── GT column names ───────────────────────────────────────────────────────
@@ -255,6 +256,8 @@ def _extract_bullet_count(s: str) -> int | None:
     """Extract total bullet count from ammunition string."""
     if not s or not s.strip():
         return 0
+    if s.strip() == "ללא":
+        return 0
     total = 0
     found = False
     for m in re.finditer(r'(\d+)\s*כדורים?', s):
@@ -411,6 +414,7 @@ def run_eval(gt_csv: str, docx_dir: str, out_csv: str):
                 os.makedirs(os.path.dirname(cache_path), exist_ok=True)
                 with open(cache_path, "w", encoding="utf-8") as cf:
                     _json.dump(gpt_cache, cf, ensure_ascii=False, indent=2)
+            pred = apply_conditional_defaults(pred)
             comparison = compare_row(row, pred)
             print("OK")
         except Exception as e:
