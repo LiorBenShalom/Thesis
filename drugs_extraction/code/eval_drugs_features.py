@@ -335,15 +335,17 @@ def run_eval(gt_csv: str, docx_dir: str, out_csv: str, cache_path: str = None):
         # accumulate stats
         for feat, info in comparison.items():
             if feat not in feature_stats:
-                feature_stats[feat] = {"correct": 0, "total": 0, "disagreements": []}
+                feature_stats[feat] = {"correct": 0.0, "total": 0, "disagreements": []}
             feature_stats[feat]["total"] += 1
-            if info.get("match"):
-                feature_stats[feat]["correct"] += 1
-            else:
+            m = info.get("match")
+            m_val = 1.0 if (isinstance(m, bool) and m) else (0.0 if isinstance(m, bool) else float(m or 0))
+            feature_stats[feat]["correct"] += m_val
+            if m_val < 1.0:
                 feature_stats[feat]["disagreements"].append({
                     "case": fname,
                     "gt":   info.get("gt"),
                     "pred": info.get("pred"),
+                    "match": m_val,
                 })
 
     # ── aggregate 6 main features ─────────────────────────────────────
@@ -357,29 +359,55 @@ def run_eval(gt_csv: str, docx_dir: str, out_csv: str, cache_path: str = None):
         "תפקיד":        ["בעל_הסמים", "בעל_המעבדה"],
         "מכירה_לסוכן":  ["מכירה_לסוכן"],
     }
-    main_stats: dict[str, dict] = {}
-    for main_feat, sub_feats in MAIN_FEATURE_GROUPS.items():
-        correct = total = 0
-        for sf in sub_feats:
-            if sf in feature_stats:
-                correct += feature_stats[sf]["correct"]
-                total   += feature_stats[sf]["total"]
-        main_stats[main_feat] = {"correct": correct, "total": total}
+    # ── compute INVOLVED-ONLY metric (default — fair, ignores trivial negatives) ──
+    inv_per_sub: dict[str, dict] = {}
+    for case in all_case_results:
+        for feat, info in case["comparison"].items():
+            gt_raw = info.get("gt")
+            pr_raw = info.get("pred")
+            def _truthy(x):
+                if x is None: return False
+                if isinstance(x, list): return len(x) > 0
+                if isinstance(x, (int, float)): return x != 0
+                return bool(str(x).strip())
+            involved = _truthy(gt_raw) or _truthy(pr_raw)
+            if feat not in inv_per_sub:
+                inv_per_sub[feat] = {"correct": 0.0, "total": 0}
+            if involved:
+                inv_per_sub[feat]["total"] += 1
+                m = info.get("match")
+                m_val = 1.0 if (isinstance(m, bool) and m) else (0.0 if isinstance(m, bool) else float(m or 0))
+                inv_per_sub[feat]["correct"] += m_val
 
-    # ── print summary (main features) ─────────────────────────────────
-    print("\n" + "=" * 60)
-    print(f"{'פיצ\'ר ראשי':<25} {'דיוק':>10} {'נכון/סה\"כ':>12}")
-    print("=" * 60)
+    main_stats: dict[str, dict] = {}
+    main_stats_all: dict[str, dict] = {}
+    for main_feat, sub_feats in MAIN_FEATURE_GROUPS.items():
+        c = t = ca = ta = 0
+        for sf in sub_feats:
+            if sf in inv_per_sub:
+                c += inv_per_sub[sf]["correct"]; t += inv_per_sub[sf]["total"]
+            if sf in feature_stats:
+                ca += feature_stats[sf]["correct"]; ta += feature_stats[sf]["total"]
+        main_stats[main_feat]     = {"correct": c,  "total": t}
+        main_stats_all[main_feat] = {"correct": ca, "total": ta}
+
+    print("\n" + "=" * 75)
+    print(f"{'פיצר ראשי':<25} {'INVOLVED-ONLY':>20} {'(כל בינאריים)':>22}")
+    print("=" * 75)
     all_correct = all_total = 0
+    all_correct_a = all_total_a = 0
     for main_feat in MAIN_FEATURE_GROUPS:
-        s = main_stats[main_feat]
-        acc = s["correct"] / s["total"] if s["total"] else 0
-        print(f"{main_feat:<25} {acc:>9.1%}  {s['correct']:>4}/{s['total']:<4}")
-        all_correct += s["correct"]
-        all_total   += s["total"]
-    print("-" * 60)
-    overall = all_correct / all_total if all_total else 0
-    print(f"{'סה\"כ':<25} {overall:>9.1%}  {all_correct:>4}/{all_total:<4}")
+        s  = main_stats[main_feat]
+        sa = main_stats_all[main_feat]
+        acc  = s["correct"]  / s["total"]  if s["total"]  else 0
+        acca = sa["correct"] / sa["total"] if sa["total"] else 0
+        print(f"{main_feat:<25} {acc:>9.1%} ({s['correct']:>3}/{s['total']:<3})  {acca:>9.1%} ({sa['correct']:>4}/{sa['total']:<4})")
+        all_correct += s["correct"]; all_total += s["total"]
+        all_correct_a += sa["correct"]; all_total_a += sa["total"]
+    print("-" * 75)
+    overall  = all_correct / all_total if all_total else 0
+    overalla = all_correct_a / all_total_a if all_total_a else 0
+    print(f"{'סהכ':<25} {overall:>9.1%} ({all_correct:>3}/{all_total:<3})  {overalla:>9.1%} ({all_correct_a:>4}/{all_total_a:<4})")
 
     # ── print sub-feature detail ───────────────────────────────────────
     print("\n" + "=" * 60)
@@ -420,23 +448,27 @@ def run_eval(gt_csv: str, docx_dir: str, out_csv: str, cache_path: str = None):
     # write summary: main features first, then sub-features
     summary_path = out_csv.replace(".csv", "_summary.csv")
     with open(summary_path, "w", newline="", encoding="utf-8-sig") as f:
-        writer = csv.DictWriter(f, fieldnames=["level", "feature", "accuracy", "correct", "total"])
+        writer = csv.DictWriter(f, fieldnames=["level","feature","accuracy_involved","correct_involved","total_involved","accuracy_all","correct_all","total_all"])
         writer.writeheader()
-        # main features
         for main_feat in MAIN_FEATURE_GROUPS:
-            s = main_stats[main_feat]
-            acc = s["correct"] / s["total"] if s["total"] else 0
+            s  = main_stats[main_feat]
+            sa = main_stats_all[main_feat]
+            acc  = s["correct"]  / s["total"]  if s["total"]  else 0
+            acca = sa["correct"] / sa["total"] if sa["total"] else 0
             writer.writerow({"level": "main", "feature": main_feat,
-                             "accuracy": f"{acc:.3f}", "correct": s["correct"], "total": s["total"]})
-        # overall
+                             "accuracy_involved": f"{acc:.3f}", "correct_involved": s["correct"], "total_involved": s["total"],
+                             "accuracy_all": f"{acca:.3f}", "correct_all": sa["correct"], "total_all": sa["total"]})
         writer.writerow({"level": "overall", "feature": "סה\"כ",
-                         "accuracy": f"{overall:.3f}", "correct": all_correct, "total": all_total})
-        # sub-features
+                         "accuracy_involved": f"{overall:.3f}", "correct_involved": all_correct, "total_involved": all_total,
+                         "accuracy_all": f"{overalla:.3f}", "correct_all": all_correct_a, "total_all": all_total_a})
         for feat in sorted(feature_stats):
-            s = feature_stats[feat]
-            acc = s["correct"] / s["total"] if s["total"] else 0
+            s_inv = inv_per_sub.get(feat, {"correct": 0, "total": 0})
+            s_all = feature_stats[feat]
+            acc_inv = s_inv["correct"] / s_inv["total"] if s_inv["total"] else 0
+            acc_all = s_all["correct"] / s_all["total"] if s_all["total"] else 0
             writer.writerow({"level": "sub", "feature": feat,
-                             "accuracy": f"{acc:.3f}", "correct": s["correct"], "total": s["total"]})
+                             "accuracy_involved": f"{acc_inv:.3f}", "correct_involved": s_inv["correct"], "total_involved": s_inv["total"],
+                             "accuracy_all": f"{acc_all:.3f}", "correct_all": s_all["correct"], "total_all": s_all["total"]})
     print(f"Summary written to {summary_path}")
 
 

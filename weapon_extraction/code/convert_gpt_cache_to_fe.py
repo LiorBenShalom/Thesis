@@ -61,7 +61,7 @@ STORAGE_DISPLAY = {
     "ברכב":          "ברכב",
     "על_גופו":       "על גופו",
     "מוסלק_מוסתר":   "מוסלק - מוסתר",
-    "באוטובוס":      "באוטובוס",
+    "סמוך_לבית":     "סמוך לבית",
 }
 
 # ── how obtained keys → display ───────────────────────────────────────────
@@ -76,11 +76,14 @@ HOW_OBTAINED_DISPLAY = {
 
 # ── purpose keys → display ────────────────────────────────────────────────
 PURPOSE_DISPLAY = {
-    "בצע_כסף":                      "בצע כסף",
+    "בצע_כסף":                       "בצע כסף",
     "הגנה_עצמית":                    "הגנה עצמית",
     "פחד":                           "פחד",
     "ביטחון":                        "ביטחון",
     "חברות_בארגון_פשע_או_טרור":      "חברות בארגון טרור",
+    "סכסוך":                         "סכסוך",
+    "חתונה":                         "חתונה",
+    "תדמית":                         "תדמית",
 }
 
 
@@ -139,11 +142,23 @@ def _build_purpose(purpose_dict: dict) -> str:
 
 
 def _build_usage(usage_dict: dict) -> str:
+    """Map cache keys to the manual GT format value.
+    Cache keys: לא, כן_ירי, ניסיון_לירי_ללא_הצלחה, זריקת_רימון, נקירת_נשק, הפעלת_מטען
+    Manual format values: לא, כן,ירי, ניסיון לירי ללא הצלחה, זריקת רימון, נקירת נשק, הפעלת מטען"""
+    KEY_TO_VALUE = {
+        "כן_ירי":                  "כן,ירי",
+        "ניסיון_לירי_ללא_הצלחה":  "ניסיון לירי ללא הצלחה",
+        "זריקת_רימון":            "זריקת רימון",
+        "נקירת_נשק":              "נקירת נשק",
+        "הפעלת_מטען":             "הפעלת מטען",
+    }
     if isinstance(usage_dict, dict):
-        if usage_dict.get("לא"): return "לא"
-        for key in ["ירי", "זריקת_רימון", "הפעלת_מטען", "אחר"]:
+        # Check non-"לא" keys first (priority to actual usage)
+        for key, value in KEY_TO_VALUE.items():
             if usage_dict.get(key):
-                return key.replace("_", " ")
+                return value
+        if usage_dict.get("לא"):
+            return "לא"
     return "לא"
 
 

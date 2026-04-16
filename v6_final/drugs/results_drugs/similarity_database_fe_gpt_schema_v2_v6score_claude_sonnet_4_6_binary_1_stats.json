@@ -9,39 +9,39 @@
   "n_pairs": 100,
   "n_valid": 100,
   "n_failed": 0,
-  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_fe_gpt_schema_v2_v6score_claude_sonnet_4_6_binary_0_preds.csv",
-  "best_threshold": 33.1658,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_final/drugs/results_drugs/similarity_database_fe_gpt_schema_v2_v6score_claude_sonnet_4_6_binary_0_preds.csv",
+  "best_threshold": 34.1709,
   "global_best": {
-    "f1": 0.84,
-    "accuracy": 0.84,
-    "precision": 0.8571,
-    "recall": 0.8235,
-    "tp": 42,
-    "fp": 7,
-    "fn": 9,
-    "tn": 42
+    "f1": 0.8421,
+    "accuracy": 0.85,
+    "precision": 0.9091,
+    "recall": 0.7843,
+    "tp": 40,
+    "fp": 4,
+    "fn": 11,
+    "tn": 45
   },
   "loo": {
     "accuracy": 0.82,
-    "f1": 0.8235,
-    "precision": 0.8235,
-    "recall": 0.8235,
+    "f1": 0.8163,
+    "precision": 0.8511,
+    "recall": 0.7843,
     "cm": [
       [
-        40,
-        9
+        42,
+        7
       ],
       [
-        9,
-        42
+        11,
+        40
       ]
     ]
   },
   "score_stats": {
-    "mean": 42.36,
-    "std": 27.84,
-    "pos_mean": 61.84,
-    "neg_mean": 22.08
+    "mean": 41.51,
+    "std": 27.62,
+    "pos_mean": 60.76,
+    "neg_mean": 21.47
   },
   "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
 }

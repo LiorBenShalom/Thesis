@@ -9,38 +9,38 @@
   "n_pairs": 100,
   "n_valid": 100,
   "n_failed": 0,
-  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_prompt_test/drugs/results_drugs/similarity_database_hybrid_full_gpt_v6score_gpt5mini_binary_0_preds.csv",
-  "best_threshold": 57.2864,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_final/drugs/results_drugs/similarity_database_hybrid_full_gpt_v6score_gpt5mini_binary_0_preds.csv",
+  "best_threshold": 64.3216,
   "global_best": {
-    "f1": 0.8537,
-    "accuracy": 0.88,
-    "precision": 0.7778,
-    "recall": 0.9459,
-    "tp": 35,
-    "fp": 10,
-    "fn": 2,
-    "tn": 53
+    "f1": 0.9118,
+    "accuracy": 0.94,
+    "precision": 0.9394,
+    "recall": 0.8857,
+    "tp": 31,
+    "fp": 2,
+    "fn": 4,
+    "tn": 63
   },
   "loo": {
-    "accuracy": 0.87,
-    "f1": 0.8434,
-    "precision": 0.7609,
-    "recall": 0.9459,
+    "accuracy": 0.92,
+    "f1": 0.8824,
+    "precision": 0.9091,
+    "recall": 0.8571,
     "cm": [
       [
-        52,
-        11
+        62,
+        3
       ],
       [
-        2,
-        35
+        5,
+        30
       ]
     ]
   },
   "score_stats": {
-    "mean": 52.4,
-    "std": 23.16,
-    "pos_mean": 76.32,
-    "neg_mean": 38.35
+    "mean": 52.79,
+    "std": 22.5,
+    "pos_mean": 77.89,
+    "neg_mean": 39.28
   }
 }

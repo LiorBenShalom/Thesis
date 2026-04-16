@@ -8,3 +8,6 @@ __pycache__/
 # Working symlinks (created at runtime)
 src/drugs
 src/weapon
+
+# Backup files from experiments
+*.backup_*
