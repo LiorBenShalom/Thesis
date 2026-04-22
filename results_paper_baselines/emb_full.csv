@@ -15,6 +15,22 @@ weapon,openai,OpenAI 3-large,AP_b0,0.49530988090665495
 weapon,openai,OpenAI 3-large,AP_b1,0.6001895624431918
 weapon,openai,OpenAI 3-large,QWK_Oracle,0.29287863590772323
 weapon,openai,OpenAI 3-large,QWK_CV,0.15673110313693706
+drugs,gemini,Gemini-embedding-001,F1_Oracle_b0,0.8205128205128205
+drugs,gemini,Gemini-embedding-001,F1_Oracle_b1,0.8181818181818182
+drugs,gemini,Gemini-embedding-001,F1_CV_b0,0.7837837837837838
+drugs,gemini,Gemini-embedding-001,F1_CV_b1,0.7924528301886793
+drugs,gemini,Gemini-embedding-001,AP_b0,0.861599426096489
+drugs,gemini,Gemini-embedding-001,AP_b1,0.8963153213687491
+drugs,gemini,Gemini-embedding-001,QWK_Oracle,0.7620538509705699
+drugs,gemini,Gemini-embedding-001,QWK_CV,0.6671018276762403
+weapon,gemini,Gemini-embedding-001,F1_Oracle_b0,0.6379310344827587
+weapon,gemini,Gemini-embedding-001,F1_Oracle_b1,0.7236842105263158
+weapon,gemini,Gemini-embedding-001,F1_CV_b0,0.5932203389830508
+weapon,gemini,Gemini-embedding-001,F1_CV_b1,0.7074829931972789
+weapon,gemini,Gemini-embedding-001,AP_b0,0.5759680216114704
+weapon,gemini,Gemini-embedding-001,AP_b1,0.6886531858562311
+weapon,gemini,Gemini-embedding-001,QWK_Oracle,0.4858184764991895
+weapon,gemini,Gemini-embedding-001,QWK_CV,0.4152185089974293
 drugs,e5,mE5-large-instruct,F1_Oracle_b0,0.8157894736842105
 drugs,e5,mE5-large-instruct,F1_Oracle_b1,0.7959183673469388
 drugs,e5,mE5-large-instruct,F1_CV_b0,0.7792207792207793

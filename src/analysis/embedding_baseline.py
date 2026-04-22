@@ -52,6 +52,11 @@ MODELS = {
         "model_id": "text-embedding-3-large",
         "display": "OpenAI 3-large",
     },
+    "gemini": {
+        "provider": "google",
+        "model_id": "gemini-embedding-001",
+        "display": "Gemini-embedding-001",
+    },
     "e5": {
         "provider": "hf",
         "model_id": "intfloat/multilingual-e5-large-instruct",
@@ -173,6 +178,32 @@ def _encode_openai(texts: list[str], model_id: str, batch_size: int = 64) -> np.
     return np.vstack(vecs)
 
 
+def _encode_google(texts: list[str], model_id: str,
+                   task_type: str = "SEMANTIC_SIMILARITY",
+                   batch_size: int = 50) -> np.ndarray:
+    from google import genai
+    from dotenv import load_dotenv
+    load_dotenv(EXP.parent.parent / ".env")
+    load_dotenv(EXP / ".env")
+    client = genai.Client(api_key=os.environ["GOOGLE_API_KEY"])
+    vecs = []
+    for i in range(0, len(texts), batch_size):
+        batch = texts[i:i + batch_size]
+        # Gemini embed_content accepts a list for batch encoding
+        resp = client.models.embed_content(
+            model=model_id,
+            contents=batch,
+            config={"task_type": task_type},
+        )
+        vecs.extend([np.asarray(e.values, dtype=np.float32) for e in resp.embeddings])
+    arr = np.vstack(vecs)
+    # Normalize for cosine (Gemini returns unit-length vectors already for
+    # SEMANTIC_SIMILARITY task_type, but we re-normalize to be safe).
+    norms = np.linalg.norm(arr, axis=1, keepdims=True)
+    arr = arr / np.where(norms > 0, norms, 1.0)
+    return arr.astype(np.float32)
+
+
 def _encode_hf(texts: list[str], model_id: str, prefix: str = "") -> np.ndarray:
     from sentence_transformers import SentenceTransformer
     import torch
@@ -205,6 +236,8 @@ def encode_verdicts(model_key: str, id_to_text: dict[str, str]) -> dict[str, np.
         t0 = time.time()
         if cfg["provider"] == "openai":
             vecs = _encode_openai(texts, cfg["model_id"])
+        elif cfg["provider"] == "google":
+            vecs = _encode_google(texts, cfg["model_id"])
         else:
             vecs = _encode_hf(texts, cfg["model_id"], cfg.get("query_prefix", ""))
         for vid, vec in zip(ids, vecs):

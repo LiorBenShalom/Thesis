@@ -143,6 +143,22 @@ weapon,AP_b0,Embedding-Text: OpenAI 3-large,0.4953098809066549,"cosine(emb(raw_t
 weapon,AP_b1,Embedding-Text: OpenAI 3-large,0.6001895624431918,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
 weapon,QWK_Oracle,Embedding-Text: OpenAI 3-large,0.2928786359077232,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
 weapon,QWK_CV,Embedding-Text: OpenAI 3-large,0.156731103136937,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
+drugs,F1_Oracle_b0,Embedding-Text: Gemini-embedding-001,0.8205128205128205,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
+drugs,F1_Oracle_b1,Embedding-Text: Gemini-embedding-001,0.8181818181818182,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
+drugs,F1_CV_b0,Embedding-Text: Gemini-embedding-001,0.7837837837837838,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
+drugs,F1_CV_b1,Embedding-Text: Gemini-embedding-001,0.7924528301886793,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
+drugs,AP_b0,Embedding-Text: Gemini-embedding-001,0.861599426096489,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
+drugs,AP_b1,Embedding-Text: Gemini-embedding-001,0.8963153213687491,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
+drugs,QWK_Oracle,Embedding-Text: Gemini-embedding-001,0.7620538509705699,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
+drugs,QWK_CV,Embedding-Text: Gemini-embedding-001,0.6671018276762403,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
+weapon,F1_Oracle_b0,Embedding-Text: Gemini-embedding-001,0.6379310344827587,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
+weapon,F1_Oracle_b1,Embedding-Text: Gemini-embedding-001,0.7236842105263158,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
+weapon,F1_CV_b0,Embedding-Text: Gemini-embedding-001,0.5932203389830508,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
+weapon,F1_CV_b1,Embedding-Text: Gemini-embedding-001,0.7074829931972789,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
+weapon,AP_b0,Embedding-Text: Gemini-embedding-001,0.5759680216114704,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
+weapon,AP_b1,Embedding-Text: Gemini-embedding-001,0.6886531858562311,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
+weapon,QWK_Oracle,Embedding-Text: Gemini-embedding-001,0.4858184764991895,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
+weapon,QWK_CV,Embedding-Text: Gemini-embedding-001,0.4152185089974293,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
 drugs,F1_Oracle_b0,Embedding-Text: mE5-large-instruct,0.8157894736842105,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
 drugs,F1_Oracle_b1,Embedding-Text: mE5-large-instruct,0.7959183673469388,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
 drugs,F1_CV_b0,Embedding-Text: mE5-large-instruct,0.7792207792207793,"cosine(emb(raw_text_V1), emb(raw_text_V2))"
@@ -287,6 +303,118 @@ weapon,AP_b0,Emb-on-Hybrid-Full: OpenAI 3-large,0.4853885033449363,cosine on Hyb
 weapon,AP_b1,Emb-on-Hybrid-Full: OpenAI 3-large,0.5801894372090732,cosine on Hybrid-Full features
 weapon,QWK_Oracle,Emb-on-Hybrid-Full: OpenAI 3-large,0.2300650445675741,cosine on Hybrid-Full features
 weapon,QWK_CV,Emb-on-Hybrid-Full: OpenAI 3-large,0.1140647655872402,cosine on Hybrid-Full features
+drugs,F1_Oracle_b0,Emb-on-Manual: Gemini-embedding-001,0.8292682926829268,cosine on Manual features
+drugs,F1_Oracle_b1,Emb-on-Manual: Gemini-embedding-001,0.8080808080808081,cosine on Manual features
+drugs,F1_CV_b0,Emb-on-Manual: Gemini-embedding-001,0.7948717948717948,cosine on Manual features
+drugs,F1_CV_b1,Emb-on-Manual: Gemini-embedding-001,0.7115384615384616,cosine on Manual features
+drugs,AP_b0,Emb-on-Manual: Gemini-embedding-001,0.775578063270808,cosine on Manual features
+drugs,AP_b1,Emb-on-Manual: Gemini-embedding-001,0.8486319459296917,cosine on Manual features
+drugs,QWK_Oracle,Emb-on-Manual: Gemini-embedding-001,0.7673031026252983,cosine on Manual features
+drugs,QWK_CV,Emb-on-Manual: Gemini-embedding-001,0.7562425683709869,cosine on Manual features
+weapon,F1_Oracle_b0,Emb-on-Manual: Gemini-embedding-001,0.6902654867256637,cosine on Manual features
+weapon,F1_Oracle_b1,Emb-on-Manual: Gemini-embedding-001,0.7808219178082192,cosine on Manual features
+weapon,F1_CV_b0,Emb-on-Manual: Gemini-embedding-001,0.6262626262626263,cosine on Manual features
+weapon,F1_CV_b1,Emb-on-Manual: Gemini-embedding-001,0.7464788732394366,cosine on Manual features
+weapon,AP_b0,Emb-on-Manual: Gemini-embedding-001,0.700180810155441,cosine on Manual features
+weapon,AP_b1,Emb-on-Manual: Gemini-embedding-001,0.7893446675648786,cosine on Manual features
+weapon,QWK_Oracle,Emb-on-Manual: Gemini-embedding-001,0.5919568905298873,cosine on Manual features
+weapon,QWK_CV,Emb-on-Manual: Gemini-embedding-001,0.4779404131630852,cosine on Manual features
+drugs,F1_Oracle_b0,Emb-on-GPT-Schema: Gemini-embedding-001,0.7435897435897436,cosine on GPT-Schema features
+drugs,F1_Oracle_b1,Emb-on-GPT-Schema: Gemini-embedding-001,0.7741935483870968,cosine on GPT-Schema features
+drugs,F1_CV_b0,Emb-on-GPT-Schema: Gemini-embedding-001,0.7272727272727273,cosine on GPT-Schema features
+drugs,F1_CV_b1,Emb-on-GPT-Schema: Gemini-embedding-001,0.7446808510638298,cosine on GPT-Schema features
+drugs,AP_b0,Emb-on-GPT-Schema: Gemini-embedding-001,0.8186775552507802,cosine on GPT-Schema features
+drugs,AP_b1,Emb-on-GPT-Schema: Gemini-embedding-001,0.8367958121046095,cosine on GPT-Schema features
+drugs,QWK_Oracle,Emb-on-GPT-Schema: Gemini-embedding-001,0.6686547382372432,cosine on GPT-Schema features
+drugs,QWK_CV,Emb-on-GPT-Schema: Gemini-embedding-001,0.6303763440860215,cosine on GPT-Schema features
+weapon,F1_Oracle_b0,Emb-on-GPT-Schema: Gemini-embedding-001,0.6170212765957447,cosine on GPT-Schema features
+weapon,F1_Oracle_b1,Emb-on-GPT-Schema: Gemini-embedding-001,0.6857142857142857,cosine on GPT-Schema features
+weapon,F1_CV_b0,Emb-on-GPT-Schema: Gemini-embedding-001,0.5742574257425742,cosine on GPT-Schema features
+weapon,F1_CV_b1,Emb-on-GPT-Schema: Gemini-embedding-001,0.5960264900662252,cosine on GPT-Schema features
+weapon,AP_b0,Emb-on-GPT-Schema: Gemini-embedding-001,0.5804087582699496,cosine on GPT-Schema features
+weapon,AP_b1,Emb-on-GPT-Schema: Gemini-embedding-001,0.7168651511435883,cosine on GPT-Schema features
+weapon,QWK_Oracle,Emb-on-GPT-Schema: Gemini-embedding-001,0.4725625450427262,cosine on GPT-Schema features
+weapon,QWK_CV,Emb-on-GPT-Schema: Gemini-embedding-001,0.4023656973878757,cosine on GPT-Schema features
+drugs,F1_Oracle_b0,Emb-on-GPT-Free: Gemini-embedding-001,0.7848101265822784,cosine on GPT-Free features
+drugs,F1_Oracle_b1,Emb-on-GPT-Free: Gemini-embedding-001,0.8363636363636363,cosine on GPT-Free features
+drugs,F1_CV_b0,Emb-on-GPT-Free: Gemini-embedding-001,0.7160493827160493,cosine on GPT-Free features
+drugs,F1_CV_b1,Emb-on-GPT-Free: Gemini-embedding-001,0.8148148148148148,cosine on GPT-Free features
+drugs,AP_b0,Emb-on-GPT-Free: Gemini-embedding-001,0.8416072607993376,cosine on GPT-Free features
+drugs,AP_b1,Emb-on-GPT-Free: Gemini-embedding-001,0.8727439508056766,cosine on GPT-Free features
+drugs,QWK_Oracle,Emb-on-GPT-Free: Gemini-embedding-001,0.7240377632534495,cosine on GPT-Free features
+drugs,QWK_CV,Emb-on-GPT-Free: Gemini-embedding-001,0.636617749825297,cosine on GPT-Free features
+weapon,F1_Oracle_b0,Emb-on-GPT-Free: Gemini-embedding-001,0.7070707070707071,cosine on GPT-Free features
+weapon,F1_Oracle_b1,Emb-on-GPT-Free: Gemini-embedding-001,0.7681159420289855,cosine on GPT-Free features
+weapon,F1_CV_b0,Emb-on-GPT-Free: Gemini-embedding-001,0.6804123711340206,cosine on GPT-Free features
+weapon,F1_CV_b1,Emb-on-GPT-Free: Gemini-embedding-001,0.75,cosine on GPT-Free features
+weapon,AP_b0,Emb-on-GPT-Free: Gemini-embedding-001,0.6001279094203599,cosine on GPT-Free features
+weapon,AP_b1,Emb-on-GPT-Free: Gemini-embedding-001,0.7245342695620307,cosine on GPT-Free features
+weapon,QWK_Oracle,Emb-on-GPT-Free: Gemini-embedding-001,0.5940668419076229,cosine on GPT-Free features
+weapon,QWK_CV,Emb-on-GPT-Free: Gemini-embedding-001,0.5675248629054745,cosine on GPT-Free features
+drugs,F1_Oracle_b0,Emb-on-GPT-Law: Gemini-embedding-001,0.7804878048780488,cosine on GPT-Law features
+drugs,F1_Oracle_b1,Emb-on-GPT-Law: Gemini-embedding-001,0.8108108108108109,cosine on GPT-Law features
+drugs,F1_CV_b0,Emb-on-GPT-Law: Gemini-embedding-001,0.7654320987654321,cosine on GPT-Law features
+drugs,F1_CV_b1,Emb-on-GPT-Law: Gemini-embedding-001,0.7706422018348624,cosine on GPT-Law features
+drugs,AP_b0,Emb-on-GPT-Law: Gemini-embedding-001,0.7881113434717669,cosine on GPT-Law features
+drugs,AP_b1,Emb-on-GPT-Law: Gemini-embedding-001,0.8413832893653833,cosine on GPT-Law features
+drugs,QWK_Oracle,Emb-on-GPT-Law: Gemini-embedding-001,0.6622369878183831,cosine on GPT-Law features
+drugs,QWK_CV,Emb-on-GPT-Law: Gemini-embedding-001,0.5644699140401146,cosine on GPT-Law features
+weapon,F1_Oracle_b0,Emb-on-GPT-Law: Gemini-embedding-001,0.7289719626168224,cosine on GPT-Law features
+weapon,F1_Oracle_b1,Emb-on-GPT-Law: Gemini-embedding-001,0.7794117647058824,cosine on GPT-Law features
+weapon,F1_CV_b0,Emb-on-GPT-Law: Gemini-embedding-001,0.7047619047619048,cosine on GPT-Law features
+weapon,F1_CV_b1,Emb-on-GPT-Law: Gemini-embedding-001,0.7555555555555555,cosine on GPT-Law features
+weapon,AP_b0,Emb-on-GPT-Law: Gemini-embedding-001,0.6685555221298071,cosine on GPT-Law features
+weapon,AP_b1,Emb-on-GPT-Law: Gemini-embedding-001,0.79847467661681,cosine on GPT-Law features
+weapon,QWK_Oracle,Emb-on-GPT-Law: Gemini-embedding-001,0.6284423594822344,cosine on GPT-Law features
+weapon,QWK_CV,Emb-on-GPT-Law: Gemini-embedding-001,0.5671589921807125,cosine on GPT-Law features
+drugs,F1_Oracle_b0,Emb-on-Raw-Facts: Gemini-embedding-001,0.8205128205128205,cosine on Raw-Facts features
+drugs,F1_Oracle_b1,Emb-on-Raw-Facts: Gemini-embedding-001,0.8181818181818182,cosine on Raw-Facts features
+drugs,F1_CV_b0,Emb-on-Raw-Facts: Gemini-embedding-001,0.7837837837837838,cosine on Raw-Facts features
+drugs,F1_CV_b1,Emb-on-Raw-Facts: Gemini-embedding-001,0.7924528301886793,cosine on Raw-Facts features
+drugs,AP_b0,Emb-on-Raw-Facts: Gemini-embedding-001,0.861599426096489,cosine on Raw-Facts features
+drugs,AP_b1,Emb-on-Raw-Facts: Gemini-embedding-001,0.8963153213687491,cosine on Raw-Facts features
+drugs,QWK_Oracle,Emb-on-Raw-Facts: Gemini-embedding-001,0.7620538509705699,cosine on Raw-Facts features
+drugs,QWK_CV,Emb-on-Raw-Facts: Gemini-embedding-001,0.6671018276762403,cosine on Raw-Facts features
+weapon,F1_Oracle_b0,Emb-on-Raw-Facts: Gemini-embedding-001,0.6379310344827587,cosine on Raw-Facts features
+weapon,F1_Oracle_b1,Emb-on-Raw-Facts: Gemini-embedding-001,0.7236842105263158,cosine on Raw-Facts features
+weapon,F1_CV_b0,Emb-on-Raw-Facts: Gemini-embedding-001,0.5932203389830508,cosine on Raw-Facts features
+weapon,F1_CV_b1,Emb-on-Raw-Facts: Gemini-embedding-001,0.7074829931972789,cosine on Raw-Facts features
+weapon,AP_b0,Emb-on-Raw-Facts: Gemini-embedding-001,0.5759680216114704,cosine on Raw-Facts features
+weapon,AP_b1,Emb-on-Raw-Facts: Gemini-embedding-001,0.6886531858562311,cosine on Raw-Facts features
+weapon,QWK_Oracle,Emb-on-Raw-Facts: Gemini-embedding-001,0.4858184764991895,cosine on Raw-Facts features
+weapon,QWK_CV,Emb-on-Raw-Facts: Gemini-embedding-001,0.4152185089974293,cosine on Raw-Facts features
+drugs,F1_Oracle_b0,Emb-on-Hybrid-Manual: Gemini-embedding-001,0.8266666666666667,cosine on Hybrid-Manual features
+drugs,F1_Oracle_b1,Emb-on-Hybrid-Manual: Gemini-embedding-001,0.8103448275862069,cosine on Hybrid-Manual features
+drugs,F1_CV_b0,Emb-on-Hybrid-Manual: Gemini-embedding-001,0.8108108108108109,cosine on Hybrid-Manual features
+drugs,F1_CV_b1,Emb-on-Hybrid-Manual: Gemini-embedding-001,0.8,cosine on Hybrid-Manual features
+drugs,AP_b0,Emb-on-Hybrid-Manual: Gemini-embedding-001,0.777098958043183,cosine on Hybrid-Manual features
+drugs,AP_b1,Emb-on-Hybrid-Manual: Gemini-embedding-001,0.8323198917912289,cosine on Hybrid-Manual features
+drugs,QWK_Oracle,Emb-on-Hybrid-Manual: Gemini-embedding-001,0.695273631840796,cosine on Hybrid-Manual features
+drugs,QWK_CV,Emb-on-Hybrid-Manual: Gemini-embedding-001,0.638178415470992,cosine on Hybrid-Manual features
+weapon,F1_Oracle_b0,Emb-on-Hybrid-Manual: Gemini-embedding-001,0.693069306930693,cosine on Hybrid-Manual features
+weapon,F1_Oracle_b1,Emb-on-Hybrid-Manual: Gemini-embedding-001,0.7448275862068966,cosine on Hybrid-Manual features
+weapon,F1_CV_b0,Emb-on-Hybrid-Manual: Gemini-embedding-001,0.6601941747572816,cosine on Hybrid-Manual features
+weapon,F1_CV_b1,Emb-on-Hybrid-Manual: Gemini-embedding-001,0.7284768211920529,cosine on Hybrid-Manual features
+weapon,AP_b0,Emb-on-Hybrid-Manual: Gemini-embedding-001,0.6520967932123672,cosine on Hybrid-Manual features
+weapon,AP_b1,Emb-on-Hybrid-Manual: Gemini-embedding-001,0.7514695618362383,cosine on Hybrid-Manual features
+weapon,QWK_Oracle,Emb-on-Hybrid-Manual: Gemini-embedding-001,0.558455114822547,cosine on Hybrid-Manual features
+weapon,QWK_CV,Emb-on-Hybrid-Manual: Gemini-embedding-001,0.4835164835164836,cosine on Hybrid-Manual features
+drugs,F1_Oracle_b0,Emb-on-Hybrid-Full: Gemini-embedding-001,0.821917808219178,cosine on Hybrid-Full features
+drugs,F1_Oracle_b1,Emb-on-Hybrid-Full: Gemini-embedding-001,0.782608695652174,cosine on Hybrid-Full features
+drugs,F1_CV_b0,Emb-on-Hybrid-Full: Gemini-embedding-001,0.75,cosine on Hybrid-Full features
+drugs,F1_CV_b1,Emb-on-Hybrid-Full: Gemini-embedding-001,0.7254901960784313,cosine on Hybrid-Full features
+drugs,AP_b0,Emb-on-Hybrid-Full: Gemini-embedding-001,0.8256150799850558,cosine on Hybrid-Full features
+drugs,AP_b1,Emb-on-Hybrid-Full: Gemini-embedding-001,0.8557024520305365,cosine on Hybrid-Full features
+drugs,QWK_Oracle,Emb-on-Hybrid-Full: Gemini-embedding-001,0.7144592952612394,cosine on Hybrid-Full features
+drugs,QWK_CV,Emb-on-Hybrid-Full: Gemini-embedding-001,0.6798603026775321,cosine on Hybrid-Full features
+weapon,F1_Oracle_b0,Emb-on-Hybrid-Full: Gemini-embedding-001,0.6526315789473685,cosine on Hybrid-Full features
+weapon,F1_Oracle_b1,Emb-on-Hybrid-Full: Gemini-embedding-001,0.7044025157232704,cosine on Hybrid-Full features
+weapon,F1_CV_b0,Emb-on-Hybrid-Full: Gemini-embedding-001,0.6105263157894737,cosine on Hybrid-Full features
+weapon,F1_CV_b1,Emb-on-Hybrid-Full: Gemini-embedding-001,0.6535947712418301,cosine on Hybrid-Full features
+weapon,AP_b0,Emb-on-Hybrid-Full: Gemini-embedding-001,0.6643454380907707,cosine on Hybrid-Full features
+weapon,AP_b1,Emb-on-Hybrid-Full: Gemini-embedding-001,0.7425530486654753,cosine on Hybrid-Full features
+weapon,QWK_Oracle,Emb-on-Hybrid-Full: Gemini-embedding-001,0.5077128166063607,cosine on Hybrid-Full features
+weapon,QWK_CV,Emb-on-Hybrid-Full: Gemini-embedding-001,0.4061122538936232,cosine on Hybrid-Full features
 drugs,F1_Oracle_b0,Emb-on-Manual: mE5-large-instruct,0.7901234567901234,cosine on Manual features
 drugs,F1_Oracle_b1,Emb-on-Manual: mE5-large-instruct,0.8333333333333334,cosine on Manual features
 drugs,F1_CV_b0,Emb-on-Manual: mE5-large-instruct,0.775,cosine on Manual features
@@ -511,115 +639,115 @@ weapon,AP_b0,Emb-on-Hybrid-Full: BGE-M3,0.5610735957581463,cosine on Hybrid-Full
 weapon,AP_b1,Emb-on-Hybrid-Full: BGE-M3,0.6537434681919729,cosine on Hybrid-Full features
 weapon,QWK_Oracle,Emb-on-Hybrid-Full: BGE-M3,0.337872740079831,cosine on Hybrid-Full features
 weapon,QWK_CV,Emb-on-Hybrid-Full: BGE-M3,0.2444082013047529,cosine on Hybrid-Full features
-drugs,AP_b0,Emb-on-GPT-Free: mean,0.7168248318641682,mean across 3 embedding models
-drugs,AP_b1,Emb-on-GPT-Free: mean,0.7756367837461992,mean across 3 embedding models
-drugs,F1_CV_b0,Emb-on-GPT-Free: mean,0.7043512043512044,mean across 3 embedding models
-drugs,F1_CV_b1,Emb-on-GPT-Free: mean,0.7461904761904762,mean across 3 embedding models
-drugs,F1_Oracle_b0,Emb-on-GPT-Free: mean,0.7486457976964306,mean across 3 embedding models
-drugs,F1_Oracle_b1,Emb-on-GPT-Free: mean,0.7769951769951771,mean across 3 embedding models
-drugs,QWK_CV,Emb-on-GPT-Free: mean,0.5301438356147363,mean across 3 embedding models
-drugs,QWK_Oracle,Emb-on-GPT-Free: mean,0.6150338158198246,mean across 3 embedding models
-drugs,AP_b0,Emb-on-GPT-Law: mean,0.6792726994710442,mean across 3 embedding models
-drugs,AP_b1,Emb-on-GPT-Law: mean,0.7700478272523826,mean across 3 embedding models
-drugs,F1_CV_b0,Emb-on-GPT-Law: mean,0.6156319231610854,mean across 3 embedding models
-drugs,F1_CV_b1,Emb-on-GPT-Law: mean,0.7342253705890069,mean across 3 embedding models
-drugs,F1_Oracle_b0,Emb-on-GPT-Law: mean,0.6800545859369388,mean across 3 embedding models
-drugs,F1_Oracle_b1,Emb-on-GPT-Law: mean,0.7512030640806803,mean across 3 embedding models
-drugs,QWK_CV,Emb-on-GPT-Law: mean,0.4392970128506373,mean across 3 embedding models
-drugs,QWK_Oracle,Emb-on-GPT-Law: mean,0.5392045034397442,mean across 3 embedding models
-drugs,AP_b0,Emb-on-GPT-Schema: mean,0.7915740362352399,mean across 3 embedding models
-drugs,AP_b1,Emb-on-GPT-Schema: mean,0.8129433013792862,mean across 3 embedding models
-drugs,F1_CV_b0,Emb-on-GPT-Schema: mean,0.6178646242471851,mean across 3 embedding models
-drugs,F1_CV_b1,Emb-on-GPT-Schema: mean,0.6771400488302518,mean across 3 embedding models
-drugs,F1_Oracle_b0,Emb-on-GPT-Schema: mean,0.6991972164581107,mean across 3 embedding models
-drugs,F1_Oracle_b1,Emb-on-GPT-Schema: mean,0.7141089512398883,mean across 3 embedding models
-drugs,QWK_CV,Emb-on-GPT-Schema: mean,0.5058507239993174,mean across 3 embedding models
-drugs,QWK_Oracle,Emb-on-GPT-Schema: mean,0.5804916699829727,mean across 3 embedding models
-drugs,AP_b0,Emb-on-Hybrid-Full: mean,0.7684765871775272,mean across 3 embedding models
-drugs,AP_b1,Emb-on-Hybrid-Full: mean,0.7902047786912679,mean across 3 embedding models
-drugs,F1_CV_b0,Emb-on-Hybrid-Full: mean,0.7368263926384925,mean across 3 embedding models
-drugs,F1_CV_b1,Emb-on-Hybrid-Full: mean,0.710516536603493,mean across 3 embedding models
-drugs,F1_Oracle_b0,Emb-on-Hybrid-Full: mean,0.7649667405764967,mean across 3 embedding models
-drugs,F1_Oracle_b1,Emb-on-Hybrid-Full: mean,0.7516843557025311,mean across 3 embedding models
-drugs,QWK_CV,Emb-on-Hybrid-Full: mean,0.5219512691741518,mean across 3 embedding models
-drugs,QWK_Oracle,Emb-on-Hybrid-Full: mean,0.6168609707292951,mean across 3 embedding models
-drugs,AP_b0,Emb-on-Hybrid-Manual: mean,0.6967409077353605,mean across 3 embedding models
-drugs,AP_b1,Emb-on-Hybrid-Manual: mean,0.7899734973769874,mean across 3 embedding models
-drugs,F1_CV_b0,Emb-on-Hybrid-Manual: mean,0.715152007713521,mean across 3 embedding models
-drugs,F1_CV_b1,Emb-on-Hybrid-Manual: mean,0.7161498907672806,mean across 3 embedding models
-drugs,F1_Oracle_b0,Emb-on-Hybrid-Manual: mean,0.7497889107796228,mean across 3 embedding models
-drugs,F1_Oracle_b1,Emb-on-Hybrid-Manual: mean,0.751156820700526,mean across 3 embedding models
-drugs,QWK_CV,Emb-on-Hybrid-Manual: mean,0.4828710446876044,mean across 3 embedding models
-drugs,QWK_Oracle,Emb-on-Hybrid-Manual: mean,0.5915739866542964,mean across 3 embedding models
-drugs,AP_b0,Emb-on-Manual: mean,0.8298149134328253,mean across 3 embedding models
-drugs,AP_b1,Emb-on-Manual: mean,0.8559461142252599,mean across 3 embedding models
-drugs,F1_CV_b0,Emb-on-Manual: mean,0.7395635459068295,mean across 3 embedding models
-drugs,F1_CV_b1,Emb-on-Manual: mean,0.7448216519765184,mean across 3 embedding models
-drugs,F1_Oracle_b0,Emb-on-Manual: mean,0.7756020800189627,mean across 3 embedding models
-drugs,F1_Oracle_b1,Emb-on-Manual: mean,0.8121933621933621,mean across 3 embedding models
-drugs,QWK_CV,Emb-on-Manual: mean,0.6216174790974224,mean across 3 embedding models
-drugs,QWK_Oracle,Emb-on-Manual: mean,0.7093470558642081,mean across 3 embedding models
-drugs,AP_b0,Emb-on-Raw-Facts: mean,0.7732889655475782,mean across 3 embedding models
-drugs,AP_b1,Emb-on-Raw-Facts: mean,0.8243100440661694,mean across 3 embedding models
-drugs,F1_CV_b0,Emb-on-Raw-Facts: mean,0.7512861534600664,mean across 3 embedding models
-drugs,F1_CV_b1,Emb-on-Raw-Facts: mean,0.7327818472678286,mean across 3 embedding models
-drugs,F1_Oracle_b0,Emb-on-Raw-Facts: mean,0.7918493416640192,mean across 3 embedding models
-drugs,F1_Oracle_b1,Emb-on-Raw-Facts: mean,0.7725682865738888,mean across 3 embedding models
-drugs,QWK_CV,Emb-on-Raw-Facts: mean,0.6196656811090242,mean across 3 embedding models
-drugs,QWK_Oracle,Emb-on-Raw-Facts: mean,0.6672524263094216,mean across 3 embedding models
-weapon,AP_b0,Emb-on-GPT-Free: mean,0.5404939252661377,mean across 3 embedding models
-weapon,AP_b1,Emb-on-GPT-Free: mean,0.6744955413166109,mean across 3 embedding models
-weapon,F1_CV_b0,Emb-on-GPT-Free: mean,0.5563732563732563,mean across 3 embedding models
-weapon,F1_CV_b1,Emb-on-GPT-Free: mean,0.6880601081143087,mean across 3 embedding models
-weapon,F1_Oracle_b0,Emb-on-GPT-Free: mean,0.6263670124861512,mean across 3 embedding models
-weapon,F1_Oracle_b1,Emb-on-GPT-Free: mean,0.716204674275953,mean across 3 embedding models
-weapon,QWK_CV,Emb-on-GPT-Free: mean,0.39691321871774426,mean across 3 embedding models
-weapon,QWK_Oracle,Emb-on-GPT-Free: mean,0.4646125315437131,mean across 3 embedding models
-weapon,AP_b0,Emb-on-GPT-Law: mean,0.5548037953192918,mean across 3 embedding models
-weapon,AP_b1,Emb-on-GPT-Law: mean,0.6890377767922186,mean across 3 embedding models
-weapon,F1_CV_b0,Emb-on-GPT-Law: mean,0.5722919705473473,mean across 3 embedding models
-weapon,F1_CV_b1,Emb-on-GPT-Law: mean,0.6751699320209742,mean across 3 embedding models
-weapon,F1_Oracle_b0,Emb-on-GPT-Law: mean,0.600019868233873,mean across 3 embedding models
-weapon,F1_Oracle_b1,Emb-on-GPT-Law: mean,0.7011062841636987,mean across 3 embedding models
-weapon,QWK_CV,Emb-on-GPT-Law: mean,0.2742340121833908,mean across 3 embedding models
-weapon,QWK_Oracle,Emb-on-GPT-Law: mean,0.40791732271004566,mean across 3 embedding models
-weapon,AP_b0,Emb-on-GPT-Schema: mean,0.5207941976565226,mean across 3 embedding models
-weapon,AP_b1,Emb-on-GPT-Schema: mean,0.6596407411134474,mean across 3 embedding models
-weapon,F1_CV_b0,Emb-on-GPT-Schema: mean,0.4920459319555257,mean across 3 embedding models
-weapon,F1_CV_b1,Emb-on-GPT-Schema: mean,0.6130110062893082,mean across 3 embedding models
-weapon,F1_Oracle_b0,Emb-on-GPT-Schema: mean,0.5552009694076947,mean across 3 embedding models
-weapon,F1_Oracle_b1,Emb-on-GPT-Schema: mean,0.6563890680754816,mean across 3 embedding models
-weapon,QWK_CV,Emb-on-GPT-Schema: mean,0.2534286743748592,mean across 3 embedding models
-weapon,QWK_Oracle,Emb-on-GPT-Schema: mean,0.34367943308876225,mean across 3 embedding models
-weapon,AP_b0,Emb-on-Hybrid-Full: mean,0.521408017784785,mean across 3 embedding models
-weapon,AP_b1,Emb-on-Hybrid-Full: mean,0.6394117882133843,mean across 3 embedding models
-weapon,F1_CV_b0,Emb-on-Hybrid-Full: mean,0.5291478426575261,mean across 3 embedding models
-weapon,F1_CV_b1,Emb-on-Hybrid-Full: mean,0.6493952638880175,mean across 3 embedding models
-weapon,F1_Oracle_b0,Emb-on-Hybrid-Full: mean,0.5574971924253572,mean across 3 embedding models
-weapon,F1_Oracle_b1,Emb-on-Hybrid-Full: mean,0.6739296231024804,mean across 3 embedding models
-weapon,QWK_CV,Emb-on-Hybrid-Full: mean,0.22226263478200114,mean across 3 embedding models
-weapon,QWK_Oracle,Emb-on-Hybrid-Full: mean,0.33654825993599524,mean across 3 embedding models
-weapon,AP_b0,Emb-on-Hybrid-Manual: mean,0.4803828776753378,mean across 3 embedding models
-weapon,AP_b1,Emb-on-Hybrid-Manual: mean,0.6506011137909662,mean across 3 embedding models
-weapon,F1_CV_b0,Emb-on-Hybrid-Manual: mean,0.5609836342046367,mean across 3 embedding models
-weapon,F1_CV_b1,Emb-on-Hybrid-Manual: mean,0.6478381126352795,mean across 3 embedding models
-weapon,F1_Oracle_b0,Emb-on-Hybrid-Manual: mean,0.601531884938784,mean across 3 embedding models
-weapon,F1_Oracle_b1,Emb-on-Hybrid-Manual: mean,0.6828740968868358,mean across 3 embedding models
-weapon,QWK_CV,Emb-on-Hybrid-Manual: mean,0.3428184157455081,mean across 3 embedding models
-weapon,QWK_Oracle,Emb-on-Hybrid-Manual: mean,0.40016543807773136,mean across 3 embedding models
-weapon,AP_b0,Emb-on-Manual: mean,0.6716397119596405,mean across 3 embedding models
-weapon,AP_b1,Emb-on-Manual: mean,0.7514320905434974,mean across 3 embedding models
-weapon,F1_CV_b0,Emb-on-Manual: mean,0.5661819391117695,mean across 3 embedding models
-weapon,F1_CV_b1,Emb-on-Manual: mean,0.6811516309549354,mean across 3 embedding models
-weapon,F1_Oracle_b0,Emb-on-Manual: mean,0.6341694285619519,mean across 3 embedding models
-weapon,F1_Oracle_b1,Emb-on-Manual: mean,0.7175819630724155,mean across 3 embedding models
-weapon,QWK_CV,Emb-on-Manual: mean,0.42704935764836316,mean across 3 embedding models
-weapon,QWK_Oracle,Emb-on-Manual: mean,0.5208191680174471,mean across 3 embedding models
-weapon,AP_b0,Emb-on-Raw-Facts: mean,0.5481809022372549,mean across 3 embedding models
-weapon,AP_b1,Emb-on-Raw-Facts: mean,0.6632733125031157,mean across 3 embedding models
-weapon,F1_CV_b0,Emb-on-Raw-Facts: mean,0.523730509956081,mean across 3 embedding models
-weapon,F1_CV_b1,Emb-on-Raw-Facts: mean,0.6450838377308966,mean across 3 embedding models
-weapon,F1_Oracle_b0,Emb-on-Raw-Facts: mean,0.5768193183313594,mean across 3 embedding models
-weapon,F1_Oracle_b1,Emb-on-Raw-Facts: mean,0.6818888867551323,mean across 3 embedding models
-weapon,QWK_CV,Emb-on-Raw-Facts: mean,0.2710594832611403,mean across 3 embedding models
-weapon,QWK_Oracle,Emb-on-Raw-Facts: mean,0.3871560107414886,mean across 3 embedding models
+drugs,AP_b0,Emb-on-GPT-Free: mean,0.7480204390979606,mean across 3 embedding models
+drugs,AP_b1,Emb-on-GPT-Free: mean,0.7999135755110685,mean across 3 embedding models
+drugs,F1_CV_b0,Emb-on-GPT-Free: mean,0.7072757489424156,mean across 3 embedding models
+drugs,F1_CV_b1,Emb-on-GPT-Free: mean,0.7633465608465608,mean across 3 embedding models
+drugs,F1_Oracle_b0,Emb-on-GPT-Free: mean,0.7576868799178926,mean across 3 embedding models
+drugs,F1_Oracle_b1,Emb-on-GPT-Free: mean,0.7918372918372918,mean across 3 embedding models
+drugs,QWK_CV,Emb-on-GPT-Free: mean,0.5567623141673765,mean across 3 embedding models
+drugs,QWK_Oracle,Emb-on-GPT-Free: mean,0.6422848026782308,mean across 3 embedding models
+drugs,AP_b0,Emb-on-GPT-Law: mean,0.7064823604712248,mean across 3 embedding models
+drugs,AP_b1,Emb-on-GPT-Law: mean,0.7878816927806329,mean across 3 embedding models
+drugs,F1_CV_b0,Emb-on-GPT-Law: mean,0.6530819670621721,mean across 3 embedding models
+drugs,F1_CV_b1,Emb-on-GPT-Law: mean,0.7433295784004708,mean across 3 embedding models
+drugs,F1_Oracle_b0,Emb-on-GPT-Law: mean,0.7051628906722164,mean across 3 embedding models
+drugs,F1_Oracle_b1,Emb-on-GPT-Law: mean,0.766105000763213,mean across 3 embedding models
+drugs,QWK_CV,Emb-on-GPT-Law: mean,0.47059023814800666,mean across 3 embedding models
+drugs,QWK_Oracle,Emb-on-GPT-Law: mean,0.569962624534404,mean across 3 embedding models
+drugs,AP_b0,Emb-on-GPT-Schema: mean,0.798349915989125,mean across 3 embedding models
+drugs,AP_b1,Emb-on-GPT-Schema: mean,0.818906429060617,mean across 3 embedding models
+drugs,F1_CV_b0,Emb-on-GPT-Schema: mean,0.6452166500035706,mean across 3 embedding models
+drugs,F1_CV_b1,Emb-on-GPT-Schema: mean,0.6940252493886463,mean across 3 embedding models
+drugs,F1_Oracle_b0,Emb-on-GPT-Schema: mean,0.7102953482410189,mean across 3 embedding models
+drugs,F1_Oracle_b1,Emb-on-GPT-Schema: mean,0.7291301005266905,mean across 3 embedding models
+drugs,QWK_CV,Emb-on-GPT-Schema: mean,0.5369821290209934,mean across 3 embedding models
+drugs,QWK_Oracle,Emb-on-GPT-Schema: mean,0.6025324370465404,mean across 3 embedding models
+drugs,AP_b0,Emb-on-Hybrid-Full: mean,0.7827612103794094,mean across 3 embedding models
+drugs,AP_b1,Emb-on-Hybrid-Full: mean,0.806579197026085,mean across 3 embedding models
+drugs,F1_CV_b0,Emb-on-Hybrid-Full: mean,0.7401197944788693,mean across 3 embedding models
+drugs,F1_CV_b1,Emb-on-Hybrid-Full: mean,0.7142599514722276,mean across 3 embedding models
+drugs,F1_Oracle_b0,Emb-on-Hybrid-Full: mean,0.779204507487167,mean across 3 embedding models
+drugs,F1_Oracle_b1,Emb-on-Hybrid-Full: mean,0.7594154406899418,mean across 3 embedding models
+drugs,QWK_CV,Emb-on-Hybrid-Full: mean,0.5614285275499968,mean across 3 embedding models
+drugs,QWK_Oracle,Emb-on-Hybrid-Full: mean,0.6412605518622811,mean across 3 embedding models
+drugs,AP_b0,Emb-on-Hybrid-Manual: mean,0.7168304203123161,mean across 3 embedding models
+drugs,AP_b1,Emb-on-Hybrid-Manual: mean,0.8005600959805478,mean across 3 embedding models
+drugs,F1_CV_b0,Emb-on-Hybrid-Manual: mean,0.7390667084878435,mean across 3 embedding models
+drugs,F1_CV_b1,Emb-on-Hybrid-Manual: mean,0.7371124180754605,mean across 3 embedding models
+drugs,F1_Oracle_b0,Emb-on-Hybrid-Manual: mean,0.7690083497513838,mean across 3 embedding models
+drugs,F1_Oracle_b1,Emb-on-Hybrid-Manual: mean,0.7659538224219462,mean across 3 embedding models
+drugs,QWK_CV,Emb-on-Hybrid-Manual: mean,0.5216978873834512,mean across 3 embedding models
+drugs,QWK_Oracle,Emb-on-Hybrid-Manual: mean,0.6174988979509213,mean across 3 embedding models
+drugs,AP_b0,Emb-on-Manual: mean,0.816255700892321,mean across 3 embedding models
+drugs,AP_b1,Emb-on-Manual: mean,0.8541175721513679,mean across 3 embedding models
+drugs,F1_CV_b0,Emb-on-Manual: mean,0.7533906081480708,mean across 3 embedding models
+drugs,F1_CV_b1,Emb-on-Manual: mean,0.7365008543670042,mean across 3 embedding models
+drugs,F1_Oracle_b0,Emb-on-Manual: mean,0.7890186331849538,mean across 3 embedding models
+drugs,F1_Oracle_b1,Emb-on-Manual: mean,0.8111652236652237,mean across 3 embedding models
+drugs,QWK_CV,Emb-on-Manual: mean,0.6552737514158136,mean across 3 embedding models
+drugs,QWK_Oracle,Emb-on-Manual: mean,0.7238360675544806,mean across 3 embedding models
+drugs,AP_b0,Emb-on-Raw-Facts: mean,0.7953665806848059,mean across 3 embedding models
+drugs,AP_b1,Emb-on-Raw-Facts: mean,0.8423113633918143,mean across 3 embedding models
+drugs,F1_CV_b0,Emb-on-Raw-Facts: mean,0.7594105610409958,mean across 3 embedding models
+drugs,F1_CV_b1,Emb-on-Raw-Facts: mean,0.7476995929980412,mean across 3 embedding models
+drugs,F1_Oracle_b0,Emb-on-Raw-Facts: mean,0.7990152113762196,mean across 3 embedding models
+drugs,F1_Oracle_b1,Emb-on-Raw-Facts: mean,0.7839716694758712,mean across 3 embedding models
+drugs,QWK_CV,Emb-on-Raw-Facts: mean,0.6315247177508282,mean across 3 embedding models
+drugs,QWK_Oracle,Emb-on-Raw-Facts: mean,0.6909527824747087,mean across 3 embedding models
+weapon,AP_b0,Emb-on-GPT-Free: mean,0.5554024213046933,mean across 3 embedding models
+weapon,AP_b1,Emb-on-GPT-Free: mean,0.6870052233779659,mean across 3 embedding models
+weapon,F1_CV_b0,Emb-on-GPT-Free: mean,0.5873830350634475,mean across 3 embedding models
+weapon,F1_CV_b1,Emb-on-GPT-Free: mean,0.7035450810857315,mean across 3 embedding models
+weapon,F1_Oracle_b0,Emb-on-GPT-Free: mean,0.6465429361322902,mean across 3 embedding models
+weapon,F1_Oracle_b1,Emb-on-GPT-Free: mean,0.7291824912142112,mean across 3 embedding models
+weapon,QWK_CV,Emb-on-GPT-Free: mean,0.43956612976467685,mean across 3 embedding models
+weapon,QWK_Oracle,Emb-on-GPT-Free: mean,0.4969761091346906,mean across 3 embedding models
+weapon,AP_b0,Emb-on-GPT-Law: mean,0.5832417270219206,mean across 3 embedding models
+weapon,AP_b1,Emb-on-GPT-Law: mean,0.7163970017483665,mean across 3 embedding models
+weapon,F1_CV_b0,Emb-on-GPT-Law: mean,0.6054094541009867,mean across 3 embedding models
+weapon,F1_CV_b1,Emb-on-GPT-Law: mean,0.6952663379046196,mean across 3 embedding models
+weapon,F1_Oracle_b0,Emb-on-GPT-Law: mean,0.6322578918296103,mean across 3 embedding models
+weapon,F1_Oracle_b1,Emb-on-GPT-Law: mean,0.7206826542992446,mean across 3 embedding models
+weapon,QWK_CV,Emb-on-GPT-Law: mean,0.34746525718272114,mean across 3 embedding models
+weapon,QWK_Oracle,Emb-on-GPT-Law: mean,0.46304858190309284,mean across 3 embedding models
+weapon,AP_b0,Emb-on-GPT-Schema: mean,0.5356978378098793,mean across 3 embedding models
+weapon,AP_b1,Emb-on-GPT-Schema: mean,0.6739468436209827,mean across 3 embedding models
+weapon,F1_CV_b0,Emb-on-GPT-Schema: mean,0.5125988054022879,mean across 3 embedding models
+weapon,F1_CV_b1,Emb-on-GPT-Schema: mean,0.6087648772335374,mean across 3 embedding models
+weapon,F1_Oracle_b0,Emb-on-GPT-Schema: mean,0.5706560462047072,mean across 3 embedding models
+weapon,F1_Oracle_b1,Emb-on-GPT-Schema: mean,0.6637203724851826,mean across 3 embedding models
+weapon,QWK_CV,Emb-on-GPT-Schema: mean,0.29066293012811334,mean across 3 embedding models
+weapon,QWK_Oracle,Emb-on-GPT-Schema: mean,0.37590021107725324,mean across 3 embedding models
+weapon,AP_b0,Emb-on-Hybrid-Full: mean,0.5571423728612814,mean across 3 embedding models
+weapon,AP_b1,Emb-on-Hybrid-Full: mean,0.665197103326407,mean across 3 embedding models
+weapon,F1_CV_b0,Emb-on-Hybrid-Full: mean,0.549492460940513,mean across 3 embedding models
+weapon,F1_CV_b1,Emb-on-Hybrid-Full: mean,0.6504451407264706,mean across 3 embedding models
+weapon,F1_Oracle_b0,Emb-on-Hybrid-Full: mean,0.58128078905586,mean across 3 embedding models
+weapon,F1_Oracle_b1,Emb-on-Hybrid-Full: mean,0.6815478462576778,mean across 3 embedding models
+weapon,QWK_CV,Emb-on-Hybrid-Full: mean,0.2682250395599067,mean across 3 embedding models
+weapon,QWK_Oracle,Emb-on-Hybrid-Full: mean,0.3793393991035866,mean across 3 embedding models
+weapon,AP_b0,Emb-on-Hybrid-Manual: mean,0.5233113565595952,mean across 3 embedding models
+weapon,AP_b1,Emb-on-Hybrid-Manual: mean,0.6758182258022842,mean across 3 embedding models
+weapon,F1_CV_b0,Emb-on-Hybrid-Manual: mean,0.585786269342798,mean across 3 embedding models
+weapon,F1_CV_b1,Emb-on-Hybrid-Manual: mean,0.6679977897744729,mean across 3 embedding models
+weapon,F1_Oracle_b0,Emb-on-Hybrid-Manual: mean,0.6244162404367612,mean across 3 embedding models
+weapon,F1_Oracle_b1,Emb-on-Hybrid-Manual: mean,0.698362469216851,mean across 3 embedding models
+weapon,QWK_CV,Emb-on-Hybrid-Manual: mean,0.37799293268825196,mean across 3 embedding models
+weapon,QWK_Oracle,Emb-on-Hybrid-Manual: mean,0.4397378572639353,mean across 3 embedding models
+weapon,AP_b0,Emb-on-Manual: mean,0.6787749865085906,mean across 3 embedding models
+weapon,AP_b1,Emb-on-Manual: mean,0.7609102347988426,mean across 3 embedding models
+weapon,F1_CV_b0,Emb-on-Manual: mean,0.5812021108994837,mean across 3 embedding models
+weapon,F1_CV_b1,Emb-on-Manual: mean,0.6974834415260607,mean across 3 embedding models
+weapon,F1_Oracle_b0,Emb-on-Manual: mean,0.6481934431028799,mean across 3 embedding models
+weapon,F1_Oracle_b1,Emb-on-Manual: mean,0.7333919517563664,mean across 3 embedding models
+weapon,QWK_CV,Emb-on-Manual: mean,0.4397721215270437,mean across 3 embedding models
+weapon,QWK_Oracle,Emb-on-Manual: mean,0.5386035986455572,mean across 3 embedding models
+weapon,AP_b0,Emb-on-Raw-Facts: mean,0.5551276820808088,mean across 3 embedding models
+weapon,AP_b1,Emb-on-Raw-Facts: mean,0.6696182808413945,mean across 3 embedding models
+weapon,F1_CV_b0,Emb-on-Raw-Facts: mean,0.5411029672128235,mean across 3 embedding models
+weapon,F1_CV_b1,Emb-on-Raw-Facts: mean,0.6606836265974921,mean across 3 embedding models
+weapon,F1_Oracle_b0,Emb-on-Raw-Facts: mean,0.5920972473692092,mean across 3 embedding models
+weapon,F1_Oracle_b1,Emb-on-Raw-Facts: mean,0.6923377176979282,mean across 3 embedding models
+weapon,QWK_CV,Emb-on-Raw-Facts: mean,0.3070992396952126,mean across 3 embedding models
+weapon,QWK_Oracle,Emb-on-Raw-Facts: mean,0.4118216271809138,mean across 3 embedding models

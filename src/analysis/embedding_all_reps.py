@@ -71,6 +71,9 @@ MODELS = {
     "openai": {"provider": "openai",
                "model_id": "text-embedding-3-large",
                "display": "OpenAI 3-large"},
+    "gemini": {"provider": "google",
+               "model_id": "gemini-embedding-001",
+               "display": "Gemini-embedding-001"},
     "e5": {"provider": "hf",
            "model_id": "intfloat/multilingual-e5-large-instruct",
            "display": "mE5-large-instruct",
@@ -223,6 +226,57 @@ def _encode_openai(texts, model_id, batch_size=64):
     return np.vstack(vecs)
 
 
+def _encode_google(texts, model_id, task_type="SEMANTIC_SIMILARITY",
+                   batch_size=50, initial_delay=15.0):
+    """Gemini embedding with retry on 429 rate limits.
+
+    Free tier quotas are tight (~5 RPM for gemini-embedding-001). We sleep
+    between batches and back off exponentially on 429.
+    """
+    from google import genai
+    from google.genai import errors as genai_errors
+    from dotenv import load_dotenv
+    import time as _time
+    load_dotenv(EXP.parent.parent / ".env")
+    load_dotenv(EXP / ".env")
+    client = genai.Client(api_key=os.environ["GOOGLE_API_KEY"])
+    vecs = []
+    for i in range(0, len(texts), batch_size):
+        batch = texts[i:i + batch_size]
+        delay = initial_delay
+        attempt = 0
+        while True:
+            try:
+                resp = client.models.embed_content(
+                    model=model_id,
+                    contents=batch,
+                    config={"task_type": task_type},
+                )
+                break
+            except genai_errors.ClientError as e:
+                # 429 = rate limit. Back off and retry. The genai ClientError
+                # exposes the HTTP status on the `code` attribute.
+                err_code = getattr(e, "code", None)
+                if err_code == 429 and attempt < 8:
+                    attempt += 1
+                    print(f"        429 rate limit, sleeping {delay:.0f}s (attempt {attempt})...")
+                    _time.sleep(delay)
+                    delay = min(delay * 2, 180.0)
+                else:
+                    raise
+        vecs.extend([np.asarray(e.values, dtype=np.float32) for e in resp.embeddings])
+        # Gentle pause between successful batches to stay under RPM limit.
+        if i + batch_size < len(texts):
+            _time.sleep(15.0)
+    # Final sleep so the NEXT (rep, domain) call has spacing from this one.
+    # 15s => 4 RPM effective, below the 5 RPM free-tier cap.
+    _time.sleep(15.0)
+    arr = np.vstack(vecs)
+    norms = np.linalg.norm(arr, axis=1, keepdims=True)
+    arr = arr / np.where(norms > 0, norms, 1.0)
+    return arr.astype(np.float32)
+
+
 _HF_MODELS: dict[str, "SentenceTransformer"] = {}
 
 
@@ -269,6 +323,8 @@ def encode_features(model_key: str, rep: str,
         t0 = time.time()
         if cfg["provider"] == "openai":
             vecs = _encode_openai(texts, cfg["model_id"])
+        elif cfg["provider"] == "google":
+            vecs = _encode_google(texts, cfg["model_id"])
         else:
             vecs = _encode_hf(texts, cfg["model_id"], cfg.get("query_prefix", ""))
         for vid, vec in zip(ids, vecs):
