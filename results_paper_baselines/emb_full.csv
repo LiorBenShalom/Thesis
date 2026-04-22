@@ -1,0 +1,49 @@
+domain,model_key,model_display,metric,value
+drugs,openai,OpenAI 3-large,F1_Oracle_b0,0.7428571428571429
+drugs,openai,OpenAI 3-large,F1_Oracle_b1,0.7254901960784313
+drugs,openai,OpenAI 3-large,F1_CV_b0,0.7246376811594203
+drugs,openai,OpenAI 3-large,F1_CV_b1,0.6666666666666666
+drugs,openai,OpenAI 3-large,AP_b0,0.7046482867529084
+drugs,openai,OpenAI 3-large,AP_b1,0.7875119283012266
+drugs,openai,OpenAI 3-large,QWK_Oracle,0.5978062157221207
+drugs,openai,OpenAI 3-large,QWK_CV,0.5813106796116505
+weapon,openai,OpenAI 3-large,F1_Oracle_b0,0.5323741007194245
+weapon,openai,OpenAI 3-large,F1_Oracle_b1,0.6403940886699507
+weapon,openai,OpenAI 3-large,F1_CV_b0,0.47692307692307695
+weapon,openai,OpenAI 3-large,F1_CV_b1,0.5837837837837838
+weapon,openai,OpenAI 3-large,AP_b0,0.49530988090665495
+weapon,openai,OpenAI 3-large,AP_b1,0.6001895624431918
+weapon,openai,OpenAI 3-large,QWK_Oracle,0.29287863590772323
+weapon,openai,OpenAI 3-large,QWK_CV,0.15673110313693706
+drugs,e5,mE5-large-instruct,F1_Oracle_b0,0.8157894736842105
+drugs,e5,mE5-large-instruct,F1_Oracle_b1,0.7959183673469388
+drugs,e5,mE5-large-instruct,F1_CV_b0,0.7792207792207793
+drugs,e5,mE5-large-instruct,F1_CV_b1,0.75
+drugs,e5,mE5-large-instruct,AP_b0,0.7882153133523488
+drugs,e5,mE5-large-instruct,AP_b1,0.8370719356690961
+drugs,e5,mE5-large-instruct,QWK_Oracle,0.7124026363091671
+drugs,e5,mE5-large-instruct,QWK_CV,0.6623222748815166
+weapon,e5,mE5-large-instruct,F1_Oracle_b0,0.6029411764705882
+weapon,e5,mE5-large-instruct,F1_Oracle_b1,0.686046511627907
+weapon,e5,mE5-large-instruct,F1_CV_b0,0.5645161290322581
+weapon,e5,mE5-large-instruct,F1_CV_b1,0.6477272727272727
+weapon,e5,mE5-large-instruct,AP_b0,0.541935744993344
+weapon,e5,mE5-large-instruct,AP_b1,0.6859127646092298
+weapon,e5,mE5-large-instruct,QWK_Oracle,0.40326150262085037
+weapon,e5,mE5-large-instruct,QWK_CV,0.24279555253006568
+drugs,bge,BGE-M3,F1_Oracle_b0,0.8169014084507042
+drugs,bge,BGE-M3,F1_Oracle_b1,0.7962962962962963
+drugs,bge,BGE-M3,F1_CV_b0,0.75
+drugs,bge,BGE-M3,F1_CV_b1,0.7567567567567568
+drugs,bge,BGE-M3,AP_b0,0.8252490616846204
+drugs,bge,BGE-M3,AP_b1,0.8467610519093627
+drugs,bge,BGE-M3,QWK_Oracle,0.6915484268969772
+drugs,bge,BGE-M3,QWK_CV,0.6232439335887612
+weapon,bge,BGE-M3,F1_Oracle_b0,0.5906040268456376
+weapon,bge,BGE-M3,F1_Oracle_b1,0.7167630057803468
+weapon,bge,BGE-M3,F1_CV_b0,0.49572649572649574
+weapon,bge,BGE-M3,F1_CV_b1,0.6941176470588235
+weapon,bge,BGE-M3,AP_b0,0.6055982056818153
+weapon,bge,BGE-M3,AP_b1,0.7032593468890929
+weapon,bge,BGE-M3,QWK_Oracle,0.4545454545454546
+weapon,bge,BGE-M3,QWK_CV,0.34476654127019246

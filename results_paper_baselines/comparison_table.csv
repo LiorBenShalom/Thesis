@@ -1,0 +1,177 @@
+domain,metric,category,value,detail
+drugs,AP_b0,Random (null mean),0.37710244841384993,"CI~[0.294, 0.493]"
+drugs,AP_b1,Random (null mean),0.5224187879458733,"CI~[0.438, 0.629]"
+drugs,F1_CV_b0,Random (null mean),0.5053875629370718,"CI~[0.460, 0.546]"
+drugs,F1_CV_b1,Random (null mean),0.6593806612599465,"CI~[0.629, 0.682]"
+drugs,F1_Oracle_b0,Random (null mean),0.532764812715131,"CI~[0.519, 0.574]"
+drugs,F1_Oracle_b1,Random (null mean),0.6735990832494065,"CI~[0.667, 0.697]"
+drugs,QWK_CV,Random (null mean),-0.011921388882654973,"CI~[-0.189, 0.181]"
+drugs,QWK_Oracle,Random (null mean),0.09836180777222613,"CI~[0.001, 0.238]"
+drugs,AP_b0,LLM-rep: GPT-Free,0.9041996261380499,n=11 models
+drugs,AP_b1,LLM-rep: GPT-Free,0.8714279518515545,n=11 models
+drugs,F1_CV_b0,LLM-rep: GPT-Free,0.8550602453374164,n=11 models
+drugs,F1_CV_b1,LLM-rep: GPT-Free,0.7736491278595161,n=11 models
+drugs,F1_Oracle_b0,LLM-rep: GPT-Free,0.8784678532588241,n=11 models
+drugs,F1_Oracle_b1,LLM-rep: GPT-Free,0.8096435131873562,n=11 models
+drugs,QWK_CV,LLM-rep: GPT-Free,0.7436252416842134,n=11 models
+drugs,QWK_Oracle,LLM-rep: GPT-Free,0.7867796660813459,n=11 models
+drugs,AP_b0,LLM-rep: GPT-Law,0.8897908989706816,n=11 models
+drugs,AP_b1,LLM-rep: GPT-Law,0.8611458953812993,n=11 models
+drugs,F1_CV_b0,LLM-rep: GPT-Law,0.8527310898428927,n=11 models
+drugs,F1_CV_b1,LLM-rep: GPT-Law,0.7636407663694373,n=11 models
+drugs,F1_Oracle_b0,LLM-rep: GPT-Law,0.8665684214922311,n=11 models
+drugs,F1_Oracle_b1,LLM-rep: GPT-Law,0.7984128852682129,n=11 models
+drugs,QWK_CV,LLM-rep: GPT-Law,0.7412897371765034,n=11 models
+drugs,QWK_Oracle,LLM-rep: GPT-Law,0.7734649667128086,n=11 models
+drugs,AP_b0,LLM-rep: GPT-Schema,0.9358393920802913,n=11 models
+drugs,AP_b1,LLM-rep: GPT-Schema,0.9003730155419738,n=11 models
+drugs,F1_CV_b0,LLM-rep: GPT-Schema,0.8423251510629282,n=11 models
+drugs,F1_CV_b1,LLM-rep: GPT-Schema,0.8175786682889402,n=11 models
+drugs,F1_Oracle_b0,LLM-rep: GPT-Schema,0.868062576126584,n=11 models
+drugs,F1_Oracle_b1,LLM-rep: GPT-Schema,0.8354702527583526,n=11 models
+drugs,QWK_CV,LLM-rep: GPT-Schema,0.7829306073870967,n=11 models
+drugs,QWK_Oracle,LLM-rep: GPT-Schema,0.8227865435653535,n=11 models
+drugs,AP_b0,LLM-rep: Hybrid-Full,0.9204982834848611,n=11 models
+drugs,AP_b1,LLM-rep: Hybrid-Full,0.8799320072568908,n=11 models
+drugs,F1_CV_b0,LLM-rep: Hybrid-Full,0.8735771662503513,n=11 models
+drugs,F1_CV_b1,LLM-rep: Hybrid-Full,0.789746632859361,n=11 models
+drugs,F1_Oracle_b0,LLM-rep: Hybrid-Full,0.891741661267434,n=11 models
+drugs,F1_Oracle_b1,LLM-rep: Hybrid-Full,0.8211585959919309,n=11 models
+drugs,QWK_CV,LLM-rep: Hybrid-Full,0.7668976997501799,n=11 models
+drugs,QWK_Oracle,LLM-rep: Hybrid-Full,0.8081492473544185,n=11 models
+drugs,AP_b0,LLM-rep: Hybrid-Manual,0.9296820518101129,n=11 models
+drugs,AP_b1,LLM-rep: Hybrid-Manual,0.8948652096236134,n=11 models
+drugs,F1_CV_b0,LLM-rep: Hybrid-Manual,0.856621839877279,n=11 models
+drugs,F1_CV_b1,LLM-rep: Hybrid-Manual,0.787620621009055,n=11 models
+drugs,F1_Oracle_b0,LLM-rep: Hybrid-Manual,0.8798093826609158,n=11 models
+drugs,F1_Oracle_b1,LLM-rep: Hybrid-Manual,0.8215932067654103,n=11 models
+drugs,QWK_CV,LLM-rep: Hybrid-Manual,0.7504823608794279,n=11 models
+drugs,QWK_Oracle,LLM-rep: Hybrid-Manual,0.8042567439490624,n=11 models
+drugs,AP_b0,LLM-rep: Manual,0.956463560911078,n=11 models
+drugs,AP_b1,LLM-rep: Manual,0.9168371734334074,n=11 models
+drugs,F1_CV_b0,LLM-rep: Manual,0.8938648668260968,n=11 models
+drugs,F1_CV_b1,LLM-rep: Manual,0.8352770459245331,n=11 models
+drugs,F1_Oracle_b0,LLM-rep: Manual,0.9117322894104603,n=11 models
+drugs,F1_Oracle_b1,LLM-rep: Manual,0.8492668433682513,n=11 models
+drugs,QWK_CV,LLM-rep: Manual,0.8427273556351946,n=11 models
+drugs,QWK_Oracle,LLM-rep: Manual,0.8585068406136916,n=11 models
+drugs,AP_b0,LLM-rep: Raw-Facts,0.9029679483117495,n=11 models
+drugs,AP_b1,LLM-rep: Raw-Facts,0.8685729424790188,n=11 models
+drugs,F1_CV_b0,LLM-rep: Raw-Facts,0.8405048681851711,n=11 models
+drugs,F1_CV_b1,LLM-rep: Raw-Facts,0.7904722752706661,n=11 models
+drugs,F1_Oracle_b0,LLM-rep: Raw-Facts,0.8736599871433461,n=11 models
+drugs,F1_Oracle_b1,LLM-rep: Raw-Facts,0.8145057315755153,n=11 models
+drugs,QWK_CV,LLM-rep: Raw-Facts,0.760901895796237,n=11 models
+drugs,QWK_Oracle,LLM-rep: Raw-Facts,0.7952733458318174,n=11 models
+weapon,AP_b0,Random (null mean),0.3494444010856835,"CI~[0.280, 0.443]"
+weapon,AP_b1,Random (null mean),0.4782310079989259,"CI~[0.405, 0.569]"
+weapon,F1_CV_b0,Random (null mean),0.4821637282568341,"CI~[0.443, 0.517]"
+weapon,F1_CV_b1,Random (null mean),0.6248816754826755,"CI~[0.600, 0.644]"
+weapon,F1_Oracle_b0,Random (null mean),0.5035217396430217,"CI~[0.492, 0.537]"
+weapon,F1_Oracle_b1,Random (null mean),0.6370782858094757,"CI~[0.631, 0.657]"
+weapon,QWK_CV,Random (null mean),-0.006732848406304976,"CI~[-0.158, 0.152]"
+weapon,QWK_Oracle,Random (null mean),0.08333856439905911,"CI~[0.001, 0.197]"
+weapon,AP_b0,LLM-rep: GPT-Free,0.7329191561687292,n=11 models
+weapon,AP_b1,LLM-rep: GPT-Free,0.8641232037878352,n=11 models
+weapon,F1_CV_b0,LLM-rep: GPT-Free,0.7022705509229494,n=11 models
+weapon,F1_CV_b1,LLM-rep: GPT-Free,0.7848277236487099,n=11 models
+weapon,F1_Oracle_b0,LLM-rep: GPT-Free,0.7359691315782968,n=11 models
+weapon,F1_Oracle_b1,LLM-rep: GPT-Free,0.8064351228240337,n=11 models
+weapon,QWK_CV,LLM-rep: GPT-Free,0.6700643953656781,n=11 models
+weapon,QWK_Oracle,LLM-rep: GPT-Free,0.6945012036373712,n=11 models
+weapon,AP_b0,LLM-rep: GPT-Law,0.7331210964723929,n=11 models
+weapon,AP_b1,LLM-rep: GPT-Law,0.8468743250511248,n=11 models
+weapon,F1_CV_b0,LLM-rep: GPT-Law,0.7124700867979038,n=11 models
+weapon,F1_CV_b1,LLM-rep: GPT-Law,0.7927967910737876,n=11 models
+weapon,F1_Oracle_b0,LLM-rep: GPT-Law,0.735579559706758,n=11 models
+weapon,F1_Oracle_b1,LLM-rep: GPT-Law,0.8133599833301449,n=11 models
+weapon,QWK_CV,LLM-rep: GPT-Law,0.6601155658862096,n=11 models
+weapon,QWK_Oracle,LLM-rep: GPT-Law,0.691787271479445,n=11 models
+weapon,AP_b0,LLM-rep: GPT-Schema,0.8069064847042651,n=11 models
+weapon,AP_b1,LLM-rep: GPT-Schema,0.878552026135068,n=11 models
+weapon,F1_CV_b0,LLM-rep: GPT-Schema,0.737016532358621,n=11 models
+weapon,F1_CV_b1,LLM-rep: GPT-Schema,0.8006126491312867,n=11 models
+weapon,F1_Oracle_b0,LLM-rep: GPT-Schema,0.7594661183776502,n=11 models
+weapon,F1_Oracle_b1,LLM-rep: GPT-Schema,0.8195927562131359,n=11 models
+weapon,QWK_CV,LLM-rep: GPT-Schema,0.6882088977196268,n=11 models
+weapon,QWK_Oracle,LLM-rep: GPT-Schema,0.7262121174187858,n=11 models
+weapon,AP_b0,LLM-rep: Hybrid-Full,0.7832198121124185,n=11 models
+weapon,AP_b1,LLM-rep: Hybrid-Full,0.885263002726641,n=11 models
+weapon,F1_CV_b0,LLM-rep: Hybrid-Full,0.7422274925127895,n=11 models
+weapon,F1_CV_b1,LLM-rep: Hybrid-Full,0.8205221537342908,n=11 models
+weapon,F1_Oracle_b0,LLM-rep: Hybrid-Full,0.7630982200127374,n=11 models
+weapon,F1_Oracle_b1,LLM-rep: Hybrid-Full,0.834736053149675,n=11 models
+weapon,QWK_CV,LLM-rep: Hybrid-Full,0.7068896882476545,n=11 models
+weapon,QWK_Oracle,LLM-rep: Hybrid-Full,0.7400637318747294,n=11 models
+weapon,AP_b0,LLM-rep: Hybrid-Manual,0.8029273144267073,n=11 models
+weapon,AP_b1,LLM-rep: Hybrid-Manual,0.8755466302303351,n=11 models
+weapon,F1_CV_b0,LLM-rep: Hybrid-Manual,0.7289336973764552,n=11 models
+weapon,F1_CV_b1,LLM-rep: Hybrid-Manual,0.8052226738310821,n=11 models
+weapon,F1_Oracle_b0,LLM-rep: Hybrid-Manual,0.763275866452824,n=11 models
+weapon,F1_Oracle_b1,LLM-rep: Hybrid-Manual,0.828090199941077,n=11 models
+weapon,QWK_CV,LLM-rep: Hybrid-Manual,0.704320314355304,n=11 models
+weapon,QWK_Oracle,LLM-rep: Hybrid-Manual,0.7335669682739966,n=11 models
+weapon,AP_b0,LLM-rep: Manual,0.8270154614023242,n=11 models
+weapon,AP_b1,LLM-rep: Manual,0.8978327080929124,n=11 models
+weapon,F1_CV_b0,LLM-rep: Manual,0.7656189005507863,n=11 models
+weapon,F1_CV_b1,LLM-rep: Manual,0.8280464393420044,n=11 models
+weapon,F1_Oracle_b0,LLM-rep: Manual,0.7866286612113546,n=11 models
+weapon,F1_Oracle_b1,LLM-rep: Manual,0.8457046390480688,n=11 models
+weapon,QWK_CV,LLM-rep: Manual,0.7432802962089415,n=11 models
+weapon,QWK_Oracle,LLM-rep: Manual,0.7629096602237609,n=11 models
+weapon,AP_b0,LLM-rep: Raw-Facts,0.741298618298604,n=11 models
+weapon,AP_b1,LLM-rep: Raw-Facts,0.8455833840857604,n=11 models
+weapon,F1_CV_b0,LLM-rep: Raw-Facts,0.7212029693145903,n=11 models
+weapon,F1_CV_b1,LLM-rep: Raw-Facts,0.7854065199574886,n=11 models
+weapon,F1_Oracle_b0,LLM-rep: Raw-Facts,0.7444253898590797,n=11 models
+weapon,F1_Oracle_b1,LLM-rep: Raw-Facts,0.8046633221079517,n=11 models
+weapon,QWK_CV,LLM-rep: Raw-Facts,0.6614019137531978,n=11 models
+weapon,QWK_Oracle,LLM-rep: Raw-Facts,0.6898929611698219,n=11 models
+drugs,F1_Oracle_b0,Embedding: OpenAI 3-large,0.7428571428571429,"cosine(emb_1, emb_2)"
+drugs,F1_Oracle_b1,Embedding: OpenAI 3-large,0.7254901960784313,"cosine(emb_1, emb_2)"
+drugs,F1_CV_b0,Embedding: OpenAI 3-large,0.7246376811594203,"cosine(emb_1, emb_2)"
+drugs,F1_CV_b1,Embedding: OpenAI 3-large,0.6666666666666666,"cosine(emb_1, emb_2)"
+drugs,AP_b0,Embedding: OpenAI 3-large,0.7046482867529084,"cosine(emb_1, emb_2)"
+drugs,AP_b1,Embedding: OpenAI 3-large,0.7875119283012266,"cosine(emb_1, emb_2)"
+drugs,QWK_Oracle,Embedding: OpenAI 3-large,0.5978062157221207,"cosine(emb_1, emb_2)"
+drugs,QWK_CV,Embedding: OpenAI 3-large,0.5813106796116505,"cosine(emb_1, emb_2)"
+weapon,F1_Oracle_b0,Embedding: OpenAI 3-large,0.5323741007194245,"cosine(emb_1, emb_2)"
+weapon,F1_Oracle_b1,Embedding: OpenAI 3-large,0.6403940886699507,"cosine(emb_1, emb_2)"
+weapon,F1_CV_b0,Embedding: OpenAI 3-large,0.4769230769230769,"cosine(emb_1, emb_2)"
+weapon,F1_CV_b1,Embedding: OpenAI 3-large,0.5837837837837838,"cosine(emb_1, emb_2)"
+weapon,AP_b0,Embedding: OpenAI 3-large,0.4953098809066549,"cosine(emb_1, emb_2)"
+weapon,AP_b1,Embedding: OpenAI 3-large,0.6001895624431918,"cosine(emb_1, emb_2)"
+weapon,QWK_Oracle,Embedding: OpenAI 3-large,0.2928786359077232,"cosine(emb_1, emb_2)"
+weapon,QWK_CV,Embedding: OpenAI 3-large,0.156731103136937,"cosine(emb_1, emb_2)"
+drugs,F1_Oracle_b0,Embedding: mE5-large-instruct,0.8157894736842105,"cosine(emb_1, emb_2)"
+drugs,F1_Oracle_b1,Embedding: mE5-large-instruct,0.7959183673469388,"cosine(emb_1, emb_2)"
+drugs,F1_CV_b0,Embedding: mE5-large-instruct,0.7792207792207793,"cosine(emb_1, emb_2)"
+drugs,F1_CV_b1,Embedding: mE5-large-instruct,0.75,"cosine(emb_1, emb_2)"
+drugs,AP_b0,Embedding: mE5-large-instruct,0.7882153133523488,"cosine(emb_1, emb_2)"
+drugs,AP_b1,Embedding: mE5-large-instruct,0.8370719356690961,"cosine(emb_1, emb_2)"
+drugs,QWK_Oracle,Embedding: mE5-large-instruct,0.7124026363091671,"cosine(emb_1, emb_2)"
+drugs,QWK_CV,Embedding: mE5-large-instruct,0.6623222748815166,"cosine(emb_1, emb_2)"
+weapon,F1_Oracle_b0,Embedding: mE5-large-instruct,0.6029411764705882,"cosine(emb_1, emb_2)"
+weapon,F1_Oracle_b1,Embedding: mE5-large-instruct,0.686046511627907,"cosine(emb_1, emb_2)"
+weapon,F1_CV_b0,Embedding: mE5-large-instruct,0.5645161290322581,"cosine(emb_1, emb_2)"
+weapon,F1_CV_b1,Embedding: mE5-large-instruct,0.6477272727272727,"cosine(emb_1, emb_2)"
+weapon,AP_b0,Embedding: mE5-large-instruct,0.541935744993344,"cosine(emb_1, emb_2)"
+weapon,AP_b1,Embedding: mE5-large-instruct,0.6859127646092298,"cosine(emb_1, emb_2)"
+weapon,QWK_Oracle,Embedding: mE5-large-instruct,0.4032615026208503,"cosine(emb_1, emb_2)"
+weapon,QWK_CV,Embedding: mE5-large-instruct,0.2427955525300656,"cosine(emb_1, emb_2)"
+drugs,F1_Oracle_b0,Embedding: BGE-M3,0.8169014084507042,"cosine(emb_1, emb_2)"
+drugs,F1_Oracle_b1,Embedding: BGE-M3,0.7962962962962963,"cosine(emb_1, emb_2)"
+drugs,F1_CV_b0,Embedding: BGE-M3,0.75,"cosine(emb_1, emb_2)"
+drugs,F1_CV_b1,Embedding: BGE-M3,0.7567567567567568,"cosine(emb_1, emb_2)"
+drugs,AP_b0,Embedding: BGE-M3,0.8252490616846204,"cosine(emb_1, emb_2)"
+drugs,AP_b1,Embedding: BGE-M3,0.8467610519093627,"cosine(emb_1, emb_2)"
+drugs,QWK_Oracle,Embedding: BGE-M3,0.6915484268969772,"cosine(emb_1, emb_2)"
+drugs,QWK_CV,Embedding: BGE-M3,0.6232439335887612,"cosine(emb_1, emb_2)"
+weapon,F1_Oracle_b0,Embedding: BGE-M3,0.5906040268456376,"cosine(emb_1, emb_2)"
+weapon,F1_Oracle_b1,Embedding: BGE-M3,0.7167630057803468,"cosine(emb_1, emb_2)"
+weapon,F1_CV_b0,Embedding: BGE-M3,0.4957264957264957,"cosine(emb_1, emb_2)"
+weapon,F1_CV_b1,Embedding: BGE-M3,0.6941176470588235,"cosine(emb_1, emb_2)"
+weapon,AP_b0,Embedding: BGE-M3,0.6055982056818153,"cosine(emb_1, emb_2)"
+weapon,AP_b1,Embedding: BGE-M3,0.7032593468890929,"cosine(emb_1, emb_2)"
+weapon,QWK_Oracle,Embedding: BGE-M3,0.4545454545454546,"cosine(emb_1, emb_2)"
+weapon,QWK_CV,Embedding: BGE-M3,0.3447665412701924,"cosine(emb_1, emb_2)"
