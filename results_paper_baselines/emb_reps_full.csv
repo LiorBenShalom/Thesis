@@ -1,0 +1,337 @@
+domain,rep,emb_model_key,emb_model_display,metric,value
+drugs,Manual,openai,OpenAI 3-large,F1_Oracle_b0,0.7605633802816901
+drugs,Manual,openai,OpenAI 3-large,F1_Oracle_b1,0.8214285714285714
+drugs,Manual,openai,OpenAI 3-large,F1_CV_b0,0.7272727272727273
+drugs,Manual,openai,OpenAI 3-large,F1_CV_b1,0.7547169811320755
+drugs,Manual,openai,OpenAI 3-large,AP_b0,0.8228257158949144
+drugs,Manual,openai,OpenAI 3-large,AP_b1,0.8462001823308138
+drugs,Manual,openai,OpenAI 3-large,QWK_Oracle,0.7032828282828283
+drugs,Manual,openai,OpenAI 3-large,QWK_CV,0.61826857532379
+weapon,Manual,openai,OpenAI 3-large,F1_Oracle_b0,0.6306306306306306
+weapon,Manual,openai,OpenAI 3-large,F1_Oracle_b1,0.7044025157232704
+weapon,Manual,openai,OpenAI 3-large,F1_CV_b0,0.5806451612903226
+weapon,Manual,openai,OpenAI 3-large,F1_CV_b1,0.6585365853658537
+weapon,Manual,openai,OpenAI 3-large,AP_b0,0.6730243937101192
+weapon,Manual,openai,OpenAI 3-large,AP_b1,0.7554386964715931
+weapon,Manual,openai,OpenAI 3-large,QWK_Oracle,0.5180320313400162
+weapon,Manual,openai,OpenAI 3-large,QWK_CV,0.4440972997098862
+drugs,GPT-Schema,openai,OpenAI 3-large,F1_Oracle_b0,0.6842105263157895
+drugs,GPT-Schema,openai,OpenAI 3-large,F1_Oracle_b1,0.6947368421052632
+drugs,GPT-Schema,openai,OpenAI 3-large,F1_CV_b0,0.5970149253731343
+drugs,GPT-Schema,openai,OpenAI 3-large,F1_CV_b1,0.6407766990291263
+drugs,GPT-Schema,openai,OpenAI 3-large,AP_b0,0.7744496385783336
+drugs,GPT-Schema,openai,OpenAI 3-large,AP_b1,0.7981379421986814
+drugs,GPT-Schema,openai,OpenAI 3-large,QWK_Oracle,0.5528967254408059
+drugs,GPT-Schema,openai,OpenAI 3-large,QWK_CV,0.469847581179589
+weapon,GPT-Schema,openai,OpenAI 3-large,F1_Oracle_b0,0.5035971223021583
+weapon,GPT-Schema,openai,OpenAI 3-large,F1_Oracle_b1,0.6310679611650486
+weapon,GPT-Schema,openai,OpenAI 3-large,F1_CV_b0,0.4496124031007752
+weapon,GPT-Schema,openai,OpenAI 3-large,F1_CV_b1,0.59375
+weapon,GPT-Schema,openai,OpenAI 3-large,AP_b0,0.4738831303440136
+weapon,GPT-Schema,openai,OpenAI 3-large,AP_b1,0.6115111852993049
+weapon,GPT-Schema,openai,OpenAI 3-large,QWK_Oracle,0.27472081218274114
+weapon,GPT-Schema,openai,OpenAI 3-large,QWK_CV,0.23076141099928826
+drugs,GPT-Free,openai,OpenAI 3-large,F1_Oracle_b0,0.625
+drugs,GPT-Free,openai,OpenAI 3-large,F1_Oracle_b1,0.7027027027027027
+drugs,GPT-Free,openai,OpenAI 3-large,F1_CV_b0,0.5681818181818182
+drugs,GPT-Free,openai,OpenAI 3-large,F1_CV_b1,0.6785714285714286
+drugs,GPT-Free,openai,OpenAI 3-large,AP_b0,0.5735703888671143
+drugs,GPT-Free,openai,OpenAI 3-large,AP_b1,0.6726654136890998
+drugs,GPT-Free,openai,OpenAI 3-large,QWK_Oracle,0.41002949852507375
+drugs,GPT-Free,openai,OpenAI 3-large,QWK_CV,0.29418742586002367
+weapon,GPT-Free,openai,OpenAI 3-large,F1_Oracle_b0,0.6201550387596899
+weapon,GPT-Free,openai,OpenAI 3-large,F1_Oracle_b1,0.6918238993710691
+weapon,GPT-Free,openai,OpenAI 3-large,F1_CV_b0,0.5873015873015873
+weapon,GPT-Free,openai,OpenAI 3-large,F1_CV_b1,0.6585365853658537
+weapon,GPT-Free,openai,OpenAI 3-large,AP_b0,0.5121545470615774
+weapon,GPT-Free,openai,OpenAI 3-large,AP_b1,0.6584027888595905
+weapon,GPT-Free,openai,OpenAI 3-large,QWK_Oracle,0.39056561591772854
+weapon,GPT-Free,openai,OpenAI 3-large,QWK_CV,0.2701552861093385
+drugs,GPT-Law,openai,OpenAI 3-large,F1_Oracle_b0,0.5897435897435898
+drugs,GPT-Law,openai,OpenAI 3-large,F1_Oracle_b1,0.725925925925926
+drugs,GPT-Law,openai,OpenAI 3-large,F1_CV_b0,0.4835164835164835
+drugs,GPT-Law,openai,OpenAI 3-large,F1_CV_b1,0.696969696969697
+drugs,GPT-Law,openai,OpenAI 3-large,AP_b0,0.6121427086475385
+drugs,GPT-Law,openai,OpenAI 3-large,AP_b1,0.7253741634854005
+drugs,GPT-Law,openai,OpenAI 3-large,QWK_Oracle,0.402135231316726
+drugs,GPT-Law,openai,OpenAI 3-large,QWK_CV,0.2576095025983667
+weapon,GPT-Law,openai,OpenAI 3-large,F1_Oracle_b0,0.5528455284552846
+weapon,GPT-Law,openai,OpenAI 3-large,F1_Oracle_b1,0.6777777777777778
+weapon,GPT-Law,openai,OpenAI 3-large,F1_CV_b0,0.5081967213114754
+weapon,GPT-Law,openai,OpenAI 3-large,F1_CV_b1,0.6703910614525139
+weapon,GPT-Law,openai,OpenAI 3-large,AP_b0,0.49070924883911504
+weapon,GPT-Law,openai,OpenAI 3-large,AP_b1,0.6197335154200243
+weapon,GPT-Law,openai,OpenAI 3-large,QWK_Oracle,0.2983789724333731
+weapon,GPT-Law,openai,OpenAI 3-large,QWK_CV,0.12398311193491907
+drugs,Raw-Facts,openai,OpenAI 3-large,F1_Oracle_b0,0.7428571428571429
+drugs,Raw-Facts,openai,OpenAI 3-large,F1_Oracle_b1,0.7254901960784313
+drugs,Raw-Facts,openai,OpenAI 3-large,F1_CV_b0,0.7246376811594203
+drugs,Raw-Facts,openai,OpenAI 3-large,F1_CV_b1,0.6915887850467289
+drugs,Raw-Facts,openai,OpenAI 3-large,AP_b0,0.7064025216057654
+drugs,Raw-Facts,openai,OpenAI 3-large,AP_b1,0.7890971446200494
+drugs,Raw-Facts,openai,OpenAI 3-large,QWK_Oracle,0.5978062157221207
+drugs,Raw-Facts,openai,OpenAI 3-large,QWK_CV,0.5734308348567947
+weapon,Raw-Facts,openai,OpenAI 3-large,F1_Oracle_b0,0.5369127516778524
+weapon,Raw-Facts,openai,OpenAI 3-large,F1_Oracle_b1,0.6428571428571429
+weapon,Raw-Facts,openai,OpenAI 3-large,F1_CV_b0,0.5109489051094891
+weapon,Raw-Facts,openai,OpenAI 3-large,F1_CV_b1,0.5934065934065934
+weapon,Raw-Facts,openai,OpenAI 3-large,AP_b0,0.49700875603660527
+weapon,Raw-Facts,openai,OpenAI 3-large,AP_b1,0.6006478260110244
+weapon,Raw-Facts,openai,OpenAI 3-large,QWK_Oracle,0.30366107505816087
+weapon,Raw-Facts,openai,OpenAI 3-large,QWK_CV,0.22561635598316299
+drugs,Hybrid-Manual,openai,OpenAI 3-large,F1_Oracle_b0,0.6363636363636364
+drugs,Hybrid-Manual,openai,OpenAI 3-large,F1_Oracle_b1,0.7121212121212122
+drugs,Hybrid-Manual,openai,OpenAI 3-large,F1_CV_b0,0.6067415730337079
+drugs,Hybrid-Manual,openai,OpenAI 3-large,F1_CV_b1,0.6612903225806451
+drugs,Hybrid-Manual,openai,OpenAI 3-large,AP_b0,0.5780139506840241
+drugs,Hybrid-Manual,openai,OpenAI 3-large,AP_b1,0.7179026031312241
+drugs,Hybrid-Manual,openai,OpenAI 3-large,QWK_Oracle,0.4243208279430789
+drugs,Hybrid-Manual,openai,OpenAI 3-large,QWK_CV,0.30154466084620557
+weapon,Hybrid-Manual,openai,OpenAI 3-large,F1_Oracle_b0,0.5853658536585366
+weapon,Hybrid-Manual,openai,OpenAI 3-large,F1_Oracle_b1,0.6813186813186813
+weapon,Hybrid-Manual,openai,OpenAI 3-large,F1_CV_b0,0.5245901639344263
+weapon,Hybrid-Manual,openai,OpenAI 3-large,F1_CV_b1,0.6380368098159509
+weapon,Hybrid-Manual,openai,OpenAI 3-large,AP_b0,0.422140033187278
+weapon,Hybrid-Manual,openai,OpenAI 3-large,AP_b1,0.6197484976218488
+weapon,Hybrid-Manual,openai,OpenAI 3-large,QWK_Oracle,0.3561643835616437
+weapon,Hybrid-Manual,openai,OpenAI 3-large,QWK_CV,0.24544217687074832
+drugs,Hybrid-Full,openai,OpenAI 3-large,F1_Oracle_b0,0.6585365853658537
+drugs,Hybrid-Full,openai,OpenAI 3-large,F1_Oracle_b1,0.7175572519083969
+drugs,Hybrid-Full,openai,OpenAI 3-large,F1_CV_b0,0.6067415730337079
+drugs,Hybrid-Full,openai,OpenAI 3-large,F1_CV_b1,0.6666666666666666
+drugs,Hybrid-Full,openai,OpenAI 3-large,AP_b0,0.6540636600115345
+drugs,Hybrid-Full,openai,OpenAI 3-large,AP_b1,0.6904441911870166
+drugs,Hybrid-Full,openai,OpenAI 3-large,QWK_Oracle,0.4501940491591203
+drugs,Hybrid-Full,openai,OpenAI 3-large,QWK_CV,0.3356164383561644
+weapon,Hybrid-Full,openai,OpenAI 3-large,F1_Oracle_b0,0.5161290322580645
+weapon,Hybrid-Full,openai,OpenAI 3-large,F1_Oracle_b1,0.6424870466321243
+weapon,Hybrid-Full,openai,OpenAI 3-large,F1_CV_b0,0.47435897435897434
+weapon,Hybrid-Full,openai,OpenAI 3-large,F1_CV_b1,0.6086956521739131
+weapon,Hybrid-Full,openai,OpenAI 3-large,AP_b0,0.48538850334493633
+weapon,Hybrid-Full,openai,OpenAI 3-large,AP_b1,0.5801894372090732
+weapon,Hybrid-Full,openai,OpenAI 3-large,QWK_Oracle,0.23006504456757415
+weapon,Hybrid-Full,openai,OpenAI 3-large,QWK_CV,0.11406476558724021
+drugs,Manual,e5,mE5-large-instruct,F1_Oracle_b0,0.7901234567901234
+drugs,Manual,e5,mE5-large-instruct,F1_Oracle_b1,0.8333333333333334
+drugs,Manual,e5,mE5-large-instruct,F1_CV_b0,0.775
+drugs,Manual,e5,mE5-large-instruct,F1_CV_b1,0.7524752475247525
+drugs,Manual,e5,mE5-large-instruct,AP_b0,0.8386644554464724
+drugs,Manual,e5,mE5-large-instruct,AP_b1,0.8871597543832896
+drugs,Manual,e5,mE5-large-instruct,QWK_Oracle,0.7546419098143237
+drugs,Manual,e5,mE5-large-instruct,QWK_CV,0.6673596673596673
+weapon,Manual,e5,mE5-large-instruct,F1_Oracle_b0,0.6355140186915887
+weapon,Manual,e5,mE5-large-instruct,F1_Oracle_b1,0.7108433734939759
+weapon,Manual,e5,mE5-large-instruct,F1_CV_b0,0.5818181818181818
+weapon,Manual,e5,mE5-large-instruct,F1_CV_b1,0.6623376623376623
+weapon,Manual,e5,mE5-large-instruct,AP_b0,0.6352243611304853
+weapon,Manual,e5,mE5-large-instruct,AP_b1,0.7452031496004978
+weapon,Manual,e5,mE5-large-instruct,QWK_Oracle,0.47777777777777775
+weapon,Manual,e5,mE5-large-instruct,QWK_CV,0.332342253055831
+drugs,GPT-Schema,e5,mE5-large-instruct,F1_Oracle_b0,0.7096774193548387
+drugs,GPT-Schema,e5,mE5-large-instruct,F1_Oracle_b1,0.7321428571428571
+drugs,GPT-Schema,e5,mE5-large-instruct,F1_CV_b0,0.625
+drugs,GPT-Schema,e5,mE5-large-instruct,F1_CV_b1,0.6964285714285714
+drugs,GPT-Schema,e5,mE5-large-instruct,AP_b0,0.80823921006348
+drugs,GPT-Schema,e5,mE5-large-instruct,AP_b1,0.8330705471970659
+drugs,GPT-Schema,e5,mE5-large-instruct,QWK_Oracle,0.6164199192462988
+drugs,GPT-Schema,e5,mE5-large-instruct,QWK_CV,0.5666666666666667
+weapon,GPT-Schema,e5,mE5-large-instruct,F1_Oracle_b0,0.5882352941176471
+weapon,GPT-Schema,e5,mE5-large-instruct,F1_Oracle_b1,0.6829268292682927
+weapon,GPT-Schema,e5,mE5-large-instruct,F1_CV_b0,0.5391304347826087
+weapon,GPT-Schema,e5,mE5-large-instruct,F1_CV_b1,0.6415094339622641
+weapon,GPT-Schema,e5,mE5-large-instruct,AP_b0,0.5717420793166812
+weapon,GPT-Schema,e5,mE5-large-instruct,AP_b1,0.7088593837832503
+weapon,GPT-Schema,e5,mE5-large-instruct,QWK_Oracle,0.41102756892230585
+weapon,GPT-Schema,e5,mE5-large-instruct,QWK_CV,0.31815907953976985
+drugs,GPT-Free,e5,mE5-large-instruct,F1_Oracle_b0,0.810126582278481
+drugs,GPT-Free,e5,mE5-large-instruct,F1_Oracle_b1,0.8282828282828283
+drugs,GPT-Free,e5,mE5-large-instruct,F1_CV_b0,0.7948717948717948
+drugs,GPT-Free,e5,mE5-large-instruct,F1_CV_b1,0.8
+drugs,GPT-Free,e5,mE5-large-instruct,AP_b0,0.7496017596236336
+drugs,GPT-Free,e5,mE5-large-instruct,AP_b1,0.8117475500902953
+drugs,GPT-Free,e5,mE5-large-instruct,QWK_Oracle,0.725700655933214
+drugs,GPT-Free,e5,mE5-large-instruct,QWK_CV,0.6723229959040373
+weapon,GPT-Free,e5,mE5-large-instruct,F1_Oracle_b0,0.6551724137931034
+weapon,GPT-Free,e5,mE5-large-instruct,F1_Oracle_b1,0.7407407407407407
+weapon,GPT-Free,e5,mE5-large-instruct,F1_CV_b0,0.5818181818181818
+weapon,GPT-Free,e5,mE5-large-instruct,F1_CV_b1,0.7142857142857143
+weapon,GPT-Free,e5,mE5-large-instruct,AP_b0,0.5486277353751599
+weapon,GPT-Free,e5,mE5-large-instruct,AP_b1,0.6876120171192911
+weapon,GPT-Free,e5,mE5-large-instruct,QWK_Oracle,0.5230354737314773
+weapon,GPT-Free,e5,mE5-large-instruct,QWK_CV,0.46561525765633605
+drugs,GPT-Law,e5,mE5-large-instruct,F1_Oracle_b0,0.7647058823529411
+drugs,GPT-Law,e5,mE5-large-instruct,F1_Oracle_b1,0.7735849056603774
+drugs,GPT-Law,e5,mE5-large-instruct,F1_CV_b0,0.7536231884057971
+drugs,GPT-Law,e5,mE5-large-instruct,F1_CV_b1,0.7619047619047619
+drugs,GPT-Law,e5,mE5-large-instruct,AP_b0,0.7317307831829598
+drugs,GPT-Law,e5,mE5-large-instruct,AP_b1,0.8007732270347421
+drugs,GPT-Law,e5,mE5-large-instruct,QWK_Oracle,0.6471329552614997
+drugs,GPT-Law,e5,mE5-large-instruct,QWK_CV,0.5596330275229358
+weapon,GPT-Law,e5,mE5-large-instruct,F1_Oracle_b0,0.6290322580645161
+weapon,GPT-Law,e5,mE5-large-instruct,F1_Oracle_b1,0.7189542483660131
+weapon,GPT-Law,e5,mE5-large-instruct,F1_CV_b0,0.6031746031746031
+weapon,GPT-Law,e5,mE5-large-instruct,F1_CV_b1,0.6802721088435374
+weapon,GPT-Law,e5,mE5-large-instruct,AP_b0,0.5571973578729583
+weapon,GPT-Law,e5,mE5-large-instruct,AP_b1,0.7285727728201139
+weapon,GPT-Law,e5,mE5-large-instruct,QWK_Oracle,0.46903368973169257
+weapon,GPT-Law,e5,mE5-large-instruct,QWK_CV,0.37079842049503997
+drugs,Raw-Facts,e5,mE5-large-instruct,F1_Oracle_b0,0.8157894736842105
+drugs,Raw-Facts,e5,mE5-large-instruct,F1_Oracle_b1,0.7959183673469388
+drugs,Raw-Facts,e5,mE5-large-instruct,F1_CV_b0,0.7792207792207793
+drugs,Raw-Facts,e5,mE5-large-instruct,F1_CV_b1,0.75
+drugs,Raw-Facts,e5,mE5-large-instruct,AP_b0,0.7882153133523488
+drugs,Raw-Facts,e5,mE5-large-instruct,AP_b1,0.8370719356690961
+drugs,Raw-Facts,e5,mE5-large-instruct,QWK_Oracle,0.7124026363091671
+drugs,Raw-Facts,e5,mE5-large-instruct,QWK_CV,0.6623222748815166
+weapon,Raw-Facts,e5,mE5-large-instruct,F1_Oracle_b0,0.6029411764705882
+weapon,Raw-Facts,e5,mE5-large-instruct,F1_Oracle_b1,0.686046511627907
+weapon,Raw-Facts,e5,mE5-large-instruct,F1_CV_b0,0.5645161290322581
+weapon,Raw-Facts,e5,mE5-large-instruct,F1_CV_b1,0.6477272727272727
+weapon,Raw-Facts,e5,mE5-large-instruct,AP_b0,0.541935744993344
+weapon,Raw-Facts,e5,mE5-large-instruct,AP_b1,0.6859127646092298
+weapon,Raw-Facts,e5,mE5-large-instruct,QWK_Oracle,0.40326150262085037
+weapon,Raw-Facts,e5,mE5-large-instruct,QWK_CV,0.24279555253006568
+drugs,Hybrid-Manual,e5,mE5-large-instruct,F1_Oracle_b0,0.8235294117647058
+drugs,Hybrid-Manual,e5,mE5-large-instruct,F1_Oracle_b1,0.7850467289719626
+drugs,Hybrid-Manual,e5,mE5-large-instruct,F1_CV_b0,0.759493670886076
+drugs,Hybrid-Manual,e5,mE5-large-instruct,F1_CV_b1,0.7476635514018691
+drugs,Hybrid-Manual,e5,mE5-large-instruct,AP_b0,0.8082883208308931
+drugs,Hybrid-Manual,e5,mE5-large-instruct,AP_b1,0.8577561645886561
+drugs,Hybrid-Manual,e5,mE5-large-instruct,QWK_Oracle,0.7299077733860342
+drugs,Hybrid-Manual,e5,mE5-large-instruct,QWK_CV,0.6717005909389364
+weapon,Hybrid-Manual,e5,mE5-large-instruct,F1_Oracle_b0,0.5985401459854015
+weapon,Hybrid-Manual,e5,mE5-large-instruct,F1_Oracle_b1,0.7006369426751592
+weapon,Hybrid-Manual,e5,mE5-large-instruct,F1_CV_b0,0.582089552238806
+weapon,Hybrid-Manual,e5,mE5-large-instruct,F1_CV_b1,0.6875
+weapon,Hybrid-Manual,e5,mE5-large-instruct,AP_b0,0.4878317135740307
+weapon,Hybrid-Manual,e5,mE5-large-instruct,AP_b1,0.6651095635555733
+weapon,Hybrid-Manual,e5,mE5-large-instruct,QWK_Oracle,0.4236917013356689
+weapon,Hybrid-Manual,e5,mE5-large-instruct,QWK_CV,0.4236917013356689
+drugs,Hybrid-Full,e5,mE5-large-instruct,F1_Oracle_b0,0.8571428571428571
+drugs,Hybrid-Full,e5,mE5-large-instruct,F1_Oracle_b1,0.7961165048543689
+drugs,Hybrid-Full,e5,mE5-large-instruct,F1_CV_b0,0.8405797101449275
+drugs,Hybrid-Full,e5,mE5-large-instruct,F1_CV_b1,0.7692307692307693
+drugs,Hybrid-Full,e5,mE5-large-instruct,AP_b0,0.8545012848067597
+drugs,Hybrid-Full,e5,mE5-large-instruct,AP_b1,0.8615648958853452
+drugs,Hybrid-Full,e5,mE5-large-instruct,QWK_Oracle,0.7617554858934169
+drugs,Hybrid-Full,e5,mE5-large-instruct,QWK_CV,0.7225647348951911
+weapon,Hybrid-Full,e5,mE5-large-instruct,F1_Oracle_b0,0.6122448979591837
+weapon,Hybrid-Full,e5,mE5-large-instruct,F1_Oracle_b1,0.7228915662650602
+weapon,Hybrid-Full,e5,mE5-large-instruct,F1_CV_b0,0.6027397260273972
+weapon,Hybrid-Full,e5,mE5-large-instruct,F1_CV_b1,0.7151515151515152
+weapon,Hybrid-Full,e5,mE5-large-instruct,AP_b0,0.5177619542512724
+weapon,Hybrid-Full,e5,mE5-large-instruct,AP_b1,0.6843024592391067
+weapon,Hybrid-Full,e5,mE5-large-instruct,QWK_Oracle,0.44170699516058065
+weapon,Hybrid-Full,e5,mE5-large-instruct,QWK_CV,0.3083149374540103
+drugs,Manual,bge,BGE-M3,F1_Oracle_b0,0.7761194029850746
+drugs,Manual,bge,BGE-M3,F1_Oracle_b1,0.7818181818181819
+drugs,Manual,bge,BGE-M3,F1_CV_b0,0.7164179104477612
+drugs,Manual,bge,BGE-M3,F1_CV_b1,0.7272727272727273
+drugs,Manual,bge,BGE-M3,AP_b0,0.8279545689570892
+drugs,Manual,bge,BGE-M3,AP_b1,0.8344784059616763
+drugs,Manual,bge,BGE-M3,QWK_Oracle,0.6701164294954722
+drugs,Manual,bge,BGE-M3,QWK_CV,0.5792241946088099
+weapon,Manual,bge,BGE-M3,F1_Oracle_b0,0.6363636363636364
+weapon,Manual,bge,BGE-M3,F1_Oracle_b1,0.7375
+weapon,Manual,bge,BGE-M3,F1_CV_b0,0.5360824742268041
+weapon,Manual,bge,BGE-M3,F1_CV_b1,0.7225806451612903
+weapon,Manual,bge,BGE-M3,AP_b0,0.7066703810383168
+weapon,Manual,bge,BGE-M3,AP_b1,0.7536544255584009
+weapon,Manual,bge,BGE-M3,QWK_Oracle,0.5666476949345476
+weapon,Manual,bge,BGE-M3,QWK_CV,0.5047085201793723
+drugs,GPT-Schema,bge,BGE-M3,F1_Oracle_b0,0.7037037037037037
+drugs,GPT-Schema,bge,BGE-M3,F1_Oracle_b1,0.7154471544715447
+drugs,GPT-Schema,bge,BGE-M3,F1_CV_b0,0.631578947368421
+drugs,GPT-Schema,bge,BGE-M3,F1_CV_b1,0.6942148760330579
+drugs,GPT-Schema,bge,BGE-M3,AP_b0,0.7920332600639062
+drugs,GPT-Schema,bge,BGE-M3,AP_b1,0.8076214147421112
+drugs,GPT-Schema,bge,BGE-M3,QWK_Oracle,0.5721583652618135
+drugs,GPT-Schema,bge,BGE-M3,QWK_CV,0.48103792415169666
+weapon,GPT-Schema,bge,BGE-M3,F1_Oracle_b0,0.5737704918032787
+weapon,GPT-Schema,bge,BGE-M3,F1_Oracle_b1,0.6551724137931034
+weapon,GPT-Schema,bge,BGE-M3,F1_CV_b0,0.48739495798319327
+weapon,GPT-Schema,bge,BGE-M3,F1_CV_b1,0.6037735849056604
+weapon,GPT-Schema,bge,BGE-M3,AP_b0,0.5167573833088727
+weapon,GPT-Schema,bge,BGE-M3,AP_b1,0.6585516542577871
+weapon,GPT-Schema,bge,BGE-M3,QWK_Oracle,0.3452899181612399
+weapon,GPT-Schema,bge,BGE-M3,QWK_CV,0.2113655325855196
+drugs,GPT-Free,bge,BGE-M3,F1_Oracle_b0,0.8108108108108109
+drugs,GPT-Free,bge,BGE-M3,F1_Oracle_b1,0.8
+drugs,GPT-Free,bge,BGE-M3,F1_CV_b0,0.75
+drugs,GPT-Free,bge,BGE-M3,F1_CV_b1,0.76
+drugs,GPT-Free,bge,BGE-M3,AP_b0,0.8273023471017567
+drugs,GPT-Free,bge,BGE-M3,AP_b1,0.8424973874592023
+drugs,GPT-Free,bge,BGE-M3,QWK_Oracle,0.7093712930011862
+drugs,GPT-Free,bge,BGE-M3,QWK_CV,0.623921085080148
+weapon,GPT-Free,bge,BGE-M3,F1_Oracle_b0,0.6037735849056604
+weapon,GPT-Free,bge,BGE-M3,F1_Oracle_b1,0.7160493827160493
+weapon,GPT-Free,bge,BGE-M3,F1_CV_b0,0.5
+weapon,GPT-Free,bge,BGE-M3,F1_CV_b1,0.691358024691358
+weapon,GPT-Free,bge,BGE-M3,AP_b0,0.560699493361676
+weapon,GPT-Free,bge,BGE-M3,AP_b1,0.6774718179709514
+weapon,GPT-Free,bge,BGE-M3,QWK_Oracle,0.4802365049819337
+weapon,GPT-Free,bge,BGE-M3,QWK_CV,0.4549691123875583
+drugs,GPT-Law,bge,BGE-M3,F1_Oracle_b0,0.6857142857142857
+drugs,GPT-Law,bge,BGE-M3,F1_Oracle_b1,0.7540983606557377
+drugs,GPT-Law,bge,BGE-M3,F1_CV_b0,0.6097560975609756
+drugs,GPT-Law,bge,BGE-M3,F1_CV_b1,0.743801652892562
+drugs,GPT-Law,bge,BGE-M3,AP_b0,0.693944606582634
+drugs,GPT-Law,bge,BGE-M3,AP_b1,0.7839960912370056
+drugs,GPT-Law,bge,BGE-M3,QWK_Oracle,0.5683453237410071
+drugs,GPT-Law,bge,BGE-M3,QWK_CV,0.5006485084306096
+weapon,GPT-Law,bge,BGE-M3,F1_Oracle_b0,0.6181818181818182
+weapon,GPT-Law,bge,BGE-M3,F1_Oracle_b1,0.7065868263473054
+weapon,GPT-Law,bge,BGE-M3,F1_CV_b0,0.6055045871559633
+weapon,GPT-Law,bge,BGE-M3,F1_CV_b1,0.6748466257668712
+weapon,GPT-Law,bge,BGE-M3,AP_b0,0.616504779245802
+weapon,GPT-Law,bge,BGE-M3,AP_b1,0.7188070421365178
+weapon,GPT-Law,bge,BGE-M3,QWK_Oracle,0.45633930596507133
+weapon,GPT-Law,bge,BGE-M3,QWK_CV,0.32792050412021334
+drugs,Raw-Facts,bge,BGE-M3,F1_Oracle_b0,0.8169014084507042
+drugs,Raw-Facts,bge,BGE-M3,F1_Oracle_b1,0.7962962962962963
+drugs,Raw-Facts,bge,BGE-M3,F1_CV_b0,0.75
+drugs,Raw-Facts,bge,BGE-M3,F1_CV_b1,0.7567567567567568
+drugs,Raw-Facts,bge,BGE-M3,AP_b0,0.8252490616846204
+drugs,Raw-Facts,bge,BGE-M3,AP_b1,0.8467610519093627
+drugs,Raw-Facts,bge,BGE-M3,QWK_Oracle,0.6915484268969772
+drugs,Raw-Facts,bge,BGE-M3,QWK_CV,0.6232439335887612
+weapon,Raw-Facts,bge,BGE-M3,F1_Oracle_b0,0.5906040268456376
+weapon,Raw-Facts,bge,BGE-M3,F1_Oracle_b1,0.7167630057803468
+weapon,Raw-Facts,bge,BGE-M3,F1_CV_b0,0.49572649572649574
+weapon,Raw-Facts,bge,BGE-M3,F1_CV_b1,0.6941176470588235
+weapon,Raw-Facts,bge,BGE-M3,AP_b0,0.6055982056818153
+weapon,Raw-Facts,bge,BGE-M3,AP_b1,0.7032593468890929
+weapon,Raw-Facts,bge,BGE-M3,QWK_Oracle,0.4545454545454546
+weapon,Raw-Facts,bge,BGE-M3,QWK_CV,0.34476654127019246
+drugs,Hybrid-Manual,bge,BGE-M3,F1_Oracle_b0,0.7894736842105263
+drugs,Hybrid-Manual,bge,BGE-M3,F1_Oracle_b1,0.7563025210084033
+drugs,Hybrid-Manual,bge,BGE-M3,F1_CV_b0,0.7792207792207793
+drugs,Hybrid-Manual,bge,BGE-M3,F1_CV_b1,0.7394957983193278
+drugs,Hybrid-Manual,bge,BGE-M3,AP_b0,0.7039204516911645
+drugs,Hybrid-Manual,bge,BGE-M3,AP_b1,0.7942617244110819
+drugs,Hybrid-Manual,bge,BGE-M3,QWK_Oracle,0.6204933586337761
+drugs,Hybrid-Manual,bge,BGE-M3,QWK_CV,0.47536788227767124
+weapon,Hybrid-Manual,bge,BGE-M3,F1_Oracle_b0,0.6206896551724138
+weapon,Hybrid-Manual,bge,BGE-M3,F1_Oracle_b1,0.6666666666666666
+weapon,Hybrid-Manual,bge,BGE-M3,F1_CV_b0,0.576271186440678
+weapon,Hybrid-Manual,bge,BGE-M3,F1_CV_b1,0.6179775280898876
+weapon,Hybrid-Manual,bge,BGE-M3,AP_b0,0.5311768862647047
+weapon,Hybrid-Manual,bge,BGE-M3,AP_b1,0.6669452801954765
+weapon,Hybrid-Manual,bge,BGE-M3,QWK_Oracle,0.4206402293358815
+weapon,Hybrid-Manual,bge,BGE-M3,QWK_CV,0.35932136903010703
+drugs,Hybrid-Full,bge,BGE-M3,F1_Oracle_b0,0.7792207792207793
+drugs,Hybrid-Full,bge,BGE-M3,F1_Oracle_b1,0.7413793103448276
+drugs,Hybrid-Full,bge,BGE-M3,F1_CV_b0,0.7631578947368421
+drugs,Hybrid-Full,bge,BGE-M3,F1_CV_b1,0.6956521739130435
+drugs,Hybrid-Full,bge,BGE-M3,AP_b0,0.7968648167142874
+drugs,Hybrid-Full,bge,BGE-M3,AP_b1,0.8186052490014419
+drugs,Hybrid-Full,bge,BGE-M3,QWK_Oracle,0.6386333771353482
+drugs,Hybrid-Full,bge,BGE-M3,QWK_CV,0.5076726342710998
+weapon,Hybrid-Full,bge,BGE-M3,F1_Oracle_b0,0.5441176470588235
+weapon,Hybrid-Full,bge,BGE-M3,F1_Oracle_b1,0.6564102564102564
+weapon,Hybrid-Full,bge,BGE-M3,F1_CV_b0,0.5103448275862069
+weapon,Hybrid-Full,bge,BGE-M3,F1_CV_b1,0.6243386243386243
+weapon,Hybrid-Full,bge,BGE-M3,AP_b0,0.5610735957581463
+weapon,Hybrid-Full,bge,BGE-M3,AP_b1,0.6537434681919729
+weapon,Hybrid-Full,bge,BGE-M3,QWK_Oracle,0.33787274007983104
+weapon,Hybrid-Full,bge,BGE-M3,QWK_CV,0.24440820130475294
