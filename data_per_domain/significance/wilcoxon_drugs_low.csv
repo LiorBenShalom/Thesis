@@ -1,0 +1,37 @@
+a,b,n,mean_a,mean_b,median_diff,p_raw,winner,p_bh,sig_5pct_bh
+baseline (median),v1 sim≥40 lin,1073,8.941,5.667,1.534,0.0,v1 sim≥40 lin,0.0,True
+baseline (median),v1 sim≥50 lin,1024,9.045,5.512,1.816,0.0,v1 sim≥50 lin,0.0,True
+baseline (median),v1 sim≥70 lin,646,9.796,5.044,3.0,0.0,v1 sim≥70 lin,0.0,True
+baseline (median),v3 sim≥70 median,646,9.796,4.985,3.0,0.0,v3 sim≥70 median,0.0,True
+baseline (median),v3 sim≥40 median,1073,8.941,5.623,1.5,0.0,v3 sim≥40 median,0.0,True
+baseline (median),v3 sim≥40 + k≥3,567,10.0,5.433,3.0,0.0,v3 sim≥40 + k≥3,0.0,True
+baseline (median),v3 sim≥40 + k≥3 + σ≤Q50,284,6.158,3.968,1.5,0.0,v3 sim≥40 + k≥3 + σ≤Q50,0.0,True
+baseline (median),v3 sim≥70 + k≥2 + σ≤Q50,180,6.911,3.972,1.0,3e-06,v3 sim≥70 + k≥2 + σ≤Q50,1.2e-05,True
+v1 sim≥40 lin,v1 sim≥50 lin,1024,5.501,5.512,0.0,0.470977,tie,0.558195,False
+v1 sim≥40 lin,v1 sim≥70 lin,646,4.925,5.044,0.0,0.372463,tie,0.458416,False
+v1 sim≥40 lin,v3 sim≥70 median,646,4.925,4.985,0.0,0.87054,tie,0.898622,False
+v1 sim≥40 lin,v3 sim≥40 median,1073,5.667,5.623,0.0,0.179093,tie,0.286549,False
+v1 sim≥40 lin,v3 sim≥40 + k≥3,567,5.525,5.433,0.172,0.15273,v3 sim≥40 + k≥3,0.257229,False
+v1 sim≥40 lin,v3 sim≥40 + k≥3 + σ≤Q50,284,4.111,3.968,0.167,0.012649,v3 sim≥40 + k≥3 + σ≤Q50,0.040477,True
+v1 sim≥40 lin,v3 sim≥70 + k≥2 + σ≤Q50,180,4.037,3.972,0.0,0.299997,tie,0.399996,False
+v1 sim≥50 lin,v1 sim≥70 lin,646,4.91,5.044,0.0,0.286227,tie,0.399996,False
+v1 sim≥50 lin,v3 sim≥70 median,646,4.91,4.985,0.0,0.909655,tie,0.909655,False
+v1 sim≥50 lin,v3 sim≥40 median,1024,5.512,5.452,0.0,0.05381,tie,0.132455,False
+v1 sim≥50 lin,v3 sim≥40 + k≥3,566,5.573,5.428,0.152,0.02966,v3 sim≥40 + k≥3,0.079093,False
+v1 sim≥50 lin,v3 sim≥40 + k≥3 + σ≤Q50,284,4.123,3.968,0.146,0.0037,v3 sim≥40 + k≥3 + σ≤Q50,0.013156,True
+v1 sim≥50 lin,v3 sim≥70 + k≥2 + σ≤Q50,180,4.033,3.972,0.0,0.315274,tie,0.403551,False
+v1 sim≥70 lin,v3 sim≥70 median,646,5.044,4.985,0.0,0.027693,tie,0.079093,False
+v1 sim≥70 lin,v3 sim≥40 median,646,5.044,4.845,0.0,0.127183,tie,0.226103,False
+v1 sim≥70 lin,v3 sim≥40 + k≥3,436,5.42,5.135,0.0,0.071016,v3 sim≥40 + k≥3,0.162322,False
+v1 sim≥70 lin,v3 sim≥40 + k≥3 + σ≤Q50,213,4.006,3.761,0.0,0.101749,tie,0.217065,False
+v1 sim≥70 lin,v3 sim≥70 + k≥2 + σ≤Q50,180,4.054,3.972,0.0,0.115061,tie,0.226103,False
+v3 sim≥70 median,v3 sim≥40 median,646,4.985,4.845,0.0,0.236966,tie,0.361091,False
+v3 sim≥70 median,v3 sim≥40 + k≥3,436,5.331,5.135,0.0,0.122511,tie,0.226103,False
+v3 sim≥70 median,v3 sim≥40 + k≥3 + σ≤Q50,213,3.901,3.761,0.0,0.297462,tie,0.399996,False
+v3 sim≥70 median,v3 sim≥70 + k≥2 + σ≤Q50,180,3.972,3.972,0.0,,tie,,False
+v3 sim≥40 median,v3 sim≥40 + k≥3,567,5.433,5.433,0.0,,tie,,False
+v3 sim≥40 median,v3 sim≥40 + k≥3 + σ≤Q50,284,3.968,3.968,0.0,,tie,,False
+v3 sim≥40 median,v3 sim≥70 + k≥2 + σ≤Q50,180,4.008,3.972,0.0,0.808349,tie,0.862239,False
+v3 sim≥40 + k≥3,v3 sim≥40 + k≥3 + σ≤Q50,284,3.968,3.968,0.0,,tie,,False
+v3 sim≥40 + k≥3,v3 sim≥70 + k≥2 + σ≤Q50,149,4.144,4.101,0.0,0.808349,tie,0.862239,False
+v3 sim≥40 + k≥3 + σ≤Q50,v3 sim≥70 + k≥2 + σ≤Q50,113,3.681,3.593,0.0,0.672023,tie,0.768026,False
