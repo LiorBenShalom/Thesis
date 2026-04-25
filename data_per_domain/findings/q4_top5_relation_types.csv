@@ -1,0 +1,8 @@
+rel_type,count
+cocite,23588
+1hop,4345
+2hop,3502
+"1hop,2hop",764
+"1hop,cocite",725
+"2hop,cocite",370
+"1hop,2hop,cocite",196

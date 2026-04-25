@@ -1,0 +1,15 @@
+domain,rel_type,n,mean,median
+drugs,1hop,1525,58.35,65.0
+drugs,"1hop,2hop",236,67.19,70.0
+drugs,"1hop,2hop,cocite",38,83.08,85.0
+drugs,"1hop,cocite",191,69.3,75.0
+drugs,2hop,1022,57.14,62.0
+drugs,"2hop,cocite",84,75.5,85.0
+drugs,cocite,16017,42.97,35.0
+weapon,1hop,2194,49.01,45.0
+weapon,"1hop,2hop",542,52.94,55.0
+weapon,"1hop,2hop,cocite",96,64.66,70.0
+weapon,"1hop,cocite",414,59.59,65.0
+weapon,2hop,2841,44.79,38.0
+weapon,"2hop,cocite",329,55.3,60.0
+weapon,cocite,59564,35.16,35.0
