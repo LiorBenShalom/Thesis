@@ -1,0 +1,311 @@
+{
+  "n_nodes": 4118,
+  "n_edges": 5238,
+  "reciprocity_pairs": 2,
+  "unique_dir_pairs": 5236,
+  "closed_triads": 1215,
+  "open_triads": 4784,
+  "closure_pct": 20.25,
+  "top_hubs": [
+    {
+      "verdict": "עפ_4945-13",
+      "domain": "weapon",
+      "in_deg": 190,
+      "out_deg": 0,
+      "low": 12.0,
+      "high": 36.0,
+      "year": 2013,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_1323-13",
+      "domain": "weapon",
+      "in_deg": 169,
+      "out_deg": 0,
+      "low": 12.0,
+      "high": 48.0,
+      "year": 2013,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_6029-03",
+      "domain": "drugs",
+      "in_deg": 125,
+      "out_deg": 0,
+      "low": 10.0,
+      "high": 20.0,
+      "year": 2003,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_5602-22",
+      "domain": "weapon",
+      "in_deg": 120,
+      "out_deg": 0,
+      "low": 16.0,
+      "high": 40.0,
+      "year": 2022,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_4910-13",
+      "domain": "weapon",
+      "in_deg": 111,
+      "out_deg": 0,
+      "low": 300.0,
+      "high": 420.0,
+      "year": 2013,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_2482-22",
+      "domain": "weapon",
+      "in_deg": 103,
+      "out_deg": 0,
+      "low": 10.0,
+      "high": 36.0,
+      "year": 2022,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_8988-16",
+      "domain": "drugs",
+      "in_deg": 81,
+      "out_deg": 0,
+      "low": 28.0,
+      "high": 48.0,
+      "year": 2016,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_3877-16",
+      "domain": "weapon",
+      "in_deg": 78,
+      "out_deg": 0,
+      "low": 24.0,
+      "high": 48.0,
+      "year": 2016,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_4456-21",
+      "domain": "weapon",
+      "in_deg": 71,
+      "out_deg": 0,
+      "low": 48.0,
+      "high": 108.0,
+      "year": 2021,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_2564-19",
+      "domain": "weapon",
+      "in_deg": 67,
+      "out_deg": 0,
+      "low": 12.0,
+      "high": 40.0,
+      "year": 2019,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_2892-13",
+      "domain": "weapon",
+      "in_deg": 64,
+      "out_deg": 0,
+      "low": 12.0,
+      "high": 36.0,
+      "year": 2013,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_8045-17",
+      "domain": "weapon",
+      "in_deg": 60,
+      "out_deg": 0,
+      "low": 48.0,
+      "high": 84.0,
+      "year": 2017,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_2283-22",
+      "domain": "weapon",
+      "in_deg": 53,
+      "out_deg": 0,
+      "low": 18.0,
+      "high": 40.0,
+      "year": 2022,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_6989-13",
+      "domain": "weapon",
+      "in_deg": 51,
+      "out_deg": 0,
+      "low": 12.0,
+      "high": 24.0,
+      "year": 2013,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_4592-15",
+      "domain": "drugs",
+      "in_deg": 49,
+      "out_deg": 0,
+      "low": 24.0,
+      "high": 72.0,
+      "year": 2015,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_8820-14",
+      "domain": "drugs",
+      "in_deg": 46,
+      "out_deg": 0,
+      "low": 36.0,
+      "high": 60.0,
+      "year": 2014,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_2422-14",
+      "domain": "weapon",
+      "in_deg": 39,
+      "out_deg": 0,
+      "low": 24.0,
+      "high": 48.0,
+      "year": 2014,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_4522-18",
+      "domain": "drugs",
+      "in_deg": 34,
+      "out_deg": 0,
+      "low": 60.0,
+      "high": 84.0,
+      "year": 2018,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_1987-15",
+      "domain": "drugs",
+      "in_deg": 32,
+      "out_deg": 0,
+      "low": 24.0,
+      "high": 44.0,
+      "year": 2015,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_1505-14",
+      "domain": "weapon",
+      "in_deg": 32,
+      "out_deg": 0,
+      "low": 7.0,
+      "high": 24.0,
+      "year": 2014,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_5681-23",
+      "domain": "weapon",
+      "in_deg": 25,
+      "out_deg": 0,
+      "low": 24.0,
+      "high": 50.0,
+      "year": 2023,
+      "court": "עפ"
+    },
+    {
+      "verdict": "תפ_54607-07-19",
+      "domain": "weapon",
+      "in_deg": 25,
+      "out_deg": 2,
+      "low": 20.0,
+      "high": 30.0,
+      "year": 2019,
+      "court": "תפ"
+    },
+    {
+      "verdict": "עפ_2880-23",
+      "domain": "weapon",
+      "in_deg": 25,
+      "out_deg": 0,
+      "low": 30.0,
+      "high": 56.0,
+      "year": 2023,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_6496-21",
+      "domain": "weapon",
+      "in_deg": 22,
+      "out_deg": 0,
+      "low": 18.0,
+      "high": 72.0,
+      "year": 2021,
+      "court": "עפ"
+    },
+    {
+      "verdict": "עפ_32-14",
+      "domain": "weapon",
+      "in_deg": 22,
+      "out_deg": 0,
+      "low": 36.0,
+      "high": 84.0,
+      "year": 2014,
+      "court": "עפ"
+    },
+    {
+      "verdict": "תפ_56059-07-17",
+      "domain": "drugs",
+      "in_deg": 21,
+      "out_deg": 0,
+      "low": 3.0,
+      "high": 16.0,
+      "year": 2017,
+      "court": "תפ"
+    },
+    {
+      "verdict": "תפ_15148-03-12",
+      "domain": "weapon",
+      "in_deg": 20,
+      "out_deg": 0,
+      "low": 24.0,
+      "high": 48.0,
+      "year": 2012,
+      "court": "תפ"
+    },
+    {
+      "verdict": "עפג_2024-04-21",
+      "domain": "weapon",
+      "in_deg": 20,
+      "out_deg": 0,
+      "low": 18.0,
+      "high": 36.0,
+      "year": 2021,
+      "court": "עפג"
+    },
+    {
+      "verdict": "תפ_26709-06-14",
+      "domain": "drugs",
+      "in_deg": 20,
+      "out_deg": 0,
+      "low": 6.0,
+      "high": 18.0,
+      "year": 2014,
+      "court": "תפ"
+    },
+    {
+      "verdict": "תפ_31862-05-13",
+      "domain": "weapon",
+      "in_deg": 19,
+      "out_deg": 1,
+      "low": 12.0,
+      "high": 36.0,
+      "year": 2013,
+      "court": "תפ"
+    }
+  ]
+}
