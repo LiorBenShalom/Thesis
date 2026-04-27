@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "fe_legacy_from_structured",
+  "csv": "similarity_database_fe_legacy_from_structured.csv",
+  "model": "mistral_large_or",
+  "task": "binary_1",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/drugs/results_drugs/similarity_database_fe_legacy_from_structured_v6score_mistral_large_or_binary_0_preds.csv",
+  "best_threshold": 40.201,
+  "global_best": {
+    "f1": 0.8367,
+    "accuracy": 0.84,
+    "precision": 0.8723,
+    "recall": 0.8039,
+    "tp": 41,
+    "fp": 6,
+    "fn": 10,
+    "tn": 43
+  },
+  "loo": {
+    "accuracy": 0.84,
+    "f1": 0.8367,
+    "precision": 0.8723,
+    "recall": 0.8039,
+    "cm": [
+      [
+        43,
+        6
+      ],
+      [
+        10,
+        41
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 47.4,
+    "std": 21.6,
+    "pos_mean": 61.47,
+    "neg_mean": 32.76
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

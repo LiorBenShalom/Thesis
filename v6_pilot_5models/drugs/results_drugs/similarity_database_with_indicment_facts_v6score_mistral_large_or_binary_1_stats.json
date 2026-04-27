@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "facts",
+  "csv": "similarity_database_with_indicment_facts.csv",
+  "model": "mistral_large_or",
+  "task": "binary_1",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/drugs/results_drugs/similarity_database_with_indicment_facts_v6score_mistral_large_or_binary_0_preds.csv",
+  "best_threshold": 40.201,
+  "global_best": {
+    "f1": 0.7957,
+    "accuracy": 0.81,
+    "precision": 0.8605,
+    "recall": 0.74,
+    "tp": 37,
+    "fp": 6,
+    "fn": 13,
+    "tn": 44
+  },
+  "loo": {
+    "accuracy": 0.81,
+    "f1": 0.7957,
+    "precision": 0.8605,
+    "recall": 0.74,
+    "cm": [
+      [
+        44,
+        6
+      ],
+      [
+        13,
+        37
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 43.5,
+    "std": 24.06,
+    "pos_mean": 59.0,
+    "neg_mean": 28.0
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

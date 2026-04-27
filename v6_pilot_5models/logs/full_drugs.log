@@ -1,0 +1,444 @@
+
+============================================================
+  DOMAIN: drugs
+============================================================
+  SKIP missing CSV: /Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/src/drugs/similarity_database_fe_my_gpt_extracted.csv
+  SKIP missing CSV: /Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/src/drugs/gpt_manual_features.csv
+  SKIP missing CSV: /Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/src/code/post_process_output/similarity_database_hybrid_concepts_drugs.csv
+  (per-model workers: 3; each model runs its 11 reps sequentially; inner-parallel per task: 5; provider caps: OpenAI≤5 HF≤4 NIM≤5 Gemini≤3 Anthropic≤10)
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+    facts qwen3_235b_or: 10/100
+    facts mistral_large_or: 10/100
+    facts qwen3_235b_or: 20/100
+    facts mistral_large_or: 20/100
+    facts deepseek_r1_or: 10/100
+    facts qwen3_235b_or: 30/100
+    facts mistral_large_or: 30/100
+    facts qwen3_235b_or: 40/100
+    facts qwen3_235b_or: 50/100
+    facts mistral_large_or: 40/100
+    facts deepseek_r1_or: 20/100
+    facts qwen3_235b_or: 60/100
+    facts mistral_large_or: 50/100
+    facts qwen3_235b_or: 70/100
+    facts deepseek_r1_or: 30/100
+    facts mistral_large_or: 60/100
+    facts qwen3_235b_or: 80/100
+    facts mistral_large_or: 70/100
+    facts qwen3_235b_or: 90/100
+    facts deepseek_r1_or: 40/100
+    facts mistral_large_or: 80/100
+    facts qwen3_235b_or: 100/100
+  facts | qwen3_235b_or | task=binary_0 F1=0.846 LOO=0.784 thr=35.2
+  facts | qwen3_235b_or | task=binary_1 (same scores, no extra API) F1=0.839 LOO=0.839 thr=35.2 -> similarity_database_with_indicment_facts_v6score_qwen3_235b_or_binary_1_stats.json
+    manual_fe qwen3_235b_or: 10/100 (cached ok)
+    manual_fe qwen3_235b_or: 20/100 (cached ok)
+    manual_fe qwen3_235b_or: 30/100 (cached ok)
+    manual_fe qwen3_235b_or: 40/100 (cached ok)
+    manual_fe qwen3_235b_or: 50/100 (cached ok)
+    manual_fe qwen3_235b_or: 60/100 (cached ok)
+    manual_fe qwen3_235b_or: 70/100 (cached ok)
+    manual_fe qwen3_235b_or: 80/100 (cached ok)
+    manual_fe qwen3_235b_or: 90/100 (cached ok)
+    manual_fe qwen3_235b_or: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  manual_fe | qwen3_235b_or | task=binary_0 F1=0.853 LOO=0.842 thr=50.3
+    facts mistral_large_or: 90/100
+  manual_fe | qwen3_235b_or | task=binary_1 (same scores, no extra API) F1=0.816 LOO=0.769 thr=40.2 -> similarity_database_fe_v6score_qwen3_235b_or_binary_1_stats.json
+    fe_manual_format qwen3_235b_or: 10/100
+    facts deepseek_r1_or: 50/100
+    facts mistral_large_or: 100/100
+  facts | mistral_large_or | task=binary_0 F1=0.853 LOO=0.831 thr=45.2
+  facts | mistral_large_or | task=binary_1 (same scores, no extra API) F1=0.796 LOO=0.796 thr=40.2 -> similarity_database_with_indicment_facts_v6score_mistral_large_or_binary_1_stats.json
+    manual_fe mistral_large_or: 10/100 (cached ok)
+    manual_fe mistral_large_or: 20/100 (cached ok)
+    manual_fe mistral_large_or: 30/100 (cached ok)
+    manual_fe mistral_large_or: 40/100 (cached ok)
+    manual_fe mistral_large_or: 50/100 (cached ok)
+    manual_fe mistral_large_or: 60/100 (cached ok)
+    manual_fe mistral_large_or: 70/100 (cached ok)
+    manual_fe mistral_large_or: 80/100 (cached ok)
+    manual_fe mistral_large_or: 90/100 (cached ok)
+    manual_fe mistral_large_or: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    fe_manual_format qwen3_235b_or: 20/100
+  manual_fe | mistral_large_or | task=binary_0 F1=0.833 LOO=0.783 thr=60.3
+  manual_fe | mistral_large_or | task=binary_1 (same scores, no extra API) F1=0.816 LOO=0.729 thr=40.2 -> similarity_database_fe_v6score_mistral_large_or_binary_1_stats.json
+    fe_manual_format qwen3_235b_or: 30/100
+    fe_manual_format mistral_large_or: 10/100
+    fe_manual_format qwen3_235b_or: 40/100
+    fe_manual_format mistral_large_or: 20/100
+    fe_manual_format qwen3_235b_or: 50/100
+    facts deepseek_r1_or: 60/100
+    fe_manual_format mistral_large_or: 30/100
+    fe_manual_format qwen3_235b_or: 60/100
+    fe_manual_format mistral_large_or: 40/100
+    fe_manual_format qwen3_235b_or: 70/100
+    fe_manual_format mistral_large_or: 50/100
+    fe_manual_format qwen3_235b_or: 80/100
+    facts deepseek_r1_or: 70/100
+    fe_manual_format qwen3_235b_or: 90/100
+    fe_manual_format mistral_large_or: 60/100
+    fe_manual_format mistral_large_or: 70/100
+    fe_manual_format qwen3_235b_or: 100/100
+  fe_manual_format | qwen3_235b_or | task=binary_0 F1=0.857 LOO=0.845 thr=50.3
+    fe_manual_format mistral_large_or: 80/100
+  fe_manual_format | qwen3_235b_or | task=binary_1 (same scores, no extra API) F1=0.792 LOO=0.792 thr=40.2 -> similarity_database_fe_manual_format_v6score_qwen3_235b_or_binary_1_stats.json
+    facts deepseek_r1_or: 80/100
+    fe_legacy_from_structured qwen3_235b_or: 10/100
+    fe_manual_format mistral_large_or: 90/100
+    fe_legacy_from_structured qwen3_235b_or: 20/100
+    fe_manual_format mistral_large_or: 100/100
+  fe_manual_format | mistral_large_or | task=binary_0 F1=0.825 LOO=0.825 thr=40.2
+  fe_manual_format | mistral_large_or | task=binary_1 (same scores, no extra API) F1=0.787 LOO=0.787 thr=40.2 -> similarity_database_fe_manual_format_v6score_mistral_large_or_binary_1_stats.json
+    fe_legacy_from_structured qwen3_235b_or: 30/100
+    fe_legacy_from_structured qwen3_235b_or: 40/100
+    fe_legacy_from_structured mistral_large_or: 10/100
+    facts deepseek_r1_or: 90/100
+    fe_legacy_from_structured qwen3_235b_or: 50/100
+    fe_legacy_from_structured mistral_large_or: 20/100
+    fe_legacy_from_structured qwen3_235b_or: 60/100
+    fe_legacy_from_structured mistral_large_or: 30/100
+    fe_legacy_from_structured qwen3_235b_or: 70/100
+    fe_legacy_from_structured mistral_large_or: 40/100
+    fe_legacy_from_structured qwen3_235b_or: 80/100
+    facts deepseek_r1_or: 100/100
+  facts | deepseek_r1_or | task=binary_0 F1=0.883 LOO=0.883 thr=45.2
+    fe_legacy_from_structured qwen3_235b_or: 90/100
+  facts | deepseek_r1_or | task=binary_1 (same scores, no extra API) F1=0.808 LOO=0.771 thr=35.2 -> similarity_database_with_indicment_facts_v6score_deepseek_r1_or_binary_1_stats.json
+    manual_fe deepseek_r1_or: 10/100 (cached ok)
+    manual_fe deepseek_r1_or: 20/100 (cached ok)
+    manual_fe deepseek_r1_or: 30/100 (cached ok)
+    manual_fe deepseek_r1_or: 40/100 (cached ok)
+    manual_fe deepseek_r1_or: 50/100 (cached ok)
+    manual_fe deepseek_r1_or: 60/100 (cached ok)
+    manual_fe deepseek_r1_or: 70/100 (cached ok)
+    manual_fe deepseek_r1_or: 80/100 (cached ok)
+    manual_fe deepseek_r1_or: 90/100 (cached ok)
+    manual_fe deepseek_r1_or: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+    fe_legacy_from_structured mistral_large_or: 50/100
+  manual_fe | deepseek_r1_or | task=binary_0 F1=0.883 LOO=0.771 thr=70.4
+  manual_fe | deepseek_r1_or | task=binary_1 (same scores, no extra API) F1=0.870 LOO=0.870 thr=70.4 -> similarity_database_fe_v6score_deepseek_r1_or_binary_1_stats.json
+    fe_legacy_from_structured qwen3_235b_or: 100/100
+  fe_legacy_from_structured | qwen3_235b_or | task=binary_0 F1=0.857 LOO=0.857 thr=45.2
+    fe_legacy_from_structured mistral_large_or: 60/100
+  fe_legacy_from_structured | qwen3_235b_or | task=binary_1 (same scores, no extra API) F1=0.810 LOO=0.810 thr=30.2 -> similarity_database_fe_legacy_from_structured_v6score_qwen3_235b_or_binary_1_stats.json
+    fe_legacy_from_structured mistral_large_or: 70/100
+    fe_gpt_schema qwen3_235b_or: 10/100
+    fe_gpt_schema qwen3_235b_or: 20/100
+    fe_legacy_from_structured mistral_large_or: 80/100
+    fe_gpt_schema qwen3_235b_or: 30/100
+    fe_gpt_schema qwen3_235b_or: 40/100
+    fe_legacy_from_structured mistral_large_or: 90/100
+    fe_manual_format deepseek_r1_or: 10/100
+    fe_gpt_schema qwen3_235b_or: 50/100
+    fe_legacy_from_structured mistral_large_or: 100/100
+  fe_legacy_from_structured | mistral_large_or | task=binary_0 F1=0.825 LOO=0.825 thr=45.2
+    fe_gpt_schema qwen3_235b_or: 60/100
+  fe_legacy_from_structured | mistral_large_or | task=binary_1 (same scores, no extra API) F1=0.837 LOO=0.837 thr=40.2 -> similarity_database_fe_legacy_from_structured_v6score_mistral_large_or_binary_1_stats.json
+    fe_gpt_schema qwen3_235b_or: 70/100
+    fe_gpt_schema qwen3_235b_or: 80/100
+    fe_gpt_schema mistral_large_or: 10/100
+    fe_manual_format deepseek_r1_or: 20/100
+    fe_gpt_schema qwen3_235b_or: 90/100
+    fe_gpt_schema mistral_large_or: 20/100
+    fe_gpt_schema mistral_large_or: 30/100
+    fe_gpt_schema qwen3_235b_or: 100/100
+    fe_gpt_schema mistral_large_or: 40/100
+  fe_gpt_schema | qwen3_235b_or | task=binary_0 F1=0.767 LOO=0.623 thr=35.2
+  fe_gpt_schema | qwen3_235b_or | task=binary_1 (same scores, no extra API) F1=0.812 LOO=0.812 thr=35.2 -> similarity_database_fe_gpt_schema_v6score_qwen3_235b_or_binary_1_stats.json
+    fe_gpt_schema_v2 qwen3_235b_or: 10/100
+    fe_gpt_schema mistral_large_or: 50/100
+    fe_manual_format deepseek_r1_or: 30/100
+    fe_gpt_schema_v2 qwen3_235b_or: 20/100
+    fe_gpt_schema mistral_large_or: 60/100
+    fe_gpt_schema_v2 qwen3_235b_or: 30/100
+    fe_gpt_schema mistral_large_or: 70/100
+    fe_gpt_schema_v2 qwen3_235b_or: 40/100
+    fe_gpt_schema mistral_large_or: 80/100
+    fe_gpt_schema_v2 qwen3_235b_or: 50/100
+    fe_manual_format deepseek_r1_or: 40/100
+    fe_gpt_schema mistral_large_or: 90/100
+    fe_gpt_schema_v2 qwen3_235b_or: 60/100
+    fe_gpt_schema mistral_large_or: 100/100
+  fe_gpt_schema | mistral_large_or | task=binary_0 F1=0.767 LOO=0.750 thr=40.2
+  fe_gpt_schema | mistral_large_or | task=binary_1 (same scores, no extra API) F1=0.807 LOO=0.807 thr=30.2 -> similarity_database_fe_gpt_schema_v6score_mistral_large_or_binary_1_stats.json
+    fe_gpt_schema_v2 qwen3_235b_or: 70/100
+    fe_gpt_schema_v2 mistral_large_or: 10/100
+    fe_gpt_schema_v2 qwen3_235b_or: 80/100
+    fe_gpt_schema_v2 mistral_large_or: 20/100
+    fe_gpt_schema_v2 qwen3_235b_or: 90/100
+    fe_manual_format deepseek_r1_or: 50/100
+    fe_gpt_schema_v2 mistral_large_or: 30/100
+    fe_gpt_schema_v2 mistral_large_or: 40/100
+    fe_gpt_schema_v2 qwen3_235b_or: 100/100
+  fe_gpt_schema_v2 | qwen3_235b_or | task=binary_0 F1=0.868 LOO=0.868 thr=45.2
+  fe_gpt_schema_v2 | qwen3_235b_or | task=binary_1 (same scores, no extra API) F1=0.835 LOO=0.835 thr=45.2 -> similarity_database_fe_gpt_schema_v2_v6score_qwen3_235b_or_binary_1_stats.json
+    fe_gpt_schema_v2 mistral_large_or: 50/100
+    fe_manual_format deepseek_r1_or: 60/100
+    fe_gpt_schema_v2 mistral_large_or: 60/100
+    gpt_law qwen3_235b_or: 10/100
+    fe_gpt_schema_v2 mistral_large_or: 70/100
+    gpt_law qwen3_235b_or: 20/100
+    fe_gpt_schema_v2 mistral_large_or: 80/100
+    gpt_law qwen3_235b_or: 30/100
+    fe_manual_format deepseek_r1_or: 70/100
+    fe_gpt_schema_v2 mistral_large_or: 90/100
+    fe_gpt_schema_v2 mistral_large_or: 100/100
+  fe_gpt_schema_v2 | mistral_large_or | task=binary_0 F1=0.821 LOO=0.821 thr=40.2
+    gpt_law qwen3_235b_or: 40/100
+  fe_gpt_schema_v2 | mistral_large_or | task=binary_1 (same scores, no extra API) F1=0.828 LOO=0.828 thr=30.2 -> similarity_database_fe_gpt_schema_v2_v6score_mistral_large_or_binary_1_stats.json
+    gpt_law qwen3_235b_or: 50/100
+    gpt_law mistral_large_or: 10/100
+    fe_manual_format deepseek_r1_or: 80/100
+    gpt_law qwen3_235b_or: 60/100
+    gpt_law mistral_large_or: 20/100
+    gpt_law qwen3_235b_or: 70/100
+    gpt_law mistral_large_or: 30/100
+    gpt_law qwen3_235b_or: 80/100
+    fe_manual_format deepseek_r1_or: 90/100
+    gpt_law qwen3_235b_or: 90/100
+    gpt_law mistral_large_or: 40/100
+    gpt_law mistral_large_or: 50/100
+    gpt_law qwen3_235b_or: 100/100
+    gpt_law mistral_large_or: 60/100
+  gpt_law | qwen3_235b_or | task=binary_0 F1=0.870 LOO=0.845 thr=58.3
+  gpt_law | qwen3_235b_or | task=binary_1 (same scores, no extra API) F1=0.800 LOO=0.800 thr=40.2 -> similarity_database_with_gpt_law_features_v6score_qwen3_235b_or_binary_1_stats.json
+    fe_manual_format deepseek_r1_or: 100/100
+  fe_manual_format | deepseek_r1_or | task=binary_0 F1=0.821 LOO=0.800 thr=45.2
+  fe_manual_format | deepseek_r1_or | task=binary_1 (same scores, no extra API) F1=0.793 LOO=0.793 thr=25.1 -> similarity_database_fe_manual_format_v6score_deepseek_r1_or_binary_1_stats.json
+    gpt_law mistral_large_or: 70/100
+    gpt_free qwen3_235b_or: 10/100
+    gpt_free qwen3_235b_or: 20/100
+    gpt_law mistral_large_or: 80/100
+    gpt_free qwen3_235b_or: 30/100
+    gpt_free qwen3_235b_or: 40/100
+    gpt_law mistral_large_or: 90/100
+    gpt_free qwen3_235b_or: 50/100
+    fe_legacy_from_structured deepseek_r1_or: 10/100
+    gpt_free qwen3_235b_or: 60/100
+    gpt_law mistral_large_or: 100/100
+  gpt_law | mistral_large_or | task=binary_0 F1=0.822 LOO=0.794 thr=48.2
+  gpt_law | mistral_large_or | task=binary_1 (same scores, no extra API) F1=0.727 LOO=0.591 thr=40.2 -> similarity_database_with_gpt_law_features_v6score_mistral_large_or_binary_1_stats.json
+    gpt_free qwen3_235b_or: 70/100
+    gpt_free qwen3_235b_or: 80/100
+    gpt_free mistral_large_or: 10/100
+    gpt_free qwen3_235b_or: 90/100
+    fe_legacy_from_structured deepseek_r1_or: 20/100
+    gpt_free mistral_large_or: 20/100
+    gpt_free qwen3_235b_or: 100/100
+  gpt_free | qwen3_235b_or | task=binary_0 F1=0.882 LOO=0.882 thr=45.2
+  gpt_free | qwen3_235b_or | task=binary_1 (same scores, no extra API) F1=0.783 LOO=0.742 thr=35.2 -> similarity_database_with_gpt_features_v6score_qwen3_235b_or_binary_1_stats.json
+    gpt_free mistral_large_or: 30/100
+    hybrid_manual_gpt qwen3_235b_or: 10/100
+    fe_legacy_from_structured deepseek_r1_or: 30/100
+    hybrid_manual_gpt qwen3_235b_or: 20/100
+    gpt_free mistral_large_or: 40/100
+    hybrid_manual_gpt qwen3_235b_or: 30/100
+    hybrid_manual_gpt qwen3_235b_or: 40/100
+    gpt_free mistral_large_or: 50/100
+    hybrid_manual_gpt qwen3_235b_or: 50/100
+    fe_legacy_from_structured deepseek_r1_or: 40/100
+    gpt_free mistral_large_or: 60/100
+    hybrid_manual_gpt qwen3_235b_or: 60/100
+    gpt_free mistral_large_or: 70/100
+    hybrid_manual_gpt qwen3_235b_or: 70/100
+    gpt_free mistral_large_or: 80/100
+    fe_legacy_from_structured deepseek_r1_or: 50/100
+    hybrid_manual_gpt qwen3_235b_or: 80/100
+    gpt_free mistral_large_or: 90/100
+    hybrid_manual_gpt qwen3_235b_or: 90/100
+    gpt_free mistral_large_or: 100/100
+  gpt_free | mistral_large_or | task=binary_0 F1=0.849 LOO=0.849 thr=40.2
+  gpt_free | mistral_large_or | task=binary_1 (same scores, no extra API) F1=0.821 LOO=0.778 thr=20.1 -> similarity_database_with_gpt_features_v6score_mistral_large_or_binary_1_stats.json
+    hybrid_manual_gpt qwen3_235b_or: 100/100
+  hybrid_manual_gpt | qwen3_235b_or | task=binary_0 F1=0.895 LOO=0.895 thr=40.2
+  hybrid_manual_gpt | qwen3_235b_or | task=binary_1 (same scores, no extra API) F1=0.839 LOO=0.826 thr=35.2 -> similarity_database_hybrid_v6score_qwen3_235b_or_binary_1_stats.json
+    hybrid_manual_gpt mistral_large_or: 10/100
+    fe_legacy_from_structured deepseek_r1_or: 60/100
+    hybrid_gpt qwen3_235b_or: 10/100
+    hybrid_manual_gpt mistral_large_or: 20/100
+    hybrid_gpt qwen3_235b_or: 20/100
+    hybrid_manual_gpt mistral_large_or: 30/100
+    hybrid_gpt qwen3_235b_or: 30/100
+    hybrid_gpt qwen3_235b_or: 40/100
+    hybrid_manual_gpt mistral_large_or: 40/100
+    fe_legacy_from_structured deepseek_r1_or: 70/100
+    hybrid_gpt qwen3_235b_or: 50/100
+    hybrid_gpt qwen3_235b_or: 60/100
+    hybrid_manual_gpt mistral_large_or: 50/100
+    hybrid_gpt qwen3_235b_or: 70/100
+    hybrid_manual_gpt mistral_large_or: 60/100
+    hybrid_gpt qwen3_235b_or: 80/100
+    hybrid_manual_gpt mistral_large_or: 70/100
+    hybrid_gpt qwen3_235b_or: 90/100
+    fe_legacy_from_structured deepseek_r1_or: 80/100
+    hybrid_gpt qwen3_235b_or: 100/100
+    hybrid_manual_gpt mistral_large_or: 80/100
+  hybrid_gpt | qwen3_235b_or | task=binary_0 F1=0.841 LOO=0.817 thr=58.3
+  hybrid_gpt | qwen3_235b_or | task=binary_1 (same scores, no extra API) F1=0.731 LOO=0.731 thr=40.2 -> similarity_database_hybrid_gpt_v6score_qwen3_235b_or_binary_1_stats.json
+    hybrid_full_gpt qwen3_235b_or: 10/100 (cached ok)
+    hybrid_full_gpt qwen3_235b_or: 20/100 (cached ok)
+    hybrid_full_gpt qwen3_235b_or: 30/100 (cached ok)
+    hybrid_full_gpt qwen3_235b_or: 40/100 (cached ok)
+    hybrid_full_gpt qwen3_235b_or: 50/100 (cached ok)
+    hybrid_full_gpt qwen3_235b_or: 60/100 (cached ok)
+    hybrid_full_gpt qwen3_235b_or: 70/100 (cached ok)
+    hybrid_full_gpt qwen3_235b_or: 80/100 (cached ok)
+    hybrid_full_gpt qwen3_235b_or: 90/100 (cached ok)
+    hybrid_full_gpt qwen3_235b_or: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | qwen3_235b_or | task=binary_0 F1=0.870 LOO=0.822 thr=40.2
+  hybrid_full_gpt | qwen3_235b_or | task=binary_1 (same scores, no extra API) F1=0.824 LOO=0.824 thr=30.2 -> similarity_database_hybrid_full_gpt_v6score_qwen3_235b_or_binary_1_stats.json
+    hybrid_manual_gpt mistral_large_or: 90/100
+    hybrid_manual_gpt mistral_large_or: 100/100
+  hybrid_manual_gpt | mistral_large_or | task=binary_0 F1=0.857 LOO=0.857 thr=40.2
+  hybrid_manual_gpt | mistral_large_or | task=binary_1 (same scores, no extra API) F1=0.815 LOO=0.807 thr=35.2 -> similarity_database_hybrid_v6score_mistral_large_or_binary_1_stats.json
+    fe_legacy_from_structured deepseek_r1_or: 90/100
+    hybrid_gpt mistral_large_or: 10/100
+    hybrid_gpt mistral_large_or: 20/100
+    hybrid_gpt mistral_large_or: 30/100
+    fe_legacy_from_structured deepseek_r1_or: 100/100
+  fe_legacy_from_structured | deepseek_r1_or | task=binary_0 F1=0.897 LOO=0.853 thr=55.3
+  fe_legacy_from_structured | deepseek_r1_or | task=binary_1 (same scores, no extra API) F1=0.852 LOO=0.772 thr=35.2 -> similarity_database_fe_legacy_from_structured_v6score_deepseek_r1_or_binary_1_stats.json
+    hybrid_gpt mistral_large_or: 40/100
+    hybrid_gpt mistral_large_or: 50/100
+    hybrid_gpt mistral_large_or: 60/100
+    fe_gpt_schema deepseek_r1_or: 10/100
+    hybrid_gpt mistral_large_or: 70/100
+    hybrid_gpt mistral_large_or: 80/100
+    fe_gpt_schema deepseek_r1_or: 20/100
+    hybrid_gpt mistral_large_or: 90/100
+    hybrid_gpt mistral_large_or: 100/100
+  hybrid_gpt | mistral_large_or | task=binary_0 F1=0.762 LOO=0.762 thr=60.3
+  hybrid_gpt | mistral_large_or | task=binary_1 (same scores, no extra API) F1=0.762 LOO=0.762 thr=30.2 -> similarity_database_hybrid_gpt_v6score_mistral_large_or_binary_1_stats.json
+    hybrid_full_gpt mistral_large_or: 10/100 (cached ok)
+    hybrid_full_gpt mistral_large_or: 20/100 (cached ok)
+    hybrid_full_gpt mistral_large_or: 30/100 (cached ok)
+    hybrid_full_gpt mistral_large_or: 40/100 (cached ok)
+    hybrid_full_gpt mistral_large_or: 50/100 (cached ok)
+    hybrid_full_gpt mistral_large_or: 60/100 (cached ok)
+    hybrid_full_gpt mistral_large_or: 70/100 (cached ok)
+    hybrid_full_gpt mistral_large_or: 80/100 (cached ok)
+    hybrid_full_gpt mistral_large_or: 90/100 (cached ok)
+    hybrid_full_gpt mistral_large_or: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | mistral_large_or | task=binary_0 F1=0.917 LOO=0.904 thr=55.3
+  hybrid_full_gpt | mistral_large_or | task=binary_1 (same scores, no extra API) F1=0.821 LOO=0.783 thr=40.2 -> similarity_database_hybrid_full_gpt_v6score_mistral_large_or_binary_1_stats.json
+    fe_gpt_schema deepseek_r1_or: 30/100
+    fe_gpt_schema deepseek_r1_or: 40/100
+    fe_gpt_schema deepseek_r1_or: 50/100
+    fe_gpt_schema deepseek_r1_or: 60/100
+    fe_gpt_schema deepseek_r1_or: 70/100
+    fe_gpt_schema deepseek_r1_or: 80/100
+    fe_gpt_schema deepseek_r1_or: 90/100
+    fe_gpt_schema deepseek_r1_or: 100/100
+  fe_gpt_schema | deepseek_r1_or | task=binary_0 F1=0.774 LOO=0.667 thr=65.3
+  fe_gpt_schema | deepseek_r1_or | task=binary_1 (same scores, no extra API) F1=0.839 LOO=0.839 thr=35.2 -> similarity_database_fe_gpt_schema_v6score_deepseek_r1_or_binary_1_stats.json
+    fe_gpt_schema_v2 deepseek_r1_or: 10/100
+    fe_gpt_schema_v2 deepseek_r1_or: 20/100
+    fe_gpt_schema_v2 deepseek_r1_or: 30/100
+    fe_gpt_schema_v2 deepseek_r1_or: 40/100
+    fe_gpt_schema_v2 deepseek_r1_or: 50/100
+    fe_gpt_schema_v2 deepseek_r1_or: 60/100
+    fe_gpt_schema_v2 deepseek_r1_or: 70/100
+    fe_gpt_schema_v2 deepseek_r1_or: 80/100
+    fe_gpt_schema_v2 deepseek_r1_or: 90/100
+    fe_gpt_schema_v2 deepseek_r1_or: 100/100
+  fe_gpt_schema_v2 | deepseek_r1_or | task=binary_0 F1=0.917 LOO=0.892 thr=65.3
+  fe_gpt_schema_v2 | deepseek_r1_or | task=binary_1 (same scores, no extra API) F1=0.813 LOO=0.813 thr=55.3 -> similarity_database_fe_gpt_schema_v2_v6score_deepseek_r1_or_binary_1_stats.json
+    gpt_law deepseek_r1_or: 10/100
+    gpt_law deepseek_r1_or: 20/100
+    gpt_law deepseek_r1_or: 30/100
+    gpt_law deepseek_r1_or: 40/100
+    gpt_law deepseek_r1_or: 50/100
+    gpt_law deepseek_r1_or: 60/100
+    gpt_law deepseek_r1_or: 70/100
+    gpt_law deepseek_r1_or: 80/100
+    gpt_law deepseek_r1_or: 90/100
+    gpt_law deepseek_r1_or: 100/100
+  gpt_law | deepseek_r1_or | task=binary_0 F1=0.822 LOO=0.800 thr=60.3
+  gpt_law | deepseek_r1_or | task=binary_1 (same scores, no extra API) F1=0.769 LOO=0.769 thr=45.2 -> similarity_database_with_gpt_law_features_v6score_deepseek_r1_or_binary_1_stats.json
+⚠️  OpenRouter error attempt 1/3: Expecting value: line 145 column 1 (char 792), retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Expecting value: line 149 column 1 (char 814), retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Expecting value: line 143 column 1 (char 781), retrying in 10s...
+    gpt_free deepseek_r1_or: 10/100
+    gpt_free deepseek_r1_or: 20/100
+    gpt_free deepseek_r1_or: 30/100
+    gpt_free deepseek_r1_or: 40/100
+    gpt_free deepseek_r1_or: 50/100
+    gpt_free deepseek_r1_or: 60/100
+    gpt_free deepseek_r1_or: 70/100
+    gpt_free deepseek_r1_or: 80/100
+    gpt_free deepseek_r1_or: 90/100
+    gpt_free deepseek_r1_or: 100/100
+  gpt_free | deepseek_r1_or | task=binary_0 F1=0.849 LOO=0.849 thr=65.3
+  gpt_free | deepseek_r1_or | task=binary_1 (same scores, no extra API) F1=0.796 LOO=0.796 thr=30.2 -> similarity_database_with_gpt_features_v6score_deepseek_r1_or_binary_1_stats.json
+    hybrid_manual_gpt deepseek_r1_or: 10/100
+    hybrid_manual_gpt deepseek_r1_or: 20/100
+    hybrid_manual_gpt deepseek_r1_or: 30/100
+    hybrid_manual_gpt deepseek_r1_or: 40/100
+    hybrid_manual_gpt deepseek_r1_or: 50/100
+    hybrid_manual_gpt deepseek_r1_or: 60/100
+    hybrid_manual_gpt deepseek_r1_or: 70/100
+    hybrid_manual_gpt deepseek_r1_or: 80/100
+    hybrid_manual_gpt deepseek_r1_or: 90/100
+    hybrid_manual_gpt deepseek_r1_or: 100/100
+  hybrid_manual_gpt | deepseek_r1_or | task=binary_0 F1=0.904 LOO=0.889 thr=40.2
+  hybrid_manual_gpt | deepseek_r1_or | task=binary_1 (same scores, no extra API) F1=0.840 LOO=0.804 thr=30.2 -> similarity_database_hybrid_v6score_deepseek_r1_or_binary_1_stats.json
+    hybrid_gpt deepseek_r1_or: 10/100
+    hybrid_gpt deepseek_r1_or: 20/100
+    hybrid_gpt deepseek_r1_or: 30/100
+    hybrid_gpt deepseek_r1_or: 40/100
+    hybrid_gpt deepseek_r1_or: 50/100
+    hybrid_gpt deepseek_r1_or: 60/100
+    hybrid_gpt deepseek_r1_or: 70/100
+    hybrid_gpt deepseek_r1_or: 80/100
+    hybrid_gpt deepseek_r1_or: 90/100
+    hybrid_gpt deepseek_r1_or: 100/100
+  hybrid_gpt | deepseek_r1_or | task=binary_0 F1=0.829 LOO=0.829 thr=65.3
+  hybrid_gpt | deepseek_r1_or | task=binary_1 (same scores, no extra API) F1=0.745 LOO=0.745 thr=35.2 -> similarity_database_hybrid_gpt_v6score_deepseek_r1_or_binary_1_stats.json
+    hybrid_full_gpt deepseek_r1_or: 10/100
+    hybrid_full_gpt deepseek_r1_or: 20/100
+    hybrid_full_gpt deepseek_r1_or: 30/100
+    hybrid_full_gpt deepseek_r1_or: 40/100
+    hybrid_full_gpt deepseek_r1_or: 50/100
+    hybrid_full_gpt deepseek_r1_or: 60/100
+    hybrid_full_gpt deepseek_r1_or: 70/100
+    hybrid_full_gpt deepseek_r1_or: 80/100
+    hybrid_full_gpt deepseek_r1_or: 90/100
+    hybrid_full_gpt deepseek_r1_or: 100/100
+  hybrid_full_gpt | deepseek_r1_or | task=binary_0 F1=0.882 LOO=0.800 thr=60.3
+  hybrid_full_gpt | deepseek_r1_or | task=binary_1 (same scores, no extra API) F1=0.804 LOO=0.768 thr=30.2 -> similarity_database_hybrid_full_gpt_v6score_deepseek_r1_or_binary_1_stats.json
+
+Saved summary: /Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/v6_multimodel_summary_binary_0.json

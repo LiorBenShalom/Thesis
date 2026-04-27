@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "fe_manual_format",
+  "csv": "similarity_database_fe_manual_format.csv",
+  "model": "mistral_large_or",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/weapon/results_weapon/similarity_database_fe_manual_format_v6score_mistral_large_or_binary_0_preds.csv",
+  "best_threshold": 30.1508,
+  "global_best": {
+    "f1": 0.7625,
+    "accuracy": 0.7305,
+    "precision": 0.6421,
+    "recall": 0.9385,
+    "tp": 61,
+    "fp": 34,
+    "fn": 4,
+    "tn": 42
+  },
+  "loo": {
+    "accuracy": 0.7305,
+    "f1": 0.7625,
+    "precision": 0.6421,
+    "recall": 0.9385,
+    "cm": [
+      [
+        42,
+        34
+      ],
+      [
+        4,
+        61
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 45.32,
+    "std": 18.6,
+    "pos_mean": 57.38,
+    "neg_mean": 35.0
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

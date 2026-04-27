@@ -1,0 +1,38 @@
+
+============================================================
+  DOMAIN: weapon
+============================================================
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+Connecting to OpenRouter (OpenAI-compatible)...
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+✅ OpenRouter client initialized
+    hybrid_full_gpt deepseek_r1_or: 10/141
+    hybrid_full_gpt deepseek_r1_or: 20/141
+    hybrid_full_gpt deepseek_r1_or: 30/141
+    hybrid_full_gpt deepseek_r1_or: 40/141
+    hybrid_full_gpt deepseek_r1_or: 50/141
+    hybrid_full_gpt deepseek_r1_or: 60/141
+    hybrid_full_gpt deepseek_r1_or: 70/141
+    hybrid_full_gpt deepseek_r1_or: 80/141
+    hybrid_full_gpt deepseek_r1_or: 90/141
+    hybrid_full_gpt deepseek_r1_or: 100/141
+    hybrid_full_gpt deepseek_r1_or: 110/141
+    hybrid_full_gpt deepseek_r1_or: 120/141
+    hybrid_full_gpt deepseek_r1_or: 130/141
+    hybrid_full_gpt deepseek_r1_or: 140/141
+  hybrid_full_gpt | deepseek_r1_or | task=binary_0 F1=0.726 LOO=0.726 thr=35.2
+  hybrid_full_gpt | deepseek_r1_or | task=binary_1 (same scores, no extra API) F1=0.810 LOO=0.810 thr=35.2 -> similarity_database_hybrid_full_gpt_v6score_deepseek_r1_or_binary_1_stats.json
+
+Saved summary: /Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/v6_multimodel_summary_binary_0.json
