@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "gpt_free",
+  "csv": "similarity_database_with_gpt_features.csv",
+  "model": "claude_haiku_4_5",
+  "task": "binary_1",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/drugs/results_drugs/similarity_database_with_gpt_features_v6score_claude_haiku_4_5_binary_0_preds.csv",
+  "best_threshold": 28.1407,
+  "global_best": {
+    "f1": 0.7527,
+    "accuracy": 0.77,
+    "precision": 0.814,
+    "recall": 0.7,
+    "tp": 35,
+    "fp": 8,
+    "fn": 15,
+    "tn": 42
+  },
+  "loo": {
+    "accuracy": 0.67,
+    "f1": 0.6733,
+    "precision": 0.6667,
+    "recall": 0.68,
+    "cm": [
+      [
+        33,
+        17
+      ],
+      [
+        16,
+        34
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 37.3,
+    "std": 22.69,
+    "pos_mean": 50.76,
+    "neg_mean": 23.84
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

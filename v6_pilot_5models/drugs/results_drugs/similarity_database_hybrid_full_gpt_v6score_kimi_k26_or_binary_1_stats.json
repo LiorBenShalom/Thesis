@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "hybrid_full_gpt",
+  "csv": "similarity_database_hybrid_full_gpt.csv",
+  "model": "kimi_k26_or",
+  "task": "binary_1",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/drugs/results_drugs/similarity_database_hybrid_full_gpt_v6score_kimi_k26_or_binary_0_preds.csv",
+  "best_threshold": 25.1256,
+  "global_best": {
+    "f1": 0.8283,
+    "accuracy": 0.83,
+    "precision": 0.8367,
+    "recall": 0.82,
+    "tp": 41,
+    "fp": 8,
+    "fn": 9,
+    "tn": 42
+  },
+  "loo": {
+    "accuracy": 0.79,
+    "f1": 0.7789,
+    "precision": 0.8222,
+    "recall": 0.74,
+    "cm": [
+      [
+        42,
+        8
+      ],
+      [
+        13,
+        37
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 38.85,
+    "std": 26.96,
+    "pos_mean": 56.8,
+    "neg_mean": 20.9
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

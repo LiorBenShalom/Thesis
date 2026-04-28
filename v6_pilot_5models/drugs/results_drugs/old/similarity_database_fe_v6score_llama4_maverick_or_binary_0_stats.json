@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "manual_fe",
+  "csv": "similarity_database_fe.csv",
+  "model": "llama4_maverick_or",
+  "task": "binary_0",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/drugs/results_drugs/similarity_database_fe_v6score_llama4_maverick_or_binary_0_preds.csv",
+  "best_threshold": 70.3518,
+  "global_best": {
+    "f1": 0.871,
+    "accuracy": 0.92,
+    "precision": 1.0,
+    "recall": 0.7714,
+    "tp": 27,
+    "fp": 0,
+    "fn": 8,
+    "tn": 65
+  },
+  "loo": {
+    "accuracy": 0.92,
+    "f1": 0.871,
+    "precision": 1.0,
+    "recall": 0.7714,
+    "cm": [
+      [
+        65,
+        0
+      ],
+      [
+        8,
+        27
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 54.71,
+    "std": 25.29,
+    "pos_mean": 81.89,
+    "neg_mean": 40.08
+  }
+}

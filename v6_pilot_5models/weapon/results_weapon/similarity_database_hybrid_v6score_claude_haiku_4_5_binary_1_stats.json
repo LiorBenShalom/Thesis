@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "hybrid_manual_gpt",
+  "csv": "similarity_database_hybrid.csv",
+  "model": "claude_haiku_4_5",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/weapon/results_weapon/similarity_database_hybrid_v6score_claude_haiku_4_5_binary_0_preds.csv",
+  "best_threshold": 28.1407,
+  "global_best": {
+    "f1": 0.8226,
+    "accuracy": 0.844,
+    "precision": 0.8644,
+    "recall": 0.7846,
+    "tp": 51,
+    "fp": 8,
+    "fn": 14,
+    "tn": 68
+  },
+  "loo": {
+    "accuracy": 0.844,
+    "f1": 0.8226,
+    "precision": 0.8644,
+    "recall": 0.7846,
+    "cm": [
+      [
+        68,
+        8
+      ],
+      [
+        14,
+        51
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 32.25,
+    "std": 15.31,
+    "pos_mean": 43.12,
+    "neg_mean": 22.95
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

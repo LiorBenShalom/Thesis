@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "manual_fe",
+  "csv": "similarity_database_fe.csv",
+  "model": "qwen35_plus_or",
+  "task": "binary_0",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/weapon/results_weapon/similarity_database_fe_v6score_qwen35_plus_or_binary_0_preds.csv",
+  "best_threshold": 45.2261,
+  "global_best": {
+    "f1": 0.7826,
+    "accuracy": 0.8582,
+    "precision": 0.7826,
+    "recall": 0.7826,
+    "tp": 36,
+    "fp": 10,
+    "fn": 10,
+    "tn": 85
+  },
+  "loo": {
+    "accuracy": 0.844,
+    "f1": 0.7556,
+    "precision": 0.7727,
+    "recall": 0.7391,
+    "cm": [
+      [
+        85,
+        10
+      ],
+      [
+        12,
+        34
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 41.21,
+    "std": 21.7,
+    "pos_mean": 64.26,
+    "neg_mean": 30.05
+  }
+}

@@ -9,39 +9,39 @@
   "n_pairs": 100,
   "n_valid": 100,
   "n_failed": 0,
-  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_final/drugs/results_drugs/similarity_database_hybrid_full_gpt_v6score_gemini_3_flash_binary_0_preds.csv",
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_final_hybrid_fixed/drugs/results_drugs/similarity_database_hybrid_full_gpt_v6score_gemini_3_flash_binary_0_preds.csv",
   "best_threshold": 38.191,
   "global_best": {
-    "f1": 0.8269,
+    "f1": 0.82,
     "accuracy": 0.82,
-    "precision": 0.7963,
-    "recall": 0.86,
-    "tp": 43,
-    "fp": 11,
-    "fn": 7,
-    "tn": 39
+    "precision": 0.82,
+    "recall": 0.82,
+    "tp": 41,
+    "fp": 9,
+    "fn": 9,
+    "tn": 41
   },
   "loo": {
-    "accuracy": 0.82,
-    "f1": 0.8269,
-    "precision": 0.7963,
-    "recall": 0.86,
+    "accuracy": 0.79,
+    "f1": 0.7835,
+    "precision": 0.8085,
+    "recall": 0.76,
     "cm": [
       [
-        39,
-        11
+        41,
+        9
       ],
       [
-        7,
-        43
+        12,
+        38
       ]
     ]
   },
   "score_stats": {
-    "mean": 51.52,
-    "std": 30.35,
-    "pos_mean": 72.4,
-    "neg_mean": 30.64
+    "mean": 49.8,
+    "std": 30.24,
+    "pos_mean": 70.4,
+    "neg_mean": 29.2
   },
   "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
 }

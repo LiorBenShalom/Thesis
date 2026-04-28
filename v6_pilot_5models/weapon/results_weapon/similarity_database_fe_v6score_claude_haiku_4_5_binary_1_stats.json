@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "manual_fe",
+  "csv": "similarity_database_fe.csv",
+  "model": "claude_haiku_4_5",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/weapon/results_weapon/similarity_database_fe_v6score_claude_haiku_4_5_binary_0_preds.csv",
+  "best_threshold": 35.1759,
+  "global_best": {
+    "f1": 0.8413,
+    "accuracy": 0.8582,
+    "precision": 0.8689,
+    "recall": 0.8154,
+    "tp": 53,
+    "fp": 8,
+    "fn": 12,
+    "tn": 68
+  },
+  "loo": {
+    "accuracy": 0.7589,
+    "f1": 0.7385,
+    "precision": 0.7385,
+    "recall": 0.7385,
+    "cm": [
+      [
+        59,
+        17
+      ],
+      [
+        17,
+        48
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 36.74,
+    "std": 17.17,
+    "pos_mean": 50.54,
+    "neg_mean": 24.93
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

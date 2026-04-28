@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "hybrid_full_gpt",
+  "csv": "similarity_database_hybrid_full_gpt.csv",
+  "model": "qwen35_plus_or",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/weapon/results_weapon/similarity_database_hybrid_full_gpt_v6score_qwen35_plus_or_binary_0_preds.csv",
+  "best_threshold": 35.1759,
+  "global_best": {
+    "f1": 0.8293,
+    "accuracy": 0.8511,
+    "precision": 0.8793,
+    "recall": 0.7846,
+    "tp": 51,
+    "fp": 7,
+    "fn": 14,
+    "tn": 69
+  },
+  "loo": {
+    "accuracy": 0.773,
+    "f1": 0.75,
+    "precision": 0.7619,
+    "recall": 0.7385,
+    "cm": [
+      [
+        61,
+        15
+      ],
+      [
+        17,
+        48
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 38.89,
+    "std": 19.97,
+    "pos_mean": 54.4,
+    "neg_mean": 25.62
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

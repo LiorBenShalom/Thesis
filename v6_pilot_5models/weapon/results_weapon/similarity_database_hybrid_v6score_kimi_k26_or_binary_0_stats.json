@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "hybrid_manual_gpt",
+  "csv": "similarity_database_hybrid.csv",
+  "model": "kimi_k26_or",
+  "task": "binary_0",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/weapon/results_weapon/similarity_database_hybrid_v6score_kimi_k26_or_binary_0_preds.csv",
+  "best_threshold": 30.1508,
+  "global_best": {
+    "f1": 0.7788,
+    "accuracy": 0.8227,
+    "precision": 0.6567,
+    "recall": 0.9565,
+    "tp": 44,
+    "fp": 23,
+    "fn": 2,
+    "tn": 72
+  },
+  "loo": {
+    "accuracy": 0.8227,
+    "f1": 0.7788,
+    "precision": 0.6567,
+    "recall": 0.9565,
+    "cm": [
+      [
+        72,
+        23
+      ],
+      [
+        2,
+        44
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 33.38,
+    "std": 18.92,
+    "pos_mean": 52.74,
+    "neg_mean": 24.0
+  }
+}

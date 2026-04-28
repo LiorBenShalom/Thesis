@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "hybrid_manual_gpt",
+  "csv": "similarity_database_hybrid.csv",
+  "model": "kimi_k26_or",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/weapon/results_weapon/similarity_database_hybrid_v6score_kimi_k26_or_binary_0_preds.csv",
+  "best_threshold": 30.1508,
+  "global_best": {
+    "f1": 0.8636,
+    "accuracy": 0.8723,
+    "precision": 0.8507,
+    "recall": 0.8769,
+    "tp": 57,
+    "fp": 10,
+    "fn": 8,
+    "tn": 66
+  },
+  "loo": {
+    "accuracy": 0.8723,
+    "f1": 0.8636,
+    "precision": 0.8507,
+    "recall": 0.8769,
+    "cm": [
+      [
+        66,
+        10
+      ],
+      [
+        8,
+        57
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 33.38,
+    "std": 18.92,
+    "pos_mean": 47.63,
+    "neg_mean": 21.18
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

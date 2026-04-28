@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "manual_fe",
+  "csv": "similarity_database_fe.csv",
+  "model": "kimi_k26_or",
+  "task": "binary_0",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/drugs/results_drugs/similarity_database_fe_v6score_kimi_k26_or_binary_0_preds.csv",
+  "best_threshold": 55.2764,
+  "global_best": {
+    "f1": 0.8986,
+    "accuracy": 0.93,
+    "precision": 0.9118,
+    "recall": 0.8857,
+    "tp": 31,
+    "fp": 3,
+    "fn": 4,
+    "tn": 62
+  },
+  "loo": {
+    "accuracy": 0.93,
+    "f1": 0.8986,
+    "precision": 0.9118,
+    "recall": 0.8857,
+    "cm": [
+      [
+        62,
+        3
+      ],
+      [
+        4,
+        31
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 47.72,
+    "std": 27.25,
+    "pos_mean": 79.0,
+    "neg_mean": 30.88
+  }
+}

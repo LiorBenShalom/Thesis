@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "gpt_law",
+  "csv": "similarity_database_with_gpt_law_features.csv",
+  "model": "claude_haiku_4_5",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/weapon/results_weapon/similarity_database_with_gpt_law_features_v6score_claude_haiku_4_5_binary_0_preds.csv",
+  "best_threshold": 28.1407,
+  "global_best": {
+    "f1": 0.8148,
+    "accuracy": 0.8227,
+    "precision": 0.7857,
+    "recall": 0.8462,
+    "tp": 55,
+    "fp": 15,
+    "fn": 10,
+    "tn": 61
+  },
+  "loo": {
+    "accuracy": 0.8227,
+    "f1": 0.8148,
+    "precision": 0.7857,
+    "recall": 0.8462,
+    "cm": [
+      [
+        61,
+        15
+      ],
+      [
+        10,
+        55
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 34.25,
+    "std": 16.53,
+    "pos_mean": 46.17,
+    "neg_mean": 24.05
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

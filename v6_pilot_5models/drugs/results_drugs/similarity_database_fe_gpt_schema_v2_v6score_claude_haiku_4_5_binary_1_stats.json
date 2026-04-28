@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "fe_gpt_schema_v2",
+  "csv": "similarity_database_fe_gpt_schema_v2.csv",
+  "model": "claude_haiku_4_5",
+  "task": "binary_1",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/drugs/results_drugs/similarity_database_fe_gpt_schema_v2_v6score_claude_haiku_4_5_binary_0_preds.csv",
+  "best_threshold": 38.191,
+  "global_best": {
+    "f1": 0.7912,
+    "accuracy": 0.81,
+    "precision": 0.878,
+    "recall": 0.72,
+    "tp": 36,
+    "fp": 5,
+    "fn": 14,
+    "tn": 45
+  },
+  "loo": {
+    "accuracy": 0.69,
+    "f1": 0.6869,
+    "precision": 0.6939,
+    "recall": 0.68,
+    "cm": [
+      [
+        35,
+        15
+      ],
+      [
+        16,
+        34
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 45.87,
+    "std": 23.38,
+    "pos_mean": 61.68,
+    "neg_mean": 30.06
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

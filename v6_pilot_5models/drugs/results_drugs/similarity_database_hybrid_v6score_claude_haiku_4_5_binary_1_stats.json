@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "hybrid_manual_gpt",
+  "csv": "similarity_database_hybrid.csv",
+  "model": "claude_haiku_4_5",
+  "task": "binary_1",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/drugs/results_drugs/similarity_database_hybrid_v6score_claude_haiku_4_5_binary_0_preds.csv",
+  "best_threshold": 28.1407,
+  "global_best": {
+    "f1": 0.8333,
+    "accuracy": 0.84,
+    "precision": 0.8696,
+    "recall": 0.8,
+    "tp": 40,
+    "fp": 6,
+    "fn": 10,
+    "tn": 44
+  },
+  "loo": {
+    "accuracy": 0.84,
+    "f1": 0.8333,
+    "precision": 0.8696,
+    "recall": 0.8,
+    "cm": [
+      [
+        44,
+        6
+      ],
+      [
+        10,
+        40
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 39.28,
+    "std": 22.56,
+    "pos_mean": 53.92,
+    "neg_mean": 24.64
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

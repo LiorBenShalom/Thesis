@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "manual_fe",
+  "csv": "similarity_database_fe.csv",
+  "model": "llama4_maverick_or",
+  "task": "binary_1",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/drugs/results_drugs/similarity_database_fe_v6score_llama4_maverick_or_binary_0_preds.csv",
+  "best_threshold": 40.201,
+  "global_best": {
+    "f1": 0.7961,
+    "accuracy": 0.79,
+    "precision": 0.7736,
+    "recall": 0.82,
+    "tp": 41,
+    "fp": 12,
+    "fn": 9,
+    "tn": 38
+  },
+  "loo": {
+    "accuracy": 0.79,
+    "f1": 0.7961,
+    "precision": 0.7736,
+    "recall": 0.82,
+    "cm": [
+      [
+        38,
+        12
+      ],
+      [
+        9,
+        41
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 54.71,
+    "std": 25.29,
+    "pos_mean": 71.62,
+    "neg_mean": 37.8
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

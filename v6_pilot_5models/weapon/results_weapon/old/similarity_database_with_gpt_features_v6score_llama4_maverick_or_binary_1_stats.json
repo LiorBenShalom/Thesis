@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "gpt_free",
+  "csv": "similarity_database_with_gpt_features.csv",
+  "model": "llama4_maverick_or",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/weapon/results_weapon/similarity_database_with_gpt_features_v6score_llama4_maverick_or_binary_0_preds.csv",
+  "best_threshold": 30.1508,
+  "global_best": {
+    "f1": 0.7742,
+    "accuracy": 0.7518,
+    "precision": 0.6667,
+    "recall": 0.9231,
+    "tp": 60,
+    "fp": 30,
+    "fn": 5,
+    "tn": 46
+  },
+  "loo": {
+    "accuracy": 0.7518,
+    "f1": 0.7742,
+    "precision": 0.6667,
+    "recall": 0.9231,
+    "cm": [
+      [
+        46,
+        30
+      ],
+      [
+        5,
+        60
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 43.05,
+    "std": 20.1,
+    "pos_mean": 56.38,
+    "neg_mean": 31.64
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

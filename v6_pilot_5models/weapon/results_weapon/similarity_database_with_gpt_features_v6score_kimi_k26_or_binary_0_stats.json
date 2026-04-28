@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "gpt_free",
+  "csv": "similarity_database_with_gpt_features.csv",
+  "model": "kimi_k26_or",
+  "task": "binary_0",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/weapon/results_weapon/similarity_database_with_gpt_features_v6score_kimi_k26_or_binary_0_preds.csv",
+  "best_threshold": 25.1256,
+  "global_best": {
+    "f1": 0.7593,
+    "accuracy": 0.8156,
+    "precision": 0.6613,
+    "recall": 0.8913,
+    "tp": 41,
+    "fp": 21,
+    "fn": 5,
+    "tn": 74
+  },
+  "loo": {
+    "accuracy": 0.8156,
+    "f1": 0.7593,
+    "precision": 0.6613,
+    "recall": 0.8913,
+    "cm": [
+      [
+        74,
+        21
+      ],
+      [
+        5,
+        41
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 29.18,
+    "std": 20.01,
+    "pos_mean": 48.15,
+    "neg_mean": 19.99
+  }
+}

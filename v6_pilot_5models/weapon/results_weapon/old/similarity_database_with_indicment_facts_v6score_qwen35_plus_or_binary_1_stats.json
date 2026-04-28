@@ -1,0 +1,47 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "facts",
+  "csv": "similarity_database_with_indicment_facts.csv",
+  "model": "qwen35_plus_or",
+  "task": "binary_1",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/weapon/results_weapon/similarity_database_with_indicment_facts_v6score_qwen35_plus_or_binary_0_preds.csv",
+  "best_threshold": 42.2111,
+  "global_best": {
+    "f1": 0.8092,
+    "accuracy": 0.8227,
+    "precision": 0.803,
+    "recall": 0.8154,
+    "tp": 53,
+    "fp": 13,
+    "fn": 12,
+    "tn": 63
+  },
+  "loo": {
+    "accuracy": 0.8227,
+    "f1": 0.8092,
+    "precision": 0.803,
+    "recall": 0.8154,
+    "cm": [
+      [
+        63,
+        13
+      ],
+      [
+        12,
+        53
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 46.0,
+    "std": 20.9,
+    "pos_mean": 60.58,
+    "neg_mean": 33.53
+  },
+  "eval_note": "No extra API calls: same continuous scores as primary task; threshold/F1 recomputed vs this label column only."
+}

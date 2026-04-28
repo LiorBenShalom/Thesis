@@ -160,7 +160,7 @@ _PROVIDER_CONCURRENCY: dict[str, int] = {
     "hf": 4,  # Dicta + Qwen HF + Gemma HF (router.huggingface.co)
     "nim": 5,  # NVIDIA NIM (multiple API keys rotate)
     "anthropic": 10,
-    "openrouter": 15,  # paid tier, shared by weapon+drugs jobs
+    "openrouter": 12,  # per-process; running 4 isolated processes → 48 combined (DeepInfra/Alibaba OK)
     "other": 2,
 }
 
@@ -168,7 +168,7 @@ _PROVIDER_CONCURRENCY: dict[str, int] = {
 def _provider_bucket(model_backend: str) -> str:
     if model_backend in ("gpt4", "gpt5mini", "gpt52", "gpt51_thinking"):
         return "openai"
-    if model_backend == "claude_sonnet_4_6":
+    if model_backend in ("claude_sonnet_4_6", "claude_haiku_4_5"):
         return "anthropic"
     if model_backend in ("gemini_25_pro", "gemini_3_flash"):
         return "gemini"
@@ -271,6 +271,8 @@ def call_model_backend(model_backend: str, system_prompt: str, user_prompt: str)
             return se.call_nim(system_prompt, user_prompt, model_backend, log_call=False)
         if model_backend == "claude_sonnet_4_6":
             return se.call_claude(system_prompt, user_prompt, log_call=False)
+        if model_backend == "claude_haiku_4_5":
+            return se.call_claude(system_prompt, user_prompt, model="claude-haiku-4-5", log_call=False)
         if model_backend == "gemma4_31b_or" or model_backend.endswith("_or"):
             return se.call_openrouter(system_prompt, user_prompt, model_backend, log_call=False)
         if model_backend == "lm_studio":

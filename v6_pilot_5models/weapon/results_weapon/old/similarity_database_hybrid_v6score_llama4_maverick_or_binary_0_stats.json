@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "weapon",
+  "representation_id": "hybrid_manual_gpt",
+  "csv": "similarity_database_hybrid.csv",
+  "model": "llama4_maverick_or",
+  "task": "binary_0",
+  "n_pairs": 141,
+  "n_valid": 141,
+  "n_failed": 0,
+  "preds_csv": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/weapon/results_weapon/similarity_database_hybrid_v6score_llama4_maverick_or_binary_0_preds.csv",
+  "best_threshold": 40.201,
+  "global_best": {
+    "f1": 0.7434,
+    "accuracy": 0.7943,
+    "precision": 0.6269,
+    "recall": 0.913,
+    "tp": 42,
+    "fp": 25,
+    "fn": 4,
+    "tn": 70
+  },
+  "loo": {
+    "accuracy": 0.7943,
+    "f1": 0.7434,
+    "precision": 0.6269,
+    "recall": 0.913,
+    "cm": [
+      [
+        70,
+        25
+      ],
+      [
+        4,
+        42
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 48.16,
+    "std": 21.09,
+    "pos_mean": 67.39,
+    "neg_mean": 38.84
+  }
+}
