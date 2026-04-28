@@ -1,17 +1,22 @@
-"""Generate updated paper figures for N=13 panel (= 9 ORIG + Mistral + DeepSeek + Haiku + Kimi):
-  1. fig_extreme_errors_n13.png    — bar chart of 1↔3 error rate by rep
-  2. fig_cld_qwk_oracle_n13.png    — boxplot with Compact Letter Display for QWK Oracle
-  3. fig_cld_qwk_cv_n13.png        — boxplot with CLD for QWK 10-fold CV (generalization)
+"""Generate paper figures for N=13 panel (= 9 ORIG + Mistral + DeepSeek + Haiku + Kimi):
+  1. fig_extreme_errors_n13.png   — bar chart of 1↔3 error rate
+  2. fig_cld_qwk_oracle_n13.png   — CLD boxplot, QWK Oracle (best thresholds)
+  3. fig_cld_qwk_cv_n13.png       — CLD boxplot, QWK 10-fold CV (generalisation)
+  4. fig_cld_spearman_n13.png     — CLD boxplot, Spearman ρ (threshold-free)
+  5. fig_cld_c_index_n13.png      — CLD boxplot, C-index (threshold-free, ordinal AUC)
 
-CLD algorithm: pairwise Wilcoxon (paired across models) with BH-FDR correction at α=0.05.
-Reps sharing a letter are NOT significantly different.
+Threshold-free metrics (Spearman, C-index) measure ranking quality directly without
+any threshold fitting — they are immune to overfit and serve as the cleanest comparison
+of representation quality.
+
+CLD algorithm: pairwise Wilcoxon (paired across models) with BH-FDR α=0.05.
 """
 from pathlib import Path
 import numpy as np, pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.metrics import cohen_kappa_score
 from sklearn.model_selection import StratifiedKFold
-from scipy.stats import wilcoxon
+from scipy.stats import wilcoxon, spearmanr
 from statsmodels.stats.multitest import multipletests
 
 EXP = Path(__file__).resolve().parents[2]
@@ -55,8 +60,8 @@ def best_qwk(scores, gt):
     return bq, bt[0], bt[1]
 
 def qwk_cv(scores: np.ndarray, gt: np.ndarray, k: int = 10, seed: int = 42) -> float:
-    """10-fold stratified CV: tune (t1,t2) on each train fold, score the held-out fold,
-    pool predictions, return overall QWK. Mirrors paper_results_qwk._cv_qwk."""
+    """k-fold stratified CV: tune (t1,t2) on each train fold, score the held-out fold,
+    pool predictions, return overall QWK."""
     if len(np.unique(gt)) < 2: return np.nan
     if min(np.bincount(gt - 1)) < k: return np.nan
     skf = StratifiedKFold(n_splits=k, shuffle=True, random_state=seed)
@@ -65,6 +70,19 @@ def qwk_cv(scores: np.ndarray, gt: np.ndarray, k: int = 10, seed: int = 42) -> f
         _, t1, t2 = best_qwk(scores[tr], gt[tr])
         pooled[te] = np.where(scores[te] < t1, 1, np.where(scores[te] < t2, 2, 3))
     return cohen_kappa_score(gt, pooled, weights="quadratic")
+
+
+def c_index(scores: np.ndarray, gt: np.ndarray) -> float:
+    """Pairwise concordance: P(score_i > score_j | gt_i > gt_j). Threshold-free."""
+    n = len(gt)
+    conc = pairs = 0.0
+    for i in range(n):
+        for j in range(n):
+            if gt[i] > gt[j]:
+                pairs += 1
+                if scores[i] > scores[j]: conc += 1
+                elif scores[i] == scores[j]: conc += 0.5
+    return conc / pairs if pairs > 0 else np.nan
 
 
 def cell(dom, m, prefix):
@@ -80,16 +98,20 @@ def cell(dom, m, prefix):
     pred = np.where(sc < t1, 1, np.where(sc < t2, 2, 3))
     ext = 100.0 * (((gt==1)&(pred==3)).sum() + ((gt==3)&(pred==1)).sum()) / len(gt)
     q_cv = qwk_cv(sc, gt)
-    return q_oracle, ext, q_cv
+    spear, _ = spearmanr(sc, gt)
+    cidx = c_index(sc, gt)
+    return q_oracle, ext, q_cv, spear, cidx
 
 # Collect data
+print("computing per-cell metrics (Oracle + CV10 + Spearman + C-index)...")
 rows = []
 for m in PANEL:
     for rep, prefix in REPS:
         for dom in ["drugs", "weapon"]:
             r = cell(dom, m, prefix)
             if r: rows.append(dict(model=m, rep=rep, dom=dom,
-                                   qwk=r[0], ext=r[1], qwk_cv=r[2]))
+                                   qwk=r[0], ext=r[1], qwk_cv=r[2],
+                                   spearman=r[3], c_index=r[4]))
 df = pd.DataFrame(rows)
 
 
@@ -311,18 +333,74 @@ print(f"wrote {OUT_QWK/'fig_cld_qwk_cv_n13.png'}")
 plt.close()
 
 
-# ============ Save the QWK CV summary CSV for the paper ============
-cv_summary_rows = []
+# ============ Generic CLD boxplot helper ============
+def make_cld_figure(metric_col: str, ylabel: str, suptitle_metric: str, fname: str):
+    fig, axes = plt.subplots(1, 2, figsize=(13, 6.0))
+    for ax, dom, title in zip(axes, ["drugs", "weapon"], ["drugs", "weapon"]):
+        sub = df[df.dom == dom]
+        pivot = sub.pivot_table(index="model", columns="rep", values=metric_col)
+        means = pivot.mean()
+        order = means.sort_values(ascending=False).index.tolist()
+        letters = cld_letters(pivot, higher_is_better=True)
+
+        data = [pivot[r].dropna().values for r in order]
+        bp = ax.boxplot(data, positions=range(len(order)), widths=0.6,
+                        patch_artist=True, medianprops=dict(color="black", lw=1.5))
+        for patch, rep in zip(bp["boxes"], order):
+            patch.set_facecolor(TIER_BOX_COLOR[TIER[rep]])
+            patch.set_edgecolor("black"); patch.set_linewidth(0.8)
+
+        for i, rep in enumerate(order):
+            vals = pivot[rep].dropna().values
+            ax.scatter(np.repeat(i, len(vals)) + np.random.uniform(-0.12, 0.12, len(vals)),
+                       vals, s=18, color="#1f4e79", alpha=0.5, edgecolor="none")
+
+        ymax, ymin = pivot.max().max(), pivot.min().min()
+        for i, rep in enumerate(order):
+            ax.text(i, pivot[rep].max() + (ymax-ymin)*0.04, letters[rep],
+                    ha="center", fontsize=14, fontweight="bold")
+
+        ax.set_xticks(range(len(order)))
+        ax.set_xticklabels(order, rotation=30, ha="right")
+        ax.set_ylabel(ylabel)
+        ax.set_title(f"{title}  (n=13 models)", fontweight="bold")
+        ax.spines["top"].set_visible(False); ax.spines["right"].set_visible(False)
+        ax.set_ylim(ymin - (ymax-ymin)*0.08, ymax + (ymax-ymin)*0.18)
+
+    handles = [plt.Rectangle((0,0),1,1,color=TIER_BOX_COLOR[t],ec="black",lw=0.8)
+               for t in ["T1","T2","T3"]]
+    labels = [TIER_LABEL[t] for t in ["T1","T2","T3"]]
+    fig.legend(handles, labels, loc="lower center", bbox_to_anchor=(0.5, -0.02),
+               ncol=3, frameon=False)
+    fig.suptitle(f"{suptitle_metric} — Compact Letter Display.  Reps sharing a letter are "
+                 f"NOT significantly different (Wilcoxon two-sided, BH-FDR α=0.05).",
+                 fontsize=11)
+    plt.tight_layout(rect=[0, 0.05, 1, 0.96])
+    plt.savefig(OUT_QWK/fname, dpi=180, bbox_inches="tight")
+    print(f"wrote {OUT_QWK/fname}")
+    plt.close()
+
+# Threshold-free metrics
+make_cld_figure("spearman", "Spearman ρ", "Spearman ρ (threshold-free)",
+                "fig_cld_spearman_n13.png")
+make_cld_figure("c_index",  "C-index (ordinal AUC)", "C-index (threshold-free)",
+                "fig_cld_c_index_n13.png")
+
+
+# ============ Save the unified QWK summary CSV ============
+summary_rows = []
 for dom in ["drugs", "weapon"]:
     for rep, _ in REPS:
         sub = df[(df.dom == dom) & (df.rep == rep)]
         if len(sub) == 0: continue
-        cv_summary_rows.append(dict(
+        summary_rows.append(dict(
             domain=dom, rep=rep, n_models=len(sub),
-            qwk_oracle_mean=sub.qwk.mean(), qwk_oracle_std=sub.qwk.std(),
-            qwk_cv_mean=sub.qwk_cv.mean(),  qwk_cv_std=sub.qwk_cv.std(),
-            qwk_cv_drop=sub.qwk.mean() - sub.qwk_cv.mean(),
+            qwk_oracle_mean=sub.qwk.mean(),     qwk_oracle_std=sub.qwk.std(),
+            qwk_cv_mean=sub.qwk_cv.mean(),      qwk_cv_std=sub.qwk_cv.std(),
+            spearman_mean=sub.spearman.mean(),  spearman_std=sub.spearman.std(),
+            c_index_mean=sub.c_index.mean(),    c_index_std=sub.c_index.std(),
+            cv_drop=sub.qwk.mean() - sub.qwk_cv.mean(),
         ))
-cv_summary = pd.DataFrame(cv_summary_rows)
-cv_summary.to_csv(OUT_QWK/"summary_qwk_n13.csv", index=False)
+summary = pd.DataFrame(summary_rows)
+summary.to_csv(OUT_QWK/"summary_qwk_n13.csv", index=False)
 print(f"wrote {OUT_QWK/'summary_qwk_n13.csv'}")
