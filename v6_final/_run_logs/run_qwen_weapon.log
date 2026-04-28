@@ -1,0 +1,165 @@
+
+============================================================
+  DOMAIN: weapon
+============================================================
+    facts qwen35_plus_or: 10/141 (cached ok)
+    facts qwen35_plus_or: 20/141 (cached ok)
+    facts qwen35_plus_or: 30/141 (cached ok)
+    facts qwen35_plus_or: 40/141 (cached ok)
+    facts qwen35_plus_or: 50/141 (cached ok)
+    facts qwen35_plus_or: 60/141 (cached ok)
+    facts qwen35_plus_or: 70/141 (cached ok)
+    facts qwen35_plus_or: 80/141 (cached ok)
+    facts qwen35_plus_or: 90/141 (cached ok)
+    facts qwen35_plus_or: 100/141 (cached ok)
+    facts qwen35_plus_or: 110/141 (cached ok)
+    facts qwen35_plus_or: 120/141 (cached ok)
+    facts qwen35_plus_or: 130/141 (cached ok)
+    facts qwen35_plus_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  facts | qwen35_plus_or | task=binary_0 F1=0.732 LOO=0.732 thr=42.2
+  facts | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.809 LOO=0.809 thr=42.2 -> similarity_database_with_indicment_facts_v6score_qwen35_plus_or_binary_1_stats.json
+    manual_fe qwen35_plus_or: 10/141 (cached ok)
+    manual_fe qwen35_plus_or: 20/141 (cached ok)
+    manual_fe qwen35_plus_or: 30/141 (cached ok)
+    manual_fe qwen35_plus_or: 40/141 (cached ok)
+    manual_fe qwen35_plus_or: 50/141 (cached ok)
+    manual_fe qwen35_plus_or: 60/141 (cached ok)
+    manual_fe qwen35_plus_or: 70/141 (cached ok)
+    manual_fe qwen35_plus_or: 80/141 (cached ok)
+    manual_fe qwen35_plus_or: 90/141 (cached ok)
+    manual_fe qwen35_plus_or: 100/141 (cached ok)
+    manual_fe qwen35_plus_or: 110/141 (cached ok)
+    manual_fe qwen35_plus_or: 120/141 (cached ok)
+    manual_fe qwen35_plus_or: 130/141 (cached ok)
+    manual_fe qwen35_plus_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  manual_fe | qwen35_plus_or | task=binary_0 F1=0.783 LOO=0.756 thr=45.2
+  manual_fe | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.851 LOO=0.851 thr=30.2 -> similarity_database_fe_v6score_qwen35_plus_or_binary_1_stats.json
+    fe_gpt_schema_v2 qwen35_plus_or: 10/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 20/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 30/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 40/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 50/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 60/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 70/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 80/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 90/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 100/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 110/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 120/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 130/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema_v2 | qwen35_plus_or | task=binary_0 F1=0.744 LOO=0.691 thr=60.3
+  fe_gpt_schema_v2 | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.800 LOO=0.748 thr=30.2 -> similarity_database_fe_gpt_schema_v2_v6score_qwen35_plus_or_binary_1_stats.json
+    gpt_free qwen35_plus_or: 10/141 (cached ok)
+    gpt_free qwen35_plus_or: 20/141 (cached ok)
+    gpt_free qwen35_plus_or: 30/141 (cached ok)
+    gpt_free qwen35_plus_or: 40/141 (cached ok)
+    gpt_free qwen35_plus_or: 50/141 (cached ok)
+    gpt_free qwen35_plus_or: 60/141 (cached ok)
+    gpt_free qwen35_plus_or: 70/141 (cached ok)
+    gpt_free qwen35_plus_or: 80/141 (cached ok)
+    gpt_free qwen35_plus_or: 90/141 (cached ok)
+    gpt_free qwen35_plus_or: 100/141 (cached ok)
+    gpt_free qwen35_plus_or: 110/141 (cached ok)
+    gpt_free qwen35_plus_or: 120/141 (cached ok)
+    gpt_free qwen35_plus_or: 130/141 (cached ok)
+    gpt_free qwen35_plus_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_free | qwen35_plus_or | task=binary_0 F1=0.759 LOO=0.759 thr=35.2
+  gpt_free | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.780 LOO=0.780 thr=30.2 -> similarity_database_with_gpt_features_v6score_qwen35_plus_or_binary_1_stats.json
+    gpt_law qwen35_plus_or: 10/141 (cached ok)
+    gpt_law qwen35_plus_or: 20/141 (cached ok)
+    gpt_law qwen35_plus_or: 30/141 (cached ok)
+    gpt_law qwen35_plus_or: 40/141 (cached ok)
+    gpt_law qwen35_plus_or: 50/141 (cached ok)
+    gpt_law qwen35_plus_or: 60/141 (cached ok)
+    gpt_law qwen35_plus_or: 70/141 (cached ok)
+    gpt_law qwen35_plus_or: 80/141 (cached ok)
+    gpt_law qwen35_plus_or: 90/141 (cached ok)
+    gpt_law qwen35_plus_or: 100/141 (cached ok)
+    gpt_law qwen35_plus_or: 110/141 (cached ok)
+    gpt_law qwen35_plus_or: 120/141 (cached ok)
+    gpt_law qwen35_plus_or: 130/141 (cached ok)
+    gpt_law qwen35_plus_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_law | qwen35_plus_or | task=binary_0 F1=0.747 LOO=0.739 thr=42.2
+  gpt_law | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.775 LOO=0.699 thr=40.2 -> similarity_database_with_gpt_law_features_v6score_qwen35_plus_or_binary_1_stats.json
+    hybrid_manual_gpt qwen35_plus_or: 10/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 20/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 30/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 40/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 50/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 60/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 70/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 80/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 90/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 100/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 110/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 120/141 (cached ok)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+  API error (qwen35_plus_or): Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{"error":{"message":"Input data may contain inappropriate content. For details, see: https://www.alibabacloud.com/help/en/model-studio/error-code#inappropriate-content","type":"data_inspection_failed","param":null,"code":"data_inspection_failed"},"id":"chatcmpl-9280add9-3698-9259-9584-81bebd7876c1","request_id":"9280add9-3698-9259-9584-81bebd7876c1"}', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_35t20KHquE3OdDxlzD0Zed7uENz'}
+    hybrid_manual_gpt qwen35_plus_or: 130/141
+    hybrid_manual_gpt qwen35_plus_or: 140/141
+    (row cache: skipped 128 ok rows; refetched 13 non-ok/missing)
+  hybrid_manual_gpt | qwen35_plus_or | task=binary_0 F1=0.780 LOO=0.772 thr=38.2
+  hybrid_manual_gpt | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.818 LOO=0.812 thr=32.2 -> similarity_database_hybrid_v6score_qwen35_plus_or_binary_1_stats.json
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+    hybrid_full_gpt qwen35_plus_or: 10/141
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+    hybrid_full_gpt qwen35_plus_or: 20/141
+    hybrid_full_gpt qwen35_plus_or: 30/141
+    hybrid_full_gpt qwen35_plus_or: 40/141
+    hybrid_full_gpt qwen35_plus_or: 50/141
+    hybrid_full_gpt qwen35_plus_or: 60/141
+    hybrid_full_gpt qwen35_plus_or: 70/141
+    hybrid_full_gpt qwen35_plus_or: 80/141
+    hybrid_full_gpt qwen35_plus_or: 90/141
+    hybrid_full_gpt qwen35_plus_or: 100/141
+    hybrid_full_gpt qwen35_plus_or: 110/141
+    hybrid_full_gpt qwen35_plus_or: 120/141
+⚠️  OpenRouter error attempt 1/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 20s...
+    hybrid_full_gpt qwen35_plus_or: 130/141
+    hybrid_full_gpt qwen35_plus_or: 140/141
+  hybrid_full_gpt | qwen35_plus_or | task=binary_0 F1=0.812 LOO=0.812 thr=42.2
+  hybrid_full_gpt | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.829 LOO=0.750 thr=35.2 -> similarity_database_hybrid_full_gpt_v6score_qwen35_plus_or_binary_1_stats.json
+
+Saved summary: /Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/v6_multimodel_summary_binary_0.json

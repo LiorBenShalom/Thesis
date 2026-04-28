@@ -6,10 +6,9 @@ on that model's pairs (drugs: 100 pairs, weapon: 141 pairs), and compute
 per-class recall + the 1<->3 off-diagonal rate. We then report mean ± std
 across the N=13 final panel — the unit is the model, not the pooled tally.
 
-The N=13 panel:
-  9 from v6_final (ORIGINAL minus llama3_70b + gemma3_27b)
-  + 4 from v6_pilot_5models (mistral_large_or, deepseek_r1_or,
-                             claude_haiku_4_5, kimi_k26_or)
+The N=13 panel — all under v6_final/ (unified):
+  9 ORIGINAL (minus llama3_70b + gemma3_27b)
+  4 candidates (mistral_large_or, deepseek_r1_or, claude_haiku_4_5, kimi_k26_or)
 
 Outputs (under experiments/results_paper/confusion_3way/):
   - cm_<domain>_<rep>.csv       3x3 confusion matrix (rows = GT, cols = pred)
@@ -25,15 +24,11 @@ EXP = Path(__file__).resolve().parents[2]
 OUT = EXP/"results_paper"/"confusion_3way"
 OUT.mkdir(parents=True, exist_ok=True)
 
-# 9 ORIGINAL live under v6_final; 4 candidates live under v6_pilot_5models.
+# All 13 panel models live under v6_final (unified after pilot merge)
 PROD_BASE = EXP/"v6_final"
-PILOT_BASE = EXP/"v6_pilot_5models"
-PILOT_MODELS = {"mistral_large_or", "deepseek_r1_or",
-                "claude_haiku_4_5", "kimi_k26_or"}
 
 def base_for(domain: str, model: str) -> Path:
-    root = PILOT_BASE if model in PILOT_MODELS else PROD_BASE
-    return root/domain/f"results_{domain}"
+    return PROD_BASE/domain/f"results_{domain}"
 
 DOMAINS = ["drugs", "weapon"]
 REP_PREFIX = {

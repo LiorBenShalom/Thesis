@@ -1,0 +1,104 @@
+
+============================================================
+  DOMAIN: weapon
+============================================================
+    facts kimi_k26_or: 10/141 (cached ok)
+    facts kimi_k26_or: 20/141 (cached ok)
+    facts kimi_k26_or: 30/141 (cached ok)
+    facts kimi_k26_or: 40/141 (cached ok)
+    facts kimi_k26_or: 50/141 (cached ok)
+    facts kimi_k26_or: 60/141 (cached ok)
+    facts kimi_k26_or: 70/141 (cached ok)
+    facts kimi_k26_or: 80/141 (cached ok)
+    facts kimi_k26_or: 90/141 (cached ok)
+    facts kimi_k26_or: 100/141 (cached ok)
+    facts kimi_k26_or: 110/141 (cached ok)
+    facts kimi_k26_or: 120/141 (cached ok)
+    facts kimi_k26_or: 130/141 (cached ok)
+    facts kimi_k26_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  facts | kimi_k26_or | task=binary_0 F1=0.832 LOO=0.832 thr=45.2
+  facts | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.833 LOO=0.800 thr=40.2 -> similarity_database_with_indicment_facts_v6score_kimi_k26_or_binary_1_stats.json
+    manual_fe kimi_k26_or: 10/141 (cached ok)
+    manual_fe kimi_k26_or: 20/141 (cached ok)
+    manual_fe kimi_k26_or: 30/141 (cached ok)
+    manual_fe kimi_k26_or: 40/141 (cached ok)
+    manual_fe kimi_k26_or: 50/141 (cached ok)
+    manual_fe kimi_k26_or: 60/141 (cached ok)
+    manual_fe kimi_k26_or: 70/141 (cached ok)
+    manual_fe kimi_k26_or: 80/141 (cached ok)
+    manual_fe kimi_k26_or: 90/141 (cached ok)
+    manual_fe kimi_k26_or: 100/141 (cached ok)
+    manual_fe kimi_k26_or: 110/141 (cached ok)
+    manual_fe kimi_k26_or: 120/141 (cached ok)
+    manual_fe kimi_k26_or: 130/141 (cached ok)
+    manual_fe kimi_k26_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  manual_fe | kimi_k26_or | task=binary_0 F1=0.808 LOO=0.808 thr=40.2
+  manual_fe | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.844 LOO=0.844 thr=30.2 -> similarity_database_fe_v6score_kimi_k26_or_binary_1_stats.json
+    fe_gpt_schema_v2 kimi_k26_or: 10/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 20/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 30/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 40/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 50/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 60/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 70/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 80/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 90/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 100/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 110/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 120/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 130/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema_v2 | kimi_k26_or | task=binary_0 F1=0.775 LOO=0.756 thr=48.2
+  fe_gpt_schema_v2 | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.829 LOO=0.829 thr=30.2 -> similarity_database_fe_gpt_schema_v2_v6score_kimi_k26_or_binary_1_stats.json
+    gpt_free kimi_k26_or: 10/141 (cached ok)
+    gpt_free kimi_k26_or: 20/141 (cached ok)
+    gpt_free kimi_k26_or: 30/141 (cached ok)
+    gpt_free kimi_k26_or: 40/141 (cached ok)
+    gpt_free kimi_k26_or: 50/141 (cached ok)
+    gpt_free kimi_k26_or: 60/141 (cached ok)
+    gpt_free kimi_k26_or: 70/141 (cached ok)
+    gpt_free kimi_k26_or: 80/141 (cached ok)
+    gpt_free kimi_k26_or: 90/141 (cached ok)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+
+
+    gpt_free kimi_k26_or: 100/141
+    gpt_free kimi_k26_or: 110/141
+    gpt_free kimi_k26_or: 120/141
+    gpt_free kimi_k26_or: 130/141
+    gpt_free kimi_k26_or: 140/141
+    (row cache: skipped 93 ok rows; refetched 48 non-ok/missing)
+  gpt_free | kimi_k26_or | task=binary_0 F1=0.759 LOO=0.759 thr=25.1
+  gpt_free | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.821 LOO=0.794 thr=20.1 -> similarity_database_with_gpt_features_v6score_kimi_k26_or_binary_1_stats.json
+    gpt_law kimi_k26_or: 10/141
+    gpt_law kimi_k26_or: 20/141
+    gpt_law kimi_k26_or: 30/141
+    gpt_law kimi_k26_or: 40/141
+    gpt_law kimi_k26_or: 50/141
+    gpt_law kimi_k26_or: 60/141
+    gpt_law kimi_k26_or: 70/141
+    gpt_law kimi_k26_or: 80/141
+    gpt_law kimi_k26_or: 90/141
+    gpt_law kimi_k26_or: 100/141
+    gpt_law kimi_k26_or: 110/141
+    gpt_law kimi_k26_or: 120/141
+    gpt_law kimi_k26_or: 130/141
+    gpt_law kimi_k26_or: 140/141
+  gpt_law | kimi_k26_or | task=binary_0 F1=0.757 LOO=0.757 thr=30.2
+  gpt_law | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.818 LOO=0.818 thr=25.1 -> similarity_database_with_gpt_law_features_v6score_kimi_k26_or_binary_1_stats.json
+    hybrid_manual_gpt kimi_k26_or: 10/141
+    hybrid_manual_gpt kimi_k26_or: 20/141
+    hybrid_manual_gpt kimi_k26_or: 30/141
+    hybrid_manual_gpt kimi_k26_or: 40/141

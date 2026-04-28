@@ -1,0 +1,109 @@
+
+============================================================
+  DOMAIN: drugs
+============================================================
+    facts kimi_k26_or: 10/100 (cached ok)
+    facts kimi_k26_or: 20/100 (cached ok)
+    facts kimi_k26_or: 30/100 (cached ok)
+    facts kimi_k26_or: 40/100 (cached ok)
+    facts kimi_k26_or: 50/100 (cached ok)
+    facts kimi_k26_or: 60/100 (cached ok)
+    facts kimi_k26_or: 70/100 (cached ok)
+    facts kimi_k26_or: 80/100 (cached ok)
+    facts kimi_k26_or: 90/100 (cached ok)
+    facts kimi_k26_or: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  facts | kimi_k26_or | task=binary_0 F1=0.882 LOO=0.857 thr=55.3
+  facts | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.821 LOO=0.796 thr=25.1 -> similarity_database_with_indicment_facts_v6score_kimi_k26_or_binary_1_stats.json
+    manual_fe kimi_k26_or: 10/100 (cached ok)
+    manual_fe kimi_k26_or: 20/100 (cached ok)
+    manual_fe kimi_k26_or: 30/100 (cached ok)
+    manual_fe kimi_k26_or: 40/100 (cached ok)
+    manual_fe kimi_k26_or: 50/100 (cached ok)
+    manual_fe kimi_k26_or: 60/100 (cached ok)
+    manual_fe kimi_k26_or: 70/100 (cached ok)
+    manual_fe kimi_k26_or: 80/100 (cached ok)
+    manual_fe kimi_k26_or: 90/100 (cached ok)
+    manual_fe kimi_k26_or: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  manual_fe | kimi_k26_or | task=binary_0 F1=0.899 LOO=0.899 thr=55.3
+  manual_fe | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.848 LOO=0.835 thr=40.2 -> similarity_database_fe_v6score_kimi_k26_or_binary_1_stats.json
+    fe_gpt_schema_v2 kimi_k26_or: 10/100 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 20/100 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 30/100 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 40/100 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 50/100 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 60/100 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 70/100 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 80/100 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 90/100 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema_v2 | kimi_k26_or | task=binary_0 F1=0.892 LOO=0.857 thr=48.2
+  fe_gpt_schema_v2 | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.830 LOO=0.804 thr=40.2 -> similarity_database_fe_gpt_schema_v2_v6score_kimi_k26_or_binary_1_stats.json
+    gpt_free kimi_k26_or: 10/100 (cached ok)
+    gpt_free kimi_k26_or: 20/100 (cached ok)
+    gpt_free kimi_k26_or: 30/100 (cached ok)
+    gpt_free kimi_k26_or: 40/100 (cached ok)
+    gpt_free kimi_k26_or: 50/100 (cached ok)
+    gpt_free kimi_k26_or: 60/100 (cached ok)
+    gpt_free kimi_k26_or: 70/100 (cached ok)
+    gpt_free kimi_k26_or: 80/100 (cached ok)
+    gpt_free kimi_k26_or: 90/100 (cached ok)
+    gpt_free kimi_k26_or: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_free | kimi_k26_or | task=binary_0 F1=0.882 LOO=0.853 thr=40.2
+  gpt_free | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.804 LOO=0.804 thr=20.1 -> similarity_database_with_gpt_features_v6score_kimi_k26_or_binary_1_stats.json
+    gpt_law kimi_k26_or: 10/100 (cached ok)
+    gpt_law kimi_k26_or: 20/100 (cached ok)
+    gpt_law kimi_k26_or: 30/100 (cached ok)
+    gpt_law kimi_k26_or: 40/100 (cached ok)
+    gpt_law kimi_k26_or: 50/100 (cached ok)
+    gpt_law kimi_k26_or: 60/100 (cached ok)
+    gpt_law kimi_k26_or: 70/100 (cached ok)
+    gpt_law kimi_k26_or: 80/100 (cached ok)
+    gpt_law kimi_k26_or: 90/100 (cached ok)
+    gpt_law kimi_k26_or: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  gpt_law | kimi_k26_or | task=binary_0 F1=0.870 LOO=0.817 thr=55.3
+  gpt_law | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.783 LOO=0.679 thr=20.1 -> similarity_database_with_gpt_law_features_v6score_kimi_k26_or_binary_1_stats.json
+    hybrid_manual_gpt kimi_k26_or: 10/100 (cached ok)
+    hybrid_manual_gpt kimi_k26_or: 20/100 (cached ok)
+    hybrid_manual_gpt kimi_k26_or: 30/100 (cached ok)
+    hybrid_manual_gpt kimi_k26_or: 40/100 (cached ok)
+    hybrid_manual_gpt kimi_k26_or: 50/100 (cached ok)
+    hybrid_manual_gpt kimi_k26_or: 60/100 (cached ok)
+    hybrid_manual_gpt kimi_k26_or: 70/100 (cached ok)
+    hybrid_manual_gpt kimi_k26_or: 80/100 (cached ok)
+    hybrid_manual_gpt kimi_k26_or: 90/100 (cached ok)
+    hybrid_manual_gpt kimi_k26_or: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  hybrid_manual_gpt | kimi_k26_or | task=binary_0 F1=0.892 LOO=0.880 thr=40.2
+  hybrid_manual_gpt | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.854 LOO=0.832 thr=20.1 -> similarity_database_hybrid_v6score_kimi_k26_or_binary_1_stats.json
+    hybrid_full_gpt kimi_k26_or: 10/100 (cached ok)
+    hybrid_full_gpt kimi_k26_or: 20/100 (cached ok)
+    hybrid_full_gpt kimi_k26_or: 30/100 (cached ok)
+    hybrid_full_gpt kimi_k26_or: 40/100 (cached ok)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+    hybrid_full_gpt kimi_k26_or: 50/100
+    hybrid_full_gpt kimi_k26_or: 60/100
+    hybrid_full_gpt kimi_k26_or: 70/100
+    hybrid_full_gpt kimi_k26_or: 80/100
+    hybrid_full_gpt kimi_k26_or: 90/100
+    hybrid_full_gpt kimi_k26_or: 100/100
+    (row cache: skipped 45 ok rows; refetched 55 non-ok/missing)
+  hybrid_full_gpt | kimi_k26_or | task=binary_0 F1=0.886 LOO=0.838 thr=40.2
+  hybrid_full_gpt | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.828 LOO=0.779 thr=25.1 -> similarity_database_hybrid_full_gpt_v6score_kimi_k26_or_binary_1_stats.json
+
+Saved summary: /Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/v6_multimodel_summary_binary_0.json

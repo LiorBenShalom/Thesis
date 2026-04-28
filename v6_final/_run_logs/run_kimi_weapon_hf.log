@@ -1,0 +1,34 @@
+
+============================================================
+  DOMAIN: weapon
+============================================================
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+
+
+✅ OpenRouter clients initialized (2 keys, round-robin)
+    hybrid_full_gpt kimi_k26_or: 10/141
+    hybrid_full_gpt kimi_k26_or: 20/141
+    hybrid_full_gpt kimi_k26_or: 30/141
+    hybrid_full_gpt kimi_k26_or: 40/141
+    hybrid_full_gpt kimi_k26_or: 50/141
+    hybrid_full_gpt kimi_k26_or: 60/141
+    hybrid_full_gpt kimi_k26_or: 70/141
+    hybrid_full_gpt kimi_k26_or: 80/141
+    hybrid_full_gpt kimi_k26_or: 90/141
+    hybrid_full_gpt kimi_k26_or: 100/141
+    hybrid_full_gpt kimi_k26_or: 110/141
+    hybrid_full_gpt kimi_k26_or: 120/141
+    hybrid_full_gpt kimi_k26_or: 130/141
+    hybrid_full_gpt kimi_k26_or: 140/141
+  hybrid_full_gpt | kimi_k26_or | task=binary_0 F1=0.778 LOO=0.778 thr=30.2
+  hybrid_full_gpt | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.835 LOO=0.835 thr=30.2 -> similarity_database_hybrid_full_gpt_v6score_kimi_k26_or_binary_1_stats.json
+
+Saved summary: /Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/v6_pilot_5models/v6_multimodel_summary_binary_0.json

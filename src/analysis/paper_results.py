@@ -17,7 +17,7 @@ import json, itertools
 from pathlib import Path
 from typing import Iterable
 import numpy as np, pandas as pd
-from sklearn.metrics import f1_score, average_precision_score
+from sklearn.metrics import f1_score, precision_score, recall_score, average_precision_score
 from sklearn.model_selection import StratifiedKFold
 from scipy.stats import wilcoxon
 from statsmodels.stats.multitest import multipletests
@@ -44,19 +44,25 @@ MODELS = ["gpt4","gpt5mini","gpt52","gpt51_thinking","claude_sonnet_4_6",
           "llama3_70b","qwen3_vl_235b_or"]
 TASKS = [0, 1]
 
-def best_f1(scores: np.ndarray, y: np.ndarray) -> float:
-    """Oracle best-threshold F1 (threshold picked on same data — upper bound)."""
-    if len(np.unique(y)) < 2: return np.nan
-    best = 0.0
+def best_f1(scores: np.ndarray, y: np.ndarray) -> tuple[float, float, float]:
+    """Oracle best-threshold F1 (threshold picked on same data — upper bound).
+    Returns (f1, precision, recall) at the best threshold."""
+    if len(np.unique(y)) < 2: return np.nan, np.nan, np.nan
+    best = 0.0; best_thr = None
     for thr in np.unique(scores):
-        best = max(best, f1_score(y, (scores >= thr).astype(int), zero_division=0))
-    return best
+        f = f1_score(y, (scores >= thr).astype(int), zero_division=0)
+        if f > best:
+            best = f; best_thr = thr
+    if best_thr is None: return np.nan, np.nan, np.nan
+    yhat = (scores >= best_thr).astype(int)
+    return best, precision_score(y, yhat, zero_division=0), recall_score(y, yhat, zero_division=0)
 
-def cv_f1(scores: np.ndarray, y: np.ndarray, k: int = 5, seed: int = 42) -> float:
+def cv_f1(scores: np.ndarray, y: np.ndarray, k: int = 5, seed: int = 42) -> tuple[float, float, float]:
     """Generalization F1: k-fold stratified CV. Tune threshold on train folds,
-    predict on held-out fold, pool all held-out predictions, compute F1."""
-    if len(np.unique(y)) < 2: return np.nan
-    if min(np.bincount(y)) < k: return np.nan
+    predict on held-out fold, pool all held-out predictions, compute F1.
+    Returns (f1, precision, recall) on pooled held-out predictions."""
+    if len(np.unique(y)) < 2: return np.nan, np.nan, np.nan
+    if min(np.bincount(y)) < k: return np.nan, np.nan, np.nan
     skf = StratifiedKFold(n_splits=k, shuffle=True, random_state=seed)
     pred = np.zeros(len(y), dtype=int)
     for tr, te in skf.split(scores, y):
@@ -66,20 +72,23 @@ def cv_f1(scores: np.ndarray, y: np.ndarray, k: int = 5, seed: int = 42) -> floa
             if f > best_f: best_f = f; best_t = t
         if best_t is None: best_t = np.median(scores[tr])
         pred[te] = (scores[te] >= best_t).astype(int)
-    return f1_score(y, pred, zero_division=0)
+    return (f1_score(y, pred, zero_division=0),
+            precision_score(y, pred, zero_division=0),
+            recall_score(y, pred, zero_division=0))
 
-def cell_metrics(base: Path, rep_prefix: str, model: str, task: int) -> tuple[float,float,float]:
+def cell_metrics(base: Path, rep_prefix: str, model: str, task: int):
+    nans = (np.nan,)*7
     p = base/f"{rep_prefix}_v6score_{model}_binary_0_preds.csv"
-    if not p.exists(): return np.nan, np.nan, np.nan
+    if not p.exists(): return nans
     df = pd.read_csv(p)
     df = df[df["status"] == "ok"] if "status" in df.columns else df
-    if len(df) < 20: return np.nan, np.nan, np.nan
+    if len(df) < 20: return nans
     y = df[f"similarity_binary_{task}"].astype(int).values
     sc = df["score"].astype(float).values
-    f1_oracle = best_f1(sc, y)
-    f1_cv = cv_f1(sc, y)
+    f1_oracle, prec_oracle, rec_oracle = best_f1(sc, y)
+    f1_cv_val, prec_cv, rec_cv = cv_f1(sc, y)
     ap = average_precision_score(y, sc) if y.sum() > 0 else np.nan
-    return f1_oracle, f1_cv, ap
+    return f1_oracle, prec_oracle, rec_oracle, f1_cv_val, prec_cv, rec_cv, ap
 
 def cohens_dz(d: np.ndarray) -> float:
     d = d[~np.isnan(d)]
@@ -97,9 +106,11 @@ for dom, base in DOMAINS.items():
     for rep, pref in REP_PREFIX.items():
         for m in MODELS:
             for t in TASKS:
-                f1o, f1cv, ap = cell_metrics(base, pref, m, t)
+                f1o, po, ro, f1cv, pcv, rcv, ap = cell_metrics(base, pref, m, t)
                 rows.append(dict(domain=dom, rep=rep, model=m, task=t,
-                                 F1=f1o, F1_CV=f1cv, AP_PR=ap))
+                                 F1=f1o, Precision=po, Recall=ro,
+                                 F1_CV=f1cv, Precision_CV=pcv, Recall_CV=rcv,
+                                 AP_PR=ap))
 full = pd.DataFrame(rows)
 full.to_csv(OUT/"full_results.csv", index=False)
 

@@ -13,8 +13,7 @@ from scipy.stats import wilcoxon
 from statsmodels.stats.multitest import multipletests
 
 EXP = Path(__file__).resolve().parents[2]
-ROOT_PROD = EXP/"v6_final"
-ROOT_PILOT = EXP/"v6_pilot_5models"
+ROOT = EXP/"v6_final"  # all 13 panel models live here after pilot merge
 OUT = EXP/"results_paper"/"confusion_3way"
 OUT.mkdir(parents=True, exist_ok=True)
 OUT_QWK = EXP/"results_paper_qwk"
@@ -25,8 +24,6 @@ PANEL = [
     "gemini_25_pro","gemini_3_flash","gemma4_31b_or","qwen3_vl_235b_or",
     "mistral_large_or","deepseek_r1_or","claude_haiku_4_5","kimi_k26_or",
 ]
-PILOT_SET = {"mistral_large_or","deepseek_r1_or","claude_haiku_4_5",
-             "kimi_k26_or","qwen35_plus_or","qwen3_235b_or"}
 REPS = [
     ("Raw-Facts",     "similarity_database_with_indicment_facts"),
     ("Manual",        "similarity_database_fe"),
@@ -40,7 +37,7 @@ T1, T2, T3 = ["Manual"], ["GPT-Schema","Hybrid-Manual","Hybrid-Full"], ["Raw-Fac
 TIER = {**{r:"T1" for r in T1}, **{r:"T2" for r in T2}, **{r:"T3" for r in T3}}
 
 def base_for(dom, m):
-    return (ROOT_PILOT if m in PILOT_SET else ROOT_PROD)/dom/f"results_{dom}"
+    return ROOT/dom/f"results_{dom}"
 
 def best_qwk(scores, gt):
     uniq = np.unique(scores)

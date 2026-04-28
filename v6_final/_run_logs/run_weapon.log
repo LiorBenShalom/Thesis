@@ -1,0 +1,886 @@
+
+============================================================
+  DOMAIN: weapon
+============================================================
+  (per-model workers: 4; each model runs its 7 reps sequentially; inner-parallel per task: 8; provider caps: OpenAI≤5 HF≤4 NIM≤5 Gemini≤3 Anthropic≤10)
+    facts kimi_k26_or: 10/141 (cached ok)
+    facts llama4_maverick_or: 10/141 (cached ok)
+    facts qwen35_plus_or: 10/141 (cached ok)
+    facts claude_haiku_4_5: 10/141 (cached ok)
+    facts kimi_k26_or: 20/141 (cached ok)
+    facts llama4_maverick_or: 20/141 (cached ok)
+    facts qwen35_plus_or: 20/141 (cached ok)
+    facts claude_haiku_4_5: 20/141 (cached ok)
+    facts kimi_k26_or: 30/141 (cached ok)
+    facts llama4_maverick_or: 30/141 (cached ok)
+    facts qwen35_plus_or: 30/141 (cached ok)
+    facts kimi_k26_or: 40/141 (cached ok)
+    facts claude_haiku_4_5: 30/141 (cached ok)
+    facts llama4_maverick_or: 40/141 (cached ok)
+    facts kimi_k26_or: 50/141 (cached ok)
+    facts qwen35_plus_or: 40/141 (cached ok)
+    facts claude_haiku_4_5: 40/141 (cached ok)
+    facts llama4_maverick_or: 50/141 (cached ok)
+    facts kimi_k26_or: 60/141 (cached ok)
+    facts qwen35_plus_or: 50/141 (cached ok)
+    facts llama4_maverick_or: 60/141 (cached ok)
+    facts claude_haiku_4_5: 50/141 (cached ok)
+    facts qwen35_plus_or: 60/141 (cached ok)
+    facts llama4_maverick_or: 70/141 (cached ok)
+    facts claude_haiku_4_5: 60/141 (cached ok)
+    facts llama4_maverick_or: 80/141 (cached ok)
+    facts qwen35_plus_or: 70/141 (cached ok)
+    facts claude_haiku_4_5: 70/141 (cached ok)
+    facts llama4_maverick_or: 90/141 (cached ok)
+    facts qwen35_plus_or: 80/141 (cached ok)
+    facts llama4_maverick_or: 100/141 (cached ok)
+    facts claude_haiku_4_5: 80/141 (cached ok)
+    facts qwen35_plus_or: 90/141 (cached ok)
+    facts llama4_maverick_or: 110/141 (cached ok)
+    facts claude_haiku_4_5: 90/141 (cached ok)
+    facts qwen35_plus_or: 100/141 (cached ok)
+    facts llama4_maverick_or: 120/141 (cached ok)
+    facts claude_haiku_4_5: 100/141 (cached ok)
+    facts qwen35_plus_or: 110/141 (cached ok)
+    facts llama4_maverick_or: 130/141 (cached ok)
+    facts claude_haiku_4_5: 110/141 (cached ok)
+    facts qwen35_plus_or: 120/141 (cached ok)
+    facts llama4_maverick_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+    facts claude_haiku_4_5: 120/141 (cached ok)
+    facts qwen35_plus_or: 130/141 (cached ok)
+    facts claude_haiku_4_5: 130/141 (cached ok)
+    facts qwen35_plus_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+    facts claude_haiku_4_5: 140/141 (cached ok)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+
+  facts | llama4_maverick_or | task=binary_0 F1=0.758 LOO=0.758 thr=60.3
+  facts | qwen35_plus_or | task=binary_0 F1=0.732 LOO=0.732 thr=42.2
+  facts | llama4_maverick_or | task=binary_1 (same scores, no extra API) F1=0.737 LOO=0.737 thr=60.3 -> similarity_database_with_indicment_facts_v6score_llama4_maverick_or_binary_1_stats.json
+  facts | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.809 LOO=0.809 thr=42.2 -> similarity_database_with_indicment_facts_v6score_qwen35_plus_or_binary_1_stats.json
+    (row cache: skipped 140 ok rows; refetched 1 non-ok/missing)
+  facts | claude_haiku_4_5 | task=binary_0 F1=0.755 LOO=0.755 thr=38.2
+  facts | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.769 LOO=0.769 thr=35.2 -> similarity_database_with_indicment_facts_v6score_claude_haiku_4_5_binary_1_stats.json
+    manual_fe claude_haiku_4_5: 10/141
+    manual_fe claude_haiku_4_5: 20/141
+    manual_fe claude_haiku_4_5: 30/141
+    manual_fe claude_haiku_4_5: 40/141
+    manual_fe claude_haiku_4_5: 50/141
+    manual_fe claude_haiku_4_5: 60/141
+    manual_fe claude_haiku_4_5: 70/141
+    facts kimi_k26_or: 70/141
+    manual_fe claude_haiku_4_5: 80/141
+    manual_fe claude_haiku_4_5: 90/141
+    manual_fe claude_haiku_4_5: 100/141
+    manual_fe claude_haiku_4_5: 110/141
+    manual_fe claude_haiku_4_5: 120/141
+    manual_fe claude_haiku_4_5: 130/141
+    manual_fe claude_haiku_4_5: 140/141
+  manual_fe | claude_haiku_4_5 | task=binary_0 F1=0.771 LOO=0.771 thr=38.2
+  manual_fe | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.841 LOO=0.739 thr=35.2 -> similarity_database_fe_v6score_claude_haiku_4_5_binary_1_stats.json
+    fe_gpt_schema_v2 claude_haiku_4_5: 10/141
+    fe_gpt_schema_v2 claude_haiku_4_5: 20/141
+    fe_gpt_schema_v2 claude_haiku_4_5: 30/141
+    manual_fe llama4_maverick_or: 10/141
+    fe_gpt_schema_v2 claude_haiku_4_5: 40/141
+    fe_gpt_schema_v2 claude_haiku_4_5: 50/141
+    fe_gpt_schema_v2 claude_haiku_4_5: 60/141
+    fe_gpt_schema_v2 claude_haiku_4_5: 70/141
+    fe_gpt_schema_v2 claude_haiku_4_5: 80/141
+    fe_gpt_schema_v2 claude_haiku_4_5: 90/141
+    fe_gpt_schema_v2 claude_haiku_4_5: 100/141
+    fe_gpt_schema_v2 claude_haiku_4_5: 110/141
+    fe_gpt_schema_v2 claude_haiku_4_5: 120/141
+    fe_gpt_schema_v2 claude_haiku_4_5: 130/141
+    manual_fe qwen35_plus_or: 10/141
+    fe_gpt_schema_v2 claude_haiku_4_5: 140/141
+  fe_gpt_schema_v2 | claude_haiku_4_5 | task=binary_0 F1=0.788 LOO=0.750 thr=38.2
+  fe_gpt_schema_v2 | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.797 LOO=0.769 thr=32.2 -> similarity_database_fe_gpt_schema_v2_v6score_claude_haiku_4_5_binary_1_stats.json
+    gpt_free claude_haiku_4_5: 10/141
+    facts kimi_k26_or: 80/141
+    gpt_free claude_haiku_4_5: 20/141
+    manual_fe llama4_maverick_or: 20/141
+    gpt_free claude_haiku_4_5: 30/141
+    gpt_free claude_haiku_4_5: 40/141
+    gpt_free claude_haiku_4_5: 50/141
+    gpt_free claude_haiku_4_5: 60/141
+    gpt_free claude_haiku_4_5: 70/141
+    gpt_free claude_haiku_4_5: 80/141
+    gpt_free claude_haiku_4_5: 90/141
+    gpt_free claude_haiku_4_5: 100/141
+    manual_fe qwen35_plus_or: 20/141
+    gpt_free claude_haiku_4_5: 110/141
+    gpt_free claude_haiku_4_5: 120/141
+    gpt_free claude_haiku_4_5: 130/141
+    gpt_free claude_haiku_4_5: 140/141
+  gpt_free | claude_haiku_4_5 | task=binary_0 F1=0.713 LOO=0.651 thr=32.2 (partial: 1 rows still invalid — delete those rows or re-run)
+  gpt_free | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.783 LOO=0.783 thr=25.1 -> similarity_database_with_gpt_features_v6score_claude_haiku_4_5_binary_1_stats.json
+    manual_fe llama4_maverick_or: 30/141
+    gpt_law claude_haiku_4_5: 10/141
+    gpt_law claude_haiku_4_5: 20/141
+    gpt_law claude_haiku_4_5: 30/141
+    gpt_law claude_haiku_4_5: 40/141
+    gpt_law claude_haiku_4_5: 50/141
+    gpt_law claude_haiku_4_5: 60/141
+    gpt_law claude_haiku_4_5: 70/141
+    gpt_law claude_haiku_4_5: 80/141
+    gpt_law claude_haiku_4_5: 90/141
+    gpt_law claude_haiku_4_5: 100/141
+    facts kimi_k26_or: 90/141
+    gpt_law claude_haiku_4_5: 110/141
+    manual_fe qwen35_plus_or: 30/141
+    gpt_law claude_haiku_4_5: 120/141
+    gpt_law claude_haiku_4_5: 130/141
+    manual_fe llama4_maverick_or: 40/141
+    gpt_law claude_haiku_4_5: 140/141
+  gpt_law | claude_haiku_4_5 | task=binary_0 F1=0.732 LOO=0.608 thr=28.1 (partial: 3 rows still invalid — delete those rows or re-run)
+  gpt_law | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.815 LOO=0.815 thr=28.1 -> similarity_database_with_gpt_law_features_v6score_claude_haiku_4_5_binary_1_stats.json
+    hybrid_manual_gpt claude_haiku_4_5: 10/141
+    hybrid_manual_gpt claude_haiku_4_5: 20/141
+    hybrid_manual_gpt claude_haiku_4_5: 30/141
+    hybrid_manual_gpt claude_haiku_4_5: 40/141
+    hybrid_manual_gpt claude_haiku_4_5: 50/141
+⚠️  OpenRouter error attempt 1/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 20s...
+    hybrid_manual_gpt claude_haiku_4_5: 60/141
+    hybrid_manual_gpt claude_haiku_4_5: 70/141
+    hybrid_manual_gpt claude_haiku_4_5: 80/141
+    hybrid_manual_gpt claude_haiku_4_5: 90/141
+    hybrid_manual_gpt claude_haiku_4_5: 100/141
+    hybrid_manual_gpt claude_haiku_4_5: 110/141
+    manual_fe qwen35_plus_or: 40/141
+    hybrid_manual_gpt claude_haiku_4_5: 120/141
+    hybrid_manual_gpt claude_haiku_4_5: 130/141
+    manual_fe llama4_maverick_or: 50/141
+    hybrid_manual_gpt claude_haiku_4_5: 140/141
+  hybrid_manual_gpt | claude_haiku_4_5 | task=binary_0 F1=0.705 LOO=0.653 thr=28.1
+  hybrid_manual_gpt | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.823 LOO=0.823 thr=28.1 -> similarity_database_hybrid_v6score_claude_haiku_4_5_binary_1_stats.json
+    hybrid_full_gpt claude_haiku_4_5: 10/141
+    hybrid_full_gpt claude_haiku_4_5: 20/141
+    hybrid_full_gpt claude_haiku_4_5: 30/141
+    facts kimi_k26_or: 100/141
+    hybrid_full_gpt claude_haiku_4_5: 40/141
+    hybrid_full_gpt claude_haiku_4_5: 50/141
+    hybrid_full_gpt claude_haiku_4_5: 60/141
+    hybrid_full_gpt claude_haiku_4_5: 70/141
+    hybrid_full_gpt claude_haiku_4_5: 80/141
+    hybrid_full_gpt claude_haiku_4_5: 90/141
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+    hybrid_full_gpt claude_haiku_4_5: 100/141
+    manual_fe qwen35_plus_or: 50/141
+    hybrid_full_gpt claude_haiku_4_5: 110/141
+    hybrid_full_gpt claude_haiku_4_5: 120/141
+    manual_fe llama4_maverick_or: 60/141
+    hybrid_full_gpt claude_haiku_4_5: 130/141
+    hybrid_full_gpt claude_haiku_4_5: 140/141
+  hybrid_full_gpt | claude_haiku_4_5 | task=binary_0 F1=0.774 LOO=0.774 thr=32.2
+  hybrid_full_gpt | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.806 LOO=0.787 thr=28.1 -> similarity_database_hybrid_full_gpt_v6score_claude_haiku_4_5_binary_1_stats.json
+    manual_fe qwen35_plus_or: 60/141
+    manual_fe llama4_maverick_or: 70/141
+    facts kimi_k26_or: 110/141
+    manual_fe llama4_maverick_or: 80/141
+    manual_fe qwen35_plus_or: 70/141
+    facts kimi_k26_or: 120/141
+    manual_fe llama4_maverick_or: 90/141
+    manual_fe qwen35_plus_or: 80/141
+    manual_fe llama4_maverick_or: 100/141
+    facts kimi_k26_or: 130/141
+    manual_fe qwen35_plus_or: 90/141
+    manual_fe llama4_maverick_or: 110/141
+    manual_fe qwen35_plus_or: 100/141
+    manual_fe llama4_maverick_or: 120/141
+    facts kimi_k26_or: 140/141
+    manual_fe qwen35_plus_or: 110/141
+    manual_fe llama4_maverick_or: 130/141
+    manual_fe llama4_maverick_or: 140/141
+  manual_fe | llama4_maverick_or | task=binary_0 F1=0.787 LOO=0.787 thr=65.3
+    (row cache: skipped 66 ok rows; refetched 75 non-ok/missing)
+  manual_fe | llama4_maverick_or | task=binary_1 (same scores, no extra API) F1=0.809 LOO=0.809 thr=40.2 -> similarity_database_fe_v6score_llama4_maverick_or_binary_1_stats.json
+  facts | kimi_k26_or | task=binary_0 F1=0.832 LOO=0.832 thr=45.2
+    manual_fe qwen35_plus_or: 120/141
+  facts | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.833 LOO=0.800 thr=40.2 -> similarity_database_with_indicment_facts_v6score_kimi_k26_or_binary_1_stats.json
+    manual_fe qwen35_plus_or: 130/141
+    fe_gpt_schema_v2 llama4_maverick_or: 10/141
+    fe_gpt_schema_v2 llama4_maverick_or: 20/141
+    manual_fe qwen35_plus_or: 140/141
+    manual_fe kimi_k26_or: 10/141
+  manual_fe | qwen35_plus_or | task=binary_0 F1=0.783 LOO=0.756 thr=45.2
+  manual_fe | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.851 LOO=0.851 thr=30.2 -> similarity_database_fe_v6score_qwen35_plus_or_binary_1_stats.json
+    fe_gpt_schema_v2 llama4_maverick_or: 30/141
+⚠️  OpenRouter error attempt 1/3: Expecting value: line 2677 column 1 (char 14718), retrying in 10s...
+    fe_gpt_schema_v2 llama4_maverick_or: 40/141
+    manual_fe kimi_k26_or: 20/141
+    fe_gpt_schema_v2 qwen35_plus_or: 10/141
+    fe_gpt_schema_v2 llama4_maverick_or: 50/141
+    manual_fe kimi_k26_or: 30/141
+    fe_gpt_schema_v2 qwen35_plus_or: 20/141
+    fe_gpt_schema_v2 llama4_maverick_or: 60/141
+    fe_gpt_schema_v2 qwen35_plus_or: 30/141
+    fe_gpt_schema_v2 llama4_maverick_or: 70/141
+    manual_fe kimi_k26_or: 40/141
+    fe_gpt_schema_v2 qwen35_plus_or: 40/141
+    fe_gpt_schema_v2 llama4_maverick_or: 80/141
+    manual_fe kimi_k26_or: 50/141
+    fe_gpt_schema_v2 llama4_maverick_or: 90/141
+    fe_gpt_schema_v2 qwen35_plus_or: 50/141
+    fe_gpt_schema_v2 llama4_maverick_or: 100/141
+    fe_gpt_schema_v2 qwen35_plus_or: 60/141
+    manual_fe kimi_k26_or: 60/141
+    fe_gpt_schema_v2 llama4_maverick_or: 110/141
+    fe_gpt_schema_v2 qwen35_plus_or: 70/141
+    manual_fe kimi_k26_or: 70/141
+    fe_gpt_schema_v2 llama4_maverick_or: 120/141
+    fe_gpt_schema_v2 qwen35_plus_or: 80/141
+    fe_gpt_schema_v2 llama4_maverick_or: 130/141
+    manual_fe kimi_k26_or: 80/141
+    fe_gpt_schema_v2 qwen35_plus_or: 90/141
+    fe_gpt_schema_v2 llama4_maverick_or: 140/141
+  fe_gpt_schema_v2 | llama4_maverick_or | task=binary_0 F1=0.723 LOO=0.723 thr=60.3
+  fe_gpt_schema_v2 | llama4_maverick_or | task=binary_1 (same scores, no extra API) F1=0.812 LOO=0.812 thr=40.2 -> similarity_database_fe_gpt_schema_v2_v6score_llama4_maverick_or_binary_1_stats.json
+    manual_fe kimi_k26_or: 90/141
+    fe_gpt_schema_v2 qwen35_plus_or: 100/141
+    gpt_free llama4_maverick_or: 10/141
+    fe_gpt_schema_v2 qwen35_plus_or: 110/141
+    manual_fe kimi_k26_or: 100/141
+    gpt_free llama4_maverick_or: 20/141
+    fe_gpt_schema_v2 qwen35_plus_or: 120/141
+    gpt_free llama4_maverick_or: 30/141
+    fe_gpt_schema_v2 qwen35_plus_or: 130/141
+    manual_fe kimi_k26_or: 110/141
+    gpt_free llama4_maverick_or: 40/141
+    gpt_free llama4_maverick_or: 50/141
+    fe_gpt_schema_v2 qwen35_plus_or: 140/141
+  fe_gpt_schema_v2 | qwen35_plus_or | task=binary_0 F1=0.744 LOO=0.691 thr=60.3
+  fe_gpt_schema_v2 | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.800 LOO=0.748 thr=30.2 -> similarity_database_fe_gpt_schema_v2_v6score_qwen35_plus_or_binary_1_stats.json
+    manual_fe kimi_k26_or: 120/141
+    gpt_free llama4_maverick_or: 60/141
+    gpt_free qwen35_plus_or: 10/141
+⚠️  OpenRouter error attempt 1/3: Expecting value: line 261 column 1 (char 1430), retrying in 10s...
+    gpt_free llama4_maverick_or: 70/141
+    manual_fe kimi_k26_or: 130/141
+    gpt_free qwen35_plus_or: 20/141
+    gpt_free llama4_maverick_or: 80/141
+    gpt_free qwen35_plus_or: 30/141
+    gpt_free llama4_maverick_or: 90/141
+    manual_fe kimi_k26_or: 140/141
+    gpt_free llama4_maverick_or: 100/141
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+    gpt_free qwen35_plus_or: 40/141
+    gpt_free llama4_maverick_or: 110/141
+  manual_fe | kimi_k26_or | task=binary_0 F1=0.808 LOO=0.808 thr=40.2
+  manual_fe | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.844 LOO=0.844 thr=30.2 -> similarity_database_fe_v6score_kimi_k26_or_binary_1_stats.json
+    gpt_free qwen35_plus_or: 50/141
+⚠️  OpenRouter error attempt 1/3: Request timed out., retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 10s...
+    gpt_free llama4_maverick_or: 120/141
+⚠️  OpenRouter error attempt 1/3: 'NoneType' object is not subscriptable, retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: 'NoneType' object is not subscriptable, retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 1/3: 'NoneType' object is not subscriptable, retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 20s...
+  API error (llama4_maverick_or): Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{"message":"invalid request error trace_id: 8c2b0599e9cd47392a3bcc1f59e97694","type":"invalid_request_error"}\n', 'provider_name': 'Novita', 'is_byok': False}}, 'user_id': 'user_34SdXlSgimWZnkwi5mqeUILRGF2'}
+    gpt_free qwen35_plus_or: 60/141
+    fe_gpt_schema_v2 kimi_k26_or: 10/141
+    gpt_free llama4_maverick_or: 130/141
+⚠️  OpenRouter error attempt 1/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 20s...
+  API error (qwen35_plus_or): Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{"error":{"message":"Input data may contain inappropriate content. For details, see: https://www.alibabacloud.com/help/en/model-studio/error-code#inappropriate-content","type":"data_inspection_failed","param":null,"code":"data_inspection_failed"},"id":"chatcmpl-65090961-c013-9f18-b3f7-6b2d61990765","request_id":"65090961-c013-9f18-b3f7-6b2d61990765"}', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_34SdXlSgimWZnkwi5mqeUILRGF2'}
+    gpt_free qwen35_plus_or: 70/141
+    gpt_free llama4_maverick_or: 140/141
+
+============================================================
+  DOMAIN: weapon
+============================================================
+  (per-model workers: 4; each model runs its 7 reps sequentially; inner-parallel per task: 12; provider caps: OpenAI≤5 HF≤4 NIM≤5 Gemini≤3 Anthropic≤10)
+    facts llama4_maverick_or: 10/141 (cached ok)
+    facts qwen35_plus_or: 10/141 (cached ok)
+    facts kimi_k26_or: 10/141 (cached ok)
+    facts claude_haiku_4_5: 10/141 (cached ok)
+    facts llama4_maverick_or: 20/141 (cached ok)
+    facts kimi_k26_or: 20/141 (cached ok)
+    facts qwen35_plus_or: 20/141 (cached ok)
+    facts claude_haiku_4_5: 20/141 (cached ok)
+    facts llama4_maverick_or: 30/141 (cached ok)
+    facts kimi_k26_or: 30/141 (cached ok)
+    facts qwen35_plus_or: 30/141 (cached ok)
+    facts claude_haiku_4_5: 30/141 (cached ok)
+    facts llama4_maverick_or: 40/141 (cached ok)
+    facts kimi_k26_or: 40/141 (cached ok)
+    facts qwen35_plus_or: 40/141 (cached ok)
+    facts claude_haiku_4_5: 40/141 (cached ok)
+    facts llama4_maverick_or: 50/141 (cached ok)
+    facts kimi_k26_or: 50/141 (cached ok)
+    facts qwen35_plus_or: 50/141 (cached ok)
+    facts llama4_maverick_or: 60/141 (cached ok)
+    facts claude_haiku_4_5: 50/141 (cached ok)
+    facts kimi_k26_or: 60/141 (cached ok)
+    facts qwen35_plus_or: 60/141 (cached ok)
+    facts llama4_maverick_or: 70/141 (cached ok)
+    facts claude_haiku_4_5: 60/141 (cached ok)
+    facts kimi_k26_or: 70/141 (cached ok)
+    facts llama4_maverick_or: 80/141 (cached ok)
+    facts qwen35_plus_or: 70/141 (cached ok)
+    facts claude_haiku_4_5: 70/141 (cached ok)
+    facts llama4_maverick_or: 90/141 (cached ok)
+    facts kimi_k26_or: 80/141 (cached ok)
+    facts qwen35_plus_or: 80/141 (cached ok)
+    facts claude_haiku_4_5: 80/141 (cached ok)
+    facts llama4_maverick_or: 100/141 (cached ok)
+    facts kimi_k26_or: 90/141 (cached ok)
+    facts qwen35_plus_or: 90/141 (cached ok)
+    facts llama4_maverick_or: 110/141 (cached ok)
+    facts claude_haiku_4_5: 90/141 (cached ok)
+    facts kimi_k26_or: 100/141 (cached ok)
+    facts qwen35_plus_or: 100/141 (cached ok)
+    facts llama4_maverick_or: 120/141 (cached ok)
+    facts claude_haiku_4_5: 100/141 (cached ok)
+    facts kimi_k26_or: 110/141 (cached ok)
+    facts qwen35_plus_or: 110/141 (cached ok)
+    facts llama4_maverick_or: 130/141 (cached ok)
+    facts claude_haiku_4_5: 110/141 (cached ok)
+    facts kimi_k26_or: 120/141 (cached ok)
+    facts qwen35_plus_or: 120/141 (cached ok)
+    facts llama4_maverick_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+    facts claude_haiku_4_5: 120/141 (cached ok)
+    facts kimi_k26_or: 130/141 (cached ok)
+    facts qwen35_plus_or: 130/141 (cached ok)
+    facts kimi_k26_or: 140/141 (cached ok)
+    facts claude_haiku_4_5: 130/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+    facts qwen35_plus_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+    facts claude_haiku_4_5: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  facts | llama4_maverick_or | task=binary_0 F1=0.758 LOO=0.758 thr=60.3
+  facts | qwen35_plus_or | task=binary_0 F1=0.732 LOO=0.732 thr=42.2
+  facts | claude_haiku_4_5 | task=binary_0 F1=0.755 LOO=0.755 thr=38.2
+  facts | kimi_k26_or | task=binary_0 F1=0.832 LOO=0.832 thr=45.2
+  facts | llama4_maverick_or | task=binary_1 (same scores, no extra API) F1=0.737 LOO=0.737 thr=60.3 -> similarity_database_with_indicment_facts_v6score_llama4_maverick_or_binary_1_stats.json
+    manual_fe llama4_maverick_or: 10/141 (cached ok)
+    manual_fe llama4_maverick_or: 20/141 (cached ok)
+    manual_fe llama4_maverick_or: 30/141 (cached ok)
+    manual_fe llama4_maverick_or: 40/141 (cached ok)
+    manual_fe llama4_maverick_or: 50/141 (cached ok)
+    manual_fe llama4_maverick_or: 60/141 (cached ok)
+    manual_fe llama4_maverick_or: 70/141 (cached ok)
+    manual_fe llama4_maverick_or: 80/141 (cached ok)
+    manual_fe llama4_maverick_or: 90/141 (cached ok)
+    manual_fe llama4_maverick_or: 100/141 (cached ok)
+    manual_fe llama4_maverick_or: 110/141 (cached ok)
+    manual_fe llama4_maverick_or: 120/141 (cached ok)
+    manual_fe llama4_maverick_or: 130/141 (cached ok)
+    manual_fe llama4_maverick_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  facts | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.769 LOO=0.769 thr=35.2 -> similarity_database_with_indicment_facts_v6score_claude_haiku_4_5_binary_1_stats.json
+    manual_fe claude_haiku_4_5: 10/141 (cached ok)
+    manual_fe claude_haiku_4_5: 20/141 (cached ok)
+  facts | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.809 LOO=0.809 thr=42.2 -> similarity_database_with_indicment_facts_v6score_qwen35_plus_or_binary_1_stats.json
+    manual_fe claude_haiku_4_5: 30/141 (cached ok)
+    manual_fe qwen35_plus_or: 10/141 (cached ok)
+    manual_fe claude_haiku_4_5: 40/141 (cached ok)
+    manual_fe qwen35_plus_or: 20/141 (cached ok)
+    manual_fe claude_haiku_4_5: 50/141 (cached ok)
+    manual_fe qwen35_plus_or: 30/141 (cached ok)
+    manual_fe claude_haiku_4_5: 60/141 (cached ok)
+    manual_fe qwen35_plus_or: 40/141 (cached ok)
+    manual_fe claude_haiku_4_5: 70/141 (cached ok)
+    manual_fe qwen35_plus_or: 50/141 (cached ok)
+    manual_fe claude_haiku_4_5: 80/141 (cached ok)
+    manual_fe qwen35_plus_or: 60/141 (cached ok)
+    manual_fe claude_haiku_4_5: 90/141 (cached ok)
+    manual_fe qwen35_plus_or: 70/141 (cached ok)
+    manual_fe claude_haiku_4_5: 100/141 (cached ok)
+    manual_fe qwen35_plus_or: 80/141 (cached ok)
+    manual_fe claude_haiku_4_5: 110/141 (cached ok)
+    manual_fe qwen35_plus_or: 90/141 (cached ok)
+    manual_fe claude_haiku_4_5: 120/141 (cached ok)
+    manual_fe qwen35_plus_or: 100/141 (cached ok)
+    manual_fe claude_haiku_4_5: 130/141 (cached ok)
+    manual_fe qwen35_plus_or: 110/141 (cached ok)
+    manual_fe claude_haiku_4_5: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+    manual_fe qwen35_plus_or: 120/141 (cached ok)
+    manual_fe qwen35_plus_or: 130/141 (cached ok)
+  facts | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.833 LOO=0.800 thr=40.2 -> similarity_database_with_indicment_facts_v6score_kimi_k26_or_binary_1_stats.json
+    manual_fe qwen35_plus_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+    manual_fe kimi_k26_or: 10/141 (cached ok)
+    manual_fe kimi_k26_or: 20/141 (cached ok)
+    manual_fe kimi_k26_or: 30/141 (cached ok)
+    manual_fe kimi_k26_or: 40/141 (cached ok)
+    manual_fe kimi_k26_or: 50/141 (cached ok)
+    manual_fe kimi_k26_or: 60/141 (cached ok)
+    manual_fe kimi_k26_or: 70/141 (cached ok)
+    manual_fe kimi_k26_or: 80/141 (cached ok)
+    manual_fe kimi_k26_or: 90/141 (cached ok)
+    manual_fe kimi_k26_or: 100/141 (cached ok)
+    manual_fe kimi_k26_or: 110/141 (cached ok)
+    manual_fe kimi_k26_or: 120/141 (cached ok)
+    manual_fe kimi_k26_or: 130/141 (cached ok)
+    manual_fe kimi_k26_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  manual_fe | llama4_maverick_or | task=binary_0 F1=0.787 LOO=0.787 thr=65.3
+  manual_fe | claude_haiku_4_5 | task=binary_0 F1=0.771 LOO=0.771 thr=38.2
+  manual_fe | qwen35_plus_or | task=binary_0 F1=0.783 LOO=0.756 thr=45.2
+  manual_fe | kimi_k26_or | task=binary_0 F1=0.808 LOO=0.808 thr=40.2
+  manual_fe | llama4_maverick_or | task=binary_1 (same scores, no extra API) F1=0.809 LOO=0.809 thr=40.2 -> similarity_database_fe_v6score_llama4_maverick_or_binary_1_stats.json
+    fe_gpt_schema_v2 llama4_maverick_or: 10/141 (cached ok)
+    fe_gpt_schema_v2 llama4_maverick_or: 20/141 (cached ok)
+    fe_gpt_schema_v2 llama4_maverick_or: 30/141 (cached ok)
+    fe_gpt_schema_v2 llama4_maverick_or: 40/141 (cached ok)
+    fe_gpt_schema_v2 llama4_maverick_or: 50/141 (cached ok)
+    fe_gpt_schema_v2 llama4_maverick_or: 60/141 (cached ok)
+    fe_gpt_schema_v2 llama4_maverick_or: 70/141 (cached ok)
+    fe_gpt_schema_v2 llama4_maverick_or: 80/141 (cached ok)
+    fe_gpt_schema_v2 llama4_maverick_or: 90/141 (cached ok)
+    fe_gpt_schema_v2 llama4_maverick_or: 100/141 (cached ok)
+    fe_gpt_schema_v2 llama4_maverick_or: 110/141 (cached ok)
+    fe_gpt_schema_v2 llama4_maverick_or: 120/141 (cached ok)
+    fe_gpt_schema_v2 llama4_maverick_or: 130/141 (cached ok)
+    fe_gpt_schema_v2 llama4_maverick_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  manual_fe | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.841 LOO=0.739 thr=35.2 -> similarity_database_fe_v6score_claude_haiku_4_5_binary_1_stats.json
+    fe_gpt_schema_v2 claude_haiku_4_5: 10/141 (cached ok)
+    fe_gpt_schema_v2 claude_haiku_4_5: 20/141 (cached ok)
+  manual_fe | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.851 LOO=0.851 thr=30.2 -> similarity_database_fe_v6score_qwen35_plus_or_binary_1_stats.json
+    fe_gpt_schema_v2 claude_haiku_4_5: 30/141 (cached ok)
+    fe_gpt_schema_v2 claude_haiku_4_5: 40/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 10/141 (cached ok)
+    fe_gpt_schema_v2 claude_haiku_4_5: 50/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 20/141 (cached ok)
+    fe_gpt_schema_v2 claude_haiku_4_5: 60/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 30/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 40/141 (cached ok)
+    fe_gpt_schema_v2 claude_haiku_4_5: 70/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 50/141 (cached ok)
+    fe_gpt_schema_v2 claude_haiku_4_5: 80/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 60/141 (cached ok)
+    fe_gpt_schema_v2 claude_haiku_4_5: 90/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 70/141 (cached ok)
+    fe_gpt_schema_v2 claude_haiku_4_5: 100/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 80/141 (cached ok)
+    fe_gpt_schema_v2 claude_haiku_4_5: 110/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 90/141 (cached ok)
+    fe_gpt_schema_v2 claude_haiku_4_5: 120/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 100/141 (cached ok)
+    fe_gpt_schema_v2 claude_haiku_4_5: 130/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 110/141 (cached ok)
+    fe_gpt_schema_v2 claude_haiku_4_5: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+    fe_gpt_schema_v2 qwen35_plus_or: 120/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 130/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  manual_fe | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.844 LOO=0.844 thr=30.2 -> similarity_database_fe_v6score_kimi_k26_or_binary_1_stats.json
+    fe_gpt_schema_v2 kimi_k26_or: 10/141 (cached ok)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+
+  fe_gpt_schema_v2 | llama4_maverick_or | task=binary_0 F1=0.723 LOO=0.723 thr=60.3
+  fe_gpt_schema_v2 | claude_haiku_4_5 | task=binary_0 F1=0.788 LOO=0.750 thr=38.2
+  fe_gpt_schema_v2 | qwen35_plus_or | task=binary_0 F1=0.744 LOO=0.691 thr=60.3
+  fe_gpt_schema_v2 | llama4_maverick_or | task=binary_1 (same scores, no extra API) F1=0.812 LOO=0.812 thr=40.2 -> similarity_database_fe_gpt_schema_v2_v6score_llama4_maverick_or_binary_1_stats.json
+    gpt_free llama4_maverick_or: 10/141 (cached ok)
+    gpt_free llama4_maverick_or: 20/141 (cached ok)
+    gpt_free llama4_maverick_or: 30/141 (cached ok)
+    gpt_free llama4_maverick_or: 40/141 (cached ok)
+    gpt_free llama4_maverick_or: 50/141 (cached ok)
+    gpt_free llama4_maverick_or: 60/141 (cached ok)
+    gpt_free llama4_maverick_or: 70/141 (cached ok)
+    gpt_free llama4_maverick_or: 80/141 (cached ok)
+    gpt_free llama4_maverick_or: 90/141 (cached ok)
+    gpt_free llama4_maverick_or: 100/141 (cached ok)
+    gpt_free llama4_maverick_or: 110/141 (cached ok)
+  fe_gpt_schema_v2 | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.797 LOO=0.769 thr=32.2 -> similarity_database_fe_gpt_schema_v2_v6score_claude_haiku_4_5_binary_1_stats.json
+    gpt_free llama4_maverick_or: 120/141 (cached ok)
+    gpt_free claude_haiku_4_5: 10/141 (cached ok)
+    gpt_free llama4_maverick_or: 130/141 (cached ok)
+  fe_gpt_schema_v2 | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.800 LOO=0.748 thr=30.2 -> similarity_database_fe_gpt_schema_v2_v6score_qwen35_plus_or_binary_1_stats.json
+    gpt_free llama4_maverick_or: 140/141 (cached ok)
+    gpt_free claude_haiku_4_5: 20/141 (cached ok)
+    gpt_free qwen35_plus_or: 10/141 (cached ok)
+    gpt_free claude_haiku_4_5: 30/141 (cached ok)
+    gpt_free qwen35_plus_or: 20/141 (cached ok)
+    gpt_free claude_haiku_4_5: 40/141 (cached ok)
+    gpt_free qwen35_plus_or: 30/141 (cached ok)
+    gpt_free qwen35_plus_or: 40/141 (cached ok)
+    gpt_free claude_haiku_4_5: 50/141 (cached ok)
+    gpt_free qwen35_plus_or: 50/141 (cached ok)
+    gpt_free claude_haiku_4_5: 60/141 (cached ok)
+    gpt_free qwen35_plus_or: 60/141 (cached ok)
+    gpt_free claude_haiku_4_5: 70/141 (cached ok)
+    gpt_free qwen35_plus_or: 70/141 (cached ok)
+    gpt_free claude_haiku_4_5: 80/141 (cached ok)
+    gpt_free claude_haiku_4_5: 90/141 (cached ok)
+    gpt_free claude_haiku_4_5: 100/141 (cached ok)
+    gpt_free claude_haiku_4_5: 110/141 (cached ok)
+    gpt_free claude_haiku_4_5: 120/141 (cached ok)
+    gpt_free claude_haiku_4_5: 130/141 (cached ok)
+    gpt_free claude_haiku_4_5: 140/141 (cached ok)
+    (row cache: skipped 140 ok rows; refetched 1 non-ok/missing)
+  gpt_free | claude_haiku_4_5 | task=binary_0 F1=0.719 LOO=0.659 thr=32.2
+  gpt_free | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.786 LOO=0.786 thr=25.1 -> similarity_database_with_gpt_features_v6score_claude_haiku_4_5_binary_1_stats.json
+    gpt_law claude_haiku_4_5: 10/141 (cached ok)
+    gpt_law claude_haiku_4_5: 20/141 (cached ok)
+    gpt_law claude_haiku_4_5: 30/141 (cached ok)
+    gpt_law claude_haiku_4_5: 40/141 (cached ok)
+    gpt_law claude_haiku_4_5: 50/141 (cached ok)
+    gpt_law claude_haiku_4_5: 60/141 (cached ok)
+    gpt_law claude_haiku_4_5: 70/141 (cached ok)
+    gpt_law claude_haiku_4_5: 80/141 (cached ok)
+    gpt_law claude_haiku_4_5: 90/141 (cached ok)
+    gpt_law claude_haiku_4_5: 100/141 (cached ok)
+    gpt_law claude_haiku_4_5: 110/141 (cached ok)
+    gpt_law claude_haiku_4_5: 120/141 (cached ok)
+    gpt_law claude_haiku_4_5: 130/141 (cached ok)
+    gpt_law claude_haiku_4_5: 140/141
+    (row cache: skipped 138 ok rows; refetched 3 non-ok/missing)
+  gpt_law | claude_haiku_4_5 | task=binary_0 F1=0.727 LOO=0.604 thr=38.2
+    fe_gpt_schema_v2 kimi_k26_or: 20/141
+  gpt_law | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.815 LOO=0.815 thr=28.1 -> similarity_database_with_gpt_law_features_v6score_claude_haiku_4_5_binary_1_stats.json
+    hybrid_manual_gpt claude_haiku_4_5: 10/141 (cached ok)
+    hybrid_manual_gpt claude_haiku_4_5: 20/141 (cached ok)
+    hybrid_manual_gpt claude_haiku_4_5: 30/141 (cached ok)
+    hybrid_manual_gpt claude_haiku_4_5: 40/141 (cached ok)
+    hybrid_manual_gpt claude_haiku_4_5: 50/141 (cached ok)
+    hybrid_manual_gpt claude_haiku_4_5: 60/141 (cached ok)
+    hybrid_manual_gpt claude_haiku_4_5: 70/141 (cached ok)
+    hybrid_manual_gpt claude_haiku_4_5: 80/141 (cached ok)
+    hybrid_manual_gpt claude_haiku_4_5: 90/141 (cached ok)
+    hybrid_manual_gpt claude_haiku_4_5: 100/141 (cached ok)
+    hybrid_manual_gpt claude_haiku_4_5: 110/141 (cached ok)
+    hybrid_manual_gpt claude_haiku_4_5: 120/141 (cached ok)
+    hybrid_manual_gpt claude_haiku_4_5: 130/141 (cached ok)
+    hybrid_manual_gpt claude_haiku_4_5: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+⚠️  OpenRouter error attempt 1/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 10s...
+    (row cache: skipped 140 ok rows; refetched 1 non-ok/missing)
+  hybrid_manual_gpt | claude_haiku_4_5 | task=binary_0 F1=0.705 LOO=0.653 thr=28.1
+⚠️  OpenRouter error attempt 2/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 20s...
+  gpt_free | llama4_maverick_or | task=binary_0 F1=0.647 LOO=0.647 thr=30.2
+  hybrid_manual_gpt | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.823 LOO=0.823 thr=28.1 -> similarity_database_hybrid_v6score_claude_haiku_4_5_binary_1_stats.json
+    hybrid_full_gpt claude_haiku_4_5: 10/141 (cached ok)
+    hybrid_full_gpt claude_haiku_4_5: 20/141 (cached ok)
+    hybrid_full_gpt claude_haiku_4_5: 30/141 (cached ok)
+    hybrid_full_gpt claude_haiku_4_5: 40/141 (cached ok)
+    hybrid_full_gpt claude_haiku_4_5: 50/141 (cached ok)
+    hybrid_full_gpt claude_haiku_4_5: 60/141 (cached ok)
+    hybrid_full_gpt claude_haiku_4_5: 70/141 (cached ok)
+    hybrid_full_gpt claude_haiku_4_5: 80/141 (cached ok)
+    hybrid_full_gpt claude_haiku_4_5: 90/141 (cached ok)
+    hybrid_full_gpt claude_haiku_4_5: 100/141 (cached ok)
+    hybrid_full_gpt claude_haiku_4_5: 110/141 (cached ok)
+    hybrid_full_gpt claude_haiku_4_5: 120/141 (cached ok)
+    hybrid_full_gpt claude_haiku_4_5: 130/141 (cached ok)
+  gpt_free | llama4_maverick_or | task=binary_1 (same scores, no extra API) F1=0.774 LOO=0.774 thr=30.2 -> similarity_database_with_gpt_features_v6score_llama4_maverick_or_binary_1_stats.json
+    hybrid_full_gpt claude_haiku_4_5: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  hybrid_full_gpt | claude_haiku_4_5 | task=binary_0 F1=0.774 LOO=0.774 thr=32.2
+  hybrid_full_gpt | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.806 LOO=0.787 thr=28.1 -> similarity_database_hybrid_full_gpt_v6score_claude_haiku_4_5_binary_1_stats.json
+    gpt_free qwen35_plus_or: 80/141
+    fe_gpt_schema_v2 kimi_k26_or: 30/141
+    gpt_law llama4_maverick_or: 10/141
+    gpt_free qwen35_plus_or: 90/141
+    gpt_law llama4_maverick_or: 20/141
+⚠️  OpenRouter error attempt 1/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 1/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 10s...
+  API error (qwen35_plus_or): Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{"error":{"message":"Input data may contain inappropriate content. For details, see: https://www.alibabacloud.com/help/en/model-studio/error-code#inappropriate-content","type":"data_inspection_failed","param":null,"code":"data_inspection_failed"},"id":"chatcmpl-f6f29ebc-80e5-9802-90fe-cd7cbda79dcb","request_id":"f6f29ebc-80e5-9802-90fe-cd7cbda79dcb"}', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_34SdXlSgimWZnkwi5mqeUILRGF2'}
+    fe_gpt_schema_v2 kimi_k26_or: 40/141
+⚠️  OpenRouter error attempt 2/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 20s...
+  API error (qwen35_plus_or): Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{"error":{"message":"Input data may contain inappropriate content. For details, see: https://www.alibabacloud.com/help/en/model-studio/error-code#inappropriate-content","type":"data_inspection_failed","param":null,"code":"data_inspection_failed"},"id":"chatcmpl-61192882-282a-9615-a7bd-684301d7859f","request_id":"61192882-282a-9615-a7bd-684301d7859f"}', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_35t20KHquE3OdDxlzD0Zed7uENz'}
+    gpt_free qwen35_plus_or: 100/141
+    gpt_law llama4_maverick_or: 30/141
+⚠️  OpenRouter error attempt 1/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 20s...
+  API error (qwen35_plus_or): Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{"error":{"message":"Input data may contain inappropriate content. For details, see: https://www.alibabacloud.com/help/en/model-studio/error-code#inappropriate-content","type":"data_inspection_failed","param":null,"code":"data_inspection_failed"},"id":"chatcmpl-26874435-0541-9844-8ea9-2b128f8d2ce9","request_id":"26874435-0541-9844-8ea9-2b128f8d2ce9"}', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_34SdXlSgimWZnkwi5mqeUILRGF2'}
+    fe_gpt_schema_v2 kimi_k26_or: 50/141
+    gpt_law llama4_maverick_or: 40/141
+    gpt_free qwen35_plus_or: 110/141
+    gpt_law llama4_maverick_or: 50/141
+⚠️  OpenRouter error attempt 1/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 10s...
+    gpt_free qwen35_plus_or: 120/141
+    gpt_law llama4_maverick_or: 60/141
+    fe_gpt_schema_v2 kimi_k26_or: 60/141
+    gpt_free qwen35_plus_or: 130/141
+    gpt_law llama4_maverick_or: 70/141
+    gpt_free qwen35_plus_or: 140/141
+    (row cache: skipped 70 ok rows; refetched 71 non-ok/missing)
+  gpt_free | qwen35_plus_or | task=binary_0 F1=0.759 LOO=0.759 thr=35.2
+    gpt_law llama4_maverick_or: 80/141
+  gpt_free | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.780 LOO=0.780 thr=30.2 -> similarity_database_with_gpt_features_v6score_qwen35_plus_or_binary_1_stats.json
+    fe_gpt_schema_v2 kimi_k26_or: 70/141
+    gpt_law llama4_maverick_or: 90/141
+    gpt_law qwen35_plus_or: 10/141
+    fe_gpt_schema_v2 kimi_k26_or: 80/141
+    gpt_law llama4_maverick_or: 100/141
+    gpt_law qwen35_plus_or: 20/141
+    gpt_law llama4_maverick_or: 110/141
+    fe_gpt_schema_v2 kimi_k26_or: 90/141
+    gpt_law llama4_maverick_or: 120/141
+    gpt_law qwen35_plus_or: 30/141
+    gpt_law llama4_maverick_or: 130/141
+    fe_gpt_schema_v2 kimi_k26_or: 100/141
+    gpt_law qwen35_plus_or: 40/141
+    gpt_law llama4_maverick_or: 140/141
+  gpt_law | llama4_maverick_or | task=binary_0 F1=0.722 LOO=0.722 thr=40.2
+  gpt_law | llama4_maverick_or | task=binary_1 (same scores, no extra API) F1=0.772 LOO=0.772 thr=40.2 -> similarity_database_with_gpt_law_features_v6score_llama4_maverick_or_binary_1_stats.json
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+    gpt_law qwen35_plus_or: 50/141
+    fe_gpt_schema_v2 kimi_k26_or: 110/141
+    hybrid_manual_gpt llama4_maverick_or: 10/141
+    gpt_law qwen35_plus_or: 60/141
+    hybrid_manual_gpt llama4_maverick_or: 20/141
+    fe_gpt_schema_v2 kimi_k26_or: 120/141
+    gpt_law qwen35_plus_or: 70/141
+    hybrid_manual_gpt llama4_maverick_or: 30/141
+    gpt_law qwen35_plus_or: 80/141
+    fe_gpt_schema_v2 kimi_k26_or: 130/141
+    hybrid_manual_gpt llama4_maverick_or: 40/141
+    gpt_law qwen35_plus_or: 90/141
+    hybrid_manual_gpt llama4_maverick_or: 50/141
+    hybrid_manual_gpt llama4_maverick_or: 60/141
+    gpt_law qwen35_plus_or: 100/141
+    hybrid_manual_gpt llama4_maverick_or: 70/141
+    gpt_law qwen35_plus_or: 110/141
+    hybrid_manual_gpt llama4_maverick_or: 80/141
+    fe_gpt_schema_v2 kimi_k26_or: 140/141
+    hybrid_manual_gpt llama4_maverick_or: 90/141
+    hybrid_manual_gpt llama4_maverick_or: 100/141
+    gpt_law qwen35_plus_or: 120/141
+    hybrid_manual_gpt llama4_maverick_or: 110/141
+    gpt_law qwen35_plus_or: 130/141
+    (row cache: skipped 17 ok rows; refetched 124 non-ok/missing)
+    hybrid_manual_gpt llama4_maverick_or: 120/141
+  fe_gpt_schema_v2 | kimi_k26_or | task=binary_0 F1=0.775 LOO=0.756 thr=48.2
+  fe_gpt_schema_v2 | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.829 LOO=0.829 thr=30.2 -> similarity_database_fe_gpt_schema_v2_v6score_kimi_k26_or_binary_1_stats.json
+    hybrid_manual_gpt llama4_maverick_or: 130/141
+    gpt_law qwen35_plus_or: 140/141
+  gpt_law | qwen35_plus_or | task=binary_0 F1=0.747 LOO=0.739 thr=42.2
+  gpt_law | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.775 LOO=0.699 thr=40.2 -> similarity_database_with_gpt_law_features_v6score_qwen35_plus_or_binary_1_stats.json
+    hybrid_manual_gpt llama4_maverick_or: 140/141
+  hybrid_manual_gpt | llama4_maverick_or | task=binary_0 F1=0.743 LOO=0.743 thr=40.2
+  hybrid_manual_gpt | llama4_maverick_or | task=binary_1 (same scores, no extra API) F1=0.818 LOO=0.818 thr=40.2 -> similarity_database_hybrid_v6score_llama4_maverick_or_binary_1_stats.json
+    gpt_free kimi_k26_or: 10/141
+    hybrid_manual_gpt qwen35_plus_or: 10/141
+    hybrid_full_gpt llama4_maverick_or: 10/141
+    hybrid_manual_gpt qwen35_plus_or: 20/141
+    hybrid_full_gpt llama4_maverick_or: 20/141
+    gpt_free kimi_k26_or: 20/141
+    hybrid_manual_gpt qwen35_plus_or: 30/141
+    hybrid_full_gpt llama4_maverick_or: 30/141
+    hybrid_manual_gpt qwen35_plus_or: 40/141
+    gpt_free kimi_k26_or: 30/141
+    hybrid_full_gpt llama4_maverick_or: 40/141
+    gpt_free kimi_k26_or: 40/141
+    hybrid_manual_gpt qwen35_plus_or: 50/141
+    hybrid_full_gpt llama4_maverick_or: 50/141
+    hybrid_full_gpt llama4_maverick_or: 60/141
+    hybrid_manual_gpt qwen35_plus_or: 60/141
+    gpt_free kimi_k26_or: 50/141
+    hybrid_full_gpt llama4_maverick_or: 70/141
+    hybrid_manual_gpt qwen35_plus_or: 70/141
+    hybrid_full_gpt llama4_maverick_or: 80/141
+    gpt_free kimi_k26_or: 60/141
+    hybrid_manual_gpt qwen35_plus_or: 80/141
+    hybrid_full_gpt llama4_maverick_or: 90/141
+    hybrid_manual_gpt qwen35_plus_or: 90/141
+    hybrid_full_gpt llama4_maverick_or: 100/141
+    gpt_free kimi_k26_or: 70/141
+    hybrid_manual_gpt qwen35_plus_or: 100/141
+    hybrid_full_gpt llama4_maverick_or: 110/141
+⚠️  OpenRouter error attempt 1/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 10s...
+    hybrid_full_gpt llama4_maverick_or: 120/141
+    gpt_free kimi_k26_or: 80/141
+    hybrid_manual_gpt qwen35_plus_or: 110/141
+
+============================================================
+  DOMAIN: weapon
+============================================================
+  (per-model workers: 2; each model runs its 7 reps sequentially; inner-parallel per task: 12; provider caps: OpenAI≤5 HF≤4 NIM≤5 Gemini≤3 Anthropic≤10)
+    facts qwen35_plus_or: 10/141 (cached ok)
+    facts kimi_k26_or: 10/141 (cached ok)
+    facts qwen35_plus_or: 20/141 (cached ok)    facts kimi_k26_or: 20/141 (cached ok)
+
+    facts kimi_k26_or: 30/141 (cached ok)
+    facts qwen35_plus_or: 30/141 (cached ok)
+    facts kimi_k26_or: 40/141 (cached ok)
+    facts qwen35_plus_or: 40/141 (cached ok)
+    facts kimi_k26_or: 50/141 (cached ok)
+    facts qwen35_plus_or: 50/141 (cached ok)
+    facts kimi_k26_or: 60/141 (cached ok)
+    facts qwen35_plus_or: 60/141 (cached ok)
+    facts kimi_k26_or: 70/141 (cached ok)
+    facts qwen35_plus_or: 70/141 (cached ok)
+    facts kimi_k26_or: 80/141 (cached ok)
+    facts qwen35_plus_or: 80/141 (cached ok)
+    facts kimi_k26_or: 90/141 (cached ok)
+    facts qwen35_plus_or: 90/141 (cached ok)
+    facts kimi_k26_or: 100/141 (cached ok)
+    facts qwen35_plus_or: 100/141 (cached ok)
+    facts kimi_k26_or: 110/141 (cached ok)
+    facts qwen35_plus_or: 110/141 (cached ok)
+    facts kimi_k26_or: 120/141 (cached ok)
+    facts qwen35_plus_or: 120/141 (cached ok)
+    facts kimi_k26_or: 130/141 (cached ok)
+    facts qwen35_plus_or: 130/141 (cached ok)
+    facts kimi_k26_or: 140/141 (cached ok)
+    facts qwen35_plus_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  facts | kimi_k26_or | task=binary_0 F1=0.832 LOO=0.832 thr=45.2
+  facts | qwen35_plus_or | task=binary_0 F1=0.732 LOO=0.732 thr=42.2
+  facts | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.833 LOO=0.800 thr=40.2 -> similarity_database_with_indicment_facts_v6score_kimi_k26_or_binary_1_stats.json
+  facts | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.809 LOO=0.809 thr=42.2 -> similarity_database_with_indicment_facts_v6score_qwen35_plus_or_binary_1_stats.json
+    manual_fe kimi_k26_or: 10/141 (cached ok)
+    manual_fe qwen35_plus_or: 10/141 (cached ok)
+    manual_fe kimi_k26_or: 20/141 (cached ok)
+    manual_fe qwen35_plus_or: 20/141 (cached ok)
+    manual_fe kimi_k26_or: 30/141 (cached ok)
+    manual_fe qwen35_plus_or: 30/141 (cached ok)
+    manual_fe kimi_k26_or: 40/141 (cached ok)
+    manual_fe qwen35_plus_or: 40/141 (cached ok)
+    manual_fe kimi_k26_or: 50/141 (cached ok)
+    manual_fe qwen35_plus_or: 50/141 (cached ok)
+    manual_fe kimi_k26_or: 60/141 (cached ok)
+    manual_fe qwen35_plus_or: 60/141 (cached ok)
+    manual_fe kimi_k26_or: 70/141 (cached ok)
+    manual_fe qwen35_plus_or: 70/141 (cached ok)
+    manual_fe kimi_k26_or: 80/141 (cached ok)
+    manual_fe qwen35_plus_or: 80/141 (cached ok)
+    manual_fe kimi_k26_or: 90/141 (cached ok)
+    manual_fe qwen35_plus_or: 90/141 (cached ok)
+    manual_fe kimi_k26_or: 100/141 (cached ok)
+    manual_fe qwen35_plus_or: 100/141 (cached ok)
+    manual_fe kimi_k26_or: 110/141 (cached ok)
+    manual_fe qwen35_plus_or: 110/141 (cached ok)
+    manual_fe kimi_k26_or: 120/141 (cached ok)
+    manual_fe qwen35_plus_or: 120/141 (cached ok)
+    manual_fe kimi_k26_or: 130/141 (cached ok)
+    manual_fe qwen35_plus_or: 130/141 (cached ok)
+    manual_fe kimi_k26_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+    manual_fe qwen35_plus_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  manual_fe | kimi_k26_or | task=binary_0 F1=0.808 LOO=0.808 thr=40.2
+  manual_fe | qwen35_plus_or | task=binary_0 F1=0.783 LOO=0.756 thr=45.2
+  manual_fe | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.844 LOO=0.844 thr=30.2 -> similarity_database_fe_v6score_kimi_k26_or_binary_1_stats.json
+    fe_gpt_schema_v2 kimi_k26_or: 10/141 (cached ok)
+  manual_fe | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.851 LOO=0.851 thr=30.2 -> similarity_database_fe_v6score_qwen35_plus_or_binary_1_stats.json
+    fe_gpt_schema_v2 kimi_k26_or: 20/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 10/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 30/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 20/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 40/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 30/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 50/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 40/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 60/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 50/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 70/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 60/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 80/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 70/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 90/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 80/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 100/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 90/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 110/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 100/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 120/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 110/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 130/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 120/141 (cached ok)
+    fe_gpt_schema_v2 kimi_k26_or: 140/141 (cached ok)
+    fe_gpt_schema_v2 qwen35_plus_or: 130/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+    fe_gpt_schema_v2 qwen35_plus_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  fe_gpt_schema_v2 | kimi_k26_or | task=binary_0 F1=0.775 LOO=0.756 thr=48.2
+  fe_gpt_schema_v2 | qwen35_plus_or | task=binary_0 F1=0.744 LOO=0.691 thr=60.3
+  fe_gpt_schema_v2 | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.829 LOO=0.829 thr=30.2 -> similarity_database_fe_gpt_schema_v2_v6score_kimi_k26_or_binary_1_stats.json
+    gpt_free kimi_k26_or: 10/141 (cached ok)
+    gpt_free kimi_k26_or: 20/141 (cached ok)
+    gpt_free kimi_k26_or: 30/141 (cached ok)
+  fe_gpt_schema_v2 | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.800 LOO=0.748 thr=30.2 -> similarity_database_fe_gpt_schema_v2_v6score_qwen35_plus_or_binary_1_stats.json
+    gpt_free kimi_k26_or: 40/141 (cached ok)
+    gpt_free qwen35_plus_or: 10/141 (cached ok)
+    gpt_free kimi_k26_or: 50/141 (cached ok)
+    gpt_free kimi_k26_or: 60/141 (cached ok)
+    gpt_free qwen35_plus_or: 20/141 (cached ok)
+    gpt_free kimi_k26_or: 70/141 (cached ok)
+    gpt_free qwen35_plus_or: 30/141 (cached ok)
+    gpt_free kimi_k26_or: 80/141 (cached ok)
+    gpt_free qwen35_plus_or: 40/141 (cached ok)
+    gpt_free qwen35_plus_or: 50/141 (cached ok)
+    gpt_free qwen35_plus_or: 60/141 (cached ok)
+    gpt_free qwen35_plus_or: 70/141 (cached ok)
+    gpt_free qwen35_plus_or: 80/141 (cached ok)
+    gpt_free qwen35_plus_or: 90/141 (cached ok)
+    gpt_free qwen35_plus_or: 100/141 (cached ok)
+    gpt_free qwen35_plus_or: 110/141 (cached ok)
+    gpt_free qwen35_plus_or: 120/141 (cached ok)
+    gpt_free qwen35_plus_or: 130/141 (cached ok)
+    gpt_free qwen35_plus_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+  gpt_free | qwen35_plus_or | task=binary_0 F1=0.759 LOO=0.759 thr=35.2
+  gpt_free | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.780 LOO=0.780 thr=30.2 -> similarity_database_with_gpt_features_v6score_qwen35_plus_or_binary_1_stats.json
+    gpt_law qwen35_plus_or: 10/141 (cached ok)
+    gpt_law qwen35_plus_or: 20/141 (cached ok)
+    gpt_law qwen35_plus_or: 30/141 (cached ok)
+    gpt_law qwen35_plus_or: 40/141 (cached ok)
+    gpt_law qwen35_plus_or: 50/141 (cached ok)
+    gpt_law qwen35_plus_or: 60/141 (cached ok)
+    gpt_law qwen35_plus_or: 70/141 (cached ok)
+    gpt_law qwen35_plus_or: 80/141 (cached ok)
+    gpt_law qwen35_plus_or: 90/141 (cached ok)
+    gpt_law qwen35_plus_or: 100/141 (cached ok)
+    gpt_law qwen35_plus_or: 110/141 (cached ok)
+    gpt_law qwen35_plus_or: 120/141 (cached ok)
+    gpt_law qwen35_plus_or: 130/141 (cached ok)
+    gpt_law qwen35_plus_or: 140/141 (cached ok)
+    (row cache: skipped 141 ok rows; refetched 0 non-ok/missing)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+  gpt_law | qwen35_plus_or | task=binary_0 F1=0.747 LOO=0.739 thr=42.2
+  gpt_law | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.775 LOO=0.699 thr=40.2 -> similarity_database_with_gpt_law_features_v6score_qwen35_plus_or_binary_1_stats.json
+    hybrid_manual_gpt qwen35_plus_or: 10/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 20/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 30/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 40/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 50/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 60/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 70/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 80/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 90/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 100/141 (cached ok)
+    hybrid_manual_gpt qwen35_plus_or: 110/141 (cached ok)
+    gpt_free kimi_k26_or: 90/141
+    hybrid_manual_gpt qwen35_plus_or: 120/141
+⚠️  OpenRouter error attempt 1/3: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': , retrying in 10s...

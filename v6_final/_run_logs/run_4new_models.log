@@ -1,0 +1,407 @@
+
+============================================================
+  REP: facts  (drugs → weapon per model)
+============================================================
+  (parallel: up to 4 workers; each runs drugs then weapon; inner-parallel per model: 8; provider caps: OpenAI≤5 HF≤4 NIM≤5 Gemini≤3)
+    facts qwen35_plus_or: 10/100 (cached ok)
+    facts claude_haiku_4_5: 10/100 (cached ok)
+    facts llama4_maverick_or: 10/100 (cached ok)
+    facts claude_haiku_4_5: 20/100 (cached ok)
+    facts llama4_maverick_or: 20/100 (cached ok)
+    facts llama4_maverick_or: 30/100 (cached ok)
+    facts llama4_maverick_or: 40/100 (cached ok)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+
+
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+
+
+    facts claude_haiku_4_5: 30/100
+    facts llama4_maverick_or: 50/100
+    facts claude_haiku_4_5: 40/100
+    facts llama4_maverick_or: 60/100
+    facts llama4_maverick_or: 70/100
+    facts claude_haiku_4_5: 50/100
+    facts llama4_maverick_or: 80/100
+    facts qwen35_plus_or: 20/100
+    facts claude_haiku_4_5: 60/100
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+    facts llama4_maverick_or: 90/100
+
+============================================================
+  REP: facts  (drugs → weapon per model)
+============================================================
+  (parallel: up to 4 workers; each runs drugs then weapon; inner-parallel per model: 16; provider caps: OpenAI≤5 HF≤4 NIM≤5 Gemini≤3)
+    facts qwen35_plus_or: 10/100 (cached ok)
+    facts claude_haiku_4_5: 10/100 (cached ok)
+    facts llama4_maverick_or: 10/100 (cached ok)
+    facts qwen35_plus_or: 20/100 (cached ok)
+    facts claude_haiku_4_5: 20/100 (cached ok)
+    facts llama4_maverick_or: 20/100 (cached ok)
+    facts claude_haiku_4_5: 30/100 (cached ok)
+    facts llama4_maverick_or: 30/100 (cached ok)
+    facts claude_haiku_4_5: 40/100 (cached ok)
+    facts llama4_maverick_or: 40/100 (cached ok)
+    facts claude_haiku_4_5: 50/100 (cached ok)
+    facts llama4_maverick_or: 50/100 (cached ok)
+    facts claude_haiku_4_5: 60/100 (cached ok)
+    facts llama4_maverick_or: 60/100 (cached ok)
+    facts llama4_maverick_or: 70/100 (cached ok)
+    facts llama4_maverick_or: 80/100 (cached ok)
+    facts llama4_maverick_or: 90/100 (cached ok)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+
+
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+
+
+
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+
+
+✅ OpenRouter clients initialized (2 keys, round-robin)
+
+
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+    facts claude_haiku_4_5: 70/100
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+    facts claude_haiku_4_5: 80/100
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_35t20KHquE3OdDxlzD0Zed7uENz'}
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_35t20KHquE3OdDxlzD0Zed7uENz'}
+    facts claude_haiku_4_5: 90/100
+
+============================================================
+  REP: facts  (drugs → weapon per model)
+============================================================
+  (parallel: up to 4 workers; each runs drugs then weapon; inner-parallel per model: 16; provider caps: OpenAI≤5 HF≤4 NIM≤5 Gemini≤3)
+    facts qwen35_plus_or: 10/100 (cached ok)
+    facts llama4_maverick_or: 10/100 (cached ok)
+    facts claude_haiku_4_5: 10/100 (cached ok)
+    facts qwen35_plus_or: 20/100 (cached ok)
+    facts llama4_maverick_or: 20/100 (cached ok)
+    facts claude_haiku_4_5: 20/100 (cached ok)
+    facts llama4_maverick_or: 30/100 (cached ok)
+    facts claude_haiku_4_5: 30/100 (cached ok)
+    facts llama4_maverick_or: 40/100 (cached ok)
+    facts claude_haiku_4_5: 40/100 (cached ok)
+    facts llama4_maverick_or: 50/100 (cached ok)
+    facts claude_haiku_4_5: 50/100 (cached ok)
+    facts llama4_maverick_or: 60/100 (cached ok)
+    facts claude_haiku_4_5: 60/100 (cached ok)
+    facts llama4_maverick_or: 70/100 (cached ok)
+    facts claude_haiku_4_5: 70/100 (cached ok)
+    facts llama4_maverick_or: 80/100 (cached ok)
+    facts claude_haiku_4_5: 80/100 (cached ok)
+    facts llama4_maverick_or: 90/100 (cached ok)
+    facts claude_haiku_4_5: 90/100 (cached ok)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+
+
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+
+
+
+
+
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+    facts qwen35_plus_or: 30/100
+    facts kimi_k26_or: 10/100
+    facts claude_haiku_4_5: 100/100
+    (row cache: skipped 97 ok rows; refetched 3 non-ok/missing)
+  facts | claude_haiku_4_5 | task=binary_0 F1=0.873 LOO=0.873 thr=42.2 (partial: 1 rows still invalid — delete those rows or re-run)
+  facts | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.792 LOO=0.758 thr=32.2 -> similarity_database_with_indicment_facts_v6score_claude_haiku_4_5_binary_1_stats.json
+    facts claude_haiku_4_5: 10/141
+    facts kimi_k26_or: 20/100
+    facts qwen35_plus_or: 40/100
+    facts claude_haiku_4_5: 20/141
+    facts llama4_maverick_or: 100/100
+    (row cache: skipped 90 ok rows; refetched 10 non-ok/missing)
+  facts | llama4_maverick_or | task=binary_0 F1=0.862 LOO=0.767 thr=70.4
+    facts claude_haiku_4_5: 30/141
+  facts | llama4_maverick_or | task=binary_1 (same scores, no extra API) F1=0.830 LOO=0.830 thr=40.2 -> similarity_database_with_indicment_facts_v6score_llama4_maverick_or_binary_1_stats.json
+    facts qwen35_plus_or: 50/100
+    facts claude_haiku_4_5: 40/141
+    facts claude_haiku_4_5: 50/141
+    facts claude_haiku_4_5: 60/141
+    facts claude_haiku_4_5: 70/141
+    facts kimi_k26_or: 30/100
+    facts claude_haiku_4_5: 80/141
+    facts llama4_maverick_or: 10/141
+    facts claude_haiku_4_5: 90/141
+    facts claude_haiku_4_5: 100/141
+    facts qwen35_plus_or: 60/100
+    facts claude_haiku_4_5: 110/141
+    facts claude_haiku_4_5: 120/141
+    facts llama4_maverick_or: 20/141
+    facts claude_haiku_4_5: 130/141
+    facts qwen35_plus_or: 70/100
+    facts llama4_maverick_or: 30/141
+    facts kimi_k26_or: 40/100
+    facts claude_haiku_4_5: 140/141
+  facts | claude_haiku_4_5 | task=binary_0 F1=0.756 LOO=0.756 thr=38.2 (partial: 6 rows still invalid — delete those rows or re-run)
+    facts llama4_maverick_or: 40/141
+  facts | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.770 LOO=0.770 thr=35.2 -> similarity_database_with_indicment_facts_v6score_claude_haiku_4_5_binary_1_stats.json
+    facts qwen35_plus_or: 80/100
+    facts llama4_maverick_or: 50/141
+
+============================================================
+  REP: facts  (drugs → weapon per model)
+============================================================
+  (parallel: up to 4 workers; each runs drugs then weapon; inner-parallel per model: 12; provider caps: OpenAI≤5 HF≤4 NIM≤5 Gemini≤3)
+    facts kimi_k26_or: 10/100 (cached ok)    facts llama4_maverick_or: 10/100 (cached ok)
+
+    facts qwen35_plus_or: 10/100 (cached ok)
+    facts claude_haiku_4_5: 10/100 (cached ok)
+    facts kimi_k26_or: 20/100 (cached ok)
+    facts llama4_maverick_or: 20/100 (cached ok)
+    facts qwen35_plus_or: 20/100 (cached ok)
+    facts claude_haiku_4_5: 20/100 (cached ok)
+    facts kimi_k26_or: 30/100 (cached ok)
+    facts llama4_maverick_or: 30/100 (cached ok)
+    facts qwen35_plus_or: 30/100 (cached ok)
+    facts claude_haiku_4_5: 30/100 (cached ok)
+    facts kimi_k26_or: 40/100 (cached ok)
+    facts llama4_maverick_or: 40/100 (cached ok)
+    facts qwen35_plus_or: 40/100 (cached ok)
+    facts claude_haiku_4_5: 40/100 (cached ok)
+    facts llama4_maverick_or: 50/100 (cached ok)
+    facts qwen35_plus_or: 50/100 (cached ok)
+    facts claude_haiku_4_5: 50/100 (cached ok)
+    facts llama4_maverick_or: 60/100 (cached ok)
+    facts qwen35_plus_or: 60/100 (cached ok)
+    facts claude_haiku_4_5: 60/100 (cached ok)
+    facts llama4_maverick_or: 70/100 (cached ok)
+    facts qwen35_plus_or: 70/100 (cached ok)
+    facts claude_haiku_4_5: 70/100 (cached ok)
+    facts llama4_maverick_or: 80/100 (cached ok)
+    facts qwen35_plus_or: 80/100 (cached ok)
+    facts claude_haiku_4_5: 80/100 (cached ok)
+    facts llama4_maverick_or: 90/100 (cached ok)
+    facts claude_haiku_4_5: 90/100 (cached ok)
+    facts llama4_maverick_or: 100/100 (cached ok)
+    (row cache: skipped 100 ok rows; refetched 0 non-ok/missing)
+  facts | llama4_maverick_or | task=binary_0 F1=0.862 LOO=0.767 thr=70.4
+  facts | llama4_maverick_or | task=binary_1 (same scores, no extra API) F1=0.830 LOO=0.830 thr=40.2 -> similarity_database_with_indicment_facts_v6score_llama4_maverick_or_binary_1_stats.json
+    facts llama4_maverick_or: 10/141 (cached ok)
+    facts llama4_maverick_or: 20/141 (cached ok)
+    facts llama4_maverick_or: 30/141 (cached ok)
+    facts llama4_maverick_or: 40/141 (cached ok)
+    facts llama4_maverick_or: 50/141 (cached ok)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+✅ OpenRouter clients initialized (2 keys, round-robin)✅ OpenRouter clients initialized (2 keys, round-robin)
+
+
+    facts claude_haiku_4_5: 100/100
+    (row cache: skipped 99 ok rows; refetched 1 non-ok/missing)
+  facts | claude_haiku_4_5 | task=binary_0 F1=0.873 LOO=0.873 thr=42.2
+    facts kimi_k26_or: 50/100
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+  facts | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.792 LOO=0.766 thr=32.2 -> similarity_database_with_indicment_facts_v6score_claude_haiku_4_5_binary_1_stats.json
+    facts claude_haiku_4_5: 10/141 (cached ok)
+    facts claude_haiku_4_5: 20/141 (cached ok)
+    facts claude_haiku_4_5: 30/141 (cached ok)
+    facts claude_haiku_4_5: 40/141 (cached ok)
+    facts claude_haiku_4_5: 50/141 (cached ok)
+    facts claude_haiku_4_5: 60/141 (cached ok)
+    facts claude_haiku_4_5: 70/141 (cached ok)
+    facts claude_haiku_4_5: 80/141 (cached ok)
+    facts claude_haiku_4_5: 90/141 (cached ok)
+    facts claude_haiku_4_5: 100/141 (cached ok)
+    facts claude_haiku_4_5: 110/141 (cached ok)
+    facts claude_haiku_4_5: 120/141 (cached ok)
+    facts claude_haiku_4_5: 130/141 (cached ok)
+    facts kimi_k26_or: 60/100
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+    facts qwen35_plus_or: 90/100
+    facts claude_haiku_4_5: 140/141
+    (row cache: skipped 135 ok rows; refetched 6 non-ok/missing)
+    facts llama4_maverick_or: 60/141
+  facts | claude_haiku_4_5 | task=binary_0 F1=0.750 LOO=0.750 thr=38.2 (partial: 1 rows still invalid — delete those rows or re-run)
+  facts | claude_haiku_4_5 | task=binary_1 (same scores, no extra API) F1=0.766 LOO=0.766 thr=35.2 -> similarity_database_with_indicment_facts_v6score_claude_haiku_4_5_binary_1_stats.json
+    facts qwen35_plus_or: 100/100
+    (row cache: skipped 89 ok rows; refetched 11 non-ok/missing)
+  facts | qwen35_plus_or | task=binary_0 F1=0.877 LOO=0.794 thr=42.2
+  facts | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.839 LOO=0.839 thr=35.2 -> similarity_database_with_indicment_facts_v6score_qwen35_plus_or_binary_1_stats.json
+    facts llama4_maverick_or: 70/141
+    facts kimi_k26_or: 70/100
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+    facts llama4_maverick_or: 80/141
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+    facts qwen35_plus_or: 10/141
+    facts llama4_maverick_or: 90/141
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+    facts kimi_k26_or: 80/100
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_34SdXlSgimWZnkwi5mqeUILRGF2'}
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_35t20KHquE3OdDxlzD0Zed7uENz'}
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_34SdXlSgimWZnkwi5mqeUILRGF2'}
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_35t20KHquE3OdDxlzD0Zed7uENz'}
+    facts llama4_maverick_or: 100/141
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+    facts qwen35_plus_or: 20/141
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_34SdXlSgimWZnkwi5mqeUILRGF2'}
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_35t20KHquE3OdDxlzD0Zed7uENz'}
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_35t20KHquE3OdDxlzD0Zed7uENz'}
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_35t20KHquE3OdDxlzD0Zed7uENz'}
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_34SdXlSgimWZnkwi5mqeUILRGF2'}
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_35t20KHquE3OdDxlzD0Zed7uENz'}
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_35t20KHquE3OdDxlzD0Zed7uENz'}
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_34SdXlSgimWZnkwi5mqeUILRGF2'}
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_35t20KHquE3OdDxlzD0Zed7uENz'}
+    facts llama4_maverick_or: 110/141
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_34SdXlSgimWZnkwi5mqeUILRGF2'}
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_34SdXlSgimWZnkwi5mqeUILRGF2'}
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_35t20KHquE3OdDxlzD0Zed7uENz'}
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+    facts kimi_k26_or: 90/100
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_34SdXlSgimWZnkwi5mqeUILRGF2'}
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_35t20KHquE3OdDxlzD0Zed7uENz'}
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_35t20KHquE3OdDxlzD0Zed7uENz'}
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_34SdXlSgimWZnkwi5mqeUILRGF2'}
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+  API error (qwen35_plus_or): Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'qwen/qwen3.5-plus-20260420 is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_34SdXlSgimWZnkwi5mqeUILRGF2'}
+⚠️  OpenRouter error attempt 2/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 20s...
+    facts llama4_maverick_or: 120/141
+    facts llama4_maverick_or: 130/141
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+    facts llama4_maverick_or: 140/141
+    (row cache: skipped 56 ok rows; refetched 85 non-ok/missing)
+⚠️  OpenRouter error attempt 1/3: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': , retrying in 10s...
+  facts | llama4_maverick_or | task=binary_0 F1=0.758 LOO=0.758 thr=60.3
+    facts kimi_k26_or: 100/100
+    (row cache: skipped 49 ok rows; refetched 51 non-ok/missing)
+    facts qwen35_plus_or: 30/141
+  facts | kimi_k26_or | task=binary_0 F1=0.882 LOO=0.857 thr=55.3
+  facts | llama4_maverick_or | task=binary_1 (same scores, no extra API) F1=0.737 LOO=0.737 thr=60.3 -> similarity_database_with_indicment_facts_v6score_llama4_maverick_or_binary_1_stats.json
+  facts | kimi_k26_or | task=binary_1 (same scores, no extra API) F1=0.821 LOO=0.796 thr=25.1 -> similarity_database_with_indicment_facts_v6score_kimi_k26_or_binary_1_stats.json
+    facts qwen35_plus_or: 40/141
+    facts qwen35_plus_or: 50/141
+    facts kimi_k26_or: 10/141
+    facts qwen35_plus_or: 60/141
+    facts qwen35_plus_or: 70/141
+    facts kimi_k26_or: 20/141
+    facts qwen35_plus_or: 80/141
+    facts qwen35_plus_or: 90/141
+    facts kimi_k26_or: 30/141
+    facts qwen35_plus_or: 100/141
+    facts qwen35_plus_or: 110/141
+    facts kimi_k26_or: 40/141
+    facts qwen35_plus_or: 120/141
+    facts kimi_k26_or: 50/141
+    facts qwen35_plus_or: 130/141
+    facts qwen35_plus_or: 140/141
+  facts | qwen35_plus_or | task=binary_0 F1=0.732 LOO=0.732 thr=42.2
+  facts | qwen35_plus_or | task=binary_1 (same scores, no extra API) F1=0.809 LOO=0.809 thr=42.2 -> similarity_database_with_indicment_facts_v6score_qwen35_plus_or_binary_1_stats.json
+    facts kimi_k26_or: 60/141
