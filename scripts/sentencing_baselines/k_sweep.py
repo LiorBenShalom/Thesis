@@ -12,7 +12,7 @@ import pandas as pd
 ROOT = Path("/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try")
 EXP = ROOT / "experiments"
 DATA_MASTER = ROOT / "innovation_submission/data_master_final/verdicts_clean.csv"
-OUT_DIR = EXP / "data_per_domain/prediction_results"
+OUT_DIR = EXP / "results/2_sentencing_range/predictions"
 
 REPS = {
     "Hybrid-Full": EXP / "data_per_domain/similarity_scores_combined.csv",
@@ -21,7 +21,7 @@ REPS = {
     "Random-K":    EXP / "data_per_domain/similarity_scores_random_combined.csv",
 }
 K_VALUES = [1, 3, 5, 10, 20, 50, 100]
-DOMAINS = {"drugs": "median", "weapon": "softmax"}  # match canonical aggregation
+DOMAINS = {"drugs": "median", "weapon": "median"}  # uniform median for fair comparison
 
 
 def softmax_weighted(values, sims, T=10.0):
