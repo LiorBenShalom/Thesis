@@ -14583,7 +14583,6 @@ verdict_1,verdict_2,domain,similarity_score,source_batch
 תפ_4612-07-22,תפ_67356-12-21,weapon,25,main
 תפ_20477-02-20,תפ_53377-09-22,weapon,75,main
 תפ_18210-05-23,תפ_30003-03-22,weapon,28,main
-תפ_21280-11-18,תפ_65985-03-17,drugs,85,main
 תפ_38687-04-20,תפ_50809-07-17,weapon,70,main
 תפ_12834-03-18,תפ_824-06-17,drugs,65,main
 תפ_10108-11-21,תפ_14963-02-23,drugs,45,main
@@ -18604,7 +18603,6 @@ verdict_1,verdict_2,domain,similarity_score,source_batch
 תפ_26478-04-22,תפ_51199-04-23,weapon,18,main
 תפ_3742-07-18,תפ_50330-07-18,weapon,30,main
 תפ_17776-11-21,תפ_28845-04-22,weapon,55,main
-תפ_41597-11-23,תפ_65985-03-17,drugs,55,main
 תפ_522-05-17,תפח_4986-04-11,weapon,18,main
 תפ_17856-11-21,תפ_30575-03-20,weapon,20,main
 תפ_35568-01-23,תפ_42164-10-19,drugs,25,main
@@ -34271,7 +34269,6 @@ verdict_1,verdict_2,domain,similarity_score,source_batch
 תפ_26478-04-22,תפ_35364-01-18,weapon,18,main
 תפ_25537-07-24,תפ_5911-11-16,drugs,55,main
 תפ_67356-12-21,תפח_12074-08-16,weapon,10,main
-תפ_63073-07-22,תפ_65985-03-17,drugs,25,main
 תפ_15709-10-19,תפ_24895-03-20,drugs,35,main
 תפ_17415-10-21,תפ_19827-06-15,drugs,75,main
 תפ_23872-02-19,תפ_44157-08-16,weapon,65,main
@@ -38806,7 +38803,6 @@ verdict_1,verdict_2,domain,similarity_score,source_batch
 תפ_25639-03-21,תפ_4411-07-19,weapon,68,main
 תפ_33439-01-21,תפ_66982-09-16,drugs,20,main
 תפ_20778-11-12,תפ_46379-02-21,weapon,68,main
-תפ_42779-07-18,תפ_42806-07-18,drugs,95,main
 תפ_30327-02-21,תפ_57965-03-15,weapon,65,main
 תפ_53669-03-22,תפ_68389-07-20,weapon,25,main
 תפ_10875-12-21,תפ_18039-10-21,weapon,18,main
@@ -44602,7 +44598,6 @@ verdict_1,verdict_2,domain,similarity_score,source_batch
 תפ_42697-05-18,תפח_34398-05-11,weapon,10,main
 תפ_35007-04-13,תפ_39193-12-15,weapon,55,main
 תפ_42613-02-23,תפ_58774-07-22,weapon,40,main
-תפ_24895-03-20,תפ_65985-03-17,drugs,65,main
 תפ_28107-06-20,תפ_64711-01-19,drugs,58,main
 תפ_2144-04-21,תפ_44381-05-20,weapon,35,main
 תפ_3295-04-18,תפ_51828-02-14,weapon,65,main
@@ -53679,7 +53674,6 @@ verdict_1,verdict_2,domain,similarity_score,source_batch
 תפ_21813-09-16,תפ_28787-04-22,weapon,25,main
 תפ_50487-06-22,תפ_50998-03-23,weapon,65,main
 תפ_13373-10-23,תפ_21339-07-21,drugs,45,main
-תפ_30558-12-21,תפ_65985-03-17,drugs,65,main
 תפ_35186-03-18,תפ_50716-11-19,weapon,15,main
 תפ_12615-11-21,תפ_67356-12-21,weapon,25,main
 תפ_14553-12-23,תפ_24239-05-17,drugs,20,main
@@ -64880,7 +64874,6 @@ verdict_1,verdict_2,domain,similarity_score,source_batch
 תפ_20482-10-16,תפ_40650-03-22,drugs,45,retry1
 תפ_16520-01-18,תפח_16644-04-16,weapon,75,retry1
 תפ_2101-10-19,תפ_63360-04-21,weapon,25,retry1
-תפ_55287-10-23,תפ_65985-03-17,drugs,65,retry1
 תפ_17935-01-20,תפ_8254-02-20,weapon,40,retry1
 תפ_31842-04-21,תפ_36982-03-18,weapon,18,retry1
 תפ_18327-09-22,תפ_63953-01-24,weapon,25,retry1
@@ -66308,7 +66301,6 @@ verdict_1,verdict_2,domain,similarity_score,source_batch
 תפ_21594-06-16,תפ_31811-03-21,weapon,85,retry1
 תפ_28844-03-22,תפ_33420-12-20,weapon,10,retry1
 תפ_33458-08-14,תפח_17033-01-22,weapon,80,retry1
-תפ_4606-08-20,תפ_65985-03-17,drugs,35,retry1
 תפ_12411-02-21,תפ_54132-03-21,weapon,35,retry1
 תפ_18397-02-16,תפ_31334-11-15,weapon,25,retry1
 תפ_33439-01-21,תפ_39214-12-15,drugs,20,retry1
@@ -72688,7 +72680,6 @@ verdict_1,verdict_2,domain,similarity_score,source_batch
 תפ_1410-03-24,תפ_4612-07-22,weapon,55,retry1
 תפ_24548-06-13,תפ_45597-11-14,weapon,38,retry1
 תפ_40932-03-18,תפ_45432-11-15,weapon,75,retry1
-תפ_27340-04-18,תפ_65985-03-17,drugs,95,retry1
 תפ_27050-03-20,תפ_61106-05-20,weapon,35,retry1
 תפ_16779-09-22,תפ_23648-12-19,weapon,30,retry1
 תפ_12233-08-12,תפ_27685-11-15,weapon,0,retry1
