@@ -25,3 +25,14 @@ data_per_domain/similarity_batch_supplement/
 data_per_domain/similarity_retry/
 data_per_domain/similarity_retry2/
 data/sentencing_range-old/hfull_features/batch/
+
+# Big batch processing artifacts (kept local only — too big for GitHub)
+**/similarity_batch/
+**/similarity_input.jsonl
+**/similarity_input.part*.jsonl
+**/old/similarity_batch_extended/
+**/old/similarity_retry/retry_input.jsonl
+**/old/similarity_retry2/retry_input.jsonl
+**/old/similarity_batch_rawfacts/
+**/old/similarity_batch_schema/*.jsonl
+**/old/similarity_batch_supplement/*.jsonl

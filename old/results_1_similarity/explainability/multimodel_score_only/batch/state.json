@@ -1,0 +1,34 @@
+{
+  "openai": {
+    "gpt4": {
+      "batch_id": "batch_69ec7afd08c08190bf519c30ea702682",
+      "jsonl": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/explainability_annotation/multimodel_score_only/batch/openai_gpt4.jsonl",
+      "n_prompts": 1687
+    },
+    "gpt52": {
+      "batch_id": "batch_69ec7e5541b0819099b2dcf0877fa65e",
+      "jsonl": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/explainability_annotation/multimodel_score_only/batch/openai_gpt52.jsonl",
+      "n_prompts": 1687
+    },
+    "gpt51_thinking": {
+      "batch_id": "batch_69ec7e581b288190ba551fab5842e6f4",
+      "jsonl": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/explainability_annotation/multimodel_score_only/batch/openai_gpt51_thinking.jsonl",
+      "n_prompts": 1687
+    },
+    "gpt5mini": {
+      "batch_id": "batch_69ecac7690f081909d993df390a69ca6",
+      "jsonl": "/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/explainability_annotation/multimodel_score_only/batch/openai_gpt5mini.jsonl",
+      "n_prompts": 1687
+    }
+  },
+  "anthropic": {
+    "batch_id": "msgbatch_015Qeuz1xim5pfH2V9iY3sTE",
+    "n_prompts": 1687
+  },
+  "google": {
+    "gemini_25_pro": {
+      "job_name": "batches/3lj0hhku8m27mg1jqqpkl9yg7ffmpgcjbfw7",
+      "n_prompts": 1687
+    }
+  }
+}

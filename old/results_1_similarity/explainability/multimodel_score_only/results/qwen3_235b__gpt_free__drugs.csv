@@ -1,0 +1,120 @@
+verdict_1,verdict_2,GT,model_score,raw
+ME-17-01-620-279,ME-16-12-19902-389,3,85.0,SIMILARITY_SCORE: 85
+ME-16-12-26620-433,ME-16-06-6788-21,3,65.0,SIMILARITY_SCORE: 65
+ME-17-03-30876-747,ME-17-01-59971-328,3,75.0,SIMILARITY_SCORE: 75
+ME-17-03-30876-747,SH-23-02-41988-839,1,15.0,SIMILARITY_SCORE: 15
+ME-18-04-46786-521,ME-16-06-6788-21,2,,"BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{""error"":{""message"":""Input data may contain inappropriate content. For details, see: https://www.alibabacloud.com/help/en/model-studio/error-code#inappropriate-content"",""type"":""data_inspection_failed"",""param"":null,""code"":""data_inspection_failed""},""id"":""chatcmpl-83f886af-9bed-96cf-83e1-05cf46458ea9"",""request_id"":""83f886af-9bed-96cf-83e1-05cf46458ea9""}', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_34SdXlSgimWZnkwi5mqeUILRGF2'}"
+ME-16-07-11608-225,ME-22-12-47987-640,1,68.0,SIMILARITY_SCORE: 68
+ME-17-01-59971-328,ME-14-01-16958-980,3,85.0,SIMILARITY_SCORE: 85
+ME-18-08-58591-978,ME-16-06-6788-21,1,,"BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{""error"":{""message"":""Input data may contain inappropriate content. For details, see: https://www.alibabacloud.com/help/en/model-studio/error-code#inappropriate-content"",""type"":""data_inspection_failed"",""param"":null,""code"":""data_inspection_failed""},""id"":""chatcmpl-c8317c84-6f39-9403-bc5b-7486554a346b"",""request_id"":""c8317c84-6f39-9403-bc5b-7486554a346b""}', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_34SdXlSgimWZnkwi5mqeUILRGF2'}"
+ME-16-11-63255-338,ME-18-01-73652-357,1,45.0,SIMILARITY_SCORE: 45
+ME-17-04-17677-800,ME-14-01-16958-980,3,70.0,SIMILARITY_SCORE: 70
+ME-18-02-5680-55,ME-22-04-7867-732,1,35.0,SIMILARITY_SCORE: 35
+ME-18-04-16826-842,ME-16-12-19902-389,3,90.0,SIMILARITY_SCORE: 90
+ME-19-01-68958-71,ME-16-06-6788-21,3,80.0,SIMILARITY_SCORE: 80
+ME-18-04-46786-521,ME-16-12-26620-433,1,75.0,SIMILARITY_SCORE: 75
+ME-19-02-45480-398,ME-17-03-30876-747,3,60.0,SIMILARITY_SCORE: 60
+ME-19-01-68942-383,ME-16-06-6788-21,3,70.0,SIMILARITY_SCORE: 70
+ME-18-02-5680-55,ME-15-11-31122-886,2,60.0,SIMILARITY_SCORE: 60
+ME-19-02-45480-398,ME-17-04-17677-800,3,75.0,SIMILARITY_SCORE: 75
+ME-19-04-14488-104,ME-21-03-10139-230,1,20.0,SIMILARITY_SCORE: 20
+ME-19-02-45480-398,ME-19-04-14578-148,3,90.0,SIMILARITY_SCORE: 90
+ME-19-04-14488-104,ME-19-04-14578-148,3,85.0,SIMILARITY_SCORE: 85
+ME-19-04-14488-104,ME-14-01-16958-980,3,85.0,SIMILARITY_SCORE: 85
+ME-19-04-14578-148,ME-17-03-30876-747,3,75.0,SIMILARITY_SCORE: 75
+ME-19-04-14578-148,ME-17-04-17677-800,3,85.0,SIMILARITY_SCORE: 85
+ME-21-03-10139-230,ME-16-06-6788-21,1,40.0,SIMILARITY_SCORE: 40
+ME-19-07-4435-107,ME-14-01-16958-980,3,85.0,SIMILARITY_SCORE: 85
+ME-19-07-4435-107,ME-19-04-14488-104,3,85.0,SIMILARITY_SCORE: 85
+ME-21-03-10139-230,ME-15-09-24514-351,1,20.0,SIMILARITY_SCORE: 20
+ME-21-03-10139-230,ME-16-07-11608-225,1,25.0,SIMILARITY_SCORE: 25
+ME-21-03-10139-230,ME-18-01-73652-357,3,75.0,SIMILARITY_SCORE: 75
+ME-21-12-42162-424,ME-19-04-14488-104,1,35.0,SIMILARITY_SCORE: 35
+ME-22-07-53625-139,ME-19-04-14578-148,3,90.0,SIMILARITY_SCORE: 90
+ME-22-08-15747-700,ME-16-12-26620-433,1,63.0,SIMILARITY_SCORE: 63
+ME-23-01-46786-206,ME-17-04-17677-800,1,35.0,SIMILARITY_SCORE: 35
+ME-22-11-1990-79,ME-19-04-14578-148,1,45.0,SIMILARITY_SCORE: 45
+ME-22-01-47042-277,SH-16-09-64418-33,1,45.0,"SIMILARITY_SCORE: 45  
+**נימוק:**  
+1. **סוג העבירה וחומרתה**: שניהם עוסקים בעבירות סמים חמורות (סחר/גידול והחזקת סם מסוכן), אך סוגי העבירות עצמם שונים (סחר ותיווך מול גידול והכנה).  
+2. **סוג הסם וכמותו**: סמים שונים (קוקאין מול קנביס/חשיש), אך כמויות דומות בסדר גודל (כ-150 גרם מול 1,125 גרם סך הכל).  
+3. **שיטת הביצוע**: תיק 1 מתבסס על רשת קשרים, תיאום טלפוני ועסקאות חוזרות; תיק 2 עוסק בגידול עצמי במעבדה סמויה — אין דפוס דומה.  
+4. **נסיבות הליבה**: תיק 1 כולל מרכיבי רו"
+ME-23-05-13598-78,ME-23-12-14553-571,3,65.0,SIMILARITY_SCORE: 65
+ME-23-04-8444-574,ME-19-07-4435-107,1,25.0,SIMILARITY_SCORE: 25
+ME-22-11-1990-79,SH-24-01-9804-702,1,30.0,SIMILARITY_SCORE: 30
+ME-23-05-52567-993,ME-22-04-7867-732,3,85.0,SIMILARITY_SCORE: 85
+SH-16-09-64418-33,SH-19-11-18218-11,1,45.0,SIMILARITY_SCORE: 45
+SH-19-02-58269-573,ME-17-04-17677-800,1,20.0,SIMILARITY_SCORE: 20
+ME-23-12-14553-571,ME-18-04-16826-842,1,35.0,SIMILARITY_SCORE: 35
+SH-20-05-28746-251,SH-21-11-9851-17,2,40.0,SIMILARITY_SCORE: 40
+SH-20-06-12380-808,ME-19-01-68942-383,1,40.0,SIMILARITY_SCORE: 40
+SH-20-06-12380-808,ME-23-05-13598-78,1,20.0,SIMILARITY_SCORE: 20
+SH-22-05-39259-133,ME-16-06-6788-21,1,,"BadRequestError: Error code: 400 - {'error': {'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{""error"":{""message"":""Input data may contain inappropriate content. For details, see: https://www.alibabacloud.com/help/en/model-studio/error-code#inappropriate-content"",""type"":""data_inspection_failed"",""param"":null,""code"":""data_inspection_failed""},""id"":""chatcmpl-b4cdb749-940f-9778-92d3-a93ecc17790a"",""request_id"":""b4cdb749-940f-9778-92d3-a93ecc17790a""}', 'provider_name': 'Alibaba', 'is_byok': False}}, 'user_id': 'user_34SdXlSgimWZnkwi5mqeUILRGF2'}"
+SH-21-02-40908-370,ME-22-07-32175-327,1,30.0,SIMILARITY_SCORE: 30
+SH-21-03-7171-604,SH-19-11-18218-11,1,25.0,SIMILARITY_SCORE: 25
+SH-19-02-58269-573,SH-15-05-1276-44,1,45.0,"SIMILARITY_SCORE: 45  
+**הסבר:**  
+1. **סוג העבירה וחומרתה**: שניהם עוסקים בסחר בסמים מסוכנים (קנבוס/חשיש וקוקאין), אך תיק 1 עוסק בניסיון ותיק 2 בסחר בפועל.  
+2. **סוג הסם וכמותו**: סמים שונים (קנבוס מול קוקאין+חשיש) וכמויות גבוהות יותר בתיק 1 (97.22 גרם מול 15.7 גרם קוקאין).  
+3. **שיטת הביצוע (MO)**: בתיק 1 – בריחה מהמשטרה, זריקת סמים מהרכב; בתיק 2 – מכירה מסודרת עם סוכן משטרתי. שיטות שונות לחלוטין.  
+4. **נסיבות הליבה**: תיק 1 כולל נסיבות מסוכנות (נהיגה"
+SH-22-01-16014-223,ME-18-07-67342-121,1,40.0,SIMILARITY_SCORE: 40
+SH-21-03-7171-604,ME-23-01-46786-206,1,40.0,SIMILARITY_SCORE: 40
+SH-22-05-36033-112,SH-22-05-39259-133,3,85.0,SIMILARITY_SCORE: 85
+SH-22-01-16014-223,ME-16-12-19902-389,1,35.0,SIMILARITY_SCORE: 35
+SH-22-05-39259-133,SH-21-03-7171-604,2,40.0,SIMILARITY_SCORE: 40
+SH-23-09-35299-260,ME-22-06-54208-991,1,45.0,"SIMILARITY_SCORE: 45  
+**נימוקים:**  
+1. **סוג עבירה וחומרתה**: שתיהן עבירות סחר בקוקאין לפי אותו חוק, אך תיק 2 כולל כמויות גדולות משמעותית (כ-47-49 גרם לעומת 0.28 גרם), מה שמשפיע על חומרת העבירה.  
+2. **סוג הסם וכמותו**: סם זהה (קוקאין), אך סדרי גודל שונים (כ-170-180 פעמים יותר סם בתיק 2).  
+3. **שיטת הביצוע**: בתיק 1 יש שיתוף פעולה עם שליח (ודים) והגעה למקום פיזית ברכב, בעוד בתיק 2 השיטה מפורטת פחות אך מתוארת כעסקה מותאמת מראש עם שימוש בציוד סודי (ני"
+SH-23-07-61816-773,SH-24-01-26596-264,1,40.0,"SIMILARITY_SCORE: 40  
+**הסבר:**  
+1. **סוג העבירה וחומרתה**: שניהם עוסקים בסחר בסמים מסוכנים לפי אותה פקודה, אך קוקאין (סם harder) שונה מקנבוס מבחינת חומרה פלילית.  
+2. **סוג הסם וכמותו**: סמים שונים לחלוטין (קוקאין מול קנבוס) וכמויות בדרגות שונות: 0.38 גרם מול 130.94 גרם.  
+3. **שיטת הביצוע (MO)**: הראשון מבוסס על מכירה ישירה ופיזית, השני כולל שימוש בטכנולוגיה (טלגרם, כרטיסי סים), תיאום מוקדם, ותיעוד דיגיטלי.  
+4. **נסיבות הליבה**: הראשון כולל ידידותות בין הצדדים ועסקאות קטנות, השני מציג רשת מסוע"
+SH-24-01-3818-394,ME-17-04-17677-800,3,65.0,SIMILARITY_SCORE: 65
+SH-24-05-28565-553,ME-15-09-24514-351,1,25.0,SIMILARITY_SCORE: 25
+ME-17-01-620-279,ME-10-11-18588-3,3,80.0,SIMILARITY_SCORE: 80
+SH-24-01-9804-702,ME-19-01-68958-71,1,20.0,SIMILARITY_SCORE: 20
+ME-18-08-58591-978,ME-16-07-11608-225,1,30.0,SIMILARITY_SCORE: 30
+ME-20-12-1338-335,ME-22-12-47987-640,2,60.0,SIMILARITY_SCORE: 60
+ME-18-02-5680-55,SH-13-09-29504-694,1,50.0,SIMILARITY_SCORE: 50
+ME-21-12-42162-424,ME-17-03-30876-747,1,20.0,SIMILARITY_SCORE: 20
+ME-18-08-8864-290,SH-17-07-16759-919,3,25.0,SIMILARITY_SCORE: 25
+ME-21-12-42162-424,SH-21-12-59578-330,2,45.0,SIMILARITY_SCORE: 45
+ME-22-07-53625-139,ME-22-12-47987-640,1,35.0,SIMILARITY_SCORE: 35
+ME-21-12-42162-424,SH-13-09-29504-694,1,40.0,SIMILARITY_SCORE: 40
+ME-22-01-47042-277,ME-18-01-73652-357,3,65.0,SIMILARITY_SCORE: 65
+ME-22-11-1990-79,ME-16-07-11608-225,3,75.0,SIMILARITY_SCORE: 75
+ME-22-11-1990-79,ME-18-04-46786-521,3,80.0,SIMILARITY_SCORE: 80
+ME-22-08-15747-700,ME-23-08-41833-827,3,75.0,SIMILARITY_SCORE: 75
+SH-16-09-64418-33,SH-17-07-16759-919,2,60.0,SIMILARITY_SCORE: 60
+ME-23-05-52567-993,ME-17-03-30876-747,3,78.0,SIMILARITY_SCORE: 78
+ME-23-12-14553-571,ME-17-03-30876-747,3,75.0,SIMILARITY_SCORE: 75
+ME-23-08-41833-827,ME-22-12-47987-640,3,55.0,SIMILARITY_SCORE: 55
+SH-19-02-58269-573,ME-16-11-63255-338,1,35.0,SIMILARITY_SCORE: 35
+SH-19-03-50607-561,ME-16-11-63255-338,1,60.0,SIMILARITY_SCORE: 60
+SH-19-02-58269-573,ME-23-12-14553-571,2,30.0,SIMILARITY_SCORE: 30
+SH-21-09-42879-201,ME-23-12-14553-571,1,35.0,SIMILARITY_SCORE: 35
+SH-21-09-42879-201,ME-22-07-53625-139,1,25.0,SIMILARITY_SCORE: 25
+SH-21-09-42879-201,ME-18-08-8864-290,1,45.0,SIMILARITY_SCORE: 45
+SH-21-09-42879-201,SH-19-03-50607-561,3,65.0,SIMILARITY_SCORE: 65
+SH-21-09-42879-201,SH-16-09-64418-33,1,25.0,SIMILARITY_SCORE: 25
+SH-24-01-26596-264,ME-22-07-53625-139,2,25.0,SIMILARITY_SCORE: 25
+SH-22-05-36033-112,SH-16-09-64418-33,2,20.0,SIMILARITY_SCORE: 20
+SH-21-09-42879-201,SH-19-02-58269-573,2,35.0,SIMILARITY_SCORE: 35
+SH-21-09-42879-201,SH-24-01-26596-264,2,70.0,SIMILARITY_SCORE: 70
+SH-24-01-26596-264,SH-13-09-29504-694,1,40.0,SIMILARITY_SCORE: 40
+SH-24-01-26596-264,ME-21-12-42162-424,1,35.0,SIMILARITY_SCORE: 35
+SH-24-01-26596-264,SH-21-12-59578-330,1,40.0,SIMILARITY_SCORE: 40
+SH-24-01-9804-702,ME-21-12-42162-424,2,50.0,SIMILARITY_SCORE: 50
+SH-24-01-9804-702,ME-16-07-11608-225,1,25.0,SIMILARITY_SCORE: 25
+SH-24-01-26596-264,SH-19-02-58269-573,3,45.0,SIMILARITY_SCORE: 45
+SH-24-01-26596-264,SH-24-01-9804-702,1,80.0,SIMILARITY_SCORE: 80
+SH-24-01-9804-702,ME-23-12-14553-571,2,40.0,SIMILARITY_SCORE: 40
+SH-24-05-28565-553,SH-21-12-59578-330,2,45.0,SIMILARITY_SCORE: 45
+SH-24-05-46424-585,SH-23-09-35299-260,3,45.0,SIMILARITY_SCORE: 45
+SH-24-01-9804-702,SH-23-09-35299-260,1,40.0,SIMILARITY_SCORE: 40

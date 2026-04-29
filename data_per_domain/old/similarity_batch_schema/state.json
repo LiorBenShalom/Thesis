@@ -1,0 +1,7 @@
+{
+  "file_id": "file-5eN39axmzQ2WgF6PA1sesH",
+  "batch_id": "batch_69efb33575188190a6b36707bf917155",
+  "status": "validating",
+  "n_requests": 9478,
+  "input_file": "data_per_domain/similarity_batch_schema/similarity_input_schema.jsonl"
+}
