@@ -36,3 +36,6 @@ data/sentencing_range-old/hfull_features/batch/
 **/old/similarity_batch_rawfacts/
 **/old/similarity_batch_schema/*.jsonl
 **/old/similarity_batch_supplement/*.jsonl
+
+# BERT classifier weights (too large for GitHub — reproduce via train_classifier.py)
+results/**/citation_classifier/model.safetensors
