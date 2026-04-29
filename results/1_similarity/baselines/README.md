@@ -1,97 +1,75 @@
 # Baselines for the Paper
 
-This folder contains three complementary baselines that contextualise the main
-results in `../results_paper/` and `../results_paper_qwk/`:
+Three complementary baselines that contextualise the main results in `../qwk/`:
 
-## 1. Random (permutation) baseline — advisor's method
+1. **Random (permutation) baseline** — chance floor (advisor's GT-shuffle method)
+2. **Embedding-Text** — cosine of full verdict text via OpenAI / Gemini / mE5 / BGE-M3
+3. **Embedding-on-rep ablation** — same 4 embedding models on each rep's structured
+   features (isolates rep-structure from LLM reasoning)
 
-Script: `src/analysis/random_baseline.py`
+> **Important — paper scope is ORDINAL similarity (3-point scale):**
+> Use only the **QWK-Oracle, QWK-CV, Spearman ρ, C-index** columns from the
+> CSVs. The legacy `*_REPORT.md` files (in `legacy_n11_with_binary/`) also
+> contain F1 / AP columns from a binary task that is no longer in the paper.
+>
+> Also, those legacy reports were generated with an **earlier 11-LLM panel**.
+> The current paper uses **N=13** (see `../qwk/summary_qwk_n13.csv`). The
+> embedding/random baseline scores per cell are unchanged (they're per-cell,
+> not per-LLM), but mean LLM-rep numbers in the legacy reports refer to the
+> N=11 panel.
 
-Follows the pattern from `new_try/code/calculate_baseline_CORRECT.py`:
+## Files (current — for the paper)
 
-- **Shuffle the ground truth** (not predictions) 1000 times per cell with a fixed seed.
-- Shuffling a vector preserves its marginal — so class proportions are preserved exactly.
-- Predictions are held fixed; we evaluate each metric on the 1000 shuffled GTs to build a null distribution.
-- Report: `baseline_mean`, `baseline_ci_lo/hi`, `improvement = observed - baseline_mean`,
-  `p_value = P(null ≥ observed)`, `significantly_better = p_value < 0.05`.
+| File | What |
+|---|---|
+| `random_full.csv` | Per-cell random null: observed, baseline_mean, CI, p_value |
+| `random_per_task.csv` | Shared baseline per (domain, metric) |
+| `random_summary.csv` | Aggregated per (domain, rep, metric) |
+| `emb_full.csv` | Embedding-Text: per (domain, emb_model, metric) |
+| `emb_reps_full.csv` | Emb-on-rep: per (domain, rep, emb_model, metric) — 56 cells |
+| `comparison_table.csv` | Combined long-format comparison |
+| `final_significance_2_baselines.csv` | LLM-rep vs Random + vs best embedding (Wilcoxon, BH-FDR) |
+| `significance_vs_embedding.csv` | LLM-rep vs Emb-on-Manual best |
+| `significance_vs_text_embedding.csv` | LLM-rep vs raw-text embedding best |
+| `headline_plot.png` | 4-level comparison plot (Random → Emb-Text → Emb-on-rep → LLM-rep) |
+| `ablation_rep_vs_emb.png` | Per-rep: Rep+Emb vs Rep+LLM |
+| `emb_preds/`, `emb_reps_preds/` | Per-pair embedding scores |
+| `emb_cache/` | Cached `.npy` embedding vectors (gitignored) |
 
-The *shared* baseline per (domain, metric) — what the paper typically cites —
-is aggregated in `random_per_task.csv`.
+## Files in `legacy_n11_with_binary/`
 
-## 2. Embedding-Text baseline (raw verdict only)
+Older Markdown reports from when the panel was N=11 LLMs and the paper still
+included a binary task. Kept for reference and reproducibility audit. **Not
+to be cited** — use the per-cell CSVs above and the canonical summary in
+`../qwk/summary_qwk_n13.csv` instead.
 
-Script: `src/analysis/embedding_baseline.py`
+| File | Why legacy |
+|---|---|
+| `BASELINES_REPORT.md` | "mean across 11 models" + binary metrics |
+| `EMB_REPORT.md` | Includes F1 / AP columns |
+| `EMB_REPS_REPORT.md` | Includes F1 / AP columns |
+| `RANDOM_REPORT.md` | (random null is task-agnostic, but mixed in) |
+| `FINAL_SIGNIFICANCE.md` | "11 LLM models" + binary metrics |
+| `significance_summary.md` | Same |
+| `significance_text_summary.md` | Same |
 
-Cosine similarity between embeddings of **full verdict facts** (`indicment_facts_1/2`),
-using three top embedding models:
-
-- `text-embedding-3-large` (OpenAI, paid)
-- `intfloat/multilingual-e5-large-instruct` (HuggingFace, free, local)
-- `BAAI/bge-m3` (HuggingFace, free, local, 8K context)
-
-Answers: "how far can you go using only the raw text of the verdict?"
-
-## 3. Embedding-on-rep ablation (all 7 reps × 3 emb models)
-
-Script: `src/analysis/embedding_all_reps.py`
-
-Same 3 embedding models, but applied to the **structured feature vector** of
-every representation (Manual, GPT-Schema, GPT-Free, GPT-Law, Raw-Facts,
-Hybrid-Manual, Hybrid-Full). Structured features are serialized to a
-deterministic `key: value | key: value | ...` string before embedding.
-
-Answers: "how much does the LLM scoring step add on top of the structured rep?"
-Compare `Rep+Embedding` (this script) against `Rep+LLM` (main experiment).
-
-## Metrics covered (all baselines)
-
-`F1-Oracle`, `F1-CV` (b0 strict, b1 lenient), `AP-PR` (b0, b1),
-`QWK-Oracle`, `QWK-CV (10-fold)` — identical to the main experiment.
-
-## Reproducing
+## Reproducing (with current N=13 panel + ordinal-only)
 
 ```bash
 cd new_try/experiments
 
-# 1. Random permutation baseline (~2-3 min on 12 workers)
+# Random permutation baseline (~2-3 min, 12 workers)
 python3 src/analysis/random_baseline.py --n-shuffles 1000 --workers 12
 
-# 2. Embedding-Text baseline (~2-5 min; OpenAI API + local MPS)
+# Embedding-Text baseline (~2-5 min; OpenAI API + local MPS)
 python3 src/analysis/embedding_baseline.py
 
-# 3. Embedding-on-rep ablation (~10-15 min; 7 reps x 3 embedding models)
+# Embedding-on-rep ablation (~10-15 min)
 python3 src/analysis/embedding_all_reps.py
-
-# 4. Combined report
-python3 src/analysis/baseline_report.py
 ```
 
-## Key output files
-
-| File | Script | Description |
-|---|---|---|
-| `random_full.csv` | random_baseline | Per-cell: observed, baseline_mean, CI, p_value, significantly_better |
-| `random_per_task.csv` | random_baseline | **Shared baseline** per (domain, metric) — paper-ready |
-| `random_summary.csv` | random_baseline | Aggregated per (domain, rep, metric) |
-| `RANDOM_REPORT.md` | random_baseline | Per-domain markdown tables |
-| `emb_full.csv` | embedding_baseline | Per (domain, emb_model, metric) — raw-text only |
-| `EMB_REPORT.md` | embedding_baseline | Per-domain tables |
-| `emb_reps_full.csv` | embedding_all_reps | Per (domain, rep, emb_model, metric) — all 42 cells |
-| `EMB_REPS_REPORT.md` | embedding_all_reps | Per (domain, metric): rep × emb_model pivot |
-| `BASELINES_REPORT.md` | baseline_report | **Combined paper-ready report** |
-| `comparison_table.csv` | baseline_report | Long-format comparison |
-| `headline_plot.png` | baseline_report | QWK-CV bar chart: Random → Emb-Text → Emb-on-rep → LLM-rep |
-| `ablation_rep_vs_emb.png` | baseline_report | Per-rep grouped bar: Rep+Emb vs Rep+LLM |
-| `emb_preds/` | embedding_baseline | Per-pair scores (raw-text embeddings) |
-| `emb_reps_preds/` | embedding_all_reps | Per-pair scores (rep embeddings) |
-| `emb_cache/` | (all emb scripts) | Cached .npy embeddings — gitignored, regen on demand |
-
-## Interpretation for the paper
-
-- **Random null** (chance floor) — any system that doesn't beat the 97.5% null
-  CI-hi is indistinguishable from guessing with correct proportions.
-- **Embedding-Text** — principled non-structured baseline; gap to Manual+LLM
-  quantifies the combined value of structure + LLM reasoning.
-- **Emb-on-rep** — holds structure fixed and replaces LLM with simple cosine;
-  gap between Rep+LLM and Rep+Emb quantifies the contribution of LLM reasoning
-  **on top of** the structured representation.
+To regenerate with N=13 + ordinal-only output, the report scripts
+(`baseline_report.py`) need to be updated to filter to QWK/Spearman/C-index
+columns only. The CSVs above (`random_full.csv`, `emb_full.csv`,
+`emb_reps_full.csv`) already contain the correct per-cell numbers; only the
+aggregated summary tables in the legacy MD files reflect the older panel.
