@@ -32,7 +32,7 @@ DOMAIN_CFG = {
     "weapon": {"sim_thr": 60.0, "agg": "softmax"},
 }
 K_MIN = 3
-K_TOP = 3  # top-K mode: take this many most-similar neighbors
+K_TOP = 10  # top-K mode: take this many most-similar neighbors
 
 
 def load_targets() -> pd.DataFrame:

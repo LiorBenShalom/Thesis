@@ -1,0 +1,17 @@
+rep,domain,target,n,AURC
+Hybrid-Full,drugs,low,1402,3.235705672356362
+Hybrid-Full,drugs,high,1402,4.910251837956782
+Hybrid-Full,weapon,low,1164,4.810472441982268
+Hybrid-Full,weapon,high,1164,7.366637571434966
+Gemini,drugs,low,1402,3.3006154123895004
+Gemini,drugs,high,1402,5.112512532735864
+Gemini,weapon,low,1164,5.607863275803096
+Gemini,weapon,high,1164,8.646784346102606
+TF-IDF,drugs,low,1402,3.3830517290607274
+TF-IDF,drugs,high,1402,5.235853990178807
+TF-IDF,weapon,low,1164,5.956630483412677
+TF-IDF,weapon,high,1164,9.127140061436403
+Random-K,drugs,low,1402,4.384718596173786
+Random-K,drugs,high,1402,6.745839738783047
+Random-K,weapon,low,1164,9.24636196464155
+Random-K,weapon,high,1164,13.954526826965887
