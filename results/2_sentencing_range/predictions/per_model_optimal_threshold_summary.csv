@@ -1,0 +1,9 @@
+rep,domain,thr,n,coverage_%,MAE_low,MAE_high,IoU
+Hybrid-Full,drugs,51.5,1587,63.4,5.24,8.08,0.507
+Hybrid-Full,weapon,72.5,724,44.5,9.66,14.53,0.522
+Gemini,drugs,95.5,1179,47.1,5.32,8.24,0.498
+Gemini,weapon,95.4,712,43.7,7.69,11.25,0.52
+TF-IDF,drugs,16.6,436,17.4,4.73,7.21,0.549
+TF-IDF,weapon,14.9,228,14.0,8.63,11.8,0.507
+Random-K,drugs,50.5,1496,59.7,6.7,10.55,0.432
+Random-K,weapon,72.2,745,45.8,15.41,22.76,0.354
