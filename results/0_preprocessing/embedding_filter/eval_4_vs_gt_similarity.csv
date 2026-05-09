@@ -1,0 +1,9 @@
+domain,scorer,n,spearman,pearson
+drugs,sup_cos,79,0.462,0.442
+drugs,sim_cos,100,0.464,0.475
+drugs,llm_score,42,0.723,0.738
+drugs,cit_strength,100,0.532,0.53
+weapon,sup_cos,90,0.089,0.119
+weapon,sim_cos,141,0.19,0.169
+weapon,llm_score,44,0.61,0.579
+weapon,cit_strength,141,0.211,0.181

@@ -39,3 +39,10 @@ data/sentencing_range-old/hfull_features/batch/
 
 # BERT classifier weights (too large for GitHub — reproduce via train_classifier.py)
 results/**/citation_classifier/model.safetensors
+
+# SimCSE supervised model weights (700MB+ each) — reproduce via simcse_cuda_bundle/
+simcse_outputs/supervised/model_*/model.safetensors
+simcse_outputs/supervised/model_*/checkpoint-*/
+simcse_outputs/supervised/model_*/README.md
+simcse_outputs/supervised/model_*/tokenizer.json
+simcse_outputs/supervised/model_*/*.bin
