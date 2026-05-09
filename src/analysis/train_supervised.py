@@ -70,29 +70,55 @@ def load_data(domain, limit=None, seed=42):
     return df
 
 
-def build_positive_pairs(df, thr_pos, max_pairs, seed=42):
-    """All (i,j) pairs in train set with |Δlow|≤thr AND |Δhigh|≤thr."""
+def build_positive_pairs(df, thr_pos, max_pairs, mode="threshold", topk_per_anchor=20, seed=42):
+    """Build positive pairs in train set.
+
+    mode='threshold': pairs with |Δlow|≤thr AND |Δhigh|≤thr (random sample if >max_pairs)
+    mode='topk':      for each anchor, take top-K closest by sqrt(Δlow² + Δhigh²)
+                      → balanced coverage, scale-adaptive, no threshold
+    """
     train = df[df.split == "train"].reset_index(drop=True)
     n = len(train)
     los = train.sentencing_range_low.values.astype(float)
     his = train.sentencing_range_high.values.astype(float)
     rng = np.random.default_rng(seed)
 
-    # Generate all upper-triangular pairs
-    pos_pairs = []
-    for i in range(n):
-        d_lo = np.abs(los[i+1:] - los[i])
-        d_hi = np.abs(his[i+1:] - his[i])
-        keep = (d_lo <= thr_pos) & (d_hi <= thr_pos)
-        for j_offset in np.where(keep)[0]:
-            pos_pairs.append((i, i + 1 + int(j_offset)))
+    if mode == "threshold":
+        pos_pairs = []
+        for i in range(n):
+            d_lo = np.abs(los[i+1:] - los[i])
+            d_hi = np.abs(his[i+1:] - his[i])
+            keep = (d_lo <= thr_pos) & (d_hi <= thr_pos)
+            for j_offset in np.where(keep)[0]:
+                pos_pairs.append((i, i + 1 + int(j_offset)))
+        print(f"  [threshold] positive pairs (|Δlow|≤{thr_pos} AND |Δhigh|≤{thr_pos}): {len(pos_pairs):,}")
+        if len(pos_pairs) > max_pairs:
+            idx = rng.choice(len(pos_pairs), size=max_pairs, replace=False)
+            pos_pairs = [pos_pairs[k] for k in idx]
+            print(f"  sampled to: {len(pos_pairs):,}")
 
-    print(f"  positive pairs (|Δlow|≤{thr_pos} AND |Δhigh|≤{thr_pos}): {len(pos_pairs):,}")
+    elif mode == "topk":
+        # For each anchor, take top-K closest by Euclidean distance in (low, high) space
+        pos_pairs = []
+        for i in range(n):
+            d_lo = los - los[i]
+            d_hi = his - his[i]
+            dist = np.sqrt(d_lo * d_lo + d_hi * d_hi)
+            dist[i] = np.inf  # exclude self
+            top = np.argpartition(dist, topk_per_anchor)[:topk_per_anchor]
+            for j in top:
+                if i < j:    pos_pairs.append((i, int(j)))
+                elif i > j:  pos_pairs.append((int(j), i))
+        # Dedupe (i,j) — same pair may appear from both anchors
+        pos_pairs = list(set(pos_pairs))
+        print(f"  [topk] positive pairs (each anchor's top-{topk_per_anchor} closest): {len(pos_pairs):,}")
+        if len(pos_pairs) > max_pairs:
+            idx = rng.choice(len(pos_pairs), size=max_pairs, replace=False)
+            pos_pairs = [pos_pairs[k] for k in idx]
+            print(f"  sampled to: {len(pos_pairs):,}")
 
-    if len(pos_pairs) > max_pairs:
-        idx = rng.choice(len(pos_pairs), size=max_pairs, replace=False)
-        pos_pairs = [pos_pairs[k] for k in idx]
-        print(f"  sampled to: {len(pos_pairs):,}")
+    else:
+        raise ValueError(f"Unknown mode: {mode}")
 
     return train, pos_pairs
 
@@ -161,8 +187,12 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--domain",      required=True, choices=["drugs", "weapon"])
     p.add_argument("--base-model",  default="dicta-il/dictabert")
+    p.add_argument("--mode",        choices=["threshold","topk"], default="threshold",
+                   help="threshold: |Δlow|≤thr AND |Δhigh|≤thr; topk: each anchor's K closest by Euclidean distance")
     p.add_argument("--thr-pos",     type=int,   default=6,
-                   help="Months. Positive pair iff |Δlow|≤thr AND |Δhigh|≤thr")
+                   help="(threshold mode only) Months. Positive pair iff |Δlow|≤thr AND |Δhigh|≤thr")
+    p.add_argument("--topk-per-anchor", type=int, default=20,
+                   help="(topk mode only) Each anchor gets its top-K closest neighbors as positives")
     p.add_argument("--max-pairs",   type=int,   default=200_000,
                    help="Sample positive pairs to this many if exceeded")
     p.add_argument("--batch-size",  type=int,   default=8)
@@ -178,7 +208,9 @@ def main():
     args = p.parse_args()
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    model_dir = OUT_DIR / f"model_{args.domain}"
+    # Mode-specific output dir to keep model variants separate
+    suffix = f"_{args.mode}" if args.mode == "topk" else ""
+    model_dir = OUT_DIR / f"model_{args.domain}{suffix}"
     random.seed(args.seed); torch.manual_seed(args.seed); np.random.seed(args.seed)
 
     print(f"=== {args.domain.upper()} supervised contrastive ===")
@@ -192,7 +224,9 @@ def main():
             raise FileNotFoundError(f"--encode-only needs saved model at {model_dir}")
         model = SentenceTransformer(str(model_dir), device=device)
     else:
-        train_df, pos_pairs = build_positive_pairs(df, args.thr_pos, args.max_pairs, args.seed)
+        train_df, pos_pairs = build_positive_pairs(
+            df, args.thr_pos, args.max_pairs,
+            mode=args.mode, topk_per_anchor=args.topk_per_anchor, seed=args.seed)
         if len(pos_pairs) < 100:
             raise ValueError(f"Too few positive pairs ({len(pos_pairs)}) — relax thr-pos")
         model = build_model(args.base_model, args.max_seq_len)
@@ -200,7 +234,7 @@ def main():
         train(model, train_df, pos_pairs, args.batch_size, args.grad_accum,
               args.epochs, args.lr, device, precision, model_dir)
 
-    encode_all(model, df, args.batch_size, OUT_DIR, args.domain)
+    encode_all(model, df, args.batch_size, OUT_DIR, args.domain + suffix)
     print("\n✓ Done.")
     print(f"\nNext: python train_supervised.py --domain "
           f"{'weapon' if args.domain=='drugs' else 'drugs'}")
