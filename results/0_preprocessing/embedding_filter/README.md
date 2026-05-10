@@ -459,3 +459,82 @@ For paper headline:
 The supervised model **without LLM** still adds value: 100% coverage at competitive MAE,
 useful as a fallback for queries where LLM scores are unavailable (e.g., new verdicts
 in production).
+
+---
+
+## Methodology summary (Hebrew, for paper drafting)
+
+### מטרת המחקר
+לבחון אם **מודל אמבדינג ייעודי** שאומן ספציפית למשימת חיזוי טווח עונש יכול לשמש
+כפילטר חלופי (או משלים) לפילטר הקיים מבוסס רשת ציטוטים, במשימה של חיזוי טווח עונש
+(low, high חודשים) באמצעות k-Nearest Neighbors.
+
+### הדאטה
+חולצו **3,898 פסקי דין פליליים מחוזיים** — אלה שעמדו ב-3 תנאים: שייכים ל-drugs/weapon,
+יש להם טווח עונש מובן, ורמת ביטחון של חילוץ העונש = "גבוהה". הסט מתחלק ל-**2,305
+drugs ו-1,593 weapon**. הקלט: עובדות כתב האישום בעברית (~1,400 תווים בממוצע, ~350
+טוקנים אחרי tokenization של DictaBERT).
+
+### האימון
+**הבסיס:** `dicta-il/dictabert` (110M פרמטרים, 768-dim) עם CLS pooling. ה-loss היה
+`MultipleNegativesRankingLoss` (InfoNCE) — לכל זוג חיובי בבאטץ', ה-positive צריך להיות
+קרוב יותר ל-anchor מאשר 63 ה-positives האחרים בבאטץ' (effective batch=64). הפרמטרים:
+max_seq=256, batch=8 פיזי × grad_accum=8, lr=3e-5, 2 epochs, bf16. כל אימון 12-13
+דקות על NVIDIA A10G.
+
+### בחירת הזוגות החיוביים
+**א. סף מוחלט** — `|Δlow| ≤ 6 AND |Δhigh| ≤ 6` חודשים. דגימה אקראית של 200K. הבעיה:
+מוטה לטווחי עונש צפופים, מפספסת פס"ד נדירים בקצוות.
+
+**ב. Top-K per anchor** ⭐ — לכל anchor, 20 הקרובים ביותר ב-Euclidean על (low, high).
+~27K זוגות drugs / ~17K weapon. אדפטיבי לסקייל הדומיין, ייצוג שווה לכל anchor.
+
+**Top-K שיפר MAE ב-10-25% וגם רץ פי 7.5 מהר יותר** מהסף המוחלט.
+
+### אי-זליגה (3 רבדים)
+1. **Verdict-level split** — כל פס"ד או ב-train או ב-test, אף פעם בשניהם.
+2. **Encoding ≠ training** — אחרי האימון, המודל מקודד את כל הפס"ד (כולל test) — זה
+   inference בלבד, ה-weights לא משתנים.
+3. **Prediction מ-train בלבד** — top-K שכנים נבחרים רק מ-train. הזוג (test, train)
+   מעולם לא היה באימון. ראיה אמפירית: MAE לא 0.
+
+ב-5-fold CV: כל verdict בtest **בדיוק פעם אחת**, ב-fold ספציפי. כל ה-MAE על דאטה
+לא-נראה בלי double counting.
+
+### LLM Scoring
+על top-20 שכני המודל לכל test query (לכל fold), ציינו עם gpt-4.1 ב-batch mode (V6
+prompt + H-Full features). סה"כ **267,694 זוגות עם ציון** מ-4 מקורות. עלות: ~$191.
+
+### תוצאות מפורטות
+
+| מצב | drugs MAE | weapon MAE |
+|---|---|---|
+| baseline (חציון גלובלי) | 11.41 | 21.06 |
+| supervised_topk לבד (K=10) | 8.30 ± 0.27 | 15.45 ± 1.21 |
+| supervised + LLM rerank (K=10) | 8.33 ± 0.26 | 15.36 ± 1.33 |
+| LLM-citation לבד (K=10) | 6.90 ± 0.44 (50% cov) | 13.15 ± 1.68 (68% cov) |
+| **LLM-all sources** ⭐ (K=10, 100% cov) | **6.77 ± 0.29** | **13.56 ± 1.02** |
+| avg(citation, supervised) (K=10) | 7.77 (50% cov) | 13.71 (68% cov) |
+
+### MAE_low / MAE_high split (supervised_topk K=10)
+
+| | drugs | weapon |
+|---|---|---|
+| MAE_low | 6.37 (noLLM), 6.35 (+LLM) | 12.45 (noLLM), 12.41 (+LLM) |
+| MAE_high | 10.23 (noLLM), 10.31 (+LLM) | 18.46 (noLLM), 18.31 (+LLM) |
+
+`MAE_high` גבוה יותר — `sentencing_range_high` מתפזר על טווח רחב יותר (P95: 68
+חודשים drugs, 132 חודשים weapon).
+
+### ממצאים מפתח
+
+1. **top-K positive sampling היה השדרוג היחיד החשוב** — הורידה MAE 25-50% במקרים
+   מסוימים, ורצה פי 7.5 מהר יותר.
+2. **supervised_topk נותן 100% coverage** לעומת citation שמכסה רק 50-85%.
+3. **LLM rerank על supervised כמעט לא עוזר** (<2% הבדל) — מאשר שcosine של supervised
+   כבר מדרג טוב.
+4. **citation ו-supervised אורתוגונליים** — 6-15% חפיפה בtop-K, מצדיק ensemble.
+5. **LLM-all (איחוד 4 מקורות הציון) הוא המנצח לכיסוי מלא** — drugs 6.77 ± 0.29 ב-K=10.
+6. **המודל הוא task-specialized**, לא general-purpose — Spearman נמוך עם GT דמיון
+   אנושי (0.46 drugs, 0.09 weapon!), בעוד שLLM panel מגיע ל-0.61-0.72.
+   **דמיון משפטי ≠ דמיון בעונש.**
