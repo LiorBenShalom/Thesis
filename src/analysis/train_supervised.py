@@ -55,18 +55,34 @@ def pick_device():
     return "cpu"
 
 
-def load_data(domain, limit=None, seed=42):
+def load_data(domain, limit=None, seed=42, fold=None, n_folds=5):
+    """
+    fold=None  → original 80/20 split (seed=42)
+    fold in 1..n_folds → K-fold CV split: this fold's verdicts are TEST,
+                         the other n_folds-1 folds are TRAIN
+    """
     df = pd.read_csv(DATA_CSV)
     df = df[df.domain == domain].dropna(subset=["indictment_facts"]).reset_index(drop=True)
     if limit: df = df.head(limit).reset_index(drop=True)
     rng = np.random.default_rng(seed)
     perm = rng.permutation(len(df))
-    n_train = int(0.8 * len(df))
-    train_idx = sorted(perm[:n_train].tolist())
-    test_idx  = sorted(perm[n_train:].tolist())
+    if fold is None:
+        n_train = int(0.8 * len(df))
+        train_idx = sorted(perm[:n_train].tolist())
+        test_idx  = sorted(perm[n_train:].tolist())
+        print(f"  {domain}: 80/20 split → train={len(train_idx):,}, test={len(test_idx):,}")
+    else:
+        assert 1 <= fold <= n_folds, f"fold must be 1..{n_folds}"
+        # Split permutation into n_folds chunks
+        fold_size = len(df) // n_folds
+        # fold 1 = perm[0:fold_size], fold 2 = perm[fold_size:2*fold_size], ...
+        start = (fold - 1) * fold_size
+        end   = start + fold_size if fold < n_folds else len(df)
+        test_idx  = sorted(perm[start:end].tolist())
+        train_idx = sorted([i for i in range(len(df)) if i not in set(test_idx)])
+        print(f"  {domain} fold {fold}/{n_folds}: train={len(train_idx):,}, test={len(test_idx):,}")
     df["split"] = "test"
     df.loc[train_idx, "split"] = "train"
-    print(f"  {domain}: total={len(df):,}, train={len(train_idx):,}, test={len(test_idx):,}")
     return df
 
 
@@ -205,16 +221,24 @@ def main():
                    help="Smoke test on first N verdicts")
     p.add_argument("--encode-only", action="store_true")
     p.add_argument("--precision",   choices=["bf16","fp16","fp32"], default="bf16")
+    p.add_argument("--fold",     type=int, default=None,
+                   help="K-fold CV: which fold (1..n_folds) to hold out as test. None = original 80/20 split.")
+    p.add_argument("--n-folds",  type=int, default=5,
+                   help="Total number of CV folds")
     args = p.parse_args()
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    # Mode-specific output dir to keep model variants separate
-    suffix = f"_{args.mode}" if args.mode == "topk" else ""
+    # Suffix encodes mode + fold to keep variants separate
+    parts = []
+    if args.mode == "topk": parts.append("topk")
+    if args.fold is not None: parts.append(f"fold{args.fold}")
+    suffix = "_" + "_".join(parts) if parts else ""
     model_dir = OUT_DIR / f"model_{args.domain}{suffix}"
     random.seed(args.seed); torch.manual_seed(args.seed); np.random.seed(args.seed)
 
     print(f"=== {args.domain.upper()} supervised contrastive ===")
-    df = load_data(args.domain, limit=args.limit, seed=args.seed)
+    df = load_data(args.domain, limit=args.limit, seed=args.seed,
+                   fold=args.fold, n_folds=args.n_folds)
 
     device = pick_device()
     precision = args.precision if device == "cuda" else "fp32"

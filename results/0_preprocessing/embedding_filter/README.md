@@ -377,9 +377,85 @@ Existing 140K citation-pair LLM scores were already paid for in prior work.
 
 ## Open questions for follow-up
 
-1. **K-fold CV** for stability of MAE estimates
+1. ~~**K-fold CV** for stability of MAE estimates~~ ✅ DONE — see "5-fold CV results" below
 2. **Better positive-pair sampling**: hard-negative mining, soft labels (regression target instead of binary)
-3. **Selective prediction by cosine threshold** (started exploring; cosine is too compressed in supervised_topk to be useful as-is)
-4. **Combining supervised_topk + LLM differently**: weighted ensemble instead of LLM-rerank
+3. **Selective prediction by cosine threshold** (cosine is too compressed in supervised_topk: P10=0.92-0.96, mean=0.96-0.97 — weak signal for confidence filtering)
+4. **Combining supervised_topk + LLM differently**: ✅ tested as "avg(sup, cit)" — see ensemble results below
 5. **Why does +LLM hurt weapon+sigma?** Hypothesis: sigma already gives the most confident pool; LLM rerank picks a different (smaller) subset that loses information.
 6. **Train a similarity-task supervised model** on the 241 GT pairs (with K-fold) to see if it can replace the LLM panel for Task 1.
+
+---
+
+## ⭐ 5-fold CV results (final)
+
+After 5-fold CV training (10 trainings × ~12-13 min each on A10) + LLM scoring of all
+fold-test×train top-20 supervised pairs (~$96 batch), here are the **stable, fully-covered**
+numbers. Each verdict appears in test EXACTLY ONCE.
+
+### Pooled across folds (n_test = 100% in every cell)
+
+| domain | K | sup MAE | sup+LLM MAE | cit MAE (cov%) | all-LLM MAE | avg(sup,cit) MAE | union MAE |
+|---|---|---|---|---|---|---|---|
+| **drugs** | 5 | 8.33 | 8.29 | 6.84 (63%) | 6.98 | 7.52 (63%) | 7.72 |
+| **drugs** | 10 | **8.30** | 8.33 | 6.90 (50%) | **6.77** ⭐ | 7.77 (50%) | 7.81 |
+| **drugs** | 20 | 8.32 | 8.32 | 7.58 (35%) | **6.75** ⭐ | 8.70 (35%) | 7.97 |
+| **weapon** | 5 | 15.53 | 15.59 | 13.48 (79%) | 14.33 | **13.96** (79%) | 15.20 |
+| **weapon** | 10 | 15.45 | 15.36 | 13.15 (68%) | 13.56 | **13.71** (68%) | 15.31 |
+| **weapon** | 20 | 15.46 | 15.46 | **12.85** (55%) | 13.72 | **13.35** (55%) | 15.36 |
+
+`all-LLM` = top-K from union of all LLM scores (citation + simcse + supervised + 5fold = 267K pairs).
+
+### Per-fold mean ± std (stability check)
+
+| domain | K | sup_topk | sup+LLM | LLM-cit | LLM-all |
+|---|---|---|---|---|---|
+| drugs | 10 | 8.30 ± 0.27 | 8.33 ± 0.26 | 6.90 ± 0.44 | **6.77 ± 0.29** |
+| weapon | 10 | 15.45 ± 1.21 | 15.36 ± 1.33 | 13.15 ± 1.68 | 13.56 ± 1.02 |
+
+### Key 5-fold findings
+
+1. **`LLM-all` is the new champion for full coverage**:
+   - drugs K=10: **6.77** at 100% coverage (vs LLM-cit 6.90 at 50%)
+   - weapon K=10: 13.56 at 100% coverage (vs LLM-cit 13.15 at 68%)
+
+2. **Adding LLM rerank to supervised barely helps** (sup vs sup+LLM: <2% diff) — confirms earlier finding that the supervised pool's cosine ranking is already near-optimal.
+
+3. **Citation+LLM still has the lowest absolute MAE** but only on 35-85% of queries. For full coverage, you must combine.
+
+4. **Ensemble avg(sup, cit) helps weapon more than drugs** — drugs LLM-cit is already strong; weapon benefits from supervised's broader coverage.
+
+### Filter overlap analysis
+
+Top-K supervised vs all citation neighbors (per test query) — measures "do the filters agree?"
+
+| domain | K | mean overlap | % queries with 0 overlap | % overlap as fraction of K |
+|---|---|---|---|---|
+| drugs | 10 | 0.6 of 10 | 68% | 6% |
+| weapon | 10 | 1.4 of 10 | 46% | 14% |
+
+**The two filters are largely orthogonal** — they pick essentially different verdicts.
+This is what makes the ensemble useful: they capture different signals.
+
+### Cost summary (updated)
+
+| Step | Cost |
+|---|---|
+| SimCSE LLM scoring (48K pairs) | ~$74 |
+| Supervised single-split LLM scoring (14K pairs) | ~$21 |
+| **5-fold CV LLM scoring (64K pairs)** | **~$96** |
+| AWS A10 GPU time (5-fold × 2 domains × ~12 min) | minimal |
+| **Total for the entire embedding-filter arc** | **~$191 + GPU time** |
+
+### CV-validated final recommendation
+
+For paper headline:
+- **drugs sentencing range (5-fold CV, K=10, n=2,305, 100% coverage)**:
+  - LLM-all (best): **MAE 6.77 ± 0.29 months**
+  - supervised_topk (no LLM): MAE 8.30 ± 0.27 months
+- **weapon sentencing range (5-fold CV, K=10, n=1,593, 100% coverage)**:
+  - LLM-all (best): **MAE 13.56 ± 1.02 months**
+  - supervised_topk (no LLM): MAE 15.45 ± 1.21 months
+
+The supervised model **without LLM** still adds value: 100% coverage at competitive MAE,
+useful as a fallback for queries where LLM scores are unavailable (e.g., new verdicts
+in production).
