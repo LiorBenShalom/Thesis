@@ -3,6 +3,9 @@
 ניתוח מקיף לחיזוי טווח עונש בפסקי דין פליליים בעברית (drugs + weapon).
 3,898 verdicts, 5-fold CV, 9 שיטות נבחנות עם bootstrap 95% CI.
 
+## 📑 תיעוד מתודולוגיה
+- **[METHODOLOGY_PART1.md](METHODOLOGY_PART1.md)** — הסבר line-by-line על איך חושב כל מספר בטבלאות "Random baseline", "LLM bucket → gap", "Citation type → gap".
+
 ## הסיפור המלא — 3 שלבים
 
 ### ① הבעיה
