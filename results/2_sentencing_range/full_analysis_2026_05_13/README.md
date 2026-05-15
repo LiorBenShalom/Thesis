@@ -24,12 +24,13 @@
 
 ## מה יש בתיקייה
 
-### `data/` — 30 קבצי CSV
+### `data/` — 32 קבצי CSV (כולל RAW DATA)
 תוצאות מספריות גולמיות. ה-CSVs הקריטיים:
 
 | קובץ | תוכן |
 |---|---|
-| `rigor_per_query_errors.csv` | **33,853 רשומות** (query × method × err_lo/err_hi). הbasis של כל הניתוחים. |
+| ⭐ **`rigor_raw_per_query_K.csv`** | **242,435 רשומות (85MB)** — RAW DATA: לכל query × method × K שמורים true/pred/err + picked neighbors (JSON) + mean LLM. **משם אפשר לבנות כל גרף**. K∈{1,3,5,7,10,15,20,30,50}. |
+| `rigor_per_query_errors.csv` | **33,853 רשומות** (query × method × err_lo/err_hi בK=10 בלבד). הbasis של ה-Phase B הקודם. |
 | `rigor_mae_with_ci.csv` | MAE per method × domain × low/high עם bootstrap 95% CI (B=2,000) |
 | `rigor_paired_diffs.csv` | Paired bootstrap differences בין השיטות + Wilcoxon p-values |
 | `rigor_quartile_ci.csv` | MAE per quartile (Q1-Q4) עם CIs — בדיקת "median regressor" |
@@ -81,11 +82,15 @@ Visualizations שעל ה-CSVs. ה-grafs הקריטיים לתזה:
 - `plot_headline.png` — 4-bar summary
 - `plot_K_sweep.png` — K=1..50 (sensitivity)
 
-### `scripts/` — 12 סקריפטים
+### `scripts/` — 14 סקריפטים
 הקוד שייצר את כל הניתוחים. הקריטיים:
 
-**Phase A (most important — מקור הdata)**:
-- `rigor_phase_a.py` — מחשב per-query MAE לכל 9 השיטות (כולל TF-IDF, BM25, offense-matched). הvitalוp שלs.
+**Phase A v2 (NEW — RAW DATA generator)**:
+- `rigor_phase_a_v2.py` — מחשב per-query × method × K dataset שלם (242K רשומות) כולל picked neighbors. **זה המסד הגולמי לכל פלוט עתידי.**
+- `rigor_plotting_examples.py` — 5 מתכוני plotting מוכנים: MAE vs K, error distribution, scatter pred-vs-true, MAE by year, confidence calibration. השתמשי כתבנית.
+
+**Phase A (original — K=10 only)**:
+- `rigor_phase_a.py` — מחשב per-query MAE לכל 9 השיטות (כולל TF-IDF, BM25, offense-matched). מוגבל לK=10.
 
 **Phase B (analysis)**:
 - `rigor_phase_b.py` — Bootstrap CIs, paired tests, quartile, year-cluster, error analysis
