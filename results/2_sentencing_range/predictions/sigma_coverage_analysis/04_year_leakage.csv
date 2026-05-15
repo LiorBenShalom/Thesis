@@ -1,0 +1,15 @@
+domain,method,n_cases,mean_abs_year_diff,median_abs_year_diff,P25_abs_year_diff
+drugs,sup,2305,3.2,2.9,2.3
+drugs,sup_llm,2305,3.25,3.0,2.3
+drugs,cit,1161,2.77,2.5,1.9
+drugs,all,2305,3.05,2.8,2.1
+drugs,simcse_only,2300,3.25,3.0,2.2
+drugs,sup_only,755,3.53,3.2,2.5
+drugs,fold5_only,2283,3.32,3.0,2.3
+weapon,sup,1593,2.57,2.3,1.4
+weapon,sup_llm,1593,2.67,2.4,1.5
+weapon,cit,1089,2.5,2.3,1.6
+weapon,all,1593,3.09,2.9,2.1
+weapon,simcse_only,1564,4.05,3.8,3.0
+weapon,sup_only,491,3.77,3.6,2.6
+weapon,fold5_only,1590,2.93,2.7,1.9
