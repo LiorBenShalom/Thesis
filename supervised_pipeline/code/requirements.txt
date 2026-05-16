@@ -1,0 +1,8 @@
+torch>=2.0
+sentence-transformers>=3.0
+transformers>=4.40
+datasets>=2.14
+accelerate>=0.20
+numpy
+pandas
+tqdm
