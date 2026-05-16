@@ -7,7 +7,8 @@
 
 > ⭐ **[MASTER_LOG.md](MASTER_LOG.md)** — ה-single source of truth. כל שיטה (M1-M9) וכל ניסוי (E1-E11): מה נבחר, איך, למה, כמה, מה נתן. + הקשת הנרטיבית + ה-bottom-line table. **אם משהו מבולבל — תקראי את זה קודם.**
 
-- **[METHODOLOGY_PART1.md](METHODOLOGY_PART1.md)** — הסבר line-by-line על איך חושב כל מספר בטבלאות "Random baseline", "LLM bucket → gap", "Citation type → gap".
+- **[METHODOLOGY_PART1.md](METHODOLOGY_PART1.md)** — הסבר line-by-line על איך חושב כל מספר בטבלאות "Random baseline" (EXACT), "LLM bucket → gap", "Citation type → gap".
+- **[METHODOLOGY_BASELINES.md](METHODOLOGY_BASELINES.md)** — line-by-line של 3 ה-baselines: offense-matched random (M2), TF-IDF+Ridge (M3), BM25 (M4) — מה הדרישה, איך נבנה, איך נבחרו המועמדים, מה נתן.
 
 ## הסיפור המלא — 3 שלבים
 

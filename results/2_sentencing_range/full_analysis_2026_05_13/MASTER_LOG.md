@@ -135,11 +135,17 @@ A=(low=24, high=60), B=(low=20, high=56) → d_lo=|24-20|=4, d_hi=|60-56|=4. מ�
 - **מה נתן**: ה-reference. כל שיטה אחרת נמדדת ביחס לזה.
 
 ### M2 · Offense-matched random
-- **מה**: K אקראיים מתוך verdicts שחולקים ≥1 סעיף עבירה עם q.
-- **איך**: H-Full → offense set לכל verdict → דגום K=10 random מאלה שחופפים → median.
-- **למה**: בודק אם **שיתוף סעיף עבירה לבדו** מספיק לחיזוי (baseline rule-based שהמועצה דרשה).
-- **כמה**: drugs **8.53 [8.09, 8.96]** · weapon **17.65 [16.02, 19.30]**
-- **מה נתן**: ❌ **גרוע מ-global median!** שיתוף סעיף לבדו לא נושא signal. צריך מנגנון בחירה *בתוך* הקבוצה.
+*(תיעוד line-by-line מלא: [METHODOLOGY_BASELINES.md](METHODOLOGY_BASELINES.md) §M2)*
+- **מה**: K=10 אקראיים מתוך verdicts שחולקים ≥1 סעיף עבירה עם q.
+- **איך**:
+  1. H-Full → offense-set לכל verdict. drugs: דגלי `section_6/7/13/14/19` + `other_drug_offense` (yesno = לא ב-{"","לא","nan","None","0"}). weapon: regex על offense_number+offense_type+additional_offenses ל-`144(א/ב/ב2/ג/ז)`,`145`,`146`.
+  2. מועמדים = train verdicts ש-`offense_set(t) ∩ offense_set(q) ≠ ∅` (חיתוך ≥1, **לא** זהות מלאה).
+  3. דגום K=10 אקראיים, `seed = hash(q)+1` (דטרמיניסטי פר-query). אם <K → קח את כולם.
+  4. median(low/high של הנבחרים).
+- **דרישה**: ל-q חייב offense-set לא-ריק, אחרת אין ניבוי (לא נכנס ל-MAE).
+- **למה**: ה-baseline שהמועצה (First Principles) דרשה — בודק אם **שיתוף סעיף עבירה לבדו** מספיק. אם כן → המודל הוא רק `GROUP BY offense_type` (תוצאת שנות ה-90).
+- **כמה**: drugs **8.53 [8.09, 8.96]** (n=2,121 — 184 נפלו עם offense-set ריק) · weapon **17.65 [16.02, 19.30]** (n=1,272 — 321 נפלו)
+- **מה נתן**: ❌ **גרוע מ-global median!** (8.53>8.43, 17.65>16.67). שיתוף סעיף לבדו לא נושא signal — שני תיקי "§7 החזקה" יכולים להיות 3 חודשים מול 5 שנים. **מפריך** את "המודל = GROUP BY offense": sup+LLM מנצח אותו ב-Δ=-3.91 (p<1e-84), כלומר המודל לומד signal אמיתי הרבה מעבר לסיווג סעיף.
 
 ### M3 · TF-IDF + Ridge
 - **מה**: רגרסיה ישירה מהטקסט ל-(low, high). לא retrieval.
