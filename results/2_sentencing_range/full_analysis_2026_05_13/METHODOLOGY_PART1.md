@@ -52,41 +52,39 @@ d_hi = |rng_hi[q] - rng_hi[p]|   # פער בhigh_months
 
 ## טבלה 1️⃣ — Random Baseline
 
-### המספרים שדווחו
+### המספרים שדווחו (EXACT — על כל הזוגות)
 
-| Domain | \|Δlow\| ממוצע | \|Δhigh\| ממוצע |
-|---|---|---|
-| **Drugs** | 12.9 חודשים | 21.1 |
-| **Weapon** | 26.0 | 39.8 |
+| Domain | \|Δlow\| ממוצע | \|Δhigh\| ממוצע | # זוגות |
+|---|---|---|---|
+| **Drugs** | 12.9 (12.89) | 21.1 (21.11) | C(2445,2) = 2,987,790 |
+| **Weapon** | 26.0 (26.01) | 39.9 (39.90) | C(1673,2) = 1,398,628 |
 
 ### איך זה חושב
 
-**קוד** (`thesis_story_part1.py` שורות 127-142):
+**שיטה: ממוצע מדויק על כל C(n,2) הזוגות** (= Gini mean difference). לא דגימה.
+
+**קוד** (`thesis_story_part1.py`):
 ```python
 for dom in ("drugs", "weapon"):
-    vs = [v for v in rng_lo if dom_of.get(v) == dom]  # רק verdicts של הdomain
-    rng = np.random.default_rng(seed=42)
-    n_sample = 50_000
-    idx = rng.integers(0, len(vs), (n_sample, 2))     # 50K זוגות אקראיים
-    d_los = []; d_his = []
-    for i, j in idx:
-        if i == j: continue
-        d_los.append(abs(rng_lo[vs[i]] - rng_lo[vs[j]]))
-        d_his.append(abs(rng_hi[vs[i]] - rng_hi[vs[j]]))
-    print(f"{dom.upper()} random pairs (n={n_sample:,}):")
-    print(f"  |Δlow|  mean={np.mean(d_los):.2f}")
-    print(f"  |Δhigh| mean={np.mean(d_his):.2f}")
+    vs = [v for v in rng_lo if dom_of.get(v) == dom]
+    lo = np.array([rng_lo[v] for v in vs], dtype=float)
+    hi = np.array([rng_hi[v] for v in vs], dtype=float)
+    n = len(lo)
+    total_pairs = n * (n - 1) // 2
+    # Σ_{i<j} |x_i - x_j| / C(n,2). המטריצה סופרת i<j וגם i>j → /2
+    exact_lo = np.abs(lo[:, None] - lo[None, :]).sum() / 2.0 / total_pairs
+    exact_hi = np.abs(hi[:, None] - hi[None, :]).sum() / 2.0 / total_pairs
 ```
 
 **מילים**:
 1. בחירת אוכלוסיית הdomain (drugs או weapon)
-2. דגימה אקראית של 50,000 זוגות (i, j) של verdicts מתוכה
-3. לכל זוג — חישוב |Δlow| ו-|Δhigh| לפי הנוסחאות הבסיסיות
-4. ממוצע
+2. בניית מטריצת המרחקים `|x_i - x_j|` לכל הזוגות ע"י broadcasting (n×n)
+3. סכימה / 2 (כי המטריצה סימטרית, סופרת כל זוג פעמיים) / C(n,2)
+4. זה בדיוק הממוצע על כל הזוגות — דטרמיניסטי, ~0.04 שניות
 
-**Seed=42** — דטרמיניסטי, אותם 50K זוגות בכל run.
+**הערה היסטורית**: הגרסה הראשונה השתמשה בדגימת Monte-Carlo של 50,000 זוגות (seed=42). אומת שהדגימה זהה ל-exact עד **±0.02 חודש (drugs) / ±0.15 (weapon)** — SE של אומדן 50K = 0.07-0.17. הוחלף ל-exact כי הוא מהיר באותה מידה, דטרמיניסטי לחלוטין, ומסיר את השאלה "למה רק 50K?". ההבדל היחיד בעיגול: weapon |Δhigh| 39.8 → **39.9**.
 
-**אומר מה?** ככה נראה המרחק הצפוי בין שני verdicts **שאין שום סיבה להעריך שהם דומים**. זה ה-floor של "ניבוי עיוור".
+**אומר מה?** ככה נראה המרחק הממוצע בין שני verdicts **שאין שום סיבה להעריך שהם דומים**. זה ה-floor של "ניבוי עיוור".
 
 ### דוגמה לחישוב יד אחד
 שתי verdict ב-drugs:
@@ -95,7 +93,7 @@ for dom in ("drugs", "weapon"):
 - d_lo = |6 - 18| = 12 חודש
 - d_hi = |24 - 36| = 12 חודש
 
-ממוצע על 50K זוגות = 12.9 / 21.1 ב-drugs.
+ממוצע על **כל 2,987,790 הזוגות** = 12.89 / 21.11 ב-drugs.
 
 ---
 
@@ -251,7 +249,7 @@ for ct in ("1hop", "2hop", "cocite", "none"):
 
 | Source | Drugs \|Δlow\| | Drugs \|Δhigh\| | Weapon \|Δlow\| | Weapon \|Δhigh\| |
 |---|---|---|---|---|
-| Random (50K זוגות) | 12.9 | 21.1 | 26.0 | 39.8 |
+| Random (EXACT, כל הזוגות) | 12.9 | 21.1 | 26.0 | 39.9 |
 | LLM 0-24 | 11.5 | 18.5 | 25.0 | 36.9 |
 | LLM 25-49 | 9.1 | 14.9 | 17.7 | 25.8 |
 | LLM 50-74 | 7.3 | 11.7 | 15.7 | 22.7 |

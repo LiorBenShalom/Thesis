@@ -123,23 +123,23 @@ for dom in ("drugs", "weapon"):
               f"{sub.d_lo.median():>12.2f}    {sub.d_hi.median():>11.2f}")
 
 
-# ===== Random baseline (no similarity assumption) =====
-print(f"\n{'='*70}\n C. RANDOM BASELINE (any 2 verdicts, NO similarity filter)\n{'='*70}")
-import itertools
+# ===== Random baseline = EXACT mean |Δ| over ALL C(n,2) pairs =====
+# (Gini mean difference). Replaces the earlier 50K Monte-Carlo sample —
+# the exact value is deterministic, fast (vectorized broadcasting), and
+# removes the "why only 50K?" question. Verified: 50K sample == exact ±0.1mo.
+print(f"\n{'='*70}\n C. RANDOM BASELINE — EXACT mean over ALL C(n,2) pairs\n{'='*70}")
 for dom in ("drugs", "weapon"):
     vs = [v for v in rng_lo if dom_of.get(v) == dom]
-    rng = np.random.default_rng(42)
-    n_sample = 50_000
-    idx = rng.integers(0, len(vs), (n_sample, 2))
-    d_los = []
-    d_his = []
-    for i, j in idx:
-        if i == j: continue
-        d_los.append(abs(rng_lo[vs[i]] - rng_lo[vs[j]]))
-        d_his.append(abs(rng_hi[vs[i]] - rng_hi[vs[j]]))
-    print(f"\n  {dom.upper()} random pairs (n={n_sample:,}):")
-    print(f"    |Δlow|  mean={np.mean(d_los):.2f}  median={np.median(d_los):.2f}")
-    print(f"    |Δhigh| mean={np.mean(d_his):.2f}  median={np.median(d_his):.2f}")
+    lo = np.array([rng_lo[v] for v in vs], dtype=float)
+    hi = np.array([rng_hi[v] for v in vs], dtype=float)
+    n = len(lo)
+    total_pairs = n * (n - 1) // 2
+    # sum_{i<j} |x_i - x_j| via broadcasting; matrix counts both i<j and i>j → /2
+    exact_lo = np.abs(lo[:, None] - lo[None, :]).sum() / 2.0 / total_pairs
+    exact_hi = np.abs(hi[:, None] - hi[None, :]).sum() / 2.0 / total_pairs
+    print(f"\n  {dom.upper()} ALL pairs (n={n} verdicts, C(n,2)={total_pairs:,}):")
+    print(f"    |Δlow|  mean={exact_lo:.4f}")
+    print(f"    |Δhigh| mean={exact_hi:.4f}")
 
 df_llm.to_csv("/tmp/story_llm_gaps.csv", index=False)
 df_cit.to_csv("/tmp/story_citation_gaps.csv", index=False)

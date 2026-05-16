@@ -25,17 +25,16 @@ m = pd.read_csv("/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesi
                 usecols=["canonical_id","domain","sentencing_range_low","sentencing_range_high","sentencing_confidence"])
 m = m[m.domain.isin(["drugs","weapon"]) & m.sentencing_range_low.notna() & (m.sentencing_confidence == "גבוהה")].drop_duplicates("canonical_id")
 
-random_baseline = {}
+random_baseline = {}  # EXACT mean |Δ| over ALL C(n,2) pairs (Gini mean difference)
 for dom in ("drugs", "weapon"):
     sub = m[m.domain == dom]
-    rng = np.random.default_rng(42)
-    n_sample = 50_000
-    idx = rng.integers(0, len(sub), (n_sample, 2))
-    lows = sub.sentencing_range_low.values
-    highs = sub.sentencing_range_high.values
-    d_los = np.array([abs(lows[i] - lows[j]) for i, j in idx if i != j])
-    d_his = np.array([abs(highs[i] - highs[j]) for i, j in idx if i != j])
-    random_baseline[dom] = (d_los.mean(), d_his.mean())
+    lows = sub.sentencing_range_low.values.astype(float)
+    highs = sub.sentencing_range_high.values.astype(float)
+    n = len(lows)
+    total_pairs = n * (n - 1) // 2
+    exact_lo = np.abs(lows[:, None] - lows[None, :]).sum() / 2.0 / total_pairs
+    exact_hi = np.abs(highs[:, None] - highs[None, :]).sum() / 2.0 / total_pairs
+    random_baseline[dom] = (exact_lo, exact_hi)
 
 # --- Figure: 4 panels (2 rows × 2 domains) ---
 fig, axes = plt.subplots(2, 2, figsize=(14, 9))
