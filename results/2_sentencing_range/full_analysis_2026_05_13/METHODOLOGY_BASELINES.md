@@ -1,5 +1,7 @@
 # מתודולוגיה — Baselines (M2 offense-matched, M3 TF-IDF, M4 BM25)
 
+> ⚠️ נתונים עדכניים = **4,432** (2026-05-16). הלוגיקה זהה; ערכים עדכניים ב-`data/rigor_mae_with_ci.csv` ו-[`DATA_PROVENANCE_4432.md`](DATA_PROVENANCE_4432.md). 4,432: offense-matched drugs 8.77 / weapon 18.41 · TF-IDF 7.57 / 16.47 · BM25 6.75 / 15.23.
+
 תיעוד line-by-line של 3 ה-baselines. **קוד מקור**: `scripts/rigor_phase_a.py`.
 לכל baseline: מה הדרישה · איך נבנה · מה נבדק · איך נבחרו המועמדים · מה נתן.
 

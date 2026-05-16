@@ -1,7 +1,11 @@
 # Sentencing Range Prediction — Full Analysis (2026-05-13)
 
 ניתוח מקיף לחיזוי טווח עונש בפסקי דין פליליים בעברית (drugs + weapon).
-3,898 verdicts, 5-fold CV, 9 שיטות נבחנות עם bootstrap 95% CI.
+**4,432 verdicts** (2,713 drugs + 1,719 weapon), 5-fold CV, 9 שיטות, bootstrap 95% CI.
+
+> ⚠️ **גרסת נתונים 4,432 (2026-05-16).** כל ה-CSV/plots/טבלאות רצו על הדטה הזה. גרסת 3,898 הקודמת superseded (`data/_bak_3898_2026-05-16/`, `plots/_bak_3898_2026-05-16/`).
+> **על איזה דטה ואיך כל טבלה הופקה** → [`DATA_PROVENANCE_4432.md`](DATA_PROVENANCE_4432.md).
+> שינויים מול 3,898: (1) sup+LLM מנצח random+LLM **מובהקית** (limitation נפתר); (2) citation+LLM > sup+LLM על drugs (מובהק), תיקו weapon.
 
 ## 📑 תיעוד — התחילי כאן
 
@@ -23,11 +27,11 @@
 
 ### ③ מהפילטור לחיזוי
 המסקנה הסטטיסטית (paired bootstrap CI + Wilcoxon):
-- **Supervised + LLM rerank** הוא הפילטור המעשי המנצח (drugs MAE-lo 6.11, weapon 12.50)
-- מנצח **באופן מובהק** את TF-IDF (Δ=-2.01), BM25 (Δ=-0.92), offense-matched random (Δ=-3.91)
-- מוסיף LLM rerank על supervised: **שיפור מובהק קטן** (Δ=-0.27, p<1e-9)
-- **לא מנצח את random+LLM באופן חד-משמעי** (CI כולל את 0 ב-Wilcoxon p=0.84) — limitation אקדמאית
-- **תקרה תיאורטית**: LLM-best 5.18/8.09 — שיפור נוסף של ~17% אבל דורש לציין הכל
+- **Supervised + LLM** הפילטור המעשי (drugs MAE-lo 5.83, weapon 12.95, 100% cov)
+- מנצח **מובהק** TF-IDF / BM25 / offense-matched / sup-only בשני ה-domains
+- **מנצח גם את random+LLM מובהקית** (drugs Δ=−1.03 p=4.8e-7 · weapon Δ=−1.94 p=1.2e-4) — ה-limitation של 3,898 (p=0.84) **נפתר** עם הדטה המורחב
+- **citation+LLM מדויק יותר**: drugs 5.45 (Δ=+0.71 vs sup, p=7.9e-13 מובהק), weapon 12.44 (תיקו)
+- **תקרה**: LLM-best 5.13/11.80 — דורש לציין הכל
 
 ## מה יש בתיקייה
 
@@ -122,20 +126,24 @@ Visualizations שעל ה-CSVs. ה-grafs הקריטיים לתזה:
 
 ## 🔑 ה-bottom-line numbers (לabstract)
 
+**נתונים: 4,432 (2,713 drugs / 1,719 weapon) — ראה [`DATA_PROVENANCE_4432.md`](DATA_PROVENANCE_4432.md)**
+
 | Method | Drugs MAE-lo [95% CI] | Drugs MAE-hi | Weapon MAE-lo | Weapon MAE-hi |
 |---|---|---|---|---|
-| Global median | 8.43 [7.99, 8.89] | 14.08 | 16.67 | 25.46 |
-| TF-IDF + Ridge | 7.56 [7.20, 7.94] | 12.48 | 15.58 | 23.13 |
-| BM25 | 6.82 [6.45, 7.24] | 11.04 | 14.54 | 21.08 |
-| Random + LLM | 6.34 [5.98, 6.74] | 10.11 | 13.44 | 19.70 |
-| Supervised cosine | 6.33 [5.98, 6.71] | 10.22 | 13.54 | 20.29 |
-| Citation + LLM | 6.11 [5.68, 6.58] | 9.46 | 12.88 | 19.59 |
-| **★ Supervised + LLM** | **6.11 [5.77, 6.48]** | **9.91** | **12.50** | **18.48** |
-| LLM-best (UB) | 5.18 [4.86, 5.53] | 8.09 | 11.15 | 16.09 |
+| Global median | 8.48 [8.05, 8.92] | 14.07 | 17.49 | 26.21 |
+| Offense-matched random | 8.77 [8.36, 9.19] | 14.66 | 18.41 | 27.39 |
+| TF-IDF + Ridge | 7.57 [7.23, 7.94] | 12.40 | 16.47 | 24.00 |
+| BM25 | 6.75 [6.39, 7.12] | 10.91 | 15.23 | 21.75 |
+| Random + LLM | 6.66 [6.28, 7.06] | 10.54 | 14.67 | 21.52 |
+| Supervised cosine | 6.05 [5.72, 6.42] | 9.74 | 13.81 | 20.53 |
+| **★ Supervised + LLM** | **5.83 [5.50, 6.19]** | **9.48** | **12.95** | **19.19** |
+| Citation + LLM | 5.45 [5.05, 5.89] | 8.49 | 12.44 | 18.28 |
+| LLM-best (UB) | 5.13 [4.82, 5.45] | 8.05 | 11.80 | 17.11 |
 
 ## 🚨 LIMITATIONS שצריך לדווח עליהם
 
-1. **Random+LLM ≈ Sup+LLM (Wilcoxon p=0.84)** — לא ניתן להוכיח חד-משמעית שהsupervised filter עדיף על random.
+1. ~~Random+LLM ≈ Sup+LLM~~ **נפתר ב-4,432**: sup+LLM מנצח random+LLM מובהקית (drugs p=4.8e-7 · weapon p=1.2e-4). היה limitation ב-3,898 (p=0.84).
+1b. **Citation+LLM > Sup+LLM על drugs** (Δ=+0.71, p=7.9e-13) — sup+LLM הוא ה-best *מעשי* (100% cov), לא ה-best מוחלט.
 2. **Year confounding ב-weapon** — year-cluster CI כפול מ-per-query.
 3. **Q4 weapon errors** — קייסים עם 100-300 חודשי מאסר אינם פתירים עם הdata הקיים.
 4. **Citation+LLM coverage** — רק 79-90% (חסר ב-10-21% מהקייסים).

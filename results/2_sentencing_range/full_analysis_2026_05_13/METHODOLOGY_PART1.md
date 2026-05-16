@@ -1,5 +1,7 @@
 # מתודולוגיה — חלק 1: השונות במציאות
 
+> ⚠️ נתונים עדכניים = **4,432** (2026-05-16). הלוגיקה זהה; הערכים העדכניים ב-`data/*.csv` ו-[`DATA_PROVENANCE_4432.md`](DATA_PROVENANCE_4432.md). random EXACT 4,432: drugs 12.96/21.11, weapon 27.38/41.20.
+
 תיעוד מלא של איך חושב כל מספר בטבלאות **"השונות הבסיסית"**, **"LLM bucket → gap"**, ו**"Citation type → gap"**.
 
 **הסקריפט המקור**: [`scripts/thesis_story_part1.py`](scripts/thesis_story_part1.py)
