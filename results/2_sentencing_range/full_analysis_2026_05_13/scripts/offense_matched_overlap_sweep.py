@@ -9,9 +9,13 @@ For each threshold:
             MAE-lo/hi with bootstrap 95% CI
 """
 from pathlib import Path
-import json, re
+import json, re, hashlib
 import numpy as np
 import pandas as pd
+
+def stable_seed(s: str) -> int:
+    """Deterministic across processes (Python's built-in hash() is salted)."""
+    return int(hashlib.md5(s.encode("utf-8")).hexdigest()[:8], 16)
 
 ROOT = Path("/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try")
 EXP  = ROOT / "experiments"
@@ -87,8 +91,8 @@ def run(threshold, exact=False):
                         if t_off==q_off: cands.append(t)
                     else:
                         if len(q_off & t_off) >= threshold: cands.append(t)
-                if not cands: continue
-                rng2=np.random.default_rng((hash(q)+1)%2**32)
+                if not cands: continue        # min_k = 1 (consistent with all other methods M1-M9)
+                rng2=np.random.default_rng(stable_seed(q))   # deterministic across runs
                 if len(cands)>=K:
                     sel=rng2.permutation(len(cands))[:K]
                     picked=[cands[i] for i in sel]
