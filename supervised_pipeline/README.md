@@ -10,7 +10,7 @@
 | נכס | מיקום בגיט | גודל | הערה |
 |---|---|---|---|
 | **קוד אימון** | `supervised_pipeline/code/` | 40KB | train + run scripts |
-| **נתוני אימון** | `supervised_pipeline/data/supervised_data.csv` | 9.3MB | 3,898 verdicts |
+| **נתוני אימון** | `supervised_pipeline/data/supervised_data.csv` | ~11MB | **4,432 verdicts** (2,713 drugs + 1,719 weapon) |
 | **לוגי אימון** | `supervised_pipeline/logs/` | 500KB | 5-fold × 2 domains |
 | **Baseline embeddings** | `simcse_outputs/supervised/` | 81MB | מודל ללא פילטר (קיים מראש בגיט) |
 | **Filtered embeddings** | `simcse_outputs/supervised_filtered/` | 59MB | המודל המסונן (חדש בגיט) |
@@ -37,11 +37,13 @@
 
 ## 2. הנתונים — `data/supervised_data.csv`
 
-3,898 פסקי דין (2,305 drugs + 1,593 weapon). Schema מלא ב-[SCHEMA.md](data/SCHEMA.md).
+**4,432 פסקי דין** (2,713 drugs + 1,719 weapon). אין nulls. כל 4,432 מכוסים ב-H-Full cache (4,433 keys). Schema מלא ב-[SCHEMA.md](data/SCHEMA.md).
 
-המקור: נגזר מ-`innovation_submission/data_master/verdicts_hebrew.csv` (8,446) → סינון ל-drugs/weapon עם טווח עונש בביטחון "גבוהה". פירוט שרשרת ה-derivation ב-SCHEMA.md.
+המקורות: (א) `innovation_submission/data_master_final/verdicts_clean.csv` — הקורפוס הנקי (4,133, high-conf range, dedup); (ב) tal-data — פסקי דין גולמיים נוספים שעברו את אותו פַייפליין (header→Hebrew-id → range high-conf → facts gpt-4-turbo → citations). הסט = איחוד כל פס"ד נקי עם כיסוי H-Full, dedup לפי `verdict`. הרכב: 3,898 (קודם) + 235 + 303 − 4 כפילויות = 4,432.
 
-⚠️ **הערת domain swap (2026-05-11)**: 74 verdicts drugs→weapon + 1 weapon→drugs תוקנו (sיווג domain שגוי שזוהה דרך H-Full schema mismatch). הגרסה הנוכחית של ה-CSV כבר מתוקנת. הגיבוי `supervised_data.csv.bak_pre_domain_swap_2026_05_11` נשאר מקומי בלבד (gitignored).
+⚠️ **domain swap (2026-05-11)**: 74 drugs→weapon + 1 weapon→drugs — נשמר בגרסה הנוכחית.
+
+⚠️ **גרסת נתונים 4,432 (2026-05-16)**: ה-embeddings וכל ניתוח ה-prediction (סעיפים 4-5) מבוססים כרגע על גרסת 3,898 הקודמת. אימון 5-fold מחדש על 4,432 + ניקוד LLM + ניתוח מלא — **בתהליך**. המספרים בסעיף 5 יתעדכנו בסיום.
 
 ---
 
@@ -58,7 +60,7 @@ source .venv/bin/activate
 1. `load_data(domain, fold)` — 5-fold CV split (seed=42), כל verdict ב-test בדיוק פעם אחת
 2. `build_positive_pairs(...)` — top-20 Euclidean → סינון offense-overlap → backfill עד K=20 בתוך 12 חודש
 3. אימון DictaBERT עם InfoNCE
-4. הצפנת **כל** 3,898 verdicts (test מוצפנים ע"י מודל train-only)
+4. הצפנת **כל** verdicts ה-domain (test מוצפנים ע"י מודל train-only)
 5. שמירת `verdict_embeddings_{dom}_topk_fold{f}_offenseFiltered.npy` + index CSV
 
 זמן: ~3-5 שעות ל-10 האימונים על A10.
@@ -83,9 +85,10 @@ source .venv/bin/activate
 
 **כל** הניתוח ב-`results/2_sentencing_range/full_analysis_2026_05_13/` נשען על ה-filtered embeddings. ראה `full_analysis_2026_05_13/README.md`.
 
-המסקנה הקצרה (5-fold CV, bootstrap 95% CI):
+המסקנה הקצרה **(גרסת 3,898 — לפני הרחבת הנתונים ל-4,432; re-run בתהליך)** (5-fold CV, bootstrap 95% CI):
 - Supervised+LLM: drugs MAE-lo **6.11 [5.77, 6.48]**, weapon **12.50 [11.42, 13.70]**
 - מנצח TF-IDF/BM25/offense-matched מובהקית (p<1e-13)
+- ⏳ ניתוח מחדש על 4,432 (embeddings חדשים + ניקוד LLM) יעדכן מספרים אלה.
 
 ---
 
