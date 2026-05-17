@@ -1,0 +1,3 @@
+domain,n_total,n_covered,coverage,mean_K_used,median_K_used,std_K_used,pct_with_lt_10,hist_1,hist_2,hist_3,hist_4,hist_5,hist_6,hist_7,hist_8,hist_9,hist_10
+drugs,2713,2352,0.8669,8.288,10.0,2.952,0.3082,123,110,73,82,71,73,68,61,64,1627
+weapon,1719,1630,0.9482,8.72,10.0,2.666,0.2221,64,50,41,53,39,37,29,27,22,1268
