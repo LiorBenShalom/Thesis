@@ -6,26 +6,26 @@
 
 > ## ⚠️ גרסת נתונים — קרא לפני כל מספר במסמך
 >
-> **כל התוצאות, הטבלאות, ה-CSV וה-plots בגרסה זו רצו על דטה של 4,432 פסקי דין (2,713 drugs + 1,719 weapon), נכון ל-2026-05-16.**
-> **בדיוק על איזה דטה ואיך כל טבלה הופקה** → [`DATA_PROVENANCE_4432.md`](DATA_PROVENANCE_4432.md) (single source of truth ל-provenance: ההרכב, המקורות A/B, כל artifact + rowcount, שיטת ה-CV, ומפת result←script←data).
-> תוצאות גרסת 3,898 הקודמת **מבוטלות (superseded)** — שמורות רק ב-`data/_bak_3898_2026-05-16/` ו-`plots/_bak_3898_2026-05-16/`.
+> **כל התוצאות, הטבלאות, ה-CSV וה-plots רצו על גרסה אחת רשמית: 4,432 פסקי דין** (corpus = eval; full-coverage methods n=2,713 drugs + 1,719 weapon). 2026-05-17.
+> **בדיוק על איזה דטה ואיך כל טבלה הופקה** → [`DATA_PROVENANCE_4432.md`](DATA_PROVENANCE_4432.md).
+> תוצאות 3,898 superseded (`data/_bak_3898_2026-05-16/`). הערה: ריצת-ביניים העריכה על 4,204 (228 שורות master_inventory עם range=NaN מ-scan ישן) — **תוקן**: range מ-supervised_data הסמכותי, dedup → corpus==eval==4,432.
 >
-> ### Bottom-line מעודכן (4,432, 5-fold CV, bootstrap 95% CI)
-> | שיטה | Drugs MAE-lo [CI] | Weapon MAE-lo [CI] |
-> |---|---|---|
-> | Global median | 8.48 [8.05, 8.92] | 17.49 [15.90, 19.07] |
-> | Offense-matched random | 8.77 [8.36, 9.19] | 18.41 [16.71, 20.23] |
-> | TF-IDF + Ridge | 7.57 [7.23, 7.94] | 16.47 [15.34, 17.67] |
-> | BM25 | 6.75 [6.39, 7.12] | 15.23 [14.00, 16.48] |
-> | Random + LLM | 6.66 [6.28, 7.06] | 14.67 [13.32, 16.28] |
-> | Supervised alone | 6.05 [5.72, 6.42] | 13.81 [12.49, 15.29] |
-> | **★ Supervised + LLM** | **5.83 [5.50, 6.19]** | **12.95 [11.71, 14.36]** |
-> | Citation + LLM | 5.45 [5.05, 5.89] | 12.44 [11.19, 13.74] |
-> | LLM-best (UB) | 5.13 [4.82, 5.45] | 11.80 [10.74, 12.97] |
+> ### Bottom-line (גרסה אחת 4,432, 5-fold CV, bootstrap 95% CI)
+> | שיטה | Drugs MAE-lo [CI] | Weapon MAE-lo [CI] | n (dr/we) |
+> |---|---|---|---|
+> | Global median | 8.50 [8.11, 8.91] | 17.47 [16.05, 19.07] | 2713/1719 |
+> | Offense-matched random | 8.72 [8.37, 9.12] | 18.23 [16.58, 20.09] | 2517/1387 |
+> | TF-IDF + Ridge | 7.39 [7.08, 7.77] | 16.38 [15.24, 17.63] | 2713/1719 |
+> | BM25 | 6.65 [6.31, 7.01] | 15.26 [14.17, 16.47] | 2713/1719 |
+> | Random + LLM | 6.38 [5.99, 6.79] | 15.03 [13.62, 16.61] | 2473/1669 |
+> | Supervised alone | 5.89 [5.58, 6.22] | 13.85 [12.49, 15.36] | 2713/1719 |
+> | **★ Supervised + LLM** | **5.69 [5.39, 6.01]** | **13.03 [11.80, 14.38]** | 2713/1719 |
+> | Citation + LLM | 5.26 [4.89, 5.69] | 12.35 [11.15, 13.63] | 2352/1630 |
+> | LLM-best (UB) | 4.97 [4.68, 5.29] | 11.85 [10.77, 13.03] | 2713/1719 |
 >
-> ### שני שינויי נרטיב מול 3,898 (קריטי לתזה)
-> 1. **ה-limitation המרכזי נפתר**: sup+LLM **מנצח מובהקית** את random+LLM בשני ה-domains (drugs Δ=−1.03, p=4.8e-7 · weapon Δ=−1.94, p=1.2e-4). ב-3,898 זה היה לא-מובהק (Wilcoxon p=0.84) — **הדטה המורחב מוכיח שהפילטר ה-supervised עדיף על random, מה שמחזק את טענת הליבה של התזה.**
-> 2. **citation+LLM מנצח את sup+LLM**: drugs Δ=+0.71 (p=7.9e-13, מובהק) · weapon תיקו (CI כולל 0). קודם sup+LLM היה ה-headline.
+> ### שני שינויי נרטיב מול 3,898 (קריטי לתזה — מאושר על הגרסה האחת)
+> 1. **ה-limitation המרכזי נפתר**: sup+LLM **מנצח מובהקית** את random+LLM בשני ה-domains (drugs Δ=−0.86, p=6.2e-6 · weapon Δ=−2.27, p=5.2e-4). ב-3,898 לא-מובהק (Wilcoxon p=0.84).
+> 2. **citation+LLM מנצח את sup+LLM**: drugs Δ=+0.74 (p=3.6e-15, מובהק) · weapon תיקו (CI כולל 0).
 > sup+LLM עדיין מנצח מובהקית את TF-IDF/BM25/offense-matched/sup-only בשני ה-domains.
 
 ---
@@ -330,25 +330,25 @@ A=(low=24, high=60), B=(low=20, high=56) → d_lo=|24-20|=4, d_hi=|60-56|=4. מ�
 
 ## 4. ה-Bottom Line (הטבלה היחידה שצריך לזכור)
 
-**נתונים: 4,432 (2,713 drugs / 1,719 weapon)**, 5-fold CV, K=10, bootstrap 95% CI (B=2,000). מקור: [`DATA_PROVENANCE_4432.md`](DATA_PROVENANCE_4432.md).
+**גרסה אחת רשמית: 4,432 (corpus==eval; full n=2,713 drugs / 1,719 weapon)**, 5-fold CV, K=10, bootstrap 95% CI (B=2,000). מקור: [`DATA_PROVENANCE_4432.md`](DATA_PROVENANCE_4432.md).
 
 | שיטה | Drugs MAE-lo [CI] | Weapon MAE-lo [CI] | מנצח את median? | תפקיד בתזה |
 |---|---|---|---|---|
-| Global median | 8.48 [8.05, 8.92] | 17.49 [15.90, 19.07] | — | ה-floor |
-| Offense-matched random | 8.77 [8.36, 9.19] | 18.41 [16.71, 20.23] | ❌ לא | rule-based נכשל |
-| TF-IDF + Ridge | 7.57 [7.23, 7.94] | 16.47 [15.34, 17.67] | ✓ | baseline נחות |
-| BM25 | 6.75 [6.39, 7.12] | 15.23 [14.00, 16.48] | ✓ | baseline חזק מפתיע |
-| Supervised alone | 6.05 [5.72, 6.42] | 13.81 [12.49, 15.29] | ✓ | זול, 0 LLM |
-| Random + LLM | 6.66 [6.28, 7.06] | 14.67 [13.32, 16.28] | ✓ | sup+LLM מנצח אותו **מובהק** |
-| Citation + LLM | 5.45 [5.05, 5.89] | 12.44 [11.19, 13.74] | ✓ | **המנצח על drugs (מובהק)** |
-| **★ Supervised + LLM** | **5.83 [5.50, 6.19]** | **12.95 [11.71, 14.36]** | ✓ | **הפתרון המעשי, 100% cov** |
-| LLM-best (UB) | 5.13 [4.82, 5.45] | 11.80 [10.74, 12.97] | ✓ | תקרה ($3,770) |
+| Global median | 8.50 [8.11, 8.91] | 17.47 [16.05, 19.07] | — | ה-floor |
+| Offense-matched random | 8.72 [8.37, 9.12] | 18.23 [16.58, 20.09] | ❌ לא | rule-based נכשל |
+| TF-IDF + Ridge | 7.39 [7.08, 7.77] | 16.38 [15.24, 17.63] | ✓ | baseline נחות |
+| BM25 | 6.65 [6.31, 7.01] | 15.26 [14.17, 16.47] | ✓ | baseline חזק מפתיע |
+| Supervised alone | 5.89 [5.58, 6.22] | 13.85 [12.49, 15.36] | ✓ | זול, 0 LLM |
+| Random + LLM | 6.38 [5.99, 6.79] | 15.03 [13.62, 16.61] | ✓ | sup+LLM מנצח אותו **מובהק** |
+| Citation + LLM | 5.26 [4.89, 5.69] | 12.35 [11.15, 13.63] | ✓ | **המנצח על drugs (מובהק)** |
+| **★ Supervised + LLM** | **5.69 [5.39, 6.01]** | **13.03 [11.80, 14.38]** | ✓ | **הפתרון המעשי, 100% cov** |
+| LLM-best (UB) | 4.97 [4.68, 5.29] | 11.85 [10.77, 13.03] | ✓ | תקרה ($3,770) |
 
-**משפט הסיכום**: דמיון *כן* עוזר — כל שיטות הדמיון מנצחות את ה-median מובהקית. עם הדטה המורחב (4,432), **sup+LLM מנצח את random+LLM מובהקית בשני ה-domains** (drugs p=4.8e-7, weapon p=1.2e-4) — הפילטר ה-supervised עצמו תורם, לא רק ה-LLM. citation+LLM הוא המדויק ביותר על drugs (מובהק) ותיקו על weapon; sup+LLM הוא הפילטר המעשי (100% coverage, ~$120 במקום $3,770).
+**משפט הסיכום**: דמיון *כן* עוזר — כל שיטות הדמיון מנצחות את ה-median מובהקית. בגרסה האחת (4,432), **sup+LLM מנצח את random+LLM מובהקית בשני ה-domains** (drugs p=6.2e-6, weapon p=5.2e-4) — הפילטר ה-supervised עצמו תורם, לא רק ה-LLM. citation+LLM הוא המדויק ביותר על drugs (מובהק) ותיקו על weapon; sup+LLM הוא הפילטר המעשי (100% coverage, ~$120 במקום $3,770).
 
 **ה-limitations (לדווח ביושר)**:
-1. ~~sup+LLM ≈ random+LLM~~ **נפתר ב-4,432**: sup+LLM מנצח את random+LLM מובהקית (drugs Δ=−1.03 p=4.8e-7 · weapon Δ=−1.94 p=1.2e-4). היה limitation ב-3,898 (Wilcoxon p=0.84).
-2. citation+LLM > sup+LLM על drugs (Δ=+0.71, p=7.9e-13) — sup+LLM אינו ה-best filter, אלא ה-best *מעשי* (100% cov; citation+LLM ~79-90% cov).
+1. ~~sup+LLM ≈ random+LLM~~ **נפתר ב-4,432**: sup+LLM מנצח את random+LLM מובהקית (drugs Δ=−0.86 p=6.2e-6 · weapon Δ=−2.27 p=5.2e-4). היה limitation ב-3,898 (Wilcoxon p=0.84).
+2. citation+LLM > sup+LLM על drugs (Δ=+0.74, p=3.6e-15) — sup+LLM אינו ה-best filter, אלא ה-best *מעשי* (100% cov; citation+LLM drugs 87% / weapon 95% cov).
 3. weapon: year-confound (CI ×3).
 4. Q4 (עונשים 100-300 חודש) — בלתי-פתיר עם הdata הקיים.
 5. LLM-best UB דורש $3,770.

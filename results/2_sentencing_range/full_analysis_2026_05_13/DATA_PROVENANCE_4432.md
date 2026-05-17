@@ -78,11 +78,33 @@ Every regenerated table/plot carries the date 2026-05-16 and corresponds to the 
 
 ---
 
-## 5. Headline result change vs the prior 3,898 run
+## 4b. Corpus-version consistency fix (2026-05-17)
 
-- **Limitation RESOLVED:** sup+LLM now **significantly** beats random+LLM on both domains (drugs Δ=−1.03, p=4.8e-7; weapon Δ=−1.94, p=1.2e-4). On 3,898 this was non-significant (Wilcoxon p=0.84) — the central documented limitation.
-- **Narrative shift:** citation+LLM now beats sup+LLM on drugs (Δ=+0.71, p=7.9e-13, significant) and ties on weapon (CI includes 0). Previously sup+LLM was the headline.
-- sup+LLM still significantly beats TF-IDF / BM25 / offense-matched / sup-only on both domains.
+An intermediate run evaluated on **4,204** queries, not the full 4,432: 228 corpus
+verdicts had a stale `master_inventory` row with `sentencing_range_low=NaN` (from an
+old folder scan) so rigor's eligibility filter (`range.notna() & conf=='גבוהה'`)
+dropped them. **Fixed**: for every corpus verdict, `master_inventory` now holds one
+authoritative row with range taken from `supervised_data.csv` (the corpus authority),
+duplicates removed → **corpus == eval == 4,432** (`master_inventory.csv.bak2_2026-05-17`).
+All `data/` outputs were re-run on this single version. rigor unique queries = 4,432;
+global_median n = 4,432. Coverage is reported relative to 4,432 (full methods 100%;
+citation drugs 87% / weapon 95%; random+LLM 91% / 97%).
+
+Note: `comprehensive_sweep.py` (sweep_K) and `rigor_phase_a.py` evaluate the *same*
+citation queries (identical n: drugs 2,352 / weapon 1,630) but differ ~0.06–0.11 in
+citation+LLM MAE due to a K-neighbor selection/aggregation implementation difference
+(not a data difference). **Canonical = rigor** (feeds CIs/Wilcoxon/bottom-line).
+
+## 5. Headline result (single 4,432 version, confirmed)
+
+- **Limitation RESOLVED:** sup+LLM **significantly** beats random+LLM on both domains
+  (drugs Δ=−0.86, p=6.2e-6; weapon Δ=−2.27, p=5.2e-4). On 3,898 non-significant
+  (Wilcoxon p=0.84) — the central documented limitation.
+- **Narrative shift:** citation+LLM beats sup+LLM on drugs (Δ=+0.74, p=3.6e-15,
+  significant); ties on weapon (CI includes 0). Previously sup+LLM was the headline.
+- sup+LLM still significantly beats TF-IDF / BM25 / offense-matched / sup-only on both.
+- Bottom-line MAE-lo: sup+LLM drugs **5.69** / weapon **13.03**; citation+LLM
+  **5.26** / **12.35**; global_median **8.50** / **17.47**; LLM-best UB **4.97** / **11.85**.
 
 ---
-Generated 2026-05-16.
+Generated 2026-05-16, corpus-version fix 2026-05-17.

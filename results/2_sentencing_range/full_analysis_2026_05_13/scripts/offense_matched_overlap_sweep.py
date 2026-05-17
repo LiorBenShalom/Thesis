@@ -138,4 +138,4 @@ for r in run(None, exact=True):
 
 pd.DataFrame(all_rows).to_csv("/tmp/offense_matched_overlap_sweep.csv", index=False)
 print("\n✅ /tmp/offense_matched_overlap_sweep.csv")
-print("\n(Reference: global_median drugs 8.43/14.08, weapon 16.67/25.46 | sup+LLM 6.11/9.91, 12.50/18.48)")
+print("\n(Reference [4,432, 2026-05-16]: global_median drugs 8.48/14.07, weapon 17.49/26.21 | sup+LLM drugs 5.83/9.48, weapon 12.95/19.19)")

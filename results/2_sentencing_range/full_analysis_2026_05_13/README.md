@@ -27,11 +27,11 @@
 
 ### ③ מהפילטור לחיזוי
 המסקנה הסטטיסטית (paired bootstrap CI + Wilcoxon):
-- **Supervised + LLM** הפילטור המעשי (drugs MAE-lo 5.83, weapon 12.95, 100% cov)
+- **Supervised + LLM** הפילטור המעשי (drugs MAE-lo 5.69, weapon 13.03, 100% cov)
 - מנצח **מובהק** TF-IDF / BM25 / offense-matched / sup-only בשני ה-domains
-- **מנצח גם את random+LLM מובהקית** (drugs Δ=−1.03 p=4.8e-7 · weapon Δ=−1.94 p=1.2e-4) — ה-limitation של 3,898 (p=0.84) **נפתר** עם הדטה המורחב
-- **citation+LLM מדויק יותר**: drugs 5.45 (Δ=+0.71 vs sup, p=7.9e-13 מובהק), weapon 12.44 (תיקו)
-- **תקרה**: LLM-best 5.13/11.80 — דורש לציין הכל
+- **מנצח גם את random+LLM מובהקית** (drugs Δ=−0.86 p=6.2e-6 · weapon Δ=−2.27 p=5.2e-4) — ה-limitation של 3,898 (p=0.84) **נפתר**
+- **citation+LLM מדויק יותר**: drugs 5.26 (Δ=+0.74 vs sup, p=3.6e-15 מובהק), weapon 12.35 (תיקו)
+- **תקרה**: LLM-best 4.97/11.85 — דורש לציין הכל
 
 ## מה יש בתיקייה
 
@@ -126,24 +126,24 @@ Visualizations שעל ה-CSVs. ה-grafs הקריטיים לתזה:
 
 ## 🔑 ה-bottom-line numbers (לabstract)
 
-**נתונים: 4,432 (2,713 drugs / 1,719 weapon) — ראה [`DATA_PROVENANCE_4432.md`](DATA_PROVENANCE_4432.md)**
+**גרסה אחת רשמית: 4,432 (corpus==eval; full n=2,713 drugs / 1,719 weapon) — [`DATA_PROVENANCE_4432.md`](DATA_PROVENANCE_4432.md)**
 
 | Method | Drugs MAE-lo [95% CI] | Drugs MAE-hi | Weapon MAE-lo | Weapon MAE-hi |
 |---|---|---|---|---|
-| Global median | 8.48 [8.05, 8.92] | 14.07 | 17.49 | 26.21 |
-| Offense-matched random | 8.77 [8.36, 9.19] | 14.66 | 18.41 | 27.39 |
-| TF-IDF + Ridge | 7.57 [7.23, 7.94] | 12.40 | 16.47 | 24.00 |
-| BM25 | 6.75 [6.39, 7.12] | 10.91 | 15.23 | 21.75 |
-| Random + LLM | 6.66 [6.28, 7.06] | 10.54 | 14.67 | 21.52 |
-| Supervised cosine | 6.05 [5.72, 6.42] | 9.74 | 13.81 | 20.53 |
-| **★ Supervised + LLM** | **5.83 [5.50, 6.19]** | **9.48** | **12.95** | **19.19** |
-| Citation + LLM | 5.45 [5.05, 5.89] | 8.49 | 12.44 | 18.28 |
-| LLM-best (UB) | 5.13 [4.82, 5.45] | 8.05 | 11.80 | 17.11 |
+| Global median | 8.50 [8.11, 8.91] | 13.98 | 17.47 | 26.16 |
+| Offense-matched random | 8.72 [8.37, 9.12] | 14.35 | 18.23 | 27.30 |
+| TF-IDF + Ridge | 7.39 [7.08, 7.77] | 12.05 | 16.38 | 23.87 |
+| BM25 | 6.65 [6.31, 7.01] | 10.60 | 15.26 | 21.77 |
+| Random + LLM | 6.38 [5.99, 6.79] | 10.10 | 15.03 | 21.87 |
+| Supervised cosine | 5.89 [5.58, 6.22] | 9.38 | 13.85 | 20.52 |
+| **★ Supervised + LLM** | **5.69 [5.39, 6.01]** | **9.12** | **13.03** | **19.24** |
+| Citation + LLM | 5.26 [4.89, 5.69] | 8.13 | 12.35 | 18.06 |
+| LLM-best (UB) | 4.97 [4.68, 5.29] | 7.72 | 11.85 | 17.07 |
 
 ## 🚨 LIMITATIONS שצריך לדווח עליהם
 
-1. ~~Random+LLM ≈ Sup+LLM~~ **נפתר ב-4,432**: sup+LLM מנצח random+LLM מובהקית (drugs p=4.8e-7 · weapon p=1.2e-4). היה limitation ב-3,898 (p=0.84).
-1b. **Citation+LLM > Sup+LLM על drugs** (Δ=+0.71, p=7.9e-13) — sup+LLM הוא ה-best *מעשי* (100% cov), לא ה-best מוחלט.
+1. ~~Random+LLM ≈ Sup+LLM~~ **נפתר ב-4,432**: sup+LLM מנצח random+LLM מובהקית (drugs p=6.2e-6 · weapon p=5.2e-4). היה limitation ב-3,898 (p=0.84).
+1b. **Citation+LLM > Sup+LLM על drugs** (Δ=+0.74, p=3.6e-15) — sup+LLM הוא ה-best *מעשי* (100% cov), לא ה-best מוחלט.
 2. **Year confounding ב-weapon** — year-cluster CI כפול מ-per-query.
 3. **Q4 weapon errors** — קייסים עם 100-300 חודשי מאסר אינם פתירים עם הdata הקיים.
 4. **Citation+LLM coverage** — רק 79-90% (חסר ב-10-21% מהקייסים).
