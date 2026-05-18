@@ -1,0 +1,56 @@
+======================================================================
+ 1. 5-FOLD MAE COMPARISON
+======================================================================
+  master inventory: 4,624 verdicts with valid range
+
+  Loading BASELINE folds (no filter)...
+    loaded 10 (domain, fold) tuples
+
+  Loading FILTERED folds (offense overlap + backfill cap=12mo)...
+    loaded 10 (domain, fold) tuples
+
+  --- MAE per K (avg of low+high) ---
+  domain     K      baseline avg-MAE      filtered avg-MAE     delta
+  ----------------------------------------------------------------------
+  drugs      3        8.35 ±  0.30           7.79 ±  0.43    -0.56↓
+  drugs      5        8.33 ±  0.32           7.74 ±  0.45    -0.59↓
+  drugs     10        8.30 ±  0.30           7.64 ±  0.46    -0.66↓
+  drugs     20        8.32 ±  0.27           7.60 ±  0.48    -0.72↓
+  weapon     3       15.65 ±  1.32          17.72 ±  2.85    +2.06↑
+  weapon     5       15.53 ±  1.50          17.28 ±  2.92    +1.75↑
+  weapon    10       15.45 ±  1.46          17.18 ±  2.89    +1.73↑
+  weapon    20       15.46 ±  1.43          17.41 ±  2.67    +1.95↑
+
+======================================================================
+ 2. SPEARMAN vs human-similarity GT
+======================================================================
+  loaded 17,678 alias→canonical mappings
+
+  DRUGS GT pairs from facts.csv
+    baseline:  ρ = 0.444  (n=79, p=4.17e-05)
+    filtered:  ρ = 0.536  (n=93, p=3.08e-08)
+    Δρ = +0.092↑
+
+  WEAPON GT pairs from facts.csv
+    baseline:  ρ = 0.195  (n=90, p=0.0656)
+    filtered:  ρ = 0.295  (n=90, p=0.00483)
+    Δρ = +0.100↑
+
+======================================================================
+ 3. OVERLAP WITH CITATION POOL
+======================================================================
+  citation pool: 146,030 pairs (1hop/2hop/cocite)
+
+  DRUGS
+    K= 3:  baseline overlap =   9.0%   filtered overlap =  22.3%   delta = +13.3pp
+    K= 5:  baseline overlap =   8.6%   filtered overlap =  21.5%   delta = +12.9pp
+    K=10:  baseline overlap =   7.5%   filtered overlap =  20.2%   delta = +12.7pp
+    K=20:  baseline overlap =   6.4%   filtered overlap =  19.1%   delta = +12.7pp
+
+  WEAPON
+    K= 3:  baseline overlap =  22.1%   filtered overlap =  37.3%   delta = +15.2pp
+    K= 5:  baseline overlap =  20.1%   filtered overlap =  35.7%   delta = +15.6pp
+    K=10:  baseline overlap =  18.0%   filtered overlap =  33.9%   delta = +15.8pp
+    K=20:  baseline overlap =  15.9%   filtered overlap =  32.0%   delta = +16.1pp
+
+✓ All comparisons saved to /tmp/comparison_*.csv

@@ -25,6 +25,7 @@ from rank_bm25 import BM25Okapi
 ROOT = Path("/Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try")
 EXP  = ROOT / "experiments"
 FILTERED_DIR = ROOT / "simcse_cuda_bundle/outputs_supervised_filtered"
+SIMCSE_DIR   = ROOT / "simcse_cuda_bundle/outputs_simcse_5fold"
 
 N_FOLDS = 5
 K = 10
@@ -126,8 +127,19 @@ for dom in ("drugs", "weapon"):
         train_ids = idx[idx.split == "train"].verdict.tolist()
         test_ids  = idx[idx.split == "test"].verdict.tolist()
         v2i = {v: i for i, v in enumerate(idx.verdict)}
-        folds[(dom, f)] = {"emb": emb, "v2i": v2i,
-                           "train_ids": train_ids, "test_ids": test_ids}
+        rec = {"emb": emb, "v2i": v2i,
+               "train_ids": train_ids, "test_ids": test_ids}
+        # SimCSE fold embeddings (same split, own verdict order) — Methods 10/11
+        sep = SIMCSE_DIR / f"verdict_embeddings_simcse_{dom}_fold{f}.npy"
+        sip = SIMCSE_DIR / f"verdict_index_simcse_{dom}_fold{f}.csv"
+        if sep.exists() and sip.exists():
+            semb = np.load(sep).astype(np.float32)
+            sidx = pd.read_csv(sip); sidx["verdict"] = sidx.verdict.astype(str)
+            sv2i = {v: i for i, v in enumerate(sidx.verdict)}
+            s_train = sidx[sidx.split == "train"].verdict.tolist()
+            rec.update(sim_emb=semb, sim_v2i=sv2i, sim_train_ids=s_train,
+                       sim_tarr=np.array([sv2i[v] for v in s_train]))
+        folds[(dom, f)] = rec
 
 
 # ============ Helper: median prediction ============
@@ -297,6 +309,35 @@ for (dom, fid), ff in folds.items():
                 records.append({
                     "query": q, "domain": dom, "fold": fid, "year": year_of.get(q),
                     "method": "offense_matched_random",
+                    "err_lo": abs(plo - true_lo), "err_hi": abs(phi - true_hi)
+                })
+
+        # === Method 10: SimCSE cosine top-K (no LLM) ===
+        if "sim_emb" in ff and q in ff["sim_v2i"]:
+            s_emb = ff["sim_emb"]; s_v2i = ff["sim_v2i"]
+            s_train_ids = ff["sim_train_ids"]; s_tarr = ff["sim_tarr"]
+            s_sims = s_emb[s_v2i[q]] @ s_emb[s_tarr].T
+            s_order = np.argsort(-s_sims)
+            picked = [s_train_ids[i] for i in s_order[:K]]
+            plo, phi = median_pred(picked)
+            if plo is not None:
+                records.append({
+                    "query": q, "domain": dom, "fold": fid, "year": year_of.get(q),
+                    "method": "simcse_only",
+                    "err_lo": abs(plo - true_lo), "err_hi": abs(phi - true_hi)
+                })
+
+            # === Method 11: SimCSE + LLM rerank (top-100 → top-10) ===
+            s_pool = [s_train_ids[i] for i in s_order[:TOP_POOL]]
+            scored = [(c, llm_scores.get(tuple(sorted([q, c])))) for c in s_pool]
+            scored = [(c, s) for c, s in scored if s is not None]
+            scored.sort(key=lambda x: -x[1])
+            picked = [c for c, _ in scored[:K]]
+            plo, phi = median_pred(picked)
+            if plo is not None:
+                records.append({
+                    "query": q, "domain": dom, "fold": fid, "year": year_of.get(q),
+                    "method": "simcse_llm",
                     "err_lo": abs(plo - true_lo), "err_hi": abs(phi - true_hi)
                 })
 

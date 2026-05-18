@@ -1,0 +1,138 @@
+Loading LLM scores...
+  452,225 pairs
+
+=== SWEEP 1: K values (source=100%, min_k=1) ===
+  global_median             K= 1  drugs: 8.50/13.98  weapon: 17.47/26.16
+  global_median             K= 3  drugs: 8.50/13.98  weapon: 17.47/26.16
+  global_median             K= 5  drugs: 8.50/13.98  weapon: 17.47/26.16
+  global_median             K=10  drugs: 8.50/13.98  weapon: 17.47/26.16
+  global_median             K=15  drugs: 8.50/13.98  weapon: 17.47/26.16
+  global_median             K=20  drugs: 8.50/13.98  weapon: 17.47/26.16
+  global_median             K=30  drugs: 8.50/13.98  weapon: 17.47/26.16
+  global_median             K=50  drugs: 8.50/13.98  weapon: 17.47/26.16
+  random                    K= 1  drugs: 12.84/20.59  weapon: 28.23/42.12
+  random                    K= 3  drugs: 10.31/16.76  weapon: 21.68/32.31
+  random                    K= 5  drugs: 9.64/15.86  weapon: 19.57/29.31
+  random                    K=10  drugs: 8.98/14.97  weapon: 18.38/27.36
+  random                    K=15  drugs: 8.90/14.71  weapon: 18.21/26.97
+  random                    K=20  drugs: 8.80/14.50  weapon: 18.01/26.71
+  random                    K=30  drugs: 8.68/14.36  weapon: 17.76/26.41
+  random                    K=50  drugs: 8.62/14.15  weapon: 17.68/26.45
+  random_llm                K= 1  drugs: 7.98/12.57  weapon: 18.32/27.36
+  random_llm                K= 3  drugs: 6.84/10.94  weapon: 14.99/21.87
+  random_llm                K= 5  drugs: 6.70/10.71  weapon: 14.50/21.39
+  random_llm                K=10  drugs: 6.70/10.72  weapon: 14.56/21.46
+  random_llm                K=15  drugs: 6.70/10.73  weapon: 14.62/21.45
+  random_llm                K=20  drugs: 6.70/10.73  weapon: 14.62/21.47
+  random_llm                K=30  drugs: 6.70/10.73  weapon: 14.62/21.47
+  random_llm                K=50  drugs: 6.70/10.73  weapon: 14.62/21.47
+  citation_all              K= 1  drugs: 11.88/20.25  weapon: 28.95/48.14
+  citation_all              K= 3  drugs: 8.18/13.05  weapon: 19.78/29.73
+  citation_all              K= 5  drugs: 7.36/11.37  weapon: 17.51/25.91
+  citation_all              K=10  drugs: 6.62/10.18  weapon: 15.94/23.41
+  citation_all              K=15  drugs: 6.26/9.62  weapon: 15.21/22.47
+  citation_all              K=20  drugs: 6.15/9.50  weapon: 14.87/21.93
+  citation_all              K=30  drugs: 6.09/9.34  weapon: 14.51/21.35
+  citation_all              K=50  drugs: 5.97/9.22  weapon: 14.13/20.79
+  citation_all_llm          K= 1  drugs: 6.62/10.10  weapon: 14.61/21.71
+  citation_all_llm          K= 3  drugs: 5.76/8.94  weapon: 12.92/18.94
+  citation_all_llm          K= 5  drugs: 5.39/8.40  weapon: 12.37/18.42
+  citation_all_llm          K=10  drugs: 5.32/8.17  weapon: 12.46/18.24
+  citation_all_llm          K=15  drugs: 5.31/8.21  weapon: 12.58/18.50
+  citation_all_llm          K=20  drugs: 5.37/8.25  weapon: 12.61/18.58
+  citation_all_llm          K=30  drugs: 5.40/8.33  weapon: 12.69/18.71
+  citation_all_llm          K=50  drugs: 5.48/8.48  weapon: 13.02/19.15
+  supervised                K= 1  drugs: 6.36/10.02  weapon: 17.21/24.98
+  supervised                K= 3  drugs: 5.97/9.61  weapon: 14.30/21.15
+  supervised                K= 5  drugs: 5.94/9.54  weapon: 13.92/20.65
+  supervised                K=10  drugs: 5.89/9.38  weapon: 13.85/20.52
+  supervised                K=15  drugs: 5.87/9.37  weapon: 13.87/20.64
+  supervised                K=20  drugs: 5.85/9.35  weapon: 13.96/20.86
+  supervised                K=30  drugs: 5.85/9.32  weapon: 13.99/20.98
+  supervised                K=50  drugs: 5.85/9.30  weapon: 14.17/21.25
+  supervised_llm            K= 1  drugs: 6.09/9.61  weapon: 15.20/21.81
+  supervised_llm            K= 3  drugs: 5.68/9.19  weapon: 13.39/19.49
+  supervised_llm            K= 5  drugs: 5.68/9.13  weapon: 13.23/19.42
+  supervised_llm            K=10  drugs: 5.69/9.12  weapon: 12.97/19.17
+  supervised_llm            K=15  drugs: 5.69/9.19  weapon: 13.00/19.21
+  supervised_llm            K=20  drugs: 5.71/9.23  weapon: 13.34/19.75
+  supervised_llm            K=30  drugs: 5.75/9.28  weapon: 13.51/20.08
+  supervised_llm            K=50  drugs: 5.77/9.30  weapon: 13.68/20.46
+  llm_top                   K= 1  drugs: 6.53/10.17  weapon: 15.98/23.33
+  llm_top                   K= 3  drugs: 5.53/8.57  weapon: 13.31/18.69
+  llm_top                   K= 5  drugs: 5.29/8.22  weapon: 12.41/17.70
+  llm_top                   K=10  drugs: 5.12/8.06  weapon: 12.12/17.42
+  llm_top                   K=15  drugs: 5.10/7.94  weapon: 12.07/17.23
+  llm_top                   K=20  drugs: 5.08/7.92  weapon: 12.16/17.35
+  llm_top                   K=30  drugs: 5.09/7.96  weapon: 12.22/17.50
+  llm_top                   K=50  drugs: 5.12/7.98  weapon: 12.54/18.18
+
+=== SWEEP 2: source-set sampling (K=10, min_k=1) ===
+  global_median             src=0.25  drugs: 8.50/13.98  weapon: 17.47/26.16
+  global_median             src=0.50  drugs: 8.50/13.98  weapon: 17.47/26.16
+  global_median             src=0.75  drugs: 8.50/13.98  weapon: 17.47/26.16
+  global_median             src=1.00  drugs: 8.50/13.98  weapon: 17.47/26.16
+  random                    src=0.25  drugs: 8.93/14.67  weapon: 18.24/27.38
+  random                    src=0.50  drugs: 9.01/14.78  weapon: 18.66/27.71
+  random                    src=0.75  drugs: 9.09/14.92  weapon: 18.55/27.55
+  random                    src=1.00  drugs: 8.98/14.97  weapon: 18.38/27.36
+  random_llm                src=0.25  drugs: 6.70/10.63  weapon: 14.30/21.19
+  random_llm                src=0.50  drugs: 6.76/10.82  weapon: 15.35/22.07
+  random_llm                src=0.75  drugs: 6.62/10.53  weapon: 14.36/20.76
+  random_llm                src=1.00  drugs: 6.70/10.72  weapon: 14.56/21.46
+  citation_all              src=0.25  drugs: 6.47/10.16  weapon: 15.73/22.73
+  citation_all              src=0.50  drugs: 6.67/10.29  weapon: 15.60/23.35
+  citation_all              src=0.75  drugs: 6.59/10.08  weapon: 15.86/23.42
+  citation_all              src=1.00  drugs: 6.62/10.18  weapon: 15.94/23.41
+  citation_all_llm          src=0.25  drugs: 5.85/9.05  weapon: 13.84/20.03
+  citation_all_llm          src=0.50  drugs: 5.76/8.77  weapon: 12.97/19.22
+  citation_all_llm          src=0.75  drugs: 5.49/8.37  weapon: 12.95/18.91
+  citation_all_llm          src=1.00  drugs: 5.32/8.17  weapon: 12.46/18.24
+  supervised                src=0.25  drugs: 5.88/9.40  weapon: 14.39/21.43
+  supervised                src=0.50  drugs: 5.90/9.42  weapon: 14.11/21.14
+  supervised                src=0.75  drugs: 5.90/9.39  weapon: 14.04/20.82
+  supervised                src=1.00  drugs: 5.89/9.38  weapon: 13.85/20.52
+  supervised_llm            src=0.25  drugs: 5.71/9.15  weapon: 13.44/19.61
+  supervised_llm            src=0.50  drugs: 5.71/9.19  weapon: 13.27/19.35
+  supervised_llm            src=0.75  drugs: 5.70/9.17  weapon: 13.05/19.13
+  supervised_llm            src=1.00  drugs: 5.69/9.12  weapon: 12.97/19.17
+  llm_top                   src=0.25  drugs: 5.40/8.42  weapon: 12.96/18.55
+  llm_top                   src=0.50  drugs: 5.26/8.24  weapon: 12.38/17.70
+  llm_top                   src=0.75  drugs: 5.20/8.17  weapon: 12.16/17.53
+  llm_top                   src=1.00  drugs: 5.12/8.06  weapon: 12.12/17.42
+
+=== SWEEP 3: min_k requirement (K=10, source=100%) ===
+  global_median             min_k= 1  drugs cov=100.0% MAE-lo=8.50  weapon cov=100.0% MAE-lo=17.47
+  global_median             min_k= 3  drugs cov=100.0% MAE-lo=8.50  weapon cov=100.0% MAE-lo=17.47
+  global_median             min_k= 5  drugs cov=100.0% MAE-lo=8.50  weapon cov=100.0% MAE-lo=17.47
+  global_median             min_k=10  drugs cov=100.0% MAE-lo=8.50  weapon cov=100.0% MAE-lo=17.47
+  random                    min_k= 1  drugs cov=100.0% MAE-lo=8.98  weapon cov=100.0% MAE-lo=18.38
+  random                    min_k= 3  drugs cov=100.0% MAE-lo=8.98  weapon cov=100.0% MAE-lo=18.38
+  random                    min_k= 5  drugs cov=100.0% MAE-lo=8.98  weapon cov=100.0% MAE-lo=18.38
+  random                    min_k=10  drugs cov=100.0% MAE-lo=8.98  weapon cov=100.0% MAE-lo=18.38
+  random_llm                min_k= 1  drugs cov= 94.1% MAE-lo=6.70  weapon cov= 98.9% MAE-lo=14.56
+  random_llm                min_k= 3  drugs cov= 64.4% MAE-lo=6.06  weapon cov= 88.1% MAE-lo=13.59
+  random_llm                min_k= 5  drugs cov= 32.8% MAE-lo=5.72  weapon cov= 66.7% MAE-lo=12.73
+  random_llm                min_k=10  drugs cov=  3.9% MAE-lo=6.64  weapon cov= 19.6% MAE-lo=11.36
+  citation_all              min_k= 1  drugs cov= 86.7% MAE-lo=6.62  weapon cov= 94.8% MAE-lo=15.94
+  citation_all              min_k= 3  drugs cov= 78.1% MAE-lo=6.48  weapon cov= 88.2% MAE-lo=15.50
+  citation_all              min_k= 5  drugs cov= 72.4% MAE-lo=6.53  weapon cov= 82.7% MAE-lo=15.32
+  citation_all              min_k=10  drugs cov= 60.0% MAE-lo=6.81  weapon cov= 73.8% MAE-lo=15.35
+  citation_all_llm          min_k= 1  drugs cov= 86.7% MAE-lo=5.32  weapon cov= 94.8% MAE-lo=12.46
+  citation_all_llm          min_k= 3  drugs cov= 78.1% MAE-lo=5.04  weapon cov= 88.2% MAE-lo=11.76
+  citation_all_llm          min_k= 5  drugs cov= 72.4% MAE-lo=4.97  weapon cov= 82.7% MAE-lo=11.33
+  citation_all_llm          min_k=10  drugs cov= 60.0% MAE-lo=4.93  weapon cov= 73.8% MAE-lo=10.88
+  supervised                min_k= 1  drugs cov=100.0% MAE-lo=5.89  weapon cov=100.0% MAE-lo=13.85
+  supervised                min_k= 3  drugs cov=100.0% MAE-lo=5.89  weapon cov=100.0% MAE-lo=13.85
+  supervised                min_k= 5  drugs cov=100.0% MAE-lo=5.89  weapon cov=100.0% MAE-lo=13.85
+  supervised                min_k=10  drugs cov=100.0% MAE-lo=5.89  weapon cov=100.0% MAE-lo=13.85
+  supervised_llm            min_k= 1  drugs cov=100.0% MAE-lo=5.69  weapon cov=100.0% MAE-lo=12.97
+  supervised_llm            min_k= 3  drugs cov=100.0% MAE-lo=5.69  weapon cov=100.0% MAE-lo=12.97
+  supervised_llm            min_k= 5  drugs cov=100.0% MAE-lo=5.69  weapon cov=100.0% MAE-lo=12.97
+  supervised_llm            min_k=10  drugs cov=100.0% MAE-lo=5.69  weapon cov=100.0% MAE-lo=12.97
+  llm_top                   min_k= 1  drugs cov=100.0% MAE-lo=5.12  weapon cov=100.0% MAE-lo=12.12
+  llm_top                   min_k= 3  drugs cov=100.0% MAE-lo=5.12  weapon cov=100.0% MAE-lo=12.12
+  llm_top                   min_k= 5  drugs cov=100.0% MAE-lo=5.12  weapon cov=100.0% MAE-lo=12.12
+  llm_top                   min_k=10  drugs cov=100.0% MAE-lo=5.12  weapon cov=100.0% MAE-lo=12.12
+
+✅ Saved: /tmp/sweep_K.csv, /tmp/sweep_source.csv, /tmp/sweep_min_k.csv

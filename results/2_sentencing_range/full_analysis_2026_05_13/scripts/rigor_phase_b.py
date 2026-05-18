@@ -27,6 +27,8 @@ METHOD_ORDER = [
     "tfidf_ridge",
     "bm25",
     "citation_llm",
+    "simcse_only",
+    "simcse_llm",
     "sup_only",
     "sup_llm",
     "llm_best",
@@ -93,6 +95,10 @@ pairs_to_test = [
     ("sup_llm", "offense_matched_random"),  # do we beat offense-matching?
     ("sup_llm", "random_llm"),     # is filter better than random?
     ("sup_llm", "citation_llm"),   # vs citation
+    ("sup_llm", "simcse_llm"),     # vs SimCSE+LLM
+    ("citation_llm", "simcse_llm"),# citation vs SimCSE+LLM
+    ("simcse_llm", "random_llm"),  # SimCSE+LLM better than random?
+    ("sup_only", "simcse_only"),   # supervised vs SimCSE (no LLM)
     ("llm_best", "sup_llm"),       # ceiling vs ours
     ("sup_only", "tfidf_ridge"),   # does our embedding beat TF-IDF without LLM?
     ("sup_only", "bm25"),

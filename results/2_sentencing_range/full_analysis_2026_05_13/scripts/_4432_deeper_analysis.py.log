@@ -1,0 +1,45 @@
+=== H. WEIGHTED MEDIAN by LLM score ===
+  drugs  pool=  50: median=5.74/9.21  w_median=5.74/9.16  w_mean=5.74/9.21
+  drugs  pool= 100: median=5.69/9.12  w_median=5.65/9.06  w_mean=5.69/9.11
+  drugs  pool= 200: median=5.64/9.05  w_median=5.60/9.00  w_mean=5.63/8.98
+  drugs  pool= 500: median=5.50/8.81  w_median=5.47/8.76  w_mean=5.50/8.76
+  drugs  pool=1000: median=5.37/8.54  w_median=5.34/8.47  w_mean=5.34/8.44
+  drugs  pool= all: median=5.11/8.06  w_median=5.07/7.99  w_mean=5.08/7.96
+  weapon pool=  50: median=13.21/19.50  w_median=13.08/19.19  w_mean=13.28/19.50
+  weapon pool= 100: median=12.97/19.17  w_median=12.76/18.93  w_mean=13.11/19.12
+  weapon pool= 200: median=12.84/18.72  w_median=12.74/18.49  w_mean=12.82/18.65
+  weapon pool= 500: median=12.31/17.81  w_median=12.36/17.72  w_mean=12.30/17.93
+  weapon pool=1000: median=12.01/17.27  w_median=11.90/16.93  w_mean=11.94/17.32
+  weapon pool= all: median=12.06/17.26  w_median=11.94/16.97  w_mean=12.10/17.52
+
+=== J. CONFIDENCE-AS-LLM-TOP1: Does high LLM-top1 score predict low error? ===
+  drugs: n=2713, Spearman(top1_score, error) = -0.218  (p=1.33e-30)
+    by top1 bucket:
+      top1 ∈ [  0,  50): n=  79, mean_error=17.28
+      top1 ∈ [ 50,  70): n= 529, mean_error=9.74
+      top1 ∈ [ 70,  85): n= 923, mean_error=7.14
+      top1 ∈ [ 85, 100): n=1182, mean_error=5.34
+  weapon: n=1719, Spearman(top1_score, error) = -0.159  (p=3.79e-11)
+    by top1 bucket:
+      top1 ∈ [  0,  50): n=  48, mean_error=12.02
+      top1 ∈ [ 50,  70): n= 235, mean_error=16.99
+      top1 ∈ [ 70,  85): n= 507, mean_error=15.88
+      top1 ∈ [ 85, 100): n= 929, mean_error=14.28
+
+=== K. Out-of-supervised-pool win — when LLM-from-all picks better ===
+  drugs: sup+LLM wins  874, LLM-all wins 1152, tied  687 (n=2713) | mean err sup=7.41, all=6.59
+  weapon: sup+LLM wins  644, LLM-all wins  766, tied  309 (n=1719) | mean err sup=16.07, all=14.77
+
+=== L. Sup pool ⊃ Citation 1hop — what fraction of high-quality citations are inside sup pool? ===
+  drugs  pool=  10: recall of citation-1hop neighbors = 0.040
+  drugs  pool=  50: recall of citation-1hop neighbors = 0.128
+  drugs  pool= 100: recall of citation-1hop neighbors = 0.189
+  drugs  pool= 500: recall of citation-1hop neighbors = 0.464
+  drugs  pool=1000: recall of citation-1hop neighbors = 0.686
+  weapon pool=  10: recall of citation-1hop neighbors = 0.056
+  weapon pool=  50: recall of citation-1hop neighbors = 0.189
+  weapon pool= 100: recall of citation-1hop neighbors = 0.267
+  weapon pool= 500: recall of citation-1hop neighbors = 0.603
+  weapon pool=1000: recall of citation-1hop neighbors = 0.854
+
+✅ All deeper analyses saved.

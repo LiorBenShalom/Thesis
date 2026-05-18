@@ -7,7 +7,7 @@
 **הסקריפט המקור**: [`scripts/thesis_story_part1.py`](scripts/thesis_story_part1.py)
 **גרף**: [`plots/plot_story_part1_variance.png`](plots/plot_story_part1_variance.png)
 **CSVs**:
-- [`data/story_llm_gaps.csv`](data/story_llm_gaps.csv) — 367,930 שורות (כל LLM-scored pair × |Δsentencing|)
+- [`data/story_llm_gaps.csv`](data/story_llm_gaps.csv) — 452,225 שורות (כל LLM-scored pair × |Δsentencing|; pool 254,952 combined)
 - [`data/story_citation_gaps.csv`](data/story_citation_gaps.csv) — 128,575 שורות (כל citation pair × |Δsentencing|)
 
 ---
@@ -115,12 +115,12 @@ for dom in ("drugs", "weapon"):
 
 ### איך זה חושב
 
-#### שלב 1: לטעון 375K זוגות עם ציון LLM
+#### שלב 1: לטעון את כל זוגות ה-LLM (554,004 rows מ-6 מקורות)
 
 **מקורות** (`thesis_story_part1.py` שורות 46-58):
 ```python
 for path in [
-    "similarity_scores_combined.csv",                            # 140,961
+    "similarity_scores_combined.csv",                            # 254,952
     "similarity_batch_5fold/results/similarity_scores_5fold.csv", #  63,836
     "similarity_batch_simcse/results/similarity_scores_simcse.csv",      # 48,832
     "similarity_batch_supervised/results/similarity_scores_supervised.csv", # 14,065
@@ -135,7 +135,7 @@ for path in [
 
 **Schema של כל CSV**: `verdict_1, verdict_2, domain, similarity_score` (ערך 0-100).
 
-**איחוד**: 375,658 unique pairs.
+**איחוד**: 554,004 rows → לאחר dedup **452,225 unique pairs** (drugs 260,332 / weapon 191,893). הגידול מול 375,658 הקודם = +78,420 (union top-20) +35,571 (SimCSE top-20) שנכנסו ל-`similarity_scores_combined` (140,961→254,952).
 
 #### שלב 2: dedupe לפי `(verdict_1, verdict_2)` כסט ממוין
 
@@ -157,7 +157,7 @@ df_llm = pd.DataFrame(rows)
 
 חשוב: זוג מופיע פעם אחת בלבד גם אם הוא ב-2 batches. סורט ע"י `tuple(sorted([v1,v2]))`.
 
-**תוצאה**: **367,930 unique pairs** (חלק מ-375K לא עברו כי אחד מהverdicts לא היה ב-`rng_lo`).
+**תוצאה**: **452,225 unique pairs** (חלק מ-554K לא עברו כי אחד מהverdicts לא היה ב-`rng_lo`).
 
 #### שלב 3: חלוקה ל-buckets לפי llm_score
 

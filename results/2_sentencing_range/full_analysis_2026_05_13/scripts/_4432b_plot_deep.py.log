@@ -1,0 +1,25 @@
+✅ plot_deep_recall.png
+✅ plot_deep_pool_quality.png
+✅ plot_deep_pareto.png
+✅ plot_deep_quartile.png
+✅ plot_deep_calibration.png
+✅ plot_deep_hybrid.png
+
+All plots saved to /tmp/thesis_plots
+  plot_K_sweep.png  (224 KB)
+  plot_deep_calibration.png  (99 KB)
+  plot_deep_hybrid.png  (82 KB)
+  plot_deep_pareto.png  (73 KB)
+  plot_deep_pool_quality.png  (84 KB)
+  plot_deep_quartile.png  (101 KB)
+  plot_deep_recall.png  (108 KB)
+  plot_headline.png  (51 KB)
+  plot_min_k_coverage.png  (139 KB)
+  plot_pool_richness.png  (156 KB)
+  plot_pool_richness_headline.png  (82 KB)
+  plot_rigor_forest_mae.png  (153 KB)
+  plot_rigor_paired_diffs.png  (77 KB)
+  plot_rigor_quartile.png  (149 KB)
+  plot_rigor_year_cluster.png  (78 KB)
+  plot_source_sweep.png  (200 KB)
+  plot_story_part1_variance.png  (170 KB)
