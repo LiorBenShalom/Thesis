@@ -361,6 +361,80 @@ A=(low=24, high=60), B=(low=20, high=56) → d_lo=|24-20|=4, d_hi=|60-56|=4. מ�
 
 ---
 
+## 4b. בדיקות חוסן ושיטות מול ה-floor — *median floor* ו-*Upper-Bound proof*
+
+### ההתפלגות של טווח-העונש (set קנוני 4,432) — *מקור*
+
+| | mean | std | median | p75 | p90 | p95 | p99 | max |
+|---|---|---|---|---|---|---|---|---|
+| drugs LOW (n=2,713) | 12.2 | 13.5 | **9** | 16 | 30 | 36 | 56 | 240 |
+| drugs HIGH | 28.2 | 20.8 | **24** | 36 | 55 | 65 | 96 | 300 |
+| weapon LOW (n=1,719) | 27.8 | 35.4 | **18** | 30 | 55 | 84 | 214 | 504 |
+| weapon HIGH | 53.1 | 53.5 | **40** | 60 | 96 | 144 | 276 | 999 |
+
+זנב ימני כבד (`mean >> median`, p99 גבוה פי-3–10), במיוחד weapon. גרפים: [`plots/plot_sentencing_range_distribution.png`](plots/plot_sentencing_range_distribution.png), [`plots/plot_sentencing_range_cdf.png`](plots/plot_sentencing_range_cdf.png).
+
+### Median-floor (random baseline מחמיר) — חישוב על *כל* C(n,2) הזוגות
+
+| | #זוגות | MEAN \|Δ\| (רשמי) | **MEDIAN \|Δ\|** (חוסן) |
+|---|---|---|---|
+| drugs LOW | 3,678,828 | 12.6 | **8.0** |
+| drugs HIGH | 3,678,828 | 20.4 | **14.0** |
+| weapon LOW | 1,476,621 | 27.3 | **14.0** |
+| weapon HIGH | 1,476,621 | 40.9 | **24.0** |
+
+הצדקה: ה-MAE עצמו הוא ממוצע → ה-floor הרשמי חייב להיות mean-vs-mean. החציון מובא **כבדיקת חוסן מחמירה** (מנטרל את הזנב הקיצוני). נתונים: [`data/floor_mean_vs_median_robustness.csv`](data/floor_mean_vs_median_robustness.csv).
+
+### % הקטנת רעש — כל שיטה מול שני ה-floors (MAE-lo)
+
+| שיטה | drugs ↓ mean | drugs ↓ **median** | weapon ↓ mean | weapon ↓ **median** |
+|---|---|---|---|---|
+| llm_best (UB) | 59% | **36%** | 56% | **13%** |
+| citation_llm | 58% | **33%** | 55% | **12%** |
+| sup_llm | 55% | 29% | 52% | 7% |
+| simcse_llm | 55% | 28% | 51% | 4% |
+| sup_only | 53% | 26% | 49% | 1% |
+| simcse_only | 41% | 7% | 41% | **−15%** ❌ |
+| tfidf_ridge | 41% | 8% | 40% | **−17%** ❌ |
+| random_llm | 47% | 17% | 45% | **−7%** ❌ |
+
+**תובנת robustness:** כל שיטות ה-+LLM (sup/citation/simcse/llm_best) מנצחות **גם** את ה-floor המחמיר בשני ה-domains. שיטות retrieval-בלבד (simcse_only/tfidf) ו-random+LLM **נכשלות מול ה-median-floor ב-weapon**. כלומר רוב ה-50%+ מול ה-mean-floor מגיע מזיהוי נכון של תיקי-זנב; השיפור על תיקים *טיפוסיים* מתון, במיוחד weapon (Q4 limitation). גרף: [`plots/plot_floor_mean_vs_median.png`](plots/plot_floor_mean_vs_median.png).
+
+### למה llm_best ≥ citation? — *הוכחה מבנית + ממצא empirically*
+
+**טענה:** llm_best ≥ citation_llm **בהבנייה** (upper bound). הפער **לא מובהק סטטיסטית** — citation כמעט מגיע לתקרה.
+
+**הוכחה מבנית (אלגברית):**
+- שני המודלים משתמשים *באותו* LLM scorer (gpt-4.1, V6, אותו prompt) ובאותו הליך בחירה (top-K לפי ציון LLM).
+- ההבדל היחיד הוא **קבוצת המועמדים** ממנה ה-LLM בוחר את ה-top-K:
+  - **llm_best**: top-K מתוך *כל* train עם ציון LLM (כל ה-pool: 254,952 זוגות).
+  - **citation_llm**: top-K מתוך תת-קבוצה — train שמחובר לשאילתה בגרף הציטוטים (1-hop) *וגם* בעל ציון LLM.
+- מתקיים `(citation-reachable ∩ scored) ⊆ entire scored pool`.
+- בחירת ה-top-K-לפי-ציון מ-superset היא חלשה-עדיפה-או-שווה לבחירה מ-subset → **llm_best ≥ citation_llm תמיד**, ללא קשר לנתונים.
+- מסקנה: llm_best היא **תקרה תיאורטית** של "מה citation+LLM היה משיג אילו ה-retrieval שלו לא היה מוגבל" — לא שיטה מתחרה.
+
+**ראיה מנגנונית — citation מגיעה רק לכ-4% מהשכנים שה-LLM היה בוחר עם גישה מלאה** (`deeper_overlap.csv`):
+
+| domain | recall של שכני llm_best ב-citation 1-hop @K=10 | @K=100 | @K=500 |
+|---|---|---|---|
+| drugs | **3.99%** | 18.9% | 46.4% |
+| weapon | **5.61%** | 26.7% | 60.3% |
+
+ובנוסף — כיסוי citation: drugs **87%** / weapon **95%** מהשאילתות בלבד יש להן ולו מועמד-ציטוט אחד עם ציון.
+
+**ההפתעה — הפער לא מובהק** (paired bootstrap + Wilcoxon על שאילתות משותפות):
+
+| domain | n משותף | citation MAE-lo | llm_best MAE-lo | Δ (citation−UB) | 95% CI | Wilcoxon p | מובהק? |
+|---|---|---|---|---|---|---|---|
+| drugs | 2,352 | 5.33 | 5.12 | +0.21 | **[−0.04, +0.51]** | 0.80 | **✗ NOT sig** |
+| weapon | 1,630 | 12.39 | 12.12 | +0.43 | **[−0.25, +1.11]** | 0.21 | **✗ NOT sig** |
+
+**הפרשנות (לתזה):** למרות ש-citation **משליכה ~96% מהשכנים שה-LLM היה מעדיף** עם גישה גלובלית, הדיוק שלה **שקול סטטיסטית** לתקרה. כלומר ה-4-6% שהיא *כן* מגיעה אליהם — ציטוטים שיפוטיים מצביעים על תיקים תקדימיים/עובדתיים-קרובים — הם *בדיוק* האות החזק. ה-LLM-rerank מעל הסט הקטן והאיכותי הזה מחלץ כמעט את כל האות הזמין. **citation+LLM היא essentially-optimal** ב-$120 במקום ה-$3,770 של ה-oracle.
+
+נתונים: [`data/upperbound_vs_citation_proof.csv`](data/upperbound_vs_citation_proof.csv).
+
+---
+
 ## 5. מפת קבצים — לאיזה ניסוי שייך מה
 
 | ניסוי | סקריפט | נתונים | גרף |

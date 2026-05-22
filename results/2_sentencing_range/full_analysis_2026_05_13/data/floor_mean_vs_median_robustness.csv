@@ -1,0 +1,17 @@
+domain,method,mae_lo,red_vs_mean_floor_lo,red_vs_median_floor_lo,mae_hi,red_vs_mean_floor_hi,red_vs_median_floor_hi
+drugs,llm_best,5.12,59,36,8.06,60,42
+drugs,citation_llm,5.33,58,33,8.19,60,42
+drugs,sup_llm,5.69,55,29,9.12,55,35
+drugs,simcse_llm,5.74,55,28,9.04,56,35
+drugs,sup_only,5.89,53,26,9.38,54,33
+drugs,simcse_only,7.46,41,7,12.04,41,14
+drugs,random_llm,6.66,47,17,10.63,48,24
+drugs,tfidf_ridge,7.39,41,8,12.05,41,14
+weapon,llm_best,12.12,56,13,17.42,57,27
+weapon,citation_llm,12.39,55,12,18.15,56,24
+weapon,sup_llm,12.97,52,7,19.17,53,20
+weapon,simcse_llm,13.4,51,4,18.73,54,22
+weapon,sup_only,13.85,49,1,20.52,50,14
+weapon,simcse_only,16.08,41,-15,23.5,43,2
+weapon,random_llm,14.97,45,-7,21.62,47,10
+weapon,tfidf_ridge,16.38,40,-17,23.87,42,1

@@ -1,0 +1,3 @@
+domain,citation_cov,recall_1hop_K10,recall_1hop_100,mae_lo_citation,mae_lo_llm_best,delta_lo,ci_lo,wilcoxon_p_lo,sig
+drugs,87%,0.0399,0.1886,5.33,5.12,0.21,"[-0.043,+0.514]",0.804,NOT sig
+weapon,95%,0.0561,0.2674,12.39,12.12,0.429,"[-0.245,+1.111]",0.211,NOT sig
