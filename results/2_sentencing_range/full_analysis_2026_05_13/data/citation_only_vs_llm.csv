@@ -1,0 +1,5 @@
+candidate_set,domain,coverage,n,median_neighbors,citation_only_lo,citation_only_hi,llm_best_lo_matched,delta_vs_llm_best,ci_vs_llm_best,p_vs_llm_best,sig_vs_llm_best,citation_llm_lo_matched,delta_vs_citation_llm,ci_vs_citation_llm,p_vs_citation_llm,sig_vs_citation_llm
+1hop_only,drugs,0.619,1678,2,5.65,9.05,4.8,0.85,"[+0.56,+1.13]",1.5e-05,yes,4.99,0.65,"[+0.36,+0.94]",1.1e-04,yes
+1hop_only,weapon,0.622,1070,2,11.39,16.07,10.91,0.48,"[-0.51,+1.49]",5.2e-01,no,11.24,0.16,"[-1.06,+1.37]",2.4e-01,no
+full_1hop+2hop+cocite,drugs,0.867,2352,17,5.87,9.18,5.12,0.75,"[+0.47,+1.07]",1.8e-04,yes,5.33,0.54,"[+0.39,+0.70]",9.5e-09,yes
+full_1hop+2hop+cocite,weapon,0.948,1630,33,13.7,20.1,11.96,1.74,"[+0.97,+2.56]",1.1e-04,yes,12.39,1.32,"[+0.93,+1.72]",7.1e-11,yes
