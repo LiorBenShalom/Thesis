@@ -1,0 +1,40 @@
+================================================================
+DOMAIN drugs  (concepts=1522)
+
+  Hybrid-Manual: core(>=90% verdicts)=6 concepts
+    ALL concepts mass:   SCHEMA   58%  BEYOND   36%  IDENT    6%
+    ENRICHMENT-only mass: SCHEMA   23%  BEYOND   66%  IDENT   11%
+    injected core: עבירה(SCHEMA), מעבדה(SCHEMA), הסם,_כמות(SCHEMA), מכירה_לסוכן(SCHEMA), עבירות_נלוות_כן/לא(SCHEMA), תפקיד(SCHEMA)
+
+  Hybrid-Full: core(>=90% verdicts)=6 concepts
+    ALL concepts mass:   SCHEMA   57%  BEYOND   37%  IDENT    6%
+    ENRICHMENT-only mass: SCHEMA   21%  BEYOND   67%  IDENT   11%
+    injected core: עבירה(SCHEMA), מעבדה(SCHEMA), הסם,_כמות(SCHEMA), מכירה_לסוכן(SCHEMA), עבירות_נלוות_כן/לא(SCHEMA), תפקיד(SCHEMA)
+
+  GPT-Free: core(>=90% verdicts)=0 concepts
+    ALL concepts mass:   SCHEMA   34%  BEYOND   59%  IDENT    6%
+    ENRICHMENT-only mass: SCHEMA   34%  BEYOND   59%  IDENT    6%
+
+  GPT-Law: core(>=90% verdicts)=0 concepts
+    ALL concepts mass:   SCHEMA   22%  BEYOND   76%  IDENT    2%
+    ENRICHMENT-only mass: SCHEMA   22%  BEYOND   76%  IDENT    2%
+================================================================
+DOMAIN weapon  (concepts=1369)
+
+  Hybrid-Manual: core(>=90% verdicts)=6 concepts
+    ALL concepts mass:   SCHEMA   69%  BEYOND   25%  IDENT    7%
+    ENRICHMENT-only mass: SCHEMA   47%  BEYOND   42%  IDENT   11%
+    injected core: תחמושת(SCHEMA), עבירה(SCHEMA), החזקת_הנשק(SCHEMA), סטטוס_הנשק(SCHEMA), תכנון(SCHEMA), שימוש(SCHEMA)
+
+  Hybrid-Full: core(>=90% verdicts)=5 concepts
+    ALL concepts mass:   SCHEMA   68%  BEYOND   27%  IDENT    6%
+    ENRICHMENT-only mass: SCHEMA   50%  BEYOND   42%  IDENT    9%
+    injected core: עבירה(SCHEMA), החזקת_הנשק(SCHEMA), סטטוס_הנשק(SCHEMA), תכנון(SCHEMA), שימוש(SCHEMA)
+
+  GPT-Free: core(>=90% verdicts)=0 concepts
+    ALL concepts mass:   SCHEMA   47%  BEYOND   44%  IDENT    9%
+    ENRICHMENT-only mass: SCHEMA   47%  BEYOND   44%  IDENT    9%
+
+  GPT-Law: core(>=90% verdicts)=0 concepts
+    ALL concepts mass:   SCHEMA   36%  BEYOND   61%  IDENT    3%
+    ENRICHMENT-only mass: SCHEMA   36%  BEYOND   61%  IDENT    3%

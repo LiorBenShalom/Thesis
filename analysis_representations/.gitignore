@@ -1,0 +1,4 @@
+# Embedding cache is ~144MB (exceeds GitHub's 100MB limit). It is a pure cache:
+# regenerate by running embed_cluster.py with a valid OPENAI_API_KEY.
+out/emb_cache.json
+__pycache__/

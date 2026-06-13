@@ -1,0 +1,5 @@
+﻿domain,rep,verdicts,core,enrichment,oneoff,oneoff_pct,recurring,trivial_val_pct,recur_in_law
+drugs,Hybrid-Manual,68,6,346,270,78,40,6,22
+drugs,Hybrid-Full,68,6,327,253,77,36,4,18
+weapon,Hybrid-Manual,101,8,338,241,71,49,1,27
+weapon,Hybrid-Full,101,7,362,270,75,56,1,29
