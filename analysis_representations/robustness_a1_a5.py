@@ -38,13 +38,21 @@ SYS = {"drugs": SYSTEM_PROMPT_V6_SCORE_RAW_drugs, "weapon": SYSTEM_PROMPT_V6_SCO
 REP_FILE = "similarity_database_hybrid_full_gpt.csv"
 
 
+def _valid(s):  # identical gate to canonical v6 validate_score: float, non-NaN, in [0,100]
+    try:
+        v = float(s)
+    except (TypeError, ValueError):
+        return False
+    return v == v and 0.0 <= v <= 100.0
+
+
 def score(model, domain, fv1, fv2):
     up = USER_TEMPLATE_SCORE_RAW.format(fv1=fv1, fv2=fv2)
     for _ in range(3):
         try:
             raw = CALL[model](SYS[domain], up, log_call=False)
             v = parse_score_v6(raw)
-            if v is not None:
+            if _valid(v):
                 return float(v)
         except Exception:
             pass

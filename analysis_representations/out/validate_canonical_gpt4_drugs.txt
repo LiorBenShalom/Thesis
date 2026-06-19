@@ -1,0 +1,5 @@
+gpt-4.1 cross-check NOT run: the canonical preds file
+  similarity_database_hybrid_full_gpt_v6score_gpt4_binary_0_preds.csv
+is a OneDrive cloud-only placeholder that fails to hydrate in this environment
+(read and cp both time out, Errno 60). The gpt-5.2 validation
+(validate_canonical_gpt52_drugs.txt) plus the code audit stand as evidence.

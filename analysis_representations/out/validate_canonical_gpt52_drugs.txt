@@ -1,0 +1,16 @@
+validate gpt52/drugs vs canonical similarity_database_hybrid_full_gpt_v6score_gpt52_binary_0_preds.csv (N=12)
+  ME-16-07-11608-225 x ME-22-12-47987-640: canon= 62.0  mine= 56.0  |Δ|=6
+  ME-16-11-63255-338 x ME-18-01-73652-357: canon= 46.0  mine= 48.0  |Δ|=2
+  ME-16-12-26620-433 x ME-16-06-6788-21: canon= 62.0  mine= 68.0  |Δ|=6
+  ME-17-01-59971-328 x ME-14-01-16958-980: canon= 78.0  mine= 72.0  |Δ|=6
+  ME-17-01-620-279 x ME-16-12-19902-389: canon= 84.0  mine= 82.0  |Δ|=2
+  ME-17-03-30876-747 x SH-23-02-41988-839: canon= 22.0  mine= 18.0  |Δ|=4
+  ME-17-03-30876-747 x ME-17-01-59971-328: canon= 72.0  mine= 72.0  |Δ|=0
+  ME-17-04-17677-800 x ME-14-01-16958-980: canon= 58.0  mine= 62.0  |Δ|=4
+  ME-18-02-5680-55 x ME-22-04-7867-732: canon= 22.0  mine= 22.0  |Δ|=0
+  ME-18-02-5680-55 x ME-15-11-31122-886: canon= 48.0  mine= 62.0  |Δ|=14
+  ME-18-04-16826-842 x ME-16-12-19902-389: canon= 82.0  mine= 88.0  |Δ|=6
+  ME-18-04-46786-521 x ME-16-06-6788-21: canon= 56.0  mine= 56.0  |Δ|=0
+
+  mean|Δ| run-A vs canonical = 4.17  max=14  identical=3/12
+  (compare to A5 temp-0 self-jitter for this model/domain; similar magnitude ⇒ identical pipeline)
