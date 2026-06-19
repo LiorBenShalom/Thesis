@@ -1,0 +1,6 @@
+model=gpt4 domain=weapon pairs=40 (canonical v6 scoring)
+
+  parsed OK pairs: 40/40 (failed=0)
+  A5 (run-to-run, temp 0): mean|Δ|=2.27  max|Δ|=13  identical=24/40  binary-flips=0/40
+  A1 (order swap):         mean|Δ|=6.03  max|Δ|=20  identical=11/40  binary-flips=6/40
+  saved -> /Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/analysis_representations/out/robustness_gpt4_weapon.csv

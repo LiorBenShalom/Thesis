@@ -1,0 +1,6 @@
+model=gpt4 domain=drugs pairs=40 (canonical v6 scoring)
+
+  parsed OK pairs: 40/40 (failed=0)
+  A5 (run-to-run, temp 0): mean|Δ|=2.88  max|Δ|=20  identical=18/40  binary-flips=0/40
+  A1 (order swap):         mean|Δ|=4.20  max|Δ|=15  identical=16/40  binary-flips=1/40
+  saved -> /Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/analysis_representations/out/robustness_gpt4_drugs.csv

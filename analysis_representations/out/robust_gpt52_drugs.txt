@@ -1,0 +1,6 @@
+model=gpt52 domain=drugs pairs=20 (canonical v6 scoring)
+
+  parsed OK pairs: 20/20 (failed=0)
+  A5 (run-to-run, temp 0): mean|Δ|=2.70  max|Δ|=6  identical=7/20  binary-flips=0/20
+  A1 (order swap):         mean|Δ|=3.85  max|Δ|=20  identical=8/20  binary-flips=2/20
+  saved -> /Users/liorb/Library/CloudStorage/OneDrive-post.bgu.ac.il/Thesis!!!/new_try/experiments/analysis_representations/out/robustness_gpt52_drugs.csv
